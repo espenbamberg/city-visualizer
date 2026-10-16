@@ -64,4 +64,6 @@ node scripts/check.mjs
 
 ## Credits
 
+CityVisualizer was created by Espen Bamberg, inspired by [Bo Meyer’s](https://www.linkedin.com/in/bo-meyer-65a0092/) work in visual modelling and explaining complex systems through illustrated landscapes. Hear more about his approach in Knowit’s *Forenklingspodden*: [“Bo Meyer – om Strategi som kunst”](https://podcasts.apple.com/it/podcast/bo-meyer-om-strategi-som-kunst/id1749310254?i=1000692304560).
+
 Includes the MIT-licensed Anatomy geometry core by Ryan. See [THIRD-PARTY.md](THIRD-PARTY.md) and [its license](kit/anatomy/LICENSE).
