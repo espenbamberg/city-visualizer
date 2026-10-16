@@ -1,0 +1,1812 @@
+[
+  {
+    "id": "greyhaven",
+    "title": "Greyhaven · a city under pressure",
+    "description": "A 72-hour emergency: power, water, healthcare, shelter and the people connecting them.",
+    "images": [
+      {
+        "title": "Final overview",
+        "source": "projects/greyhaven/checks/final-overview.png",
+        "file": "images/projects-greyhaven-checks-final-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-final-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Overview",
+        "source": "projects/greyhaven/checks/overview.png",
+        "file": "images/projects-greyhaven-checks-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Asset barrier",
+        "source": "projects/greyhaven/checks/asset-barrier.png",
+        "file": "images/projects-greyhaven-checks-asset-barrier.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-barrier-thumb.webp",
+        "width": 328,
+        "height": 427
+      },
+      {
+        "title": "Asset bed",
+        "source": "projects/greyhaven/checks/asset-bed.png",
+        "file": "images/projects-greyhaven-checks-asset-bed.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-bed-thumb.webp",
+        "width": 328,
+        "height": 426
+      },
+      {
+        "title": "Asset fridge",
+        "source": "projects/greyhaven/checks/asset-fridge.png",
+        "file": "images/projects-greyhaven-checks-asset-fridge.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-fridge-thumb.webp",
+        "width": 328,
+        "height": 427
+      },
+      {
+        "title": "Asset fuel",
+        "source": "projects/greyhaven/checks/asset-fuel.png",
+        "file": "images/projects-greyhaven-checks-asset-fuel.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-fuel-thumb.webp",
+        "width": 328,
+        "height": 426
+      },
+      {
+        "title": "Asset generator",
+        "source": "projects/greyhaven/checks/asset-generator.png",
+        "file": "images/projects-greyhaven-checks-asset-generator.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-generator-thumb.webp",
+        "width": 328,
+        "height": 427
+      },
+      {
+        "title": "Asset hospital",
+        "source": "projects/greyhaven/checks/asset-hospital.png",
+        "file": "images/projects-greyhaven-checks-asset-hospital.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-hospital-thumb.webp",
+        "width": 328,
+        "height": 427
+      },
+      {
+        "title": "Asset kitchen",
+        "source": "projects/greyhaven/checks/asset-kitchen.png",
+        "file": "images/projects-greyhaven-checks-asset-kitchen.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-kitchen-thumb.webp",
+        "width": 328,
+        "height": 427
+      },
+      {
+        "title": "Asset pump",
+        "source": "projects/greyhaven/checks/asset-pump.png",
+        "file": "images/projects-greyhaven-checks-asset-pump.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-pump-thumb.webp",
+        "width": 328,
+        "height": 427
+      },
+      {
+        "title": "Asset reservoir",
+        "source": "projects/greyhaven/checks/asset-reservoir.png",
+        "file": "images/projects-greyhaven-checks-asset-reservoir.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-reservoir-thumb.webp",
+        "width": 328,
+        "height": 427
+      },
+      {
+        "title": "Asset shelter",
+        "source": "projects/greyhaven/checks/asset-shelter.png",
+        "file": "images/projects-greyhaven-checks-asset-shelter.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-shelter-thumb.webp",
+        "width": 328,
+        "height": 427
+      },
+      {
+        "title": "Asset substation",
+        "source": "projects/greyhaven/checks/asset-substation.png",
+        "file": "images/projects-greyhaven-checks-asset-substation.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-substation-thumb.webp",
+        "width": 328,
+        "height": 447
+      },
+      {
+        "title": "Asset waterworks",
+        "source": "projects/greyhaven/checks/asset-waterworks.png",
+        "file": "images/projects-greyhaven-checks-asset-waterworks.webp",
+        "thumbnail": "images/projects-greyhaven-checks-asset-waterworks-thumb.webp",
+        "width": 328,
+        "height": 426
+      },
+      {
+        "title": "City detail",
+        "source": "projects/greyhaven/checks/city-detail.png",
+        "file": "images/projects-greyhaven-checks-city-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-city-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "City overview",
+        "source": "projects/greyhaven/checks/city-overview.png",
+        "file": "images/projects-greyhaven-checks-city-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-city-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Contact detail",
+        "source": "projects/greyhaven/checks/contact-detail.jpg",
+        "file": "images/projects-greyhaven-checks-contact-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-contact-detail-thumb.webp",
+        "width": 1600,
+        "height": 2775
+      },
+      {
+        "title": "Contact overview",
+        "source": "projects/greyhaven/checks/contact-overview.jpg",
+        "file": "images/projects-greyhaven-checks-contact-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-contact-overview-thumb.webp",
+        "width": 1600,
+        "height": 2775
+      },
+      {
+        "title": "Coordination detail",
+        "source": "projects/greyhaven/checks/coordination-detail.png",
+        "file": "images/projects-greyhaven-checks-coordination-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-coordination-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Coordination overview",
+        "source": "projects/greyhaven/checks/coordination-overview.png",
+        "file": "images/projects-greyhaven-checks-coordination-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-coordination-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Ed detail",
+        "source": "projects/greyhaven/checks/ed-detail.png",
+        "file": "images/projects-greyhaven-checks-ed-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-ed-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Ed overview",
+        "source": "projects/greyhaven/checks/ed-overview.png",
+        "file": "images/projects-greyhaven-checks-ed-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-ed-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Final assets",
+        "source": "projects/greyhaven/checks/final-assets.jpg",
+        "file": "images/projects-greyhaven-checks-final-assets.webp",
+        "thumbnail": "images/projects-greyhaven-checks-final-assets-thumb.webp",
+        "width": 1290,
+        "height": 1940
+      },
+      {
+        "title": "Final phone",
+        "source": "projects/greyhaven/checks/final-phone.png",
+        "file": "images/projects-greyhaven-checks-final-phone.webp",
+        "thumbnail": "images/projects-greyhaven-checks-final-phone-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Final stories",
+        "source": "projects/greyhaven/checks/final-stories.jpg",
+        "file": "images/projects-greyhaven-checks-final-stories.webp",
+        "thumbnail": "images/projects-greyhaven-checks-final-stories-thumb.webp",
+        "width": 1600,
+        "height": 1650
+      },
+      {
+        "title": "Final views",
+        "source": "projects/greyhaven/checks/final-views.jpg",
+        "file": "images/projects-greyhaven-checks-final-views.webp",
+        "thumbnail": "images/projects-greyhaven-checks-final-views-thumb.webp",
+        "width": 1600,
+        "height": 2750
+      },
+      {
+        "title": "Hospital detail",
+        "source": "projects/greyhaven/checks/hospital-detail.png",
+        "file": "images/projects-greyhaven-checks-hospital-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-hospital-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Hospital overview",
+        "source": "projects/greyhaven/checks/hospital-overview.png",
+        "file": "images/projects-greyhaven-checks-hospital-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-hospital-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Pharmacy detail",
+        "source": "projects/greyhaven/checks/pharmacy-detail.png",
+        "file": "images/projects-greyhaven-checks-pharmacy-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-pharmacy-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Pharmacy overview",
+        "source": "projects/greyhaven/checks/pharmacy-overview.png",
+        "file": "images/projects-greyhaven-checks-pharmacy-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-pharmacy-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Phone shelter",
+        "source": "projects/greyhaven/checks/phone-shelter.png",
+        "file": "images/projects-greyhaven-checks-phone-shelter.webp",
+        "thumbnail": "images/projects-greyhaven-checks-phone-shelter-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Phone",
+        "source": "projects/greyhaven/checks/phone.png",
+        "file": "images/projects-greyhaven-checks-phone.webp",
+        "thumbnail": "images/projects-greyhaven-checks-phone-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Power detail",
+        "source": "projects/greyhaven/checks/power-detail.png",
+        "file": "images/projects-greyhaven-checks-power-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-power-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Power overview",
+        "source": "projects/greyhaven/checks/power-overview.png",
+        "file": "images/projects-greyhaven-checks-power-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-power-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Pumping detail",
+        "source": "projects/greyhaven/checks/pumping-detail.png",
+        "file": "images/projects-greyhaven-checks-pumping-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-pumping-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Pumping overview",
+        "source": "projects/greyhaven/checks/pumping-overview.png",
+        "file": "images/projects-greyhaven-checks-pumping-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-pumping-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Repair detail",
+        "source": "projects/greyhaven/checks/repair-detail.png",
+        "file": "images/projects-greyhaven-checks-repair-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-repair-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Repair overview",
+        "source": "projects/greyhaven/checks/repair-overview.png",
+        "file": "images/projects-greyhaven-checks-repair-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-repair-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Shelter detail",
+        "source": "projects/greyhaven/checks/shelter-detail.png",
+        "file": "images/projects-greyhaven-checks-shelter-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-shelter-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Shelter overview",
+        "source": "projects/greyhaven/checks/shelter-overview.png",
+        "file": "images/projects-greyhaven-checks-shelter-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-shelter-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Story food route",
+        "source": "projects/greyhaven/checks/story-food-route.png",
+        "file": "images/projects-greyhaven-checks-story-food-route.webp",
+        "thumbnail": "images/projects-greyhaven-checks-story-food-route-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Story hospital",
+        "source": "projects/greyhaven/checks/story-hospital.png",
+        "file": "images/projects-greyhaven-checks-story-hospital.webp",
+        "thumbnail": "images/projects-greyhaven-checks-story-hospital-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Story missed",
+        "source": "projects/greyhaven/checks/story-missed.png",
+        "file": "images/projects-greyhaven-checks-story-missed.webp",
+        "thumbnail": "images/projects-greyhaven-checks-story-missed-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Story resident",
+        "source": "projects/greyhaven/checks/story-resident.png",
+        "file": "images/projects-greyhaven-checks-story-resident.webp",
+        "thumbnail": "images/projects-greyhaven-checks-story-resident-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Story restore",
+        "source": "projects/greyhaven/checks/story-restore.png",
+        "file": "images/projects-greyhaven-checks-story-restore.webp",
+        "thumbnail": "images/projects-greyhaven-checks-story-restore-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Story water",
+        "source": "projects/greyhaven/checks/story-water.png",
+        "file": "images/projects-greyhaven-checks-story-water.webp",
+        "thumbnail": "images/projects-greyhaven-checks-story-water-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Waterworks detail",
+        "source": "projects/greyhaven/checks/waterworks-detail.png",
+        "file": "images/projects-greyhaven-checks-waterworks-detail.webp",
+        "thumbnail": "images/projects-greyhaven-checks-waterworks-detail-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      },
+      {
+        "title": "Waterworks overview",
+        "source": "projects/greyhaven/checks/waterworks-overview.png",
+        "file": "images/projects-greyhaven-checks-waterworks-overview.webp",
+        "thumbnail": "images/projects-greyhaven-checks-waterworks-overview-thumb.webp",
+        "width": 1600,
+        "height": 1050
+      }
+    ]
+  },
+  {
+    "id": "mos-eisley-cantina",
+    "title": "Life around the cantina",
+    "description": "A Star Wars-inspired neighborhood, a cutaway cantina, and close-ups of the bar and band.",
+    "images": [
+      {
+        "title": "Overview",
+        "source": "projects/mos-eisley-cantina/preview/overview.png",
+        "file": "images/projects-mos-eisley-cantina-preview-overview.webp",
+        "thumbnail": "images/projects-mos-eisley-cantina-preview-overview-thumb.webp",
+        "width": 1440,
+        "height": 960
+      },
+      {
+        "title": "Band closeup",
+        "source": "projects/mos-eisley-cantina/preview/band-closeup.png",
+        "file": "images/projects-mos-eisley-cantina-preview-band-closeup.webp",
+        "thumbnail": "images/projects-mos-eisley-cantina-preview-band-closeup-thumb.webp",
+        "width": 1250,
+        "height": 1025
+      },
+      {
+        "title": "Band component",
+        "source": "projects/mos-eisley-cantina/preview/band-component.png",
+        "file": "images/projects-mos-eisley-cantina-preview-band-component.webp",
+        "thumbnail": "images/projects-mos-eisley-cantina-preview-band-component-thumb.webp",
+        "width": 344,
+        "height": 359
+      },
+      {
+        "title": "Bar closeup",
+        "source": "projects/mos-eisley-cantina/preview/bar-closeup.png",
+        "file": "images/projects-mos-eisley-cantina-preview-bar-closeup.webp",
+        "thumbnail": "images/projects-mos-eisley-cantina-preview-bar-closeup-thumb.webp",
+        "width": 1250,
+        "height": 1025
+      },
+      {
+        "title": "Bar component",
+        "source": "projects/mos-eisley-cantina/preview/bar-component.png",
+        "file": "images/projects-mos-eisley-cantina-preview-bar-component.webp",
+        "thumbnail": "images/projects-mos-eisley-cantina-preview-bar-component-thumb.webp",
+        "width": 344,
+        "height": 359
+      },
+      {
+        "title": "Cantina component",
+        "source": "projects/mos-eisley-cantina/preview/cantina-component.png",
+        "file": "images/projects-mos-eisley-cantina-preview-cantina-component.webp",
+        "thumbnail": "images/projects-mos-eisley-cantina-preview-cantina-component-thumb.webp",
+        "width": 344,
+        "height": 359
+      },
+      {
+        "title": "Interior",
+        "source": "projects/mos-eisley-cantina/preview/interior.png",
+        "file": "images/projects-mos-eisley-cantina-preview-interior.webp",
+        "thumbnail": "images/projects-mos-eisley-cantina-preview-interior-thumb.webp",
+        "width": 1440,
+        "height": 960
+      },
+      {
+        "title": "Phone",
+        "source": "projects/mos-eisley-cantina/preview/phone.png",
+        "file": "images/projects-mos-eisley-cantina-preview-phone.webp",
+        "thumbnail": "images/projects-mos-eisley-cantina-preview-phone-thumb.webp",
+        "width": 390,
+        "height": 844
+      }
+    ]
+  },
+  {
+    "id": "forerkort-b",
+    "title": "The driving-licence journey",
+    "description": "Norwegian category B training, traffic-station tests, and passed and failed outcomes.",
+    "images": [
+      {
+        "title": "City",
+        "source": "projects/forerkort-b/review/city.png",
+        "file": "images/projects-forerkort-b-review-city.webp",
+        "thumbnail": "images/projects-forerkort-b-review-city-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "City mobile",
+        "source": "projects/forerkort-b/review/city-mobile.png",
+        "file": "images/projects-forerkort-b-review-city-mobile.webp",
+        "thumbnail": "images/projects-forerkort-b-review-city-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Components city",
+        "source": "projects/forerkort-b/review/components-city.png",
+        "file": "images/projects-forerkort-b-review-components-city.webp",
+        "thumbnail": "images/projects-forerkort-b-review-components-city-thumb.webp",
+        "width": 1440,
+        "height": 1018
+      },
+      {
+        "title": "Components station",
+        "source": "projects/forerkort-b/review/components-station.png",
+        "file": "images/projects-forerkort-b-review-components-station.webp",
+        "thumbnail": "images/projects-forerkort-b-review-components-station-thumb.webp",
+        "width": 1440,
+        "height": 1018
+      },
+      {
+        "title": "Failed",
+        "source": "projects/forerkort-b/review/failed.png",
+        "file": "images/projects-forerkort-b-review-failed.webp",
+        "thumbnail": "images/projects-forerkort-b-review-failed-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Passed",
+        "source": "projects/forerkort-b/review/passed.png",
+        "file": "images/projects-forerkort-b-review-passed.webp",
+        "thumbnail": "images/projects-forerkort-b-review-passed-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Station mobile",
+        "source": "projects/forerkort-b/review/station-mobile.png",
+        "file": "images/projects-forerkort-b-review-station-mobile.webp",
+        "thumbnail": "images/projects-forerkort-b-review-station-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Station",
+        "source": "projects/forerkort-b/review/station.png",
+        "file": "images/projects-forerkort-b-review-station.webp",
+        "thumbnail": "images/projects-forerkort-b-review-station-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Story",
+        "source": "projects/forerkort-b/review/story.png",
+        "file": "images/projects-forerkort-b-review-story.webp",
+        "thumbnail": "images/projects-forerkort-b-review-story-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      }
+    ]
+  },
+  {
+    "id": "elkjop-laptop",
+    "title": "A laptop’s repair journey",
+    "description": "From the store to the workshop: service handoffs, diagnosis and detailed repair stations.",
+    "images": [
+      {
+        "title": "City",
+        "source": "projects/elkjop-laptop/review/city.png",
+        "file": "images/projects-elkjop-laptop-review-city.webp",
+        "thumbnail": "images/projects-elkjop-laptop-review-city-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "City mobile",
+        "source": "projects/elkjop-laptop/review/city-mobile.png",
+        "file": "images/projects-elkjop-laptop-review-city-mobile.webp",
+        "thumbnail": "images/projects-elkjop-laptop-review-city-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Components city",
+        "source": "projects/elkjop-laptop/review/components-city.png",
+        "file": "images/projects-elkjop-laptop-review-components-city.webp",
+        "thumbnail": "images/projects-elkjop-laptop-review-components-city-thumb.webp",
+        "width": 1440,
+        "height": 1018
+      },
+      {
+        "title": "Lab mobile",
+        "source": "projects/elkjop-laptop/review/lab-mobile.png",
+        "file": "images/projects-elkjop-laptop-review-lab-mobile.webp",
+        "thumbnail": "images/projects-elkjop-laptop-review-lab-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Lab",
+        "source": "projects/elkjop-laptop/review/lab.png",
+        "file": "images/projects-elkjop-laptop-review-lab.webp",
+        "thumbnail": "images/projects-elkjop-laptop-review-lab-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Module close",
+        "source": "projects/elkjop-laptop/review/module-close.png",
+        "file": "images/projects-elkjop-laptop-review-module-close.webp",
+        "thumbnail": "images/projects-elkjop-laptop-review-module-close-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Store",
+        "source": "projects/elkjop-laptop/review/store.png",
+        "file": "images/projects-elkjop-laptop-review-store.webp",
+        "thumbnail": "images/projects-elkjop-laptop-review-store-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Story desktop",
+        "source": "projects/elkjop-laptop/review/story-desktop.png",
+        "file": "images/projects-elkjop-laptop-review-story-desktop.webp",
+        "thumbnail": "images/projects-elkjop-laptop-review-story-desktop-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "v5",
+    "title": "V5 · five kinds of landscape",
+    "description": "Cities, campuses, buildings, workspaces and technical systems, with indoor and mobile reviews.",
+    "images": [
+      {
+        "title": "City",
+        "source": "research/v5-city.png",
+        "file": "images/research-v5-city.webp",
+        "thumbnail": "images/research-v5-city-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Building close",
+        "source": "research/v5-building-close.png",
+        "file": "images/research-v5-building-close.webp",
+        "thumbnail": "images/research-v5-building-close-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Building organization",
+        "source": "research/v5-building-organization.png",
+        "file": "images/research-v5-building-organization.webp",
+        "thumbnail": "images/research-v5-building-organization-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Building phone panel",
+        "source": "research/v5-building-phone-panel.png",
+        "file": "images/research-v5-building-phone-panel.webp",
+        "thumbnail": "images/research-v5-building-phone-panel-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Building phone",
+        "source": "research/v5-building-phone.png",
+        "file": "images/research-v5-building-phone.webp",
+        "thumbnail": "images/research-v5-building-phone-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Building",
+        "source": "research/v5-building.png",
+        "file": "images/research-v5-building.webp",
+        "thumbnail": "images/research-v5-building-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Campus organization",
+        "source": "research/v5-campus-organization.png",
+        "file": "images/research-v5-campus-organization.webp",
+        "thumbnail": "images/research-v5-campus-organization-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Campus",
+        "source": "research/v5-campus.png",
+        "file": "images/research-v5-campus.webp",
+        "thumbnail": "images/research-v5-campus-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "City organization",
+        "source": "research/v5-city-organization.png",
+        "file": "images/research-v5-city-organization.webp",
+        "thumbnail": "images/research-v5-city-organization-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Technical organization",
+        "source": "research/v5-technical-organization.png",
+        "file": "images/research-v5-technical-organization.webp",
+        "thumbnail": "images/research-v5-technical-organization-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Technical phone",
+        "source": "research/v5-technical-phone.png",
+        "file": "images/research-v5-technical-phone.webp",
+        "thumbnail": "images/research-v5-technical-phone-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Technical",
+        "source": "research/v5-technical.png",
+        "file": "images/research-v5-technical.webp",
+        "thumbnail": "images/research-v5-technical-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Workspace organization",
+        "source": "research/v5-workspace-organization.png",
+        "file": "images/research-v5-workspace-organization.webp",
+        "thumbnail": "images/research-v5-workspace-organization-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Workspace",
+        "source": "research/v5-workspace.png",
+        "file": "images/research-v5-workspace.webp",
+        "thumbnail": "images/research-v5-workspace-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      }
+    ]
+  },
+  {
+    "id": "v4",
+    "title": "V4 · connected places",
+    "description": "Shared networks, visible work, close-up diagnostics and a larger-scale city.",
+    "images": [
+      {
+        "title": "City",
+        "source": "research/v4-city.png",
+        "file": "images/research-v4-city.webp",
+        "thumbnail": "images/research-v4-city-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Booking",
+        "source": "research/v4-booking.png",
+        "file": "images/research-v4-booking.webp",
+        "thumbnail": "images/research-v4-booking-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Diagnosis close",
+        "source": "research/v4-diagnosis-close.png",
+        "file": "images/research-v4-diagnosis-close.webp",
+        "thumbnail": "images/research-v4-diagnosis-close-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Diagnostics",
+        "source": "research/v4-diagnostics.png",
+        "file": "images/research-v4-diagnostics.webp",
+        "thumbnail": "images/research-v4-diagnostics-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Mobile city",
+        "source": "research/v4-mobile-city.png",
+        "file": "images/research-v4-mobile-city.webp",
+        "thumbnail": "images/research-v4-mobile-city-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Mobile scale",
+        "source": "research/v4-mobile-scale.png",
+        "file": "images/research-v4-mobile-scale.webp",
+        "thumbnail": "images/research-v4-mobile-scale-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Mobile workshop",
+        "source": "research/v4-mobile-workshop.png",
+        "file": "images/research-v4-mobile-workshop.webp",
+        "thumbnail": "images/research-v4-mobile-workshop-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Network",
+        "source": "research/v4-network.png",
+        "file": "images/research-v4-network.webp",
+        "thumbnail": "images/research-v4-network-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Scale",
+        "source": "research/v4-scale.png",
+        "file": "images/research-v4-scale.webp",
+        "thumbnail": "images/research-v4-scale-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Validation",
+        "source": "research/v4-validation.png",
+        "file": "images/research-v4-validation.webp",
+        "thumbnail": "images/research-v4-validation-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Workshop",
+        "source": "research/v4-workshop.png",
+        "file": "images/research-v4-workshop.webp",
+        "thumbnail": "images/research-v4-workshop-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "v3",
+    "title": "V3 · room for what matters",
+    "description": "Variable building sizes, expanded workstations, scale tests and phone layouts.",
+    "images": [
+      {
+        "title": "City",
+        "source": "research/v3-city.png",
+        "file": "images/research-v3-city.webp",
+        "thumbnail": "images/research-v3-city-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Booking",
+        "source": "research/v3-booking.png",
+        "file": "images/research-v3-booking.webp",
+        "thumbnail": "images/research-v3-booking-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Diagnostics",
+        "source": "research/v3-diagnostics.png",
+        "file": "images/research-v3-diagnostics.webp",
+        "thumbnail": "images/research-v3-diagnostics-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Mobile city",
+        "source": "research/v3-mobile-city.png",
+        "file": "images/research-v3-mobile-city.webp",
+        "thumbnail": "images/research-v3-mobile-city-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Mobile scale",
+        "source": "research/v3-mobile-scale.png",
+        "file": "images/research-v3-mobile-scale.webp",
+        "thumbnail": "images/research-v3-mobile-scale-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Mobile workshop",
+        "source": "research/v3-mobile-workshop.png",
+        "file": "images/research-v3-mobile-workshop.webp",
+        "thumbnail": "images/research-v3-mobile-workshop-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Network",
+        "source": "research/v3-network.png",
+        "file": "images/research-v3-network.webp",
+        "thumbnail": "images/research-v3-network-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Scale",
+        "source": "research/v3-scale.png",
+        "file": "images/research-v3-scale.webp",
+        "thumbnail": "images/research-v3-scale-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Validation",
+        "source": "research/v3-validation.png",
+        "file": "images/research-v3-validation.webp",
+        "thumbnail": "images/research-v3-validation-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Workshop",
+        "source": "research/v3-workshop.png",
+        "file": "images/research-v3-workshop.webp",
+        "thumbnail": "images/research-v3-workshop-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "v2",
+    "title": "V2 · the work inside",
+    "description": "Nested workshops, booking systems, parks, vans and aircraft, with desktop and phone captures.",
+    "images": [
+      {
+        "title": "City overview",
+        "source": "research/v2-city-overview.png",
+        "file": "images/research-v2-city-overview.webp",
+        "thumbnail": "images/research-v2-city-overview-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Bench detail",
+        "source": "research/v2-bench-detail.png",
+        "file": "images/research-v2-bench-detail.webp",
+        "thumbnail": "images/research-v2-bench-detail-thumb.webp",
+        "width": 432,
+        "height": 374
+      },
+      {
+        "title": "Booking overview",
+        "source": "research/v2-booking-overview.png",
+        "file": "images/research-v2-booking-overview.webp",
+        "thumbnail": "images/research-v2-booking-overview-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "City",
+        "source": "research/v2-city.png",
+        "file": "images/research-v2-city.webp",
+        "thumbnail": "images/research-v2-city-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Diagnostics",
+        "source": "research/v2-diagnostics.png",
+        "file": "images/research-v2-diagnostics.webp",
+        "thumbnail": "images/research-v2-diagnostics-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Park final",
+        "source": "research/v2-park-final.png",
+        "file": "images/research-v2-park-final.webp",
+        "thumbnail": "images/research-v2-park-final-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Park overview",
+        "source": "research/v2-park-overview.png",
+        "file": "images/research-v2-park-overview.webp",
+        "thumbnail": "images/research-v2-park-overview-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Phone hidden",
+        "source": "research/v2-phone-hidden.png",
+        "file": "images/research-v2-phone-hidden.webp",
+        "thumbnail": "images/research-v2-phone-hidden-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Phone",
+        "source": "research/v2-phone.png",
+        "file": "images/research-v2-phone.webp",
+        "thumbnail": "images/research-v2-phone-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Plane final",
+        "source": "research/v2-plane-final.png",
+        "file": "images/research-v2-plane-final.webp",
+        "thumbnail": "images/research-v2-plane-final-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Plane overview",
+        "source": "research/v2-plane-overview.png",
+        "file": "images/research-v2-plane-overview.webp",
+        "thumbnail": "images/research-v2-plane-overview-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Scale",
+        "source": "research/v2-scale.png",
+        "file": "images/research-v2-scale.webp",
+        "thumbnail": "images/research-v2-scale-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Validation overview",
+        "source": "research/v2-validation-overview.png",
+        "file": "images/research-v2-validation-overview.webp",
+        "thumbnail": "images/research-v2-validation-overview-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Van overview",
+        "source": "research/v2-van-overview.png",
+        "file": "images/research-v2-van-overview.webp",
+        "thumbnail": "images/research-v2-van-overview-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Van story",
+        "source": "research/v2-van-story.png",
+        "file": "images/research-v2-van-story.webp",
+        "thumbnail": "images/research-v2-van-story-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Workshop final",
+        "source": "research/v2-workshop-final.png",
+        "file": "images/research-v2-workshop-final.webp",
+        "thumbnail": "images/research-v2-workshop-final-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Workshop",
+        "source": "research/v2-workshop.png",
+        "file": "images/research-v2-workshop.webp",
+        "thumbnail": "images/research-v2-workshop-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "city",
+    "title": "City expansion",
+    "description": "Reading day, the library network and heat exposure at neighborhood and city scales.",
+    "images": [
+      {
+        "title": "City reading day overview",
+        "source": "research/city-reading-day-overview.png",
+        "file": "images/research-city-reading-day-overview.webp",
+        "thumbnail": "images/research-city-reading-day-overview-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "City heat fullscreen",
+        "source": "research/city-heat-fullscreen.png",
+        "file": "images/research-city-heat-fullscreen.webp",
+        "thumbnail": "images/research-city-heat-fullscreen-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "City heat mobile",
+        "source": "research/city-heat-mobile.png",
+        "file": "images/research-city-heat-mobile.webp",
+        "thumbnail": "images/research-city-heat-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "City heat overview",
+        "source": "research/city-heat-overview.png",
+        "file": "images/research-city-heat-overview.webp",
+        "thumbnail": "images/research-city-heat-overview-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "City library network fullscreen",
+        "source": "research/city-library-network-fullscreen.png",
+        "file": "images/research-city-library-network-fullscreen.webp",
+        "thumbnail": "images/research-city-library-network-fullscreen-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "City library network mobile",
+        "source": "research/city-library-network-mobile.png",
+        "file": "images/research-city-library-network-mobile.webp",
+        "thumbnail": "images/research-city-library-network-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "City library network overview",
+        "source": "research/city-library-network-overview.png",
+        "file": "images/research-city-library-network-overview.webp",
+        "thumbnail": "images/research-city-library-network-overview-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "City people school",
+        "source": "research/city-people-school.png",
+        "file": "images/research-city-people-school.webp",
+        "thumbnail": "images/research-city-people-school-thumb.webp",
+        "width": 344,
+        "height": 360
+      },
+      {
+        "title": "City reading day fullscreen",
+        "source": "research/city-reading-day-fullscreen.png",
+        "file": "images/research-city-reading-day-fullscreen.webp",
+        "thumbnail": "images/research-city-reading-day-fullscreen-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "City reading day mobile",
+        "source": "research/city-reading-day-mobile.png",
+        "file": "images/research-city-reading-day-mobile.webp",
+        "thumbnail": "images/research-city-reading-day-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Expansion city fullscreen",
+        "source": "research/expansion-city-fullscreen.png",
+        "file": "images/research-expansion-city-fullscreen.webp",
+        "thumbnail": "images/research-expansion-city-fullscreen-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Expansion heat",
+        "source": "research/expansion-heat.png",
+        "file": "images/research-expansion-heat.webp",
+        "thumbnail": "images/research-expansion-heat-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Expansion library network",
+        "source": "research/expansion-library-network.png",
+        "file": "images/research-expansion-library-network.webp",
+        "thumbnail": "images/research-expansion-library-network-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      },
+      {
+        "title": "Expansion reading day",
+        "source": "research/expansion-reading-day.png",
+        "file": "images/research-expansion-reading-day.webp",
+        "thumbnail": "images/research-expansion-reading-day-thumb.webp",
+        "width": 1600,
+        "height": 1100
+      }
+    ]
+  },
+  {
+    "id": "motion",
+    "title": "Motion & story playback",
+    "description": "Entrance sequences, moving actors, closed-door outcomes, playback and fullscreen reviews.",
+    "images": [
+      {
+        "title": "Playback desktop",
+        "source": "research/playback-desktop.png",
+        "file": "images/research-playback-desktop.webp",
+        "thumbnail": "images/research-playback-desktop-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Motion before heat",
+        "source": "research/motion-before-heat.png",
+        "file": "images/research-motion-before-heat.webp",
+        "thumbnail": "images/research-motion-before-heat-thumb.webp",
+        "width": 1440,
+        "height": 1100
+      },
+      {
+        "title": "Motion before repair",
+        "source": "research/motion-before-repair.png",
+        "file": "images/research-motion-before-repair.webp",
+        "thumbnail": "images/research-motion-before-repair-thumb.webp",
+        "width": 1440,
+        "height": 1100
+      },
+      {
+        "title": "Motion booking states",
+        "source": "research/motion-booking-states.png",
+        "file": "images/research-motion-booking-states.webp",
+        "thumbnail": "images/research-motion-booking-states-thumb.webp",
+        "width": 1500,
+        "height": 1000
+      },
+      {
+        "title": "Motion closed door 1",
+        "source": "research/motion-closed-door-1.png",
+        "file": "images/research-motion-closed-door-1.webp",
+        "thumbnail": "images/research-motion-closed-door-1-thumb.webp",
+        "width": 1056,
+        "height": 786
+      },
+      {
+        "title": "Motion entrance sequence",
+        "source": "research/motion-entrance-sequence.png",
+        "file": "images/research-motion-entrance-sequence.webp",
+        "thumbnail": "images/research-motion-entrance-sequence-thumb.webp",
+        "width": 1500,
+        "height": 1000
+      },
+      {
+        "title": "Motion heat states",
+        "source": "research/motion-heat-states.png",
+        "file": "images/research-motion-heat-states.webp",
+        "thumbnail": "images/research-motion-heat-states-thumb.webp",
+        "width": 1500,
+        "height": 1216
+      },
+      {
+        "title": "Motion hot afternoon 0",
+        "source": "research/motion-hot-afternoon-0.png",
+        "file": "images/research-motion-hot-afternoon-0.webp",
+        "thumbnail": "images/research-motion-hot-afternoon-0-thumb.webp",
+        "width": 1056,
+        "height": 786
+      },
+      {
+        "title": "Motion hot afternoon 1",
+        "source": "research/motion-hot-afternoon-1.png",
+        "file": "images/research-motion-hot-afternoon-1.webp",
+        "thumbnail": "images/research-motion-hot-afternoon-1-thumb.webp",
+        "width": 1056,
+        "height": 786
+      },
+      {
+        "title": "Motion hot afternoon 2",
+        "source": "research/motion-hot-afternoon-2.png",
+        "file": "images/research-motion-hot-afternoon-2.webp",
+        "thumbnail": "images/research-motion-hot-afternoon-2-thumb.webp",
+        "width": 1056,
+        "height": 786
+      },
+      {
+        "title": "Motion hot afternoon 3",
+        "source": "research/motion-hot-afternoon-3.png",
+        "file": "images/research-motion-hot-afternoon-3.webp",
+        "thumbnail": "images/research-motion-hot-afternoon-3-thumb.webp",
+        "width": 1056,
+        "height": 786
+      },
+      {
+        "title": "Motion mobile fullscreen",
+        "source": "research/motion-mobile-fullscreen.png",
+        "file": "images/research-motion-mobile-fullscreen.webp",
+        "thumbnail": "images/research-motion-mobile-fullscreen-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Motion park sequence",
+        "source": "research/motion-park-sequence.png",
+        "file": "images/research-motion-park-sequence.webp",
+        "thumbnail": "images/research-motion-park-sequence-thumb.webp",
+        "width": 1500,
+        "height": 1000
+      },
+      {
+        "title": "Motion zoom comparison",
+        "source": "research/motion-zoom-comparison.png",
+        "file": "images/research-motion-zoom-comparison.webp",
+        "thumbnail": "images/research-motion-zoom-comparison-thumb.webp",
+        "width": 1500,
+        "height": 1621
+      },
+      {
+        "title": "Playback mobile",
+        "source": "research/playback-mobile.png",
+        "file": "images/research-playback-mobile.webp",
+        "thumbnail": "images/research-playback-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      }
+    ]
+  },
+  {
+    "id": "page",
+    "title": "Page, controls & navigation",
+    "description": "Desktop and narrow layouts, floating panels, overlays, zoom and fullscreen controls.",
+    "images": [
+      {
+        "title": "Controls repair 1440",
+        "source": "research/controls-repair-1440.png",
+        "file": "images/research-controls-repair-1440.webp",
+        "thumbnail": "images/research-controls-repair-1440-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Controls heat 1440",
+        "source": "research/controls-heat-1440.png",
+        "file": "images/research-controls-heat-1440.webp",
+        "thumbnail": "images/research-controls-heat-1440-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Controls heat 320",
+        "source": "research/controls-heat-320.png",
+        "file": "images/research-controls-heat-320.webp",
+        "thumbnail": "images/research-controls-heat-320-thumb.webp",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "title": "Controls heat 390",
+        "source": "research/controls-heat-390.png",
+        "file": "images/research-controls-heat-390.webp",
+        "thumbnail": "images/research-controls-heat-390-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Controls heat fullscreen 320",
+        "source": "research/controls-heat-fullscreen-320.png",
+        "file": "images/research-controls-heat-fullscreen-320.webp",
+        "thumbnail": "images/research-controls-heat-fullscreen-320-thumb.webp",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "title": "Controls heat story",
+        "source": "research/controls-heat-story.png",
+        "file": "images/research-controls-heat-story.webp",
+        "thumbnail": "images/research-controls-heat-story-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Controls repair 320",
+        "source": "research/controls-repair-320.png",
+        "file": "images/research-controls-repair-320.webp",
+        "thumbnail": "images/research-controls-repair-320-thumb.webp",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "title": "Controls repair 390",
+        "source": "research/controls-repair-390.png",
+        "file": "images/research-controls-repair-390.webp",
+        "thumbnail": "images/research-controls-repair-390-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Controls repair fullscreen 320",
+        "source": "research/controls-repair-fullscreen-320.png",
+        "file": "images/research-controls-repair-fullscreen-320.webp",
+        "thumbnail": "images/research-controls-repair-fullscreen-320-thumb.webp",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "title": "Controls repair story",
+        "source": "research/controls-repair-story.png",
+        "file": "images/research-controls-repair-story.webp",
+        "thumbnail": "images/research-controls-repair-story-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Entrance heat desktop",
+        "source": "research/entrance-heat-desktop.png",
+        "file": "images/research-entrance-heat-desktop.webp",
+        "thumbnail": "images/research-entrance-heat-desktop-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Entrance heat mobile story",
+        "source": "research/entrance-heat-mobile-story.png",
+        "file": "images/research-entrance-heat-mobile-story.webp",
+        "thumbnail": "images/research-entrance-heat-mobile-story-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Entrance heat mobile",
+        "source": "research/entrance-heat-mobile.png",
+        "file": "images/research-entrance-heat-mobile.webp",
+        "thumbnail": "images/research-entrance-heat-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Entrance heat sequence",
+        "source": "research/entrance-heat-sequence.png",
+        "file": "images/research-entrance-heat-sequence.webp",
+        "thumbnail": "images/research-entrance-heat-sequence-thumb.webp",
+        "width": 1500,
+        "height": 1000
+      },
+      {
+        "title": "Entrance repair desktop",
+        "source": "research/entrance-repair-desktop.png",
+        "file": "images/research-entrance-repair-desktop.webp",
+        "thumbnail": "images/research-entrance-repair-desktop-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Entrance repair mobile story",
+        "source": "research/entrance-repair-mobile-story.png",
+        "file": "images/research-entrance-repair-mobile-story.webp",
+        "thumbnail": "images/research-entrance-repair-mobile-story-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Entrance repair mobile",
+        "source": "research/entrance-repair-mobile.png",
+        "file": "images/research-entrance-repair-mobile.webp",
+        "thumbnail": "images/research-entrance-repair-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Footer desktop",
+        "source": "research/footer-desktop.png",
+        "file": "images/research-footer-desktop.webp",
+        "thumbnail": "images/research-footer-desktop-thumb.webp",
+        "width": 1400,
+        "height": 101
+      },
+      {
+        "title": "Footer mobile",
+        "source": "research/footer-mobile.png",
+        "file": "images/research-footer-mobile.webp",
+        "thumbnail": "images/research-footer-mobile-thumb.webp",
+        "width": 390,
+        "height": 167
+      },
+      {
+        "title": "Overlay heat desktop",
+        "source": "research/overlay-heat-desktop.png",
+        "file": "images/research-overlay-heat-desktop.webp",
+        "thumbnail": "images/research-overlay-heat-desktop-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Overlay heat mobile",
+        "source": "research/overlay-heat-mobile.png",
+        "file": "images/research-overlay-heat-mobile.webp",
+        "thumbnail": "images/research-overlay-heat-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Overlay heat zoom",
+        "source": "research/overlay-heat-zoom.png",
+        "file": "images/research-overlay-heat-zoom.webp",
+        "thumbnail": "images/research-overlay-heat-zoom-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Overlay repair desktop",
+        "source": "research/overlay-repair-desktop.png",
+        "file": "images/research-overlay-repair-desktop.webp",
+        "thumbnail": "images/research-overlay-repair-desktop-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Overlay repair mobile",
+        "source": "research/overlay-repair-mobile.png",
+        "file": "images/research-overlay-repair-mobile.webp",
+        "thumbnail": "images/research-overlay-repair-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Overlay repair zoom",
+        "source": "research/overlay-repair-zoom.png",
+        "file": "images/research-overlay-repair-zoom.webp",
+        "thumbnail": "images/research-overlay-repair-zoom-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      }
+    ]
+  },
+  {
+    "id": "heat",
+    "title": "Heat exposure",
+    "description": "A hot afternoon across the square, school, park and cooling room.",
+    "images": [
+      {
+        "title": "Overview",
+        "source": "research/heat-overview.png",
+        "file": "images/research-heat-overview.webp",
+        "thumbnail": "images/research-heat-overview-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "Cool room detail",
+        "source": "research/heat-cool-room-detail.png",
+        "file": "images/research-heat-cool-room-detail.webp",
+        "thumbnail": "images/research-heat-cool-room-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      },
+      {
+        "title": "Fullscreen mobile",
+        "source": "research/heat-fullscreen-mobile.png",
+        "file": "images/research-heat-fullscreen-mobile.webp",
+        "thumbnail": "images/research-heat-fullscreen-mobile-thumb.webp",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "title": "Fullscreen",
+        "source": "research/heat-fullscreen.png",
+        "file": "images/research-heat-fullscreen.webp",
+        "thumbnail": "images/research-heat-fullscreen-thumb.webp",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "title": "Mobile",
+        "source": "research/heat-mobile.png",
+        "file": "images/research-heat-mobile.webp",
+        "thumbnail": "images/research-heat-mobile-thumb.webp",
+        "width": 390,
+        "height": 4566
+      },
+      {
+        "title": "Park detail",
+        "source": "research/heat-park-detail.png",
+        "file": "images/research-heat-park-detail.webp",
+        "thumbnail": "images/research-heat-park-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      },
+      {
+        "title": "Paving",
+        "source": "research/heat-paving.png",
+        "file": "images/research-heat-paving.webp",
+        "thumbnail": "images/research-heat-paving-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "School detail",
+        "source": "research/heat-school-detail.png",
+        "file": "images/research-heat-school-detail.webp",
+        "thumbnail": "images/research-heat-school-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      },
+      {
+        "title": "Square detail",
+        "source": "research/heat-square-detail.png",
+        "file": "images/research-heat-square-detail.webp",
+        "thumbnail": "images/research-heat-square-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      }
+    ]
+  },
+  {
+    "id": "booking",
+    "title": "Booking, step by step",
+    "description": "The connected booking story, captured through its steps and on a phone.",
+    "images": [
+      {
+        "title": "Step 1",
+        "source": "research/booking-step-1.png",
+        "file": "images/research-booking-step-1.webp",
+        "thumbnail": "images/research-booking-step-1-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "Mobile",
+        "source": "research/booking-mobile.png",
+        "file": "images/research-booking-mobile.webp",
+        "thumbnail": "images/research-booking-mobile-thumb.webp",
+        "width": 390,
+        "height": 900
+      },
+      {
+        "title": "Step 2",
+        "source": "research/booking-step-2.png",
+        "file": "images/research-booking-step-2.webp",
+        "thumbnail": "images/research-booking-step-2-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "Step 3",
+        "source": "research/booking-step-3.png",
+        "file": "images/research-booking-step-3.webp",
+        "thumbnail": "images/research-booking-step-3-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "Step 4",
+        "source": "research/booking-step-4.png",
+        "file": "images/research-booking-step-4.webp",
+        "thumbnail": "images/research-booking-step-4-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      }
+    ]
+  },
+  {
+    "id": "style",
+    "title": "The first visual studies",
+    "description": "Early repair-service maps, architectural details, labels and component studies.",
+    "images": [
+      {
+        "title": "Desktop",
+        "source": "research/style-proof-desktop.png",
+        "file": "images/research-style-proof-desktop.webp",
+        "thumbnail": "images/research-style-proof-desktop-thumb.webp",
+        "width": 1440,
+        "height": 1220
+      },
+      {
+        "title": "Labels building detail",
+        "source": "research/labels-building-detail.png",
+        "file": "images/research-labels-building-detail.webp",
+        "thumbnail": "images/research-labels-building-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      },
+      {
+        "title": "Labels component study",
+        "source": "research/labels-component-study.png",
+        "file": "images/research-labels-component-study.webp",
+        "thumbnail": "images/research-labels-component-study-thumb.webp",
+        "width": 1600,
+        "height": 1838
+      },
+      {
+        "title": "Labels draft",
+        "source": "research/labels-draft.png",
+        "file": "images/research-labels-draft.webp",
+        "thumbnail": "images/research-labels-draft-thumb.webp",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "title": "Labels mobile",
+        "source": "research/labels-mobile.png",
+        "file": "images/research-labels-mobile.webp",
+        "thumbnail": "images/research-labels-mobile-thumb.webp",
+        "width": 390,
+        "height": 900
+      },
+      {
+        "title": "Labels roof detail",
+        "source": "research/labels-roof-detail.png",
+        "file": "images/research-labels-roof-detail.webp",
+        "thumbnail": "images/research-labels-roof-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      },
+      {
+        "title": "Labels service detail",
+        "source": "research/labels-service-detail.png",
+        "file": "images/research-labels-service-detail.webp",
+        "thumbnail": "images/research-labels-service-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      },
+      {
+        "title": "Labels technical detail",
+        "source": "research/labels-technical-detail.png",
+        "file": "images/research-labels-technical-detail.webp",
+        "thumbnail": "images/research-labels-technical-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      },
+      {
+        "title": "Reception detail",
+        "source": "research/reception-detail.png",
+        "file": "images/research-reception-detail.webp",
+        "thumbnail": "images/research-reception-detail-thumb.webp",
+        "width": 1216,
+        "height": 905
+      },
+      {
+        "title": "Data driven",
+        "source": "research/style-proof-data-driven.png",
+        "file": "images/research-style-proof-data-driven.webp",
+        "thumbnail": "images/research-style-proof-data-driven-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "Desaturated",
+        "source": "research/style-proof-desaturated.png",
+        "file": "images/research-style-proof-desaturated.webp",
+        "thumbnail": "images/research-style-proof-desaturated-thumb.webp",
+        "width": 1440,
+        "height": 1220
+      },
+      {
+        "title": "Integrated labels",
+        "source": "research/style-proof-integrated-labels.png",
+        "file": "images/research-style-proof-integrated-labels.webp",
+        "thumbnail": "images/research-style-proof-integrated-labels-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "Missing part",
+        "source": "research/style-proof-missing-part.png",
+        "file": "images/research-style-proof-missing-part.webp",
+        "thumbnail": "images/research-style-proof-missing-part-thumb.webp",
+        "width": 1440,
+        "height": 1220
+      },
+      {
+        "title": "Mobile inspector",
+        "source": "research/style-proof-mobile-inspector.png",
+        "file": "images/research-style-proof-mobile-inspector.webp",
+        "thumbnail": "images/research-style-proof-mobile-inspector-thumb.webp",
+        "width": 320,
+        "height": 426
+      },
+      {
+        "title": "Mobile",
+        "source": "research/style-proof-mobile.png",
+        "file": "images/research-style-proof-mobile.webp",
+        "thumbnail": "images/research-style-proof-mobile-thumb.webp",
+        "width": 390,
+        "height": 900
+      },
+      {
+        "title": "Server links",
+        "source": "research/style-proof-server-links.png",
+        "file": "images/research-style-proof-server-links.webp",
+        "thumbnail": "images/research-style-proof-server-links-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "Servers",
+        "source": "research/style-proof-servers.png",
+        "file": "images/research-style-proof-servers.webp",
+        "thumbnail": "images/research-style-proof-servers-thumb.webp",
+        "width": 678,
+        "height": 710
+      },
+      {
+        "title": "Street 4x",
+        "source": "research/style-proof-street-4x.png",
+        "file": "images/research-style-proof-street-4x.webp",
+        "thumbnail": "images/research-style-proof-street-4x-thumb.webp",
+        "width": 1456,
+        "height": 1496
+      },
+      {
+        "title": "Technical mobile",
+        "source": "research/style-proof-technical-mobile.png",
+        "file": "images/research-style-proof-technical-mobile.webp",
+        "thumbnail": "images/research-style-proof-technical-mobile-thumb.webp",
+        "width": 390,
+        "height": 900
+      },
+      {
+        "title": "Technical",
+        "source": "research/style-proof-technical.png",
+        "file": "images/research-style-proof-technical.webp",
+        "thumbnail": "images/research-style-proof-technical-thumb.webp",
+        "width": 1600,
+        "height": 1250
+      },
+      {
+        "title": "Workshop 4x",
+        "source": "research/style-proof-workshop-4x.png",
+        "file": "images/research-style-proof-workshop-4x.webp",
+        "thumbnail": "images/research-style-proof-workshop-4x-thumb.webp",
+        "width": 1416,
+        "height": 1000
+      }
+    ]
+  }
+]

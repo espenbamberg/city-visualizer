@@ -4,6 +4,12 @@ Create detailed, interactive isometric maps that explain issues, services and sy
 
 The toolkit supports cities, campuses, buildings, workspaces and technical systems, with animated journeys and nested views. Generated HTML pages are self-contained and work offline.
 
+## Screenshot gallery
+
+**[Explore the visual archive](https://espenbamberg.github.io/city-visualizer/)** — saved screenshots from development reviews and project studies, including desktop, mobile, close-ups and component studies.
+
+The static website lives in `docs/`. Its screenshot catalog is `docs/screenshots.json`; full-resolution WebP images and smaller thumbnails live in `docs/images/`. After editing the catalog, regenerate the page with `node scripts/build-gallery.mjs`. GitHub Pages serves `docs/` from `main`.
+
 ## Build an example
 
 With a current Node.js installation, run:
