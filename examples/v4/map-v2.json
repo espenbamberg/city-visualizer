@@ -1,0 +1,133 @@
+{
+  "version": 2,
+  "language": "nb",
+  "root": "city",
+  "views": {
+    "city": {
+      "issue": "views/city/issue.json",
+      "scene": "views/city/scene.json"
+    },
+    "workshop": {
+      "issue": "views/workshop/issue.json",
+      "scene": "views/workshop/scene.json",
+      "boundaries": [
+        {
+          "relation": "visit",
+          "entity": "intake",
+          "direction": "in"
+        },
+        {
+          "relation": "order",
+          "entity": "intake",
+          "direction": "in"
+        },
+        {
+          "relation": "load",
+          "entity": "quality",
+          "direction": "out"
+        }
+      ]
+    },
+    "diagnostics": {
+      "issue": "views/diagnostics/issue.json",
+      "scene": "views/diagnostics/scene.json",
+      "boundaries": [
+        {
+          "relation": "inspect",
+          "entity": "isolate",
+          "direction": "in"
+        },
+        {
+          "relation": "fetch",
+          "entity": "report",
+          "direction": "out"
+        },
+        {
+          "relation": "hold",
+          "entity": "report",
+          "direction": "out"
+        }
+      ]
+    },
+    "park": {
+      "issue": "views/park/issue.json",
+      "scene": "views/park/scene.json",
+      "boundaries": [
+        {
+          "relation": "rest",
+          "entity": "entry",
+          "direction": "in"
+        },
+        {
+          "relation": "cycle",
+          "entity": "exit",
+          "direction": "out"
+        }
+      ]
+    },
+    "van": {
+      "issue": "views/van/issue.json",
+      "scene": "views/van/scene.json",
+      "boundaries": [
+        {
+          "relation": "load",
+          "entity": "cargo",
+          "direction": "in"
+        },
+        {
+          "relation": "deliver",
+          "entity": "cargo",
+          "direction": "out"
+        }
+      ]
+    },
+    "booking": {
+      "issue": "views/booking/issue.json",
+      "scene": "views/booking/scene.json",
+      "boundaries": [
+        {
+          "relation": "request",
+          "entity": "receive",
+          "direction": "in"
+        },
+        {
+          "relation": "order",
+          "entity": "send",
+          "direction": "out"
+        }
+      ]
+    },
+    "validation": {
+      "issue": "views/validation/issue.json",
+      "scene": "views/validation/scene.json",
+      "boundaries": [
+        {
+          "relation": "check",
+          "entity": "fields",
+          "direction": "in"
+        },
+        {
+          "relation": "enqueue",
+          "entity": "accepted",
+          "direction": "out"
+        },
+        {
+          "relation": "reject",
+          "entity": "rejected",
+          "direction": "out"
+        }
+      ]
+    },
+    "plane": {
+      "issue": "views/plane/issue.json",
+      "scene": "views/plane/scene.json",
+      "boundaries": [
+        {
+          "relation": "air",
+          "entity": "unload",
+          "direction": "out"
+        }
+      ]
+    }
+  }
+}

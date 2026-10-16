@@ -1,0 +1,238 @@
+{
+  "title": "Inne i bestillingen",
+  "question": "Hva skjer i inne i bestillingen?",
+  "summary": "Forespørselen kontrolleres, får et oppdragsnummer og blir en arbeidsordre. Åpne valideringen for å se kontrollene.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et reparasjonsoppdrag fra henting til ferdig levering",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "receive",
+      "number": "01",
+      "label": "Mottak",
+      "kind": "system",
+      "role": "Mottak",
+      "description": "Tar imot kundens opplysninger.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "validate",
+      "number": "02",
+      "label": "Validering",
+      "kind": "system",
+      "role": "Validering",
+      "description": "Kontrollerer nødvendige felt og kapasitet.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional",
+      "detailView": "validation"
+    },
+    {
+      "id": "queue",
+      "number": "03",
+      "label": "Ordrekø",
+      "kind": "system",
+      "role": "Ordrekø",
+      "description": "Holder bekreftede bestillinger i rekkefølge.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "store",
+      "number": "04",
+      "label": "Ordrelager",
+      "kind": "infrastructure",
+      "role": "Ordrelager",
+      "description": "Lagrer oppdrag og status.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "send",
+      "number": "05",
+      "label": "Arbeidsordre",
+      "kind": "system",
+      "role": "Arbeidsordre",
+      "description": "Sender ordren til verkstedet.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "check",
+      "from": "receive",
+      "to": "validate",
+      "kind": "information",
+      "label": "Kontroller bestillingen",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "enqueue",
+      "from": "validate",
+      "to": "queue",
+      "kind": "information",
+      "label": "Legg i kø",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "save",
+      "from": "queue",
+      "to": "store",
+      "kind": "information",
+      "label": "Lagre oppdraget",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "send",
+      "from": "store",
+      "to": "send",
+      "kind": "information",
+      "label": "Send arbeidsordren",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "reject",
+      "from": "validate",
+      "to": "receive",
+      "kind": "information",
+      "label": "Be om manglende opplysning",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "accepted",
+      "number": "01",
+      "label": "En komplett bestilling",
+      "summary": "Fra forespørsel til arbeidsordre.",
+      "condition": "Påkrevde opplysninger er oppgitt, og det finnes kapasitet.",
+      "outcome": "Verkstedet får en ordre med et lagret oppdragsnummer.",
+      "actor": {
+        "kind": "data",
+        "label": "Bestillingsdata",
+        "start": "receive"
+      },
+      "steps": [
+        {
+          "title": "Kontroller innholdet",
+          "text": "Valideringen kontrollerer apparat, kontakt og tidspunkt.",
+          "relations": [
+            "check"
+          ],
+          "state": {
+            "at": "validate",
+            "via": "check",
+            "moving": "Kontroller innholdet",
+            "caption": "Ved validering"
+          }
+        },
+        {
+          "title": "Plasser i ordrekøen",
+          "text": "Den godkjente bestillingen går videre i køen.",
+          "relations": [
+            "enqueue"
+          ],
+          "state": {
+            "at": "queue",
+            "via": "enqueue",
+            "moving": "Plasser i ordrekøen",
+            "caption": "Ved ordrekø"
+          }
+        },
+        {
+          "title": "Lagre oppdraget",
+          "text": "Ordrelageret tildeler et oppdragsnummer.",
+          "relations": [
+            "save"
+          ],
+          "state": {
+            "at": "store",
+            "via": "save",
+            "moving": "Lagre oppdraget",
+            "caption": "Ved ordrelager"
+          }
+        },
+        {
+          "title": "Overlever til verkstedet",
+          "text": "Arbeidsordren inneholder opplysningene verkstedet trenger.",
+          "relations": [
+            "send"
+          ],
+          "state": {
+            "at": "send",
+            "via": "send",
+            "moving": "Overlever til verkstedet",
+            "caption": "Ved arbeidsordre"
+          }
+        }
+      ]
+    },
+    {
+      "id": "incomplete",
+      "number": "02",
+      "label": "En opplysning mangler",
+      "summary": "Forespørselen returneres med en konkret beskjed.",
+      "condition": "Kontaktinformasjonen mangler.",
+      "outcome": "Kunden får vite hvilket felt som må fylles ut.",
+      "actor": {
+        "kind": "data",
+        "label": "Bestillingsdata",
+        "start": "receive"
+      },
+      "steps": [
+        {
+          "title": "Finn det tomme feltet",
+          "text": "Valideringen finner at kontaktinformasjonen mangler.",
+          "relations": [
+            "check"
+          ],
+          "state": {
+            "at": "validate",
+            "via": "check",
+            "moving": "Finn det tomme feltet",
+            "caption": "Ved validering"
+          }
+        },
+        {
+          "title": "Be om kontaktinformasjon",
+          "text": "Mottaket sender beskjed om hvilket felt som må rettes.",
+          "relations": [
+            "reject"
+          ],
+          "state": {
+            "at": "receive",
+            "via": "reject",
+            "moving": "Be om kontaktinformasjon",
+            "caption": "Ved mottak"
+          }
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "storyHeading": "Velg et forløp"
+  },
+  "legend": {
+    "movement": "Fysisk bevegelse",
+    "information": "Informasjon",
+    "electricity": "Elektrisk strøm",
+    "dependency": "Avhengighet"
+  }
+}

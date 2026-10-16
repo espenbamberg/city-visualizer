@@ -1,0 +1,992 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      660,
+      569,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 660,
+      "d": 569,
+      "h": 3,
+      "material": "#ded9c9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "w": 660,
+      "d": 4,
+      "h": 62,
+      "material": "#c4c6b5"
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "w": 4,
+      "d": 569,
+      "h": 46,
+      "material": "#b8c3b4"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          40,
+          4,
+          3.1
+        ],
+        [
+          40,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          80,
+          4,
+          3.1
+        ],
+        [
+          80,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          120,
+          4,
+          3.1
+        ],
+        [
+          120,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          160,
+          4,
+          3.1
+        ],
+        [
+          160,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          200,
+          4,
+          3.1
+        ],
+        [
+          200,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          240,
+          4,
+          3.1
+        ],
+        [
+          240,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          280,
+          4,
+          3.1
+        ],
+        [
+          280,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          320,
+          4,
+          3.1
+        ],
+        [
+          320,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          360,
+          4,
+          3.1
+        ],
+        [
+          360,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          400,
+          4,
+          3.1
+        ],
+        [
+          400,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          440,
+          4,
+          3.1
+        ],
+        [
+          440,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          480,
+          4,
+          3.1
+        ],
+        [
+          480,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          520,
+          4,
+          3.1
+        ],
+        [
+          520,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          560,
+          4,
+          3.1
+        ],
+        [
+          560,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          600,
+          4,
+          3.1
+        ],
+        [
+          600,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          640,
+          4,
+          3.1
+        ],
+        [
+          640,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          40,
+          3.1
+        ],
+        [
+          660,
+          40,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          80,
+          3.1
+        ],
+        [
+          660,
+          80,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          120,
+          3.1
+        ],
+        [
+          660,
+          120,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          160,
+          3.1
+        ],
+        [
+          660,
+          160,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          200,
+          3.1
+        ],
+        [
+          660,
+          200,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          240,
+          3.1
+        ],
+        [
+          660,
+          240,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          280,
+          3.1
+        ],
+        [
+          660,
+          280,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          320,
+          3.1
+        ],
+        [
+          660,
+          320,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          360,
+          3.1
+        ],
+        [
+          660,
+          360,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          400,
+          3.1
+        ],
+        [
+          660,
+          400,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          440,
+          3.1
+        ],
+        [
+          660,
+          440,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          480,
+          3.1
+        ],
+        [
+          660,
+          480,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          520,
+          3.1
+        ],
+        [
+          660,
+          520,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          560,
+          3.1
+        ],
+        [
+          660,
+          560,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 28,
+      "z": 3,
+      "w": 81,
+      "d": 78,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 197,
+      "y": 28,
+      "z": 3,
+      "w": 196,
+      "d": 139,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 447,
+      "y": 28,
+      "z": 3,
+      "w": 64,
+      "d": 66,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 304,
+      "z": 3,
+      "w": 101,
+      "d": 89,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 402,
+      "y": 304,
+      "z": 3,
+      "w": 166,
+      "d": 120,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "intake",
+      "entity": "intake",
+      "asset": "desk",
+      "x": 30,
+      "y": 36,
+      "w": 65,
+      "d": 44,
+      "h": 52,
+      "anchor": [
+        117,
+        144,
+        4
+      ],
+      "label": [
+        62.5,
+        100,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Mottaksbord"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "MOTTAKSBORD",
+      "size": "compact",
+      "emphasis": "context"
+    },
+    {
+      "id": "diagnosis",
+      "entity": "diagnosis",
+      "asset": "tester",
+      "x": 205,
+      "y": 36,
+      "w": 180,
+      "d": 105,
+      "h": 65,
+      "anchor": [
+        407,
+        205,
+        4
+      ],
+      "label": [
+        295,
+        161,
+        4
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Diagnosebenk"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "DIAGNOSEBENK",
+      "size": "expanded",
+      "emphasis": "primary"
+    },
+    {
+      "id": "parts",
+      "entity": "parts",
+      "asset": "shelf",
+      "x": 455,
+      "y": 36,
+      "w": 48,
+      "d": 32,
+      "h": 68,
+      "anchor": [
+        525,
+        132,
+        4
+      ],
+      "label": [
+        479,
+        88,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Delehylle"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "DELEHYLLE",
+      "size": "compact",
+      "emphasis": "context"
+    },
+    {
+      "id": "quality",
+      "entity": "quality",
+      "asset": "tester",
+      "x": 30,
+      "y": 312,
+      "w": 85,
+      "d": 55,
+      "h": 65,
+      "anchor": [
+        137,
+        431,
+        4
+      ],
+      "label": [
+        72.5,
+        387,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Sluttkontroll"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "SLUTTKONTROLL",
+      "size": "regular",
+      "emphasis": "supporting"
+    },
+    {
+      "id": "repair",
+      "entity": "repair",
+      "asset": "workbench",
+      "x": 410,
+      "y": 312,
+      "w": 150,
+      "d": 86,
+      "h": 55,
+      "anchor": [
+        582,
+        462,
+        4
+      ],
+      "label": [
+        485,
+        418,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10,
+        "lines": [
+          "Arbeidsbenk"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "ARBEIDSBENK",
+      "size": "expanded",
+      "emphasis": "primary"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "inspect",
+      "points": [
+        [
+          117,
+          144,
+          4
+        ],
+        [
+          117,
+          257,
+          4
+        ],
+        [
+          407,
+          257,
+          4
+        ],
+        [
+          407,
+          205,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "fetch",
+      "points": [
+        [
+          407,
+          205,
+          4
+        ],
+        [
+          407,
+          257,
+          4
+        ],
+        [
+          525,
+          257,
+          4
+        ],
+        [
+          525,
+          132,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "fix",
+      "points": [
+        [
+          525,
+          132,
+          4
+        ],
+        [
+          525,
+          257,
+          4
+        ],
+        [
+          642,
+          257,
+          4
+        ],
+        [
+          642,
+          514,
+          4
+        ],
+        [
+          582,
+          514,
+          4
+        ],
+        [
+          582,
+          462,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "test",
+      "points": [
+        [
+          582,
+          462,
+          4
+        ],
+        [
+          582,
+          514,
+          4
+        ],
+        [
+          137,
+          514,
+          4
+        ],
+        [
+          137,
+          431,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "hold",
+      "points": [
+        [
+          407,
+          205,
+          4
+        ],
+        [
+          407,
+          257,
+          4
+        ],
+        [
+          117,
+          257,
+          4
+        ],
+        [
+          117,
+          144,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "repair",
+      "actor": {
+        "identity": "technician",
+        "at": [
+          117,
+          144,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            295,
+            88.5,
+            93
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            479,
+            52,
+            96
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            485,
+            355,
+            83
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            72.5,
+            339.5,
+            93
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "technician",
+        "at": [
+          117,
+          144,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            295,
+            88.5,
+            93
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            62.5,
+            58,
+            80
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

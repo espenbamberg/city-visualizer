@@ -1,0 +1,1227 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      585,
+      531,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 585,
+      "d": 531,
+      "h": 3,
+      "material": "#ded9c9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "w": 585,
+      "d": 4,
+      "h": 62,
+      "material": "#c4c6b5"
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "w": 4,
+      "d": 531,
+      "h": 46,
+      "material": "#b8c3b4"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          40,
+          4,
+          3.1
+        ],
+        [
+          40,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          80,
+          4,
+          3.1
+        ],
+        [
+          80,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          120,
+          4,
+          3.1
+        ],
+        [
+          120,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          160,
+          4,
+          3.1
+        ],
+        [
+          160,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          200,
+          4,
+          3.1
+        ],
+        [
+          200,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          240,
+          4,
+          3.1
+        ],
+        [
+          240,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          280,
+          4,
+          3.1
+        ],
+        [
+          280,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          320,
+          4,
+          3.1
+        ],
+        [
+          320,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          360,
+          4,
+          3.1
+        ],
+        [
+          360,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          400,
+          4,
+          3.1
+        ],
+        [
+          400,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          440,
+          4,
+          3.1
+        ],
+        [
+          440,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          480,
+          4,
+          3.1
+        ],
+        [
+          480,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          520,
+          4,
+          3.1
+        ],
+        [
+          520,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          560,
+          4,
+          3.1
+        ],
+        [
+          560,
+          531,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          40,
+          3.1
+        ],
+        [
+          585,
+          40,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          80,
+          3.1
+        ],
+        [
+          585,
+          80,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          120,
+          3.1
+        ],
+        [
+          585,
+          120,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          160,
+          3.1
+        ],
+        [
+          585,
+          160,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          200,
+          3.1
+        ],
+        [
+          585,
+          200,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          240,
+          3.1
+        ],
+        [
+          585,
+          240,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          280,
+          3.1
+        ],
+        [
+          585,
+          280,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          320,
+          3.1
+        ],
+        [
+          585,
+          320,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          360,
+          3.1
+        ],
+        [
+          585,
+          360,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          400,
+          3.1
+        ],
+        [
+          585,
+          400,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          440,
+          3.1
+        ],
+        [
+          585,
+          440,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          480,
+          3.1
+        ],
+        [
+          585,
+          480,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          520,
+          3.1
+        ],
+        [
+          585,
+          520,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 28,
+      "z": 3,
+      "w": 96,
+      "d": 82,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 297,
+      "y": 28,
+      "z": 3,
+      "w": 196,
+      "d": 139,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 304,
+      "z": 3,
+      "w": 81,
+      "d": 82,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 197,
+      "y": 304,
+      "z": 3,
+      "w": 91,
+      "d": 82,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 372,
+      "y": 304,
+      "z": 3,
+      "w": 68,
+      "d": 74,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "isolate",
+      "entity": "isolate",
+      "asset": "workbench",
+      "x": 30,
+      "y": 36,
+      "w": 80,
+      "d": 48,
+      "h": 55,
+      "anchor": [
+        50,
+        148,
+        3
+      ],
+      "label": [
+        70,
+        104,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Klargjøring"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "KLARGJØRING",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "repair"
+    },
+    {
+      "id": "probe",
+      "entity": "probe",
+      "asset": "tester",
+      "x": 305,
+      "y": 36,
+      "w": 180,
+      "d": 105,
+      "h": 65,
+      "anchor": [
+        350,
+        205,
+        3
+      ],
+      "label": [
+        395,
+        161,
+        4
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Målepunkt"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "MÅLEPUNKT",
+      "size": "expanded",
+      "emphasis": "primary",
+      "process": "measurement"
+    },
+    {
+      "id": "read",
+      "entity": "read",
+      "asset": "terminal",
+      "x": 30,
+      "y": 312,
+      "w": 65,
+      "d": 48,
+      "h": 45,
+      "anchor": [
+        46.25,
+        424,
+        3
+      ],
+      "label": [
+        62.5,
+        380,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Måleinstrument"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "MÅLEINSTRUMENT",
+      "size": "regular",
+      "emphasis": "supporting",
+      "process": "readout"
+    },
+    {
+      "id": "compare",
+      "entity": "compare",
+      "asset": "desk",
+      "x": 205,
+      "y": 312,
+      "w": 75,
+      "d": 48,
+      "h": 52,
+      "anchor": [
+        223.75,
+        424,
+        3
+      ],
+      "label": [
+        242.5,
+        380,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Sammenligning"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "SAMMENLIGNING",
+      "size": "regular",
+      "emphasis": "supporting",
+      "process": "record"
+    },
+    {
+      "id": "report",
+      "entity": "report",
+      "asset": "terminal",
+      "x": 380,
+      "y": 312,
+      "w": 52,
+      "d": 40,
+      "h": 45,
+      "anchor": [
+        393,
+        416,
+        3
+      ],
+      "label": [
+        406,
+        372,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Feilrapport"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "FEILRAPPORT",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "dispatch"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "prepare",
+      "points": [
+        [
+          50,
+          148,
+          3
+        ],
+        [
+          132,
+          257,
+          4
+        ],
+        [
+          507,
+          257,
+          4
+        ],
+        [
+          350,
+          205,
+          3
+        ]
+      ],
+      "network": {
+        "from": "isolate-entry",
+        "to": "probe-entry",
+        "mode": "person"
+      },
+      "edges": [
+        "link-0",
+        "link-1",
+        "link-2"
+      ]
+    },
+    {
+      "relation": "measure",
+      "points": [
+        [
+          350,
+          205,
+          3
+        ],
+        [
+          507,
+          257,
+          4
+        ],
+        [
+          567,
+          257,
+          4
+        ],
+        [
+          567,
+          476,
+          4
+        ],
+        [
+          117,
+          476,
+          4
+        ],
+        [
+          46.25,
+          424,
+          3
+        ]
+      ],
+      "network": {
+        "from": "probe-entry",
+        "to": "read-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-2",
+        "link-3",
+        "link-4",
+        "link-5",
+        "link-6"
+      ]
+    },
+    {
+      "relation": "compare",
+      "points": [
+        [
+          46.25,
+          424,
+          3
+        ],
+        [
+          117,
+          476,
+          4
+        ],
+        [
+          302,
+          476,
+          4
+        ],
+        [
+          223.75,
+          424,
+          3
+        ]
+      ],
+      "network": {
+        "from": "read-entry",
+        "to": "compare-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-6",
+        "link-7",
+        "link-8"
+      ]
+    },
+    {
+      "relation": "report",
+      "points": [
+        [
+          223.75,
+          424,
+          3
+        ],
+        [
+          302,
+          476,
+          4
+        ],
+        [
+          454,
+          476,
+          4
+        ],
+        [
+          393,
+          416,
+          3
+        ]
+      ],
+      "network": {
+        "from": "compare-entry",
+        "to": "report-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-8",
+        "link-9",
+        "link-10"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "measure",
+      "actor": {
+        "identity": "technician",
+        "at": [
+          50,
+          148,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            395,
+            88.5,
+            93
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "probe",
+              "part": "component",
+              "state": "active"
+            },
+            {
+              "entity": "probe",
+              "part": "probes",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            62.5,
+            336,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "read",
+              "part": "input",
+              "state": "active"
+            },
+            {
+              "entity": "read",
+              "part": "display",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            242.5,
+            336,
+            80
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "compare",
+              "part": "record",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            406,
+            332,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "report",
+              "part": "output",
+              "state": "active"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adaptiveDetail": true,
+  "network": {
+    "nodes": [
+      {
+        "id": "junction-0",
+        "at": [
+          50,
+          148,
+          3
+        ]
+      },
+      {
+        "id": "junction-1",
+        "at": [
+          350,
+          205,
+          3
+        ]
+      },
+      {
+        "id": "junction-2",
+        "at": [
+          46.25,
+          424,
+          3
+        ]
+      },
+      {
+        "id": "junction-3",
+        "at": [
+          223.75,
+          424,
+          3
+        ]
+      },
+      {
+        "id": "junction-4",
+        "at": [
+          393,
+          416,
+          3
+        ]
+      },
+      {
+        "id": "junction-5",
+        "at": [
+          132,
+          257,
+          4
+        ]
+      },
+      {
+        "id": "junction-6",
+        "at": [
+          507,
+          257,
+          4
+        ]
+      },
+      {
+        "id": "junction-7",
+        "at": [
+          567,
+          257,
+          4
+        ]
+      },
+      {
+        "id": "junction-8",
+        "at": [
+          567,
+          476,
+          4
+        ]
+      },
+      {
+        "id": "junction-9",
+        "at": [
+          117,
+          476,
+          4
+        ]
+      },
+      {
+        "id": "junction-10",
+        "at": [
+          302,
+          476,
+          4
+        ]
+      },
+      {
+        "id": "junction-11",
+        "at": [
+          454,
+          476,
+          4
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "link-0",
+        "from": "junction-0",
+        "to": "junction-5",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-1",
+        "from": "junction-5",
+        "to": "junction-6",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-2",
+        "from": "junction-6",
+        "to": "junction-1",
+        "surface": "path",
+        "modes": [
+          "person",
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-3",
+        "from": "junction-6",
+        "to": "junction-7",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-4",
+        "from": "junction-7",
+        "to": "junction-8",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-5",
+        "from": "junction-8",
+        "to": "junction-9",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-6",
+        "from": "junction-9",
+        "to": "junction-2",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-7",
+        "from": "junction-9",
+        "to": "junction-10",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-8",
+        "from": "junction-10",
+        "to": "junction-3",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-9",
+        "from": "junction-10",
+        "to": "junction-11",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-10",
+        "from": "junction-11",
+        "to": "junction-4",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      }
+    ],
+    "ports": [
+      {
+        "id": "isolate-entry",
+        "entity": "isolate",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-0"
+      },
+      {
+        "id": "probe-entry",
+        "entity": "probe",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-1"
+      },
+      {
+        "id": "read-entry",
+        "entity": "read",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-2"
+      },
+      {
+        "id": "compare-entry",
+        "entity": "compare",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-3"
+      },
+      {
+        "id": "report-entry",
+        "entity": "report",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-4"
+      }
+    ]
+  }
+}

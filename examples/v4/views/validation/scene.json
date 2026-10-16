@@ -1,0 +1,788 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      600,
+      522,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 600,
+      "d": 522,
+      "h": 3,
+      "material": "#c1cfc9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 28,
+      "z": 3,
+      "w": 136,
+      "d": 106,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 387,
+      "y": 28,
+      "z": 3,
+      "w": 81,
+      "d": 82,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 271,
+      "z": 3,
+      "w": 136,
+      "d": 106,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 212,
+      "y": 271,
+      "z": 3,
+      "w": 64,
+      "d": 70,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 387,
+      "y": 271,
+      "z": 3,
+      "w": 68,
+      "d": 74,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "fields",
+      "entity": "fields",
+      "asset": "terminal",
+      "x": 30,
+      "y": 36,
+      "w": 120,
+      "d": 72,
+      "h": 45,
+      "anchor": [
+        60,
+        172,
+        3
+      ],
+      "label": [
+        90,
+        128,
+        4
+      ],
+      "labelStyle": {
+        "width": 120,
+        "size": 10,
+        "lines": [
+          "Feltkontroll"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "FELTKONTROLL",
+      "size": "expanded",
+      "emphasis": "primary",
+      "process": "checks"
+    },
+    {
+      "id": "capacity",
+      "entity": "capacity",
+      "asset": "terminal",
+      "x": 395,
+      "y": 36,
+      "w": 65,
+      "d": 48,
+      "h": 45,
+      "anchor": [
+        411.25,
+        148,
+        3
+      ],
+      "label": [
+        427.5,
+        104,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Kapasitetskontroll"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "KAPASITETSKONTROLL",
+      "size": "regular",
+      "emphasis": "supporting",
+      "process": "checks"
+    },
+    {
+      "id": "decision",
+      "entity": "decision",
+      "asset": "terminal",
+      "x": 30,
+      "y": 279,
+      "w": 120,
+      "d": 72,
+      "h": 45,
+      "anchor": [
+        60,
+        415,
+        3
+      ],
+      "label": [
+        90,
+        371,
+        4
+      ],
+      "labelStyle": {
+        "width": 120,
+        "size": 10,
+        "lines": [
+          "Beslutning"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "BESLUTNING",
+      "size": "expanded",
+      "emphasis": "primary",
+      "process": "checks"
+    },
+    {
+      "id": "accepted",
+      "entity": "accepted",
+      "asset": "queue",
+      "x": 220,
+      "y": 279,
+      "w": 48,
+      "d": 36,
+      "h": 40,
+      "anchor": [
+        232,
+        379,
+        3
+      ],
+      "label": [
+        244,
+        335,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Godkjent"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "GODKJENT",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "queue"
+    },
+    {
+      "id": "rejected",
+      "entity": "rejected",
+      "asset": "terminal",
+      "x": 395,
+      "y": 279,
+      "w": 52,
+      "d": 40,
+      "h": 45,
+      "anchor": [
+        408,
+        383,
+        3
+      ],
+      "label": [
+        421,
+        339,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Returmelding"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "RETURMELDING",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "dispatch"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "capacity",
+      "points": [
+        [
+          60,
+          172,
+          3
+        ],
+        [
+          172,
+          224,
+          4
+        ],
+        [
+          482,
+          224,
+          4
+        ],
+        [
+          411.25,
+          148,
+          3
+        ]
+      ],
+      "network": {
+        "from": "fields-entry",
+        "to": "capacity-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-0",
+        "link-1",
+        "link-2"
+      ]
+    },
+    {
+      "relation": "decide",
+      "points": [
+        [
+          411.25,
+          148,
+          3
+        ],
+        [
+          482,
+          224,
+          4
+        ],
+        [
+          582,
+          224,
+          4
+        ],
+        [
+          582,
+          467,
+          4
+        ],
+        [
+          172,
+          467,
+          4
+        ],
+        [
+          60,
+          415,
+          3
+        ]
+      ],
+      "network": {
+        "from": "capacity-entry",
+        "to": "decision-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-2",
+        "link-3",
+        "link-4",
+        "link-5",
+        "link-6"
+      ]
+    },
+    {
+      "relation": "accept",
+      "points": [
+        [
+          60,
+          415,
+          3
+        ],
+        [
+          172,
+          467,
+          4
+        ],
+        [
+          290,
+          467,
+          4
+        ],
+        [
+          232,
+          379,
+          3
+        ]
+      ],
+      "network": {
+        "from": "decision-entry",
+        "to": "accepted-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-6",
+        "link-7",
+        "link-8"
+      ]
+    },
+    {
+      "relation": "reject",
+      "points": [
+        [
+          60,
+          172,
+          3
+        ],
+        [
+          172,
+          224,
+          4
+        ],
+        [
+          582,
+          224,
+          4
+        ],
+        [
+          582,
+          467,
+          4
+        ],
+        [
+          469,
+          467,
+          4
+        ],
+        [
+          408,
+          383,
+          3
+        ]
+      ],
+      "network": {
+        "from": "fields-entry",
+        "to": "rejected-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-0",
+        "link-9",
+        "link-4",
+        "link-10",
+        "link-11"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "ok",
+      "actor": {
+        "identity": "ok",
+        "at": [
+          60,
+          172,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            427.5,
+            60,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "capacity",
+              "part": "capacity",
+              "state": "done"
+            }
+          ]
+        },
+        {
+          "at": [
+            90,
+            315,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "decision",
+              "part": "fields",
+              "state": "done"
+            },
+            {
+              "entity": "decision",
+              "part": "capacity",
+              "state": "done"
+            },
+            {
+              "entity": "decision",
+              "part": "decision",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            244,
+            297,
+            68
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "accepted",
+              "part": "released",
+              "state": "done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "missing",
+        "at": [
+          60,
+          172,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            421,
+            299,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "fields",
+              "part": "fields",
+              "state": "blocked"
+            },
+            {
+              "entity": "rejected",
+              "part": "output",
+              "state": "active"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adaptiveDetail": true,
+  "network": {
+    "nodes": [
+      {
+        "id": "junction-0",
+        "at": [
+          60,
+          172,
+          3
+        ]
+      },
+      {
+        "id": "junction-1",
+        "at": [
+          411.25,
+          148,
+          3
+        ]
+      },
+      {
+        "id": "junction-2",
+        "at": [
+          60,
+          415,
+          3
+        ]
+      },
+      {
+        "id": "junction-3",
+        "at": [
+          232,
+          379,
+          3
+        ]
+      },
+      {
+        "id": "junction-4",
+        "at": [
+          408,
+          383,
+          3
+        ]
+      },
+      {
+        "id": "junction-5",
+        "at": [
+          172,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-6",
+        "at": [
+          482,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-7",
+        "at": [
+          582,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-8",
+        "at": [
+          582,
+          467,
+          4
+        ]
+      },
+      {
+        "id": "junction-9",
+        "at": [
+          172,
+          467,
+          4
+        ]
+      },
+      {
+        "id": "junction-10",
+        "at": [
+          290,
+          467,
+          4
+        ]
+      },
+      {
+        "id": "junction-11",
+        "at": [
+          469,
+          467,
+          4
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "link-0",
+        "from": "junction-0",
+        "to": "junction-5",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-1",
+        "from": "junction-5",
+        "to": "junction-6",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-2",
+        "from": "junction-6",
+        "to": "junction-1",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-3",
+        "from": "junction-6",
+        "to": "junction-7",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-4",
+        "from": "junction-7",
+        "to": "junction-8",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-5",
+        "from": "junction-8",
+        "to": "junction-9",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-6",
+        "from": "junction-9",
+        "to": "junction-2",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-7",
+        "from": "junction-9",
+        "to": "junction-10",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-8",
+        "from": "junction-10",
+        "to": "junction-3",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-9",
+        "from": "junction-5",
+        "to": "junction-7",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-10",
+        "from": "junction-8",
+        "to": "junction-11",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-11",
+        "from": "junction-11",
+        "to": "junction-4",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      }
+    ],
+    "ports": [
+      {
+        "id": "fields-entry",
+        "entity": "fields",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-0"
+      },
+      {
+        "id": "capacity-entry",
+        "entity": "capacity",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-1"
+      },
+      {
+        "id": "decision-entry",
+        "entity": "decision",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-2"
+      },
+      {
+        "id": "accepted-entry",
+        "entity": "accepted",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-3"
+      },
+      {
+        "id": "rejected-entry",
+        "entity": "rejected",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "linden-heat",
+  "title": "A neighbourhood in the heat",
+  "question": "Where can a resident find relief on a hot afternoon?",
+  "summary": "Follow a resident from home to school, across sun-exposed paving, through a shaded park and into a community cool room. Surfaces, shade and an open door shape the journey.",
+  "status": "fictional",
+  "presentation": {
+    "eyebrow": "LINDEN / AN ENVIRONMENTAL ISSUE MAP",
+    "intro": "The same hot day. Different surfaces, shade and access to relief.",
+    "storyHeading": "Relief is more than a nearby building.",
+    "caption": "Follow the people, the conditions and the door that must be open."
+  },
+  "legend": { "movement": "People walking", "information": "Notices", "dependency": "Access conditions", "influence": "Environmental influence" },
+  "sources": [
+    { "id": "fixture", "title": "Linden neighbourhood — example brief", "locator": "brief.md · Participants, operating conditions and scenarios", "date": "2026-10-12" },
+    { "id": "epa-surfaces", "title": "US EPA — What Are Heat Islands?", "locator": "https://www.epa.gov/heatislands/learn-about-heat-islands · Causes and Characteristics; reviewed 2026-10-12", "date": "2026-08-18" },
+    { "id": "epa-trees", "title": "US EPA — Benefits of Trees and Vegetation", "locator": "https://www.epa.gov/heatislands/benefits-trees-and-vegetation · How Trees and Vegetation Reduce Heat; reviewed 2026-10-12", "date": "2026-05-15" },
+    { "id": "who-heat", "title": "WHO — Heat and health", "locator": "https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health · Exposure, vulnerability and public actions; reviewed 2026-10-12", "date": "2026-07-31" }
+  ],
+  "entities": [
+    { "id": "home", "number": "01", "label": "Resident's home", "kind": "place", "role": "Resident and family", "description": "The resident leaves home to collect a child from school, following the school's heat-day notice.", "constraint": "The pickup route needs to suit the family's mobility and walking distance.", "source": "fixture", "status": "fictional" },
+    { "id": "school", "number": "02", "label": "Linden school", "kind": "place", "role": "Children, caregivers and school staff", "description": "A classroom opens onto the neighbourhood. Staff share a heat-day notice with families, and the resident meets the child at the nearby square.", "constraint": "Families rely on the school to pass on current opening information for the community room.", "source": "fixture", "status": "fictional" },
+    { "id": "square", "number": "03", "label": "Sunlit square", "kind": "place", "role": "Exposed meeting point and paved surface", "description": "The family meets on a paved square beside the school. Sun-exposed paving absorbs and re-emits heat.", "constraint": "The waiting area has little shade, so the family moves to the park path after pickup.", "source": "fixture", "status": "fictional" },
+    { "id": "park", "number": "04", "label": "Canopy park", "kind": "place", "role": "Walkers and parks maintenance staff", "description": "Mature trees shade parts of the path and seating area. Vegetation also cools through evapotranspiration. The family takes this route toward the community room.", "constraint": "Shade shifts with the sun. The route follows the shaded parts of the maintained path.", "source": "fixture", "status": "fictional" },
+    { "id": "cool-room", "number": "05", "label": "Community cool room", "kind": "place", "role": "Visitors and community staff", "description": "An indoor meeting room offers seats, drinking water and mechanical cooling. In the first story it is open; in the second, the resident arrives after an unexpected closure.", "constraint": "The room needs an open entrance, staff, power and working cooling to receive visitors.", "source": "fixture", "status": "fictional" }
+  ],
+  "relationships": [
+    { "id": "walk-school", "from": "home", "to": "school", "kind": "movement", "label": "Resident walks to school for pickup", "shortLabel": "Walk to school", "source": "fixture", "status": "fictional" },
+    { "id": "meet-square", "from": "school", "to": "square", "kind": "movement", "label": "Family meets at the exposed square", "shortLabel": "Meet on exposed paving", "source": "fixture", "status": "fictional" },
+    { "id": "seek-shade", "from": "square", "to": "park", "kind": "movement", "label": "Family moves from the square to the shaded park path", "shortLabel": "Choose a shaded path", "source": "fixture", "status": "fictional" },
+    { "id": "reach-room", "from": "park", "to": "cool-room", "kind": "movement", "label": "Family walks from the park to the community room", "shortLabel": "Reach the cool room", "source": "fixture", "status": "fictional" },
+    { "id": "return-shade", "from": "cool-room", "to": "park", "kind": "movement", "label": "Family returns to park shade after finding the room closed", "shortLabel": "Return without indoor refuge", "source": "fixture", "status": "fictional" },
+    { "id": "opening-notice", "from": "cool-room", "to": "school", "kind": "information", "label": "Community staff publish opening information to the school", "shortLabel": "Published opening information", "source": "fixture", "status": "fictional" },
+    { "id": "family-notice", "from": "school", "to": "home", "kind": "information", "label": "School shares the heat-day notice with families", "shortLabel": "Heat-day notice", "source": "fixture", "status": "fictional" },
+    { "id": "paving-influence", "from": "square", "to": "school", "kind": "influence", "label": "Sun-exposed paving can contribute to outdoor heat exposure beside the school", "shortLabel": "Paving stores and releases heat", "source": "epa-surfaces", "status": "inferred" },
+    { "id": "room-access", "from": "school", "to": "cool-room", "kind": "dependency", "label": "The school community's indoor respite depends on the room being open and functioning", "shortLabel": "Requires an open, functioning room", "source": "fixture", "status": "fictional" }
+  ],
+  "scenarios": [
+    { "id": "hot-afternoon", "number": "01", "label": "A hot afternoon", "summary": "From pickup to shade and an indoor break.", "condition": "The resident can make this walk. The park path is accessible, and the community cool room is open with working cooling.", "outcome": "The family reaches the community room for an indoor break after using the shaded park path.", "actor": {"kind":"person","label":"Resident in the ochre coat","start":"home"}, "steps": [
+      { "title": "Walk to school", "text": "The resident in the ochre coat leaves home to collect the child, following the school's heat-day notice.", "relations": ["family-notice", "walk-school"], "state":{"at":"school","via":"walk-school","moving":"Walking to school","caption":"At the school pickup point","access":{"entity":"cool-room","value":"open"}} },
+      { "title": "Wait on exposed paving", "text": "The family meets at the largely unshaded square. The paving absorbs and re-emits solar heat, and the family waits in direct sun.", "relations": ["meet-square", "paving-influence"], "problem": true, "state":{"at":"square","via":"meet-square","moving":"Walking to the exposed square","caption":"Waiting on exposed paving","access":{"entity":"cool-room","value":"open"}} },
+      { "title": "Move into patchy shade", "text": "They take the park path to get out of direct sun. The tree canopy provides shade, and vegetation cools through evapotranspiration.", "relations": ["seek-shade"], "state":{"at":"park","via":"seek-shade","moving":"Walking into park shade","caption":"On the shaded park path","access":{"entity":"cool-room","value":"open"}} },
+      { "title": "Reach an open cool room", "text": "The family enters the community room for an indoor break. Seats, drinking water and working cooling are available inside.", "relations": ["reach-room", "room-access"], "state":{"at":"cool-room","via":"reach-room","moving":"Walking to the open room","caption":"Inside the open cool room","access":{"entity":"cool-room","value":"open"}} }
+    ] },
+    { "id": "closed-door", "number": "02", "label": "A closed door", "summary": "An outdated notice leads to a closed entrance.", "condition": "The family is at the park and relies on an outdated opening notice. The community room has closed unexpectedly.", "outcome": "They return to park shade without reaching indoor refuge. They still need another indoor place to take a break.", "actor": {"kind":"person","label":"Resident in the ochre coat","start":"park"}, "steps": [
+      { "title": "Follow the old notice", "text": "The family leaves the park for the room using previously published information. The entrance is already closed, although the resident has not discovered this yet.", "relations": ["opening-notice", "reach-room"], "state":{"at":"cool-room","via":"reach-room","moving":"Following the old opening notice","caption":"Outside the closed entrance","access":{"entity":"cool-room","value":"closed"}} },
+      { "title": "The room is closed", "text": "The family reaches a closed entrance. The room's unexpected closure has not reached them through the school's notice.", "relations": ["room-access"], "problem": true, "state":{"at":"cool-room","caption":"Door closed — no indoor access","access":{"entity":"cool-room","value":"closed"}} },
+      { "title": "Return to shade", "text": "The family returns to the park. They wait in the shade while looking for another indoor place to take a break.", "relations": ["return-shade"], "problem": true, "state":{"at":"park","via":"return-shade","moving":"Returning to park shade","caption":"Back in shade; indoor refuge unresolved","access":{"entity":"cool-room","value":"closed"}} }
+    ] }
+  ]
+}

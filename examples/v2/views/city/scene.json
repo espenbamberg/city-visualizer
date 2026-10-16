@@ -1,0 +1,1185 @@
+{
+  "width": 1600,
+  "height": 1100,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 34
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1504,
+      760,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": -3,
+      "w": 1504,
+      "d": 760,
+      "h": 4,
+      "material": "#e4e0cf",
+      "r": 6
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 322,
+      "z": 1,
+      "w": 1504,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          344,
+          2
+        ],
+        [
+          1504,
+          344,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 702,
+      "z": 1,
+      "w": 1504,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          724,
+          2
+        ],
+        [
+          1504,
+          724,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 324,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 760,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          344,
+          0,
+          2
+        ],
+        [
+          344,
+          760,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 700,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 760,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          720,
+          0,
+          2
+        ],
+        [
+          720,
+          760,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 1076,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 760,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          1096,
+          0,
+          2
+        ],
+        [
+          1096,
+          760,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 1452,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 760,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          1472,
+          0,
+          2
+        ],
+        [
+          1472,
+          760,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "text",
+      "at": [
+        30,
+        22,
+        3
+      ],
+      "text": "NABOLAG OG VERKSTED",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 46,
+      "z": 1,
+      "w": 164,
+      "d": 198,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 165,
+      "y": 206,
+      "z": 2,
+      "w": 14,
+      "d": 138,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 404,
+      "y": 46,
+      "z": 1,
+      "w": 308,
+      "d": 238,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 685,
+      "y": 246,
+      "z": 2,
+      "w": 14,
+      "d": 98,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 426,
+      "z": 1,
+      "w": 252,
+      "d": 260,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 253,
+      "y": 648,
+      "z": 2,
+      "w": 14,
+      "d": 76,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 404,
+      "y": 426,
+      "z": 1,
+      "w": 102,
+      "d": 134,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 479,
+      "y": 522,
+      "z": 2,
+      "w": 14,
+      "d": 202,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "text",
+      "at": [
+        782,
+        22,
+        3
+      ],
+      "text": "LEVERING OG BESTILLING",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 780,
+      "y": 46,
+      "z": 1,
+      "w": 175,
+      "d": 199,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 928,
+      "y": 207,
+      "z": 2,
+      "w": 14,
+      "d": 137,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1156,
+      "y": 46,
+      "z": 1,
+      "w": 110,
+      "d": 149,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1239,
+      "y": 157,
+      "z": 2,
+      "w": 14,
+      "d": 187,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 780,
+      "y": 426,
+      "z": 1,
+      "w": 132,
+      "d": 186,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 885,
+      "y": 574,
+      "z": 2,
+      "w": 14,
+      "d": 150,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1156,
+      "y": 426,
+      "z": 1,
+      "w": 220,
+      "d": 201,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1349,
+      "y": 589,
+      "z": 2,
+      "w": 14,
+      "d": 135,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    }
+  ],
+  "scenery": [
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 224,
+      "h": 48,
+      "seed": 0
+    },
+    {
+      "type": "person",
+      "id": "visitor-home",
+      "x": 52,
+      "y": 231,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 191,
+      "y": 316
+    },
+    {
+      "type": "tree",
+      "x": 408,
+      "y": 264,
+      "h": 54,
+      "seed": 1
+    },
+    {
+      "type": "person",
+      "id": "visitor-workshop",
+      "x": 428,
+      "y": 271,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 711,
+      "y": 316
+    },
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 666,
+      "h": 60,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-park",
+      "x": 52,
+      "y": 673,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 279,
+      "y": 696
+    },
+    {
+      "type": "tree",
+      "x": 408,
+      "y": 540,
+      "h": 48,
+      "seed": 3
+    },
+    {
+      "type": "person",
+      "id": "visitor-van",
+      "x": 428,
+      "y": 547,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 505,
+      "y": 696
+    },
+    {
+      "type": "tree",
+      "x": 784,
+      "y": 225,
+      "h": 48,
+      "seed": 1
+    },
+    {
+      "type": "person",
+      "id": "visitor-depot",
+      "x": 804,
+      "y": 232,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 954,
+      "y": 316
+    },
+    {
+      "type": "tree",
+      "x": 1160,
+      "y": 175,
+      "h": 54,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-booking",
+      "x": 1180,
+      "y": 182,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1265,
+      "y": 316
+    },
+    {
+      "type": "tree",
+      "x": 784,
+      "y": 592,
+      "h": 60,
+      "seed": 3
+    },
+    {
+      "type": "person",
+      "id": "visitor-plane",
+      "x": 804,
+      "y": 599,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 911,
+      "y": 696
+    },
+    {
+      "type": "tree",
+      "x": 1160,
+      "y": 607,
+      "h": 48,
+      "seed": 4
+    },
+    {
+      "type": "person",
+      "id": "visitor-airport",
+      "x": 1180,
+      "y": 614,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1375,
+      "y": 696
+    }
+  ],
+  "instances": [
+    {
+      "id": "home",
+      "entity": "home",
+      "asset": "house",
+      "x": 40,
+      "y": 58,
+      "w": 112,
+      "d": 88,
+      "h": 72,
+      "material": "#c6b59b",
+      "sign": "Hjemmet",
+      "anchor": [
+        172,
+        216,
+        3
+      ],
+      "label": [
+        96,
+        158,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Hjemmet"
+        ]
+      }
+    },
+    {
+      "id": "workshop",
+      "entity": "workshop",
+      "asset": "workshop",
+      "x": 416,
+      "y": 58,
+      "w": 256,
+      "d": 128,
+      "h": 62,
+      "material": "#c6b59b",
+      "sign": "Verkstedet",
+      "anchor": [
+        692,
+        256,
+        3
+      ],
+      "label": [
+        544,
+        198,
+        3
+      ],
+      "labelStyle": {
+        "width": 256,
+        "size": 10,
+        "lines": [
+          "Verkstedet"
+        ]
+      }
+    },
+    {
+      "id": "park",
+      "entity": "park",
+      "asset": "park",
+      "x": 40,
+      "y": 438,
+      "w": 200,
+      "d": 150,
+      "h": 72,
+      "material": "#c6b59b",
+      "sign": "Nabolagsparken",
+      "anchor": [
+        260,
+        658,
+        3
+      ],
+      "label": [
+        140,
+        600,
+        3
+      ],
+      "labelStyle": {
+        "width": 200,
+        "size": 10,
+        "lines": [
+          "Nabolagsparken"
+        ]
+      }
+    },
+    {
+      "id": "van",
+      "entity": "van",
+      "asset": "van",
+      "x": 416,
+      "y": 438,
+      "w": 50,
+      "d": 24,
+      "h": 35,
+      "material": "#c6b59b",
+      "sign": "Servicebilen",
+      "anchor": [
+        486,
+        532,
+        3
+      ],
+      "label": [
+        441,
+        474,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Servicebilen"
+        ]
+      }
+    },
+    {
+      "id": "depot",
+      "entity": "depot",
+      "asset": "depot",
+      "x": 792,
+      "y": 58,
+      "w": 123,
+      "d": 89,
+      "h": 67,
+      "material": "#b7c9bb",
+      "sign": "Utleveringen",
+      "anchor": [
+        935,
+        217,
+        3
+      ],
+      "label": [
+        853.5,
+        159,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Utleveringen"
+        ]
+      }
+    },
+    {
+      "id": "booking",
+      "entity": "booking",
+      "asset": "cabinet",
+      "x": 1168,
+      "y": 58,
+      "w": 58,
+      "d": 39,
+      "h": 42,
+      "material": "#b7c9bb",
+      "sign": "Bestillingen",
+      "anchor": [
+        1246,
+        167,
+        3
+      ],
+      "label": [
+        1197,
+        109,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Bestillingen"
+        ]
+      }
+    },
+    {
+      "id": "plane",
+      "entity": "plane",
+      "asset": "plane",
+      "x": 792,
+      "y": 438,
+      "w": 80,
+      "d": 76,
+      "h": 38,
+      "material": "#b7c9bb",
+      "sign": "Deleflyet",
+      "anchor": [
+        892,
+        584,
+        3
+      ],
+      "label": [
+        832,
+        526,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Deleflyet"
+        ]
+      }
+    },
+    {
+      "id": "airport",
+      "entity": "airport",
+      "asset": "warehouse",
+      "x": 1168,
+      "y": 438,
+      "w": 168,
+      "d": 91,
+      "h": 73,
+      "material": "#b7c9bb",
+      "sign": "Flyterminalen",
+      "anchor": [
+        1356,
+        599,
+        3
+      ],
+      "label": [
+        1252,
+        541,
+        3
+      ],
+      "labelStyle": {
+        "width": 168,
+        "size": 10,
+        "lines": [
+          "Flyterminalen"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "relation": "visit",
+      "points": [
+        [
+          172,
+          216,
+          3
+        ],
+        [
+          172,
+          344,
+          3
+        ],
+        [
+          344,
+          344,
+          3
+        ],
+        [
+          692,
+          344,
+          3
+        ],
+        [
+          692,
+          256,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "rest",
+      "points": [
+        [
+          692,
+          256,
+          3
+        ],
+        [
+          692,
+          344,
+          3
+        ],
+        [
+          344,
+          344,
+          3
+        ],
+        [
+          344,
+          724,
+          3
+        ],
+        [
+          260,
+          724,
+          3
+        ],
+        [
+          260,
+          658,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "cycle",
+      "points": [
+        [
+          260,
+          658,
+          3
+        ],
+        [
+          260,
+          724,
+          3
+        ],
+        [
+          344,
+          724,
+          3
+        ],
+        [
+          344,
+          344,
+          3
+        ],
+        [
+          172,
+          344,
+          3
+        ],
+        [
+          172,
+          216,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "load",
+      "points": [
+        [
+          692,
+          256,
+          3
+        ],
+        [
+          692,
+          344,
+          3
+        ],
+        [
+          720,
+          344,
+          3
+        ],
+        [
+          720,
+          724,
+          3
+        ],
+        [
+          486,
+          724,
+          3
+        ],
+        [
+          486,
+          532,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "deliver",
+      "points": [
+        [
+          486,
+          532,
+          3
+        ],
+        [
+          486,
+          724,
+          3
+        ],
+        [
+          720,
+          724,
+          3
+        ],
+        [
+          720,
+          344,
+          3
+        ],
+        [
+          935,
+          344,
+          3
+        ],
+        [
+          935,
+          217,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "request",
+      "points": [
+        [
+          172,
+          216,
+          3
+        ],
+        [
+          172,
+          340,
+          3
+        ],
+        [
+          340,
+          340,
+          3
+        ],
+        [
+          1246,
+          340,
+          3
+        ],
+        [
+          1246,
+          167,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "order",
+      "points": [
+        [
+          1246,
+          167,
+          3
+        ],
+        [
+          1246,
+          342,
+          3
+        ],
+        [
+          718,
+          342,
+          3
+        ],
+        [
+          692,
+          342,
+          3
+        ],
+        [
+          692,
+          256,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "air",
+      "points": [
+        [
+          892,
+          584,
+          3
+        ],
+        [
+          972,
+          584,
+          120
+        ],
+        [
+          1276,
+          599,
+          120
+        ],
+        [
+          1356,
+          599,
+          3
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "visit",
+      "actor": {
+        "identity": "visit",
+        "at": [
+          172,
+          216,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            544,
+            122,
+            112
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            140,
+            513,
+            122
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "delivery",
+      "actor": {
+        "identity": "delivery",
+        "at": [
+          486,
+          532,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            853.5,
+            102.5,
+            117
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "booking",
+      "actor": {
+        "identity": "booking",
+        "at": [
+          172,
+          216,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            1197,
+            77.5,
+            92
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            544,
+            122,
+            112
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "bike",
+      "actor": {
+        "identity": "bike",
+        "at": [
+          260,
+          658,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            96,
+            102,
+            122
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "air",
+      "actor": {
+        "identity": "air",
+        "at": [
+          892,
+          584,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            1252,
+            483.5,
+            123
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

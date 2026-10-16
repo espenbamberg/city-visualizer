@@ -1,0 +1,774 @@
+{
+  "seed": 92713,
+  "groups": [
+    {
+      "label": "Verkstedtunet",
+      "pattern": "court",
+      "at": [
+        50,
+        40
+      ],
+      "plots": [
+        {
+          "entity": "workshop",
+          "asset": "workshop",
+          "emphasis": "primary",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "entity": "home",
+          "asset": "house",
+          "emphasis": "supporting",
+          "at": [
+            450,
+            0
+          ]
+        },
+        {
+          "entity": "van",
+          "asset": "van",
+          "emphasis": "context",
+          "at": [
+            450,
+            210
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Park og opphold",
+      "pattern": "green",
+      "at": [
+        50,
+        390
+      ],
+      "plots": [
+        {
+          "entity": "park",
+          "asset": "park",
+          "emphasis": "primary"
+        }
+      ]
+    },
+    {
+      "label": "Levering og bestilling",
+      "pattern": "street",
+      "at": [
+        760,
+        40
+      ],
+      "plots": [
+        {
+          "entity": "airport",
+          "asset": "warehouse",
+          "emphasis": "supporting",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "entity": "depot",
+          "asset": "depot",
+          "emphasis": "supporting",
+          "at": [
+            250,
+            0
+          ]
+        },
+        {
+          "entity": "booking",
+          "asset": "cabinet",
+          "emphasis": "context",
+          "at": [
+            250,
+            250
+          ]
+        },
+        {
+          "entity": "plane",
+          "asset": "plane",
+          "emphasis": "context",
+          "at": [
+            0,
+            400
+          ]
+        }
+      ]
+    }
+  ],
+  "network": {
+    "nodes": [
+      {
+        "id": "home-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "workshop-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "park-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "booking-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "workshop-loading",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "van-loading",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "depot-loading",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "plane-apron",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "airport-apron",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "home-path",
+        "at": [
+          660,
+          160,
+          3
+        ]
+      },
+      {
+        "id": "cross-north",
+        "at": [
+          660,
+          168,
+          3
+        ]
+      },
+      {
+        "id": "cross-center",
+        "at": [
+          660,
+          200,
+          3
+        ]
+      },
+      {
+        "id": "cross-south",
+        "at": [
+          660,
+          232,
+          3
+        ]
+      },
+      {
+        "id": "yard-east",
+        "at": [
+          460,
+          262,
+          3
+        ]
+      },
+      {
+        "id": "yard-path",
+        "at": [
+          460,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "neighbour-path",
+        "at": [
+          660,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "park-path",
+        "at": [
+          460,
+          602,
+          3
+        ]
+      },
+      {
+        "id": "road-west",
+        "at": [
+          720,
+          200,
+          3
+        ]
+      },
+      {
+        "id": "road-turn",
+        "at": [
+          720,
+          214,
+          3
+        ]
+      },
+      {
+        "id": "road-cross",
+        "at": [
+          720,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "road-south",
+        "at": [
+          720,
+          390,
+          3
+        ]
+      },
+      {
+        "id": "loading-bay",
+        "at": [
+          525,
+          390,
+          3
+        ]
+      },
+      {
+        "id": "depot-turn",
+        "at": [
+          1071.5,
+          214,
+          3
+        ]
+      },
+      {
+        "id": "cross-west",
+        "at": [
+          688,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "cross-east",
+        "at": [
+          752,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "air-departure",
+        "at": [
+          650,
+          650,
+          190
+        ]
+      },
+      {
+        "id": "air-approach",
+        "at": [
+          680,
+          230,
+          190
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "home-entry",
+        "entity": "home",
+        "node": "home-entry",
+        "side": "front",
+        "position": 0.5,
+        "offset": 32
+      },
+      {
+        "id": "workshop-entry",
+        "entity": "workshop",
+        "node": "workshop-entry",
+        "side": "front",
+        "position": 0.5,
+        "offset": 32
+      },
+      {
+        "id": "park-entry",
+        "entity": "park",
+        "node": "park-entry",
+        "side": "front",
+        "position": 0.5,
+        "offset": 32
+      },
+      {
+        "id": "booking-entry",
+        "entity": "booking",
+        "node": "booking-entry",
+        "side": "front",
+        "position": 0.5,
+        "offset": 32
+      },
+      {
+        "id": "workshop-loading",
+        "entity": "workshop",
+        "node": "workshop-loading",
+        "side": "right",
+        "position": 0.8421052631578947,
+        "offset": 60
+      },
+      {
+        "id": "van-loading",
+        "entity": "van",
+        "node": "van-loading",
+        "side": "front",
+        "position": 0.5,
+        "offset": 42
+      },
+      {
+        "id": "depot-loading",
+        "entity": "depot",
+        "node": "depot-loading",
+        "side": "front",
+        "position": 0.5,
+        "offset": 42
+      },
+      {
+        "id": "plane-apron",
+        "entity": "plane",
+        "node": "plane-apron",
+        "side": "front",
+        "position": 0.5,
+        "offset": 55
+      },
+      {
+        "id": "airport-apron",
+        "entity": "airport",
+        "node": "airport-apron",
+        "side": "front",
+        "position": 0.5,
+        "offset": 55
+      }
+    ],
+    "edges": [
+      {
+        "id": "home-access",
+        "from": "home-entry",
+        "to": "home-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "home-walk",
+        "from": "home-path",
+        "to": "cross-north",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "neighbour-walk",
+        "from": "cross-south",
+        "to": "neighbour-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "yard-walk",
+        "from": "neighbour-path",
+        "to": "yard-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "workshop-access",
+        "from": "workshop-entry",
+        "to": "yard-east",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "yard-entrance",
+        "from": "yard-east",
+        "to": "yard-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "park-walk",
+        "from": "yard-path",
+        "to": "park-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "park-access",
+        "from": "park-path",
+        "to": "park-entry",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "van-foot-access",
+        "from": "yard-path",
+        "to": "van-loading",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "east-walk",
+        "from": "neighbour-path",
+        "to": "cross-west",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "booking-access",
+        "from": "cross-east",
+        "to": "booking-entry",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "workshop-drive",
+        "from": "workshop-loading",
+        "to": "cross-center",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "yard-road",
+        "from": "cross-center",
+        "to": "road-west",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "north-road",
+        "from": "road-west",
+        "to": "road-turn",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "shared-road",
+        "from": "road-turn",
+        "to": "road-cross",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "south-road",
+        "from": "road-cross",
+        "to": "road-south",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "bay-road",
+        "from": "road-south",
+        "to": "loading-bay",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "van-access",
+        "from": "loading-bay",
+        "to": "van-loading",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "delivery-road",
+        "from": "road-turn",
+        "to": "depot-turn",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "depot-access",
+        "from": "depot-turn",
+        "to": "depot-loading",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "takeoff",
+        "from": "plane-apron",
+        "to": "air-departure",
+        "surface": "air",
+        "modes": [
+          "plane"
+        ],
+        "width": 90
+      },
+      {
+        "id": "flight",
+        "from": "air-departure",
+        "to": "air-approach",
+        "surface": "air",
+        "modes": [
+          "plane"
+        ],
+        "width": 90
+      },
+      {
+        "id": "arrival",
+        "from": "air-approach",
+        "to": "airport-apron",
+        "surface": "air",
+        "modes": [
+          "plane"
+        ],
+        "width": 90
+      },
+      {
+        "id": "north-crossing",
+        "from": "cross-north",
+        "to": "cross-center",
+        "surface": "crossing",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "south-crossing",
+        "from": "cross-center",
+        "to": "cross-south",
+        "surface": "crossing",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "west-crossing",
+        "from": "cross-west",
+        "to": "road-cross",
+        "surface": "crossing",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "east-crossing",
+        "from": "road-cross",
+        "to": "cross-east",
+        "surface": "crossing",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      }
+    ]
+  },
+  "routes": [
+    {
+      "relation": "visit",
+      "network": {
+        "from": "home-entry",
+        "to": "workshop-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "rest",
+      "network": {
+        "from": "workshop-entry",
+        "to": "park-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "cycle",
+      "network": {
+        "from": "park-entry",
+        "to": "home-entry",
+        "mode": "bicycle"
+      }
+    },
+    {
+      "relation": "load",
+      "network": {
+        "from": "workshop-entry",
+        "to": "van-loading",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "deliver",
+      "network": {
+        "from": "van-loading",
+        "to": "depot-loading",
+        "mode": "van"
+      }
+    },
+    {
+      "relation": "request",
+      "network": {
+        "from": "home-entry",
+        "to": "booking-entry",
+        "mode": "data"
+      }
+    },
+    {
+      "relation": "order",
+      "network": {
+        "from": "booking-entry",
+        "to": "workshop-entry",
+        "mode": "data"
+      }
+    },
+    {
+      "relation": "air",
+      "network": {
+        "from": "plane-apron",
+        "to": "airport-apron",
+        "mode": "plane"
+      }
+    }
+  ]
+}

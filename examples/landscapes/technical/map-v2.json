@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "language": "nb",
+  "root": "technical",
+  "views": {
+    "technical": {
+      "issue": "views/technical/issue.json",
+      "scene": "views/technical/scene.json"
+    }
+  }
+}

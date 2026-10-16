@@ -1,0 +1,243 @@
+{
+  "title": "Inne i verkstedet",
+  "question": "Hva skjer i inne i verkstedet?",
+  "summary": "Apparatet registreres, undersøkes, repareres og kontrolleres. Åpne diagnosebenken for å følge målingene.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et reparasjonsoppdrag fra henting til ferdig levering",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "intake",
+      "number": "01",
+      "label": "Mottaksbord",
+      "kind": "station",
+      "role": "Mottaksbord",
+      "description": "Registrerer apparat, symptom og oppdragsnummer.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "diagnosis",
+      "number": "02",
+      "label": "Diagnosebenk",
+      "kind": "station",
+      "role": "Diagnosebenk",
+      "description": "Måler apparatet og finner feilen.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional",
+      "detailView": "diagnostics"
+    },
+    {
+      "id": "parts",
+      "number": "03",
+      "label": "Delehylle",
+      "kind": "station",
+      "role": "Delehylle",
+      "description": "Har deler med sporbare delenummer.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "repair",
+      "number": "04",
+      "label": "Arbeidsbenk",
+      "kind": "station",
+      "role": "Arbeidsbenk",
+      "description": "Bytter den defekte komponenten.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "quality",
+      "number": "05",
+      "label": "Sluttkontroll",
+      "kind": "station",
+      "role": "Sluttkontroll",
+      "description": "Kontrollerer funksjon før utlevering.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "inspect",
+      "from": "intake",
+      "to": "diagnosis",
+      "kind": "movement",
+      "label": "Flytt til diagnose",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "fetch",
+      "from": "diagnosis",
+      "to": "parts",
+      "kind": "movement",
+      "label": "Hent riktig del",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "fix",
+      "from": "parts",
+      "to": "repair",
+      "kind": "movement",
+      "label": "Utfør reparasjonen",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "test",
+      "from": "repair",
+      "to": "quality",
+      "kind": "movement",
+      "label": "Kontroller resultatet",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hold",
+      "from": "diagnosis",
+      "to": "intake",
+      "kind": "information",
+      "label": "Meld behov for en del",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "repair",
+      "number": "01",
+      "label": "Fra symptom til kontroll",
+      "summary": "Teknikeren følger apparatet gjennom verkstedet.",
+      "condition": "Apparatet og arbeidsordren er mottatt.",
+      "outcome": "Apparatet består kontrollen og kan lastes i bilen.",
+      "actor": {
+        "kind": "person",
+        "label": "Teknikeren",
+        "start": "intake"
+      },
+      "steps": [
+        {
+          "title": "Undersøk feilen",
+          "text": "Teknikeren leser symptomet og gjør målinger på diagnosebenken.",
+          "relations": [
+            "inspect"
+          ],
+          "state": {
+            "at": "diagnosis",
+            "via": "inspect",
+            "moving": "Undersøk feilen",
+            "caption": "Ved diagnosebenk"
+          }
+        },
+        {
+          "title": "Finn riktig del",
+          "text": "Delenummeret kontrolleres før delen hentes.",
+          "relations": [
+            "fetch"
+          ],
+          "state": {
+            "at": "parts",
+            "via": "fetch",
+            "moving": "Finn riktig del",
+            "caption": "Ved delehylle"
+          }
+        },
+        {
+          "title": "Bytt komponenten",
+          "text": "Den defekte komponenten byttes og tilkoblingene kontrolleres.",
+          "relations": [
+            "fix"
+          ],
+          "state": {
+            "at": "repair",
+            "via": "fix",
+            "moving": "Bytt komponenten",
+            "caption": "Ved arbeidsbenk"
+          }
+        },
+        {
+          "title": "Prøv apparatet",
+          "text": "Funksjonen testes under samme forhold som da feilen ble meldt.",
+          "relations": [
+            "test"
+          ],
+          "state": {
+            "at": "quality",
+            "via": "test",
+            "moving": "Prøv apparatet",
+            "caption": "Ved sluttkontroll"
+          }
+        }
+      ]
+    },
+    {
+      "id": "missing",
+      "number": "02",
+      "label": "Når delen mangler",
+      "summary": "Målingen blir til et behov som mottaket kan følge opp.",
+      "condition": "Diagnosen er ferdig, men delen finnes ikke på hyllen.",
+      "outcome": "Mottaket har et dokumentert delebehov.",
+      "actor": {
+        "kind": "person",
+        "label": "Teknikeren",
+        "start": "intake"
+      },
+      "steps": [
+        {
+          "title": "Dokumenter feilen",
+          "text": "Teknikeren registrerer måling og delenummer.",
+          "relations": [
+            "inspect"
+          ],
+          "state": {
+            "at": "diagnosis",
+            "via": "inspect",
+            "moving": "Dokumenter feilen",
+            "caption": "Ved diagnosebenk"
+          }
+        },
+        {
+          "title": "Send delebehovet",
+          "text": "Mottaket får opplysningene og avtaler ny leveringstid.",
+          "relations": [
+            "hold"
+          ],
+          "state": {
+            "at": "intake",
+            "via": "hold",
+            "moving": "Send delebehovet",
+            "caption": "Ved mottaksbord"
+          },
+          "actor": {
+            "kind": "data",
+            "label": "Delebehov"
+          },
+          "handoff": "Teknikerens måling blir et digitalt delebehov."
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "storyHeading": "Velg et forløp"
+  },
+  "legend": {
+    "movement": "Fysisk bevegelse",
+    "information": "Informasjon",
+    "electricity": "Elektrisk strøm",
+    "dependency": "Avhengighet"
+  }
+}

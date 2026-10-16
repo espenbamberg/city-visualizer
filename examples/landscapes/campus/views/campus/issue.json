@@ -1,0 +1,168 @@
+{
+  "title": "Utstyr på et felles område",
+  "question": "Hvordan følger medarbeideren et apparat gjennom mottak, kontroll og utlevering?",
+  "summary": "Apparatet registreres, kontrolleres og leveres ut. Medarbeideren følger det mellom aktivitetene; manglende opplysninger sender arbeidet tilbake til mottaket.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et illustrativt serviceoppdrag",
+      "locator": "brief.md",
+      "date": "2026-10-13"
+    }
+  ],
+  "presentation": {
+    "eyebrow": "CityVisualizer · landskap",
+    "layoutNote": "Ett felles område med ganginngang, tun og funksjonsgrupper."
+  },
+  "entities": [
+    {
+      "id": "intake",
+      "label": "Mottak",
+      "description": "Registrerer apparatnummer, kontakt og beskrivelse av feilen.",
+      "constraint": "Apparatnummer og kontakt må være kjent.",
+      "kind": "place",
+      "number": "01",
+      "role": "Mottak",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "check",
+      "label": "Kontroll",
+      "description": "Sammenligner apparatets funksjon med arbeidsordren.",
+      "constraint": "Måleresultatet må godkjennes før utlevering.",
+      "kind": "place",
+      "number": "02",
+      "role": "Kontroll",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "release",
+      "label": "Utlevering",
+      "description": "Registrerer resultatet og bekrefter overleveringen.",
+      "constraint": "Apparatet frigis først når kontrollen er godkjent.",
+      "kind": "place",
+      "number": "03",
+      "role": "Utlevering",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "inspect",
+      "from": "intake",
+      "to": "check",
+      "label": "Til kontroll",
+      "kind": "movement",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "deliver",
+      "from": "check",
+      "to": "release",
+      "label": "Til utlevering",
+      "kind": "movement",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "clarify",
+      "from": "check",
+      "to": "intake",
+      "label": "Tilbake for avklaring",
+      "kind": "movement",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "complete",
+      "number": "01",
+      "label": "Fra mottak til ferdig",
+      "summary": "Apparatet og arbeidsordren er mottatt.",
+      "condition": "Apparatet og arbeidsordren er mottatt.",
+      "outcome": "Resultatet er dokumentert og apparatet er klart for overlevering.",
+      "actor": {
+        "kind": "person",
+        "label": "Medarbeideren",
+        "start": "intake",
+        "identity": "colleague"
+      },
+      "steps": [
+        {
+          "title": "Kontroller apparatet",
+          "text": "Medarbeideren tar apparatet til målebenken og sammenligner funksjonen med feilen som er meldt.",
+          "relations": [
+            "inspect"
+          ],
+          "state": {
+            "at": "check",
+            "via": "inspect",
+            "moving": "Kontroller apparatet",
+            "caption": "Kontroller apparatet"
+          }
+        },
+        {
+          "title": "Dokumenter og lever ut",
+          "text": "Målingen er godkjent. Medarbeideren registrerer resultatet og bekrefter hvem som mottar apparatet.",
+          "relations": [
+            "deliver"
+          ],
+          "state": {
+            "at": "release",
+            "via": "deliver",
+            "moving": "Dokumenter og lever ut",
+            "caption": "Dokumenter og lever ut"
+          }
+        }
+      ]
+    },
+    {
+      "id": "missing",
+      "number": "02",
+      "label": "Når opplysninger mangler",
+      "summary": "Arbeidsordren mangler opplysninger om når feilen oppstår.",
+      "condition": "Arbeidsordren mangler opplysninger om når feilen oppstår.",
+      "outcome": "Mottaket innhenter opplysningene. Utleveringen venter.",
+      "actor": {
+        "kind": "person",
+        "label": "Medarbeideren",
+        "start": "intake",
+        "identity": "colleague"
+      },
+      "steps": [
+        {
+          "title": "Oppdag mangelen",
+          "text": "Ved kontrollen oppdager medarbeideren at feilen ikke kan gjenskapes med opplysningene som er registrert.",
+          "relations": [
+            "inspect"
+          ],
+          "state": {
+            "at": "check",
+            "via": "inspect",
+            "moving": "Oppdag mangelen",
+            "caption": "Oppdag mangelen"
+          }
+        },
+        {
+          "title": "Avklar med mottaket",
+          "text": "Medarbeideren går tilbake med apparatet. Mottaket kontakter avsenderen før kontrollen fortsetter.",
+          "relations": [
+            "clarify"
+          ],
+          "state": {
+            "at": "intake",
+            "via": "clarify",
+            "moving": "Avklar med mottaket",
+            "caption": "Avklar med mottaket"
+          }
+        }
+      ]
+    }
+  ]
+}

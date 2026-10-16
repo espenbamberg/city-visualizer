@@ -1,0 +1,35 @@
+{
+  "seed": 92713,
+  "theme": "digital",
+  "rows": [
+    [
+      {
+        "entity": "receive",
+        "asset": "terminal",
+        "emphasis": "context"
+      },
+      {
+        "entity": "validate",
+        "asset": "terminal",
+        "emphasis": "primary"
+      },
+      {
+        "entity": "queue",
+        "asset": "queue",
+        "emphasis": "context"
+      }
+    ],
+    [
+      {
+        "entity": "store",
+        "asset": "database",
+        "emphasis": "supporting"
+      },
+      {
+        "entity": "send",
+        "asset": "terminal",
+        "emphasis": "context"
+      }
+    ]
+  ]
+}

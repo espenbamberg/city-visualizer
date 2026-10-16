@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "language": "nb",
+  "root": "workspace",
+  "views": {
+    "workspace": {
+      "issue": "views/workspace/issue.json",
+      "scene": "views/workspace/scene.json"
+    }
+  }
+}

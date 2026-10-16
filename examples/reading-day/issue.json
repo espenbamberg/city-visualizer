@@ -1,0 +1,178 @@
+{
+  "title": "A day at the library",
+  "question": "How does a reader move from finding a book to joining a reading group?",
+  "summary": "Follow a reader through five places, from home to a shared reading session.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Regional library service — example operating brief",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "home",
+      "number": "01",
+      "label": "Reader home",
+      "kind": "place",
+      "role": "Reader",
+      "description": "The reader leaves home for a day of borrowing and a reading group.",
+      "constraint": "The group meets in the afternoon.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "desk",
+      "number": "02",
+      "label": "Welcome desk",
+      "kind": "place",
+      "role": "Library staff",
+      "description": "Staff help the reader choose a collection and explain today’s activities.",
+      "constraint": "The collection is in a separate building.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "collection",
+      "number": "03",
+      "label": "Book collection",
+      "kind": "place",
+      "role": "Collection team",
+      "description": "The reader borrows a book selected with the collection team.",
+      "constraint": "The book must be available on the shelf.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "park",
+      "number": "04",
+      "label": "Reading garden",
+      "kind": "place",
+      "role": "Readers",
+      "description": "The reader takes a break in the garden before the group begins.",
+      "constraint": "The path connects the library buildings.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "room",
+      "number": "05",
+      "label": "Reading room",
+      "kind": "place",
+      "role": "Group facilitator",
+      "description": "Readers meet around tables for a shared reading session.",
+      "constraint": "The facilitator opens the session at the announced time.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "walk-desk",
+      "from": "home",
+      "to": "desk",
+      "kind": "movement",
+      "label": "Walk to welcome desk",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "walk-collection",
+      "from": "desk",
+      "to": "collection",
+      "kind": "movement",
+      "label": "Walk to book collection",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "walk-park",
+      "from": "collection",
+      "to": "park",
+      "kind": "movement",
+      "label": "Walk to reading garden",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "walk-room",
+      "from": "park",
+      "to": "room",
+      "kind": "movement",
+      "label": "Walk to reading room",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "reading-day",
+      "number": "01",
+      "label": "Find a book, join a group",
+      "summary": "A five-place journey through the neighbourhood.",
+      "condition": "The collection and reading room are open.",
+      "outcome": "The reader arrives with a borrowed book and joins the group.",
+      "actor": {
+        "kind": "person",
+        "label": "Reader in the ochre coat",
+        "start": "home"
+      },
+      "steps": [
+        {
+          "title": "Walk to welcome desk",
+          "text": "Staff help the reader choose a collection and explain today’s activities.",
+          "relations": [
+            "walk-desk"
+          ],
+          "state": {
+            "at": "desk",
+            "via": "walk-desk",
+            "moving": "Walk to welcome desk",
+            "caption": "At welcome desk"
+          }
+        },
+        {
+          "title": "Walk to book collection",
+          "text": "The reader borrows a book selected with the collection team.",
+          "relations": [
+            "walk-collection"
+          ],
+          "state": {
+            "at": "collection",
+            "via": "walk-collection",
+            "moving": "Walk to book collection",
+            "caption": "At book collection"
+          }
+        },
+        {
+          "title": "Walk to reading garden",
+          "text": "The reader takes a break in the garden before the group begins.",
+          "relations": [
+            "walk-park"
+          ],
+          "state": {
+            "at": "park",
+            "via": "walk-park",
+            "moving": "Walk to reading garden",
+            "caption": "At reading garden"
+          }
+        },
+        {
+          "title": "Walk to reading room",
+          "text": "Readers meet around tables for a shared reading session.",
+          "relations": [
+            "walk-room"
+          ],
+          "state": {
+            "at": "room",
+            "via": "walk-room",
+            "moving": "Walk to reading room",
+            "caption": "At reading room"
+          }
+        }
+      ]
+    }
+  ]
+}

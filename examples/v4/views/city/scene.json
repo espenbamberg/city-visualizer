@@ -1,0 +1,1969 @@
+{
+  "width": 1600,
+  "height": 1100,
+  "seed": 92713,
+  "adaptiveDetail": true,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 34
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1233,
+      680,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 20,
+      "y": 10,
+      "z": -3,
+      "w": 1149,
+      "d": 662,
+      "h": 3,
+      "material": "#e5e1ce",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 32,
+      "y": 22,
+      "z": 0,
+      "w": 604,
+      "d": 342,
+      "h": 2,
+      "material": "#dedbc9",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        40,
+        30,
+        3
+      ],
+      "text": "VERKSTEDTUNET",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          52,
+          42,
+          2.1
+        ],
+        [
+          52,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          82,
+          42,
+          2.1
+        ],
+        [
+          82,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          112,
+          42,
+          2.1
+        ],
+        [
+          112,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          142,
+          42,
+          2.1
+        ],
+        [
+          142,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          172,
+          42,
+          2.1
+        ],
+        [
+          172,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          202,
+          42,
+          2.1
+        ],
+        [
+          202,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          232,
+          42,
+          2.1
+        ],
+        [
+          232,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          262,
+          42,
+          2.1
+        ],
+        [
+          262,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          292,
+          42,
+          2.1
+        ],
+        [
+          292,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          322,
+          42,
+          2.1
+        ],
+        [
+          322,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          352,
+          42,
+          2.1
+        ],
+        [
+          352,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          382,
+          42,
+          2.1
+        ],
+        [
+          382,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          412,
+          42,
+          2.1
+        ],
+        [
+          412,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          442,
+          42,
+          2.1
+        ],
+        [
+          442,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          472,
+          42,
+          2.1
+        ],
+        [
+          472,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          502,
+          42,
+          2.1
+        ],
+        [
+          502,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          532,
+          42,
+          2.1
+        ],
+        [
+          532,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          562,
+          42,
+          2.1
+        ],
+        [
+          562,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          592,
+          42,
+          2.1
+        ],
+        [
+          592,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          622,
+          42,
+          2.1
+        ],
+        [
+          622,
+          354,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "box",
+      "x": 32,
+      "y": 372,
+      "z": 0,
+      "w": 342,
+      "d": 288,
+      "h": 2,
+      "material": "#c2ccad",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        40,
+        380,
+        3
+      ],
+      "text": "PARK OG OPPHOLD",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    },
+    {
+      "type": "box",
+      "x": 742,
+      "y": 22,
+      "z": 0,
+      "w": 415,
+      "d": 584,
+      "h": 2,
+      "material": "#dedbc9",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        750,
+        30,
+        3
+      ],
+      "text": "LEVERING OG BESTILLING",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    }
+  ],
+  "scenery": [
+    {
+      "type": "tree",
+      "x": 62,
+      "y": 292,
+      "h": 43,
+      "seed": 0
+    },
+    {
+      "type": "person",
+      "id": "visitor-workshop",
+      "x": 80,
+      "y": 278,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 478,
+      "y": 154,
+      "h": 43,
+      "seed": 1
+    },
+    {
+      "type": "person",
+      "id": "visitor-home",
+      "x": 478,
+      "y": 154,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 574,
+      "y": 274,
+      "h": 43,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-van",
+      "x": 478,
+      "y": 300,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 62,
+      "y": 632,
+      "h": 43,
+      "seed": 3
+    },
+    {
+      "type": "person",
+      "id": "visitor-park",
+      "x": 80,
+      "y": 618,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 952,
+      "y": 64,
+      "h": 43,
+      "seed": 4
+    },
+    {
+      "type": "person",
+      "id": "visitor-airport",
+      "x": 952,
+      "y": 64,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 988,
+      "y": 155,
+      "h": 43,
+      "seed": 5
+    },
+    {
+      "type": "person",
+      "id": "visitor-depot",
+      "x": 988,
+      "y": 155,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 1022,
+      "y": 391,
+      "h": 43,
+      "seed": 6
+    },
+    {
+      "type": "person",
+      "id": "visitor-booking",
+      "x": 1040,
+      "y": 377,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 864,
+      "y": 464,
+      "h": 43,
+      "seed": 7
+    },
+    {
+      "type": "person",
+      "id": "visitor-plane",
+      "x": 864,
+      "y": 464,
+      "z": 3
+    }
+  ],
+  "instances": [
+    {
+      "id": "workshop",
+      "entity": "workshop",
+      "asset": "workshop",
+      "x": 50,
+      "y": 40,
+      "w": 360,
+      "d": 190,
+      "h": 68,
+      "material": "#bcc6b1",
+      "sign": "Verkstedet",
+      "size": "expanded",
+      "emphasis": "primary",
+      "detailLevels": true,
+      "anchor": [
+        230,
+        262,
+        3
+      ],
+      "label": [
+        230,
+        237,
+        3
+      ],
+      "labelStyle": {
+        "width": 360,
+        "size": 10,
+        "lines": [
+          "Verkstedet"
+        ]
+      }
+    },
+    {
+      "id": "home",
+      "entity": "home",
+      "asset": "house",
+      "x": 500,
+      "y": 40,
+      "w": 112,
+      "d": 88,
+      "h": 72,
+      "material": "#bcc6b1",
+      "sign": "Hjemmet",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        556,
+        160,
+        3
+      ],
+      "label": [
+        556,
+        135,
+        3
+      ],
+      "labelStyle": {
+        "width": 112,
+        "size": 10,
+        "lines": [
+          "Hjemmet"
+        ]
+      }
+    },
+    {
+      "id": "van",
+      "entity": "van",
+      "asset": "van",
+      "x": 500,
+      "y": 250,
+      "w": 50,
+      "d": 24,
+      "h": 35,
+      "material": "#bcc6b1",
+      "sign": "Servicebilen",
+      "emphasis": "context",
+      "detailLevels": true,
+      "anchor": [
+        525,
+        316,
+        3
+      ],
+      "label": [
+        525,
+        281,
+        3
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Servicebilen"
+        ]
+      }
+    },
+    {
+      "id": "park",
+      "entity": "park",
+      "asset": "park",
+      "x": 50,
+      "y": 390,
+      "w": 300,
+      "d": 180,
+      "h": 72,
+      "material": "#b2c09a",
+      "sign": "Nabolagsparken",
+      "size": "expanded",
+      "emphasis": "primary",
+      "detailLevels": true,
+      "anchor": [
+        200,
+        602,
+        3
+      ],
+      "label": [
+        200,
+        577,
+        3
+      ],
+      "labelStyle": {
+        "width": 300,
+        "size": 10,
+        "lines": [
+          "Nabolagsparken"
+        ]
+      }
+    },
+    {
+      "id": "airport",
+      "entity": "airport",
+      "asset": "warehouse",
+      "x": 760,
+      "y": 40,
+      "w": 168,
+      "d": 91,
+      "h": 73,
+      "material": "#bcc6b1",
+      "sign": "Flyterminalen",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        844,
+        186,
+        3
+      ],
+      "label": [
+        844,
+        138,
+        3
+      ],
+      "labelStyle": {
+        "width": 168,
+        "size": 10,
+        "lines": [
+          "Flyterminalen"
+        ]
+      }
+    },
+    {
+      "id": "depot",
+      "entity": "depot",
+      "asset": "depot",
+      "x": 1010,
+      "y": 40,
+      "w": 123,
+      "d": 89,
+      "h": 67,
+      "material": "#bcc6b1",
+      "sign": "Utleveringen",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        1071.5,
+        171,
+        3
+      ],
+      "label": [
+        1071.5,
+        136,
+        3
+      ],
+      "labelStyle": {
+        "width": 123,
+        "size": 10,
+        "lines": [
+          "Utleveringen"
+        ]
+      }
+    },
+    {
+      "id": "booking",
+      "entity": "booking",
+      "asset": "cabinet",
+      "x": 1010,
+      "y": 290,
+      "w": 58,
+      "d": 39,
+      "h": 42,
+      "material": "#bcc6b1",
+      "sign": "Bestillingen",
+      "emphasis": "context",
+      "detailLevels": true,
+      "anchor": [
+        1039,
+        361,
+        3
+      ],
+      "label": [
+        1039,
+        336,
+        3
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Bestillingen"
+        ]
+      }
+    },
+    {
+      "id": "plane",
+      "entity": "plane",
+      "asset": "plane",
+      "x": 760,
+      "y": 440,
+      "w": 80,
+      "d": 76,
+      "h": 38,
+      "material": "#bcc6b1",
+      "sign": "Deleflyet",
+      "emphasis": "context",
+      "detailLevels": true,
+      "anchor": [
+        800,
+        571,
+        3
+      ],
+      "label": [
+        800,
+        523,
+        3
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Deleflyet"
+        ]
+      }
+    }
+  ],
+  "network": {
+    "nodes": [
+      {
+        "id": "home-entry",
+        "at": [
+          556,
+          160,
+          3
+        ]
+      },
+      {
+        "id": "workshop-entry",
+        "at": [
+          230,
+          262,
+          3
+        ]
+      },
+      {
+        "id": "park-entry",
+        "at": [
+          200,
+          602,
+          3
+        ]
+      },
+      {
+        "id": "booking-entry",
+        "at": [
+          1039,
+          361,
+          3
+        ]
+      },
+      {
+        "id": "workshop-loading",
+        "at": [
+          470,
+          200,
+          3
+        ]
+      },
+      {
+        "id": "van-loading",
+        "at": [
+          525,
+          316,
+          3
+        ]
+      },
+      {
+        "id": "depot-loading",
+        "at": [
+          1071.5,
+          171,
+          3
+        ]
+      },
+      {
+        "id": "plane-apron",
+        "at": [
+          800,
+          571,
+          3
+        ]
+      },
+      {
+        "id": "airport-apron",
+        "at": [
+          844,
+          186,
+          3
+        ]
+      },
+      {
+        "id": "home-path",
+        "at": [
+          660,
+          160,
+          3
+        ]
+      },
+      {
+        "id": "cross-north",
+        "at": [
+          660,
+          168,
+          3
+        ]
+      },
+      {
+        "id": "cross-center",
+        "at": [
+          660,
+          200,
+          3
+        ]
+      },
+      {
+        "id": "cross-south",
+        "at": [
+          660,
+          232,
+          3
+        ]
+      },
+      {
+        "id": "yard-east",
+        "at": [
+          460,
+          262,
+          3
+        ]
+      },
+      {
+        "id": "yard-path",
+        "at": [
+          460,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "neighbour-path",
+        "at": [
+          660,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "park-path",
+        "at": [
+          460,
+          602,
+          3
+        ]
+      },
+      {
+        "id": "road-west",
+        "at": [
+          720,
+          200,
+          3
+        ]
+      },
+      {
+        "id": "road-turn",
+        "at": [
+          720,
+          214,
+          3
+        ]
+      },
+      {
+        "id": "road-cross",
+        "at": [
+          720,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "road-south",
+        "at": [
+          720,
+          390,
+          3
+        ]
+      },
+      {
+        "id": "loading-bay",
+        "at": [
+          525,
+          390,
+          3
+        ]
+      },
+      {
+        "id": "depot-turn",
+        "at": [
+          1071.5,
+          214,
+          3
+        ]
+      },
+      {
+        "id": "cross-west",
+        "at": [
+          688,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "cross-east",
+        "at": [
+          752,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "air-departure",
+        "at": [
+          650,
+          650,
+          190
+        ]
+      },
+      {
+        "id": "air-approach",
+        "at": [
+          680,
+          230,
+          190
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "home-entry",
+        "entity": "home",
+        "node": "home-entry",
+        "side": "front",
+        "position": 0.5,
+        "offset": 32
+      },
+      {
+        "id": "workshop-entry",
+        "entity": "workshop",
+        "node": "workshop-entry",
+        "side": "front",
+        "position": 0.5,
+        "offset": 32
+      },
+      {
+        "id": "park-entry",
+        "entity": "park",
+        "node": "park-entry",
+        "side": "front",
+        "position": 0.5,
+        "offset": 32
+      },
+      {
+        "id": "booking-entry",
+        "entity": "booking",
+        "node": "booking-entry",
+        "side": "front",
+        "position": 0.5,
+        "offset": 32
+      },
+      {
+        "id": "workshop-loading",
+        "entity": "workshop",
+        "node": "workshop-loading",
+        "side": "right",
+        "position": 0.8421052631578947,
+        "offset": 60
+      },
+      {
+        "id": "van-loading",
+        "entity": "van",
+        "node": "van-loading",
+        "side": "front",
+        "position": 0.5,
+        "offset": 42
+      },
+      {
+        "id": "depot-loading",
+        "entity": "depot",
+        "node": "depot-loading",
+        "side": "front",
+        "position": 0.5,
+        "offset": 42
+      },
+      {
+        "id": "plane-apron",
+        "entity": "plane",
+        "node": "plane-apron",
+        "side": "front",
+        "position": 0.5,
+        "offset": 55
+      },
+      {
+        "id": "airport-apron",
+        "entity": "airport",
+        "node": "airport-apron",
+        "side": "front",
+        "position": 0.5,
+        "offset": 55
+      }
+    ],
+    "edges": [
+      {
+        "id": "home-access",
+        "from": "home-entry",
+        "to": "home-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "home-walk",
+        "from": "home-path",
+        "to": "cross-north",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "neighbour-walk",
+        "from": "cross-south",
+        "to": "neighbour-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "yard-walk",
+        "from": "neighbour-path",
+        "to": "yard-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "workshop-access",
+        "from": "workshop-entry",
+        "to": "yard-east",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "yard-entrance",
+        "from": "yard-east",
+        "to": "yard-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "park-walk",
+        "from": "yard-path",
+        "to": "park-path",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "park-access",
+        "from": "park-path",
+        "to": "park-entry",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "van-foot-access",
+        "from": "yard-path",
+        "to": "van-loading",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "east-walk",
+        "from": "neighbour-path",
+        "to": "cross-west",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "booking-access",
+        "from": "cross-east",
+        "to": "booking-entry",
+        "surface": "path",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "workshop-drive",
+        "from": "workshop-loading",
+        "to": "cross-center",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "yard-road",
+        "from": "cross-center",
+        "to": "road-west",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "north-road",
+        "from": "road-west",
+        "to": "road-turn",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "shared-road",
+        "from": "road-turn",
+        "to": "road-cross",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "south-road",
+        "from": "road-cross",
+        "to": "road-south",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "bay-road",
+        "from": "road-south",
+        "to": "loading-bay",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "van-access",
+        "from": "loading-bay",
+        "to": "van-loading",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "delivery-road",
+        "from": "road-turn",
+        "to": "depot-turn",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "depot-access",
+        "from": "depot-turn",
+        "to": "depot-loading",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 64
+      },
+      {
+        "id": "takeoff",
+        "from": "plane-apron",
+        "to": "air-departure",
+        "surface": "air",
+        "modes": [
+          "plane"
+        ],
+        "width": 90
+      },
+      {
+        "id": "flight",
+        "from": "air-departure",
+        "to": "air-approach",
+        "surface": "air",
+        "modes": [
+          "plane"
+        ],
+        "width": 90
+      },
+      {
+        "id": "arrival",
+        "from": "air-approach",
+        "to": "airport-apron",
+        "surface": "air",
+        "modes": [
+          "plane"
+        ],
+        "width": 90
+      },
+      {
+        "id": "north-crossing",
+        "from": "cross-north",
+        "to": "cross-center",
+        "surface": "crossing",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "south-crossing",
+        "from": "cross-center",
+        "to": "cross-south",
+        "surface": "crossing",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "west-crossing",
+        "from": "cross-west",
+        "to": "road-cross",
+        "surface": "crossing",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      },
+      {
+        "id": "east-crossing",
+        "from": "road-cross",
+        "to": "cross-east",
+        "surface": "crossing",
+        "modes": [
+          "person",
+          "bicycle",
+          "data"
+        ],
+        "width": 40
+      }
+    ]
+  },
+  "routes": [
+    {
+      "relation": "visit",
+      "network": {
+        "from": "home-entry",
+        "to": "workshop-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          556,
+          160,
+          3
+        ],
+        [
+          660,
+          160,
+          3
+        ],
+        [
+          660,
+          168,
+          3
+        ],
+        [
+          660,
+          200,
+          3
+        ],
+        [
+          660,
+          232,
+          3
+        ],
+        [
+          660,
+          330,
+          3
+        ],
+        [
+          460,
+          330,
+          3
+        ],
+        [
+          460,
+          262,
+          3
+        ],
+        [
+          230,
+          262,
+          3
+        ]
+      ],
+      "edges": [
+        "home-access",
+        "home-walk",
+        "north-crossing",
+        "south-crossing",
+        "neighbour-walk",
+        "yard-walk",
+        "yard-entrance",
+        "workshop-access"
+      ]
+    },
+    {
+      "relation": "rest",
+      "network": {
+        "from": "workshop-entry",
+        "to": "park-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          230,
+          262,
+          3
+        ],
+        [
+          460,
+          262,
+          3
+        ],
+        [
+          460,
+          330,
+          3
+        ],
+        [
+          460,
+          602,
+          3
+        ],
+        [
+          200,
+          602,
+          3
+        ]
+      ],
+      "edges": [
+        "workshop-access",
+        "yard-entrance",
+        "park-walk",
+        "park-access"
+      ]
+    },
+    {
+      "relation": "cycle",
+      "network": {
+        "from": "park-entry",
+        "to": "home-entry",
+        "mode": "bicycle"
+      },
+      "points": [
+        [
+          200,
+          602,
+          3
+        ],
+        [
+          460,
+          602,
+          3
+        ],
+        [
+          460,
+          330,
+          3
+        ],
+        [
+          660,
+          330,
+          3
+        ],
+        [
+          660,
+          232,
+          3
+        ],
+        [
+          660,
+          200,
+          3
+        ],
+        [
+          660,
+          168,
+          3
+        ],
+        [
+          660,
+          160,
+          3
+        ],
+        [
+          556,
+          160,
+          3
+        ]
+      ],
+      "edges": [
+        "park-access",
+        "park-walk",
+        "yard-walk",
+        "neighbour-walk",
+        "south-crossing",
+        "north-crossing",
+        "home-walk",
+        "home-access"
+      ]
+    },
+    {
+      "relation": "load",
+      "network": {
+        "from": "workshop-entry",
+        "to": "van-loading",
+        "mode": "person"
+      },
+      "points": [
+        [
+          230,
+          262,
+          3
+        ],
+        [
+          460,
+          262,
+          3
+        ],
+        [
+          460,
+          330,
+          3
+        ],
+        [
+          525,
+          316,
+          3
+        ]
+      ],
+      "edges": [
+        "workshop-access",
+        "yard-entrance",
+        "van-foot-access"
+      ]
+    },
+    {
+      "relation": "deliver",
+      "network": {
+        "from": "van-loading",
+        "to": "depot-loading",
+        "mode": "van"
+      },
+      "points": [
+        [
+          525,
+          316,
+          3
+        ],
+        [
+          525,
+          390,
+          3
+        ],
+        [
+          720,
+          390,
+          3
+        ],
+        [
+          720,
+          330,
+          3
+        ],
+        [
+          720,
+          214,
+          3
+        ],
+        [
+          1071.5,
+          214,
+          3
+        ],
+        [
+          1071.5,
+          171,
+          3
+        ]
+      ],
+      "edges": [
+        "van-access",
+        "bay-road",
+        "south-road",
+        "shared-road",
+        "delivery-road",
+        "depot-access"
+      ]
+    },
+    {
+      "relation": "request",
+      "network": {
+        "from": "home-entry",
+        "to": "booking-entry",
+        "mode": "data"
+      },
+      "points": [
+        [
+          556,
+          160,
+          3
+        ],
+        [
+          660,
+          160,
+          3
+        ],
+        [
+          660,
+          168,
+          3
+        ],
+        [
+          660,
+          200,
+          3
+        ],
+        [
+          660,
+          232,
+          3
+        ],
+        [
+          660,
+          330,
+          3
+        ],
+        [
+          688,
+          330,
+          3
+        ],
+        [
+          720,
+          330,
+          3
+        ],
+        [
+          752,
+          330,
+          3
+        ],
+        [
+          1039,
+          361,
+          3
+        ]
+      ],
+      "edges": [
+        "home-access",
+        "home-walk",
+        "north-crossing",
+        "south-crossing",
+        "neighbour-walk",
+        "east-walk",
+        "west-crossing",
+        "east-crossing",
+        "booking-access"
+      ]
+    },
+    {
+      "relation": "order",
+      "network": {
+        "from": "booking-entry",
+        "to": "workshop-entry",
+        "mode": "data"
+      },
+      "points": [
+        [
+          1039,
+          361,
+          3
+        ],
+        [
+          752,
+          330,
+          3
+        ],
+        [
+          720,
+          330,
+          3
+        ],
+        [
+          688,
+          330,
+          3
+        ],
+        [
+          660,
+          330,
+          3
+        ],
+        [
+          460,
+          330,
+          3
+        ],
+        [
+          460,
+          262,
+          3
+        ],
+        [
+          230,
+          262,
+          3
+        ]
+      ],
+      "edges": [
+        "booking-access",
+        "east-crossing",
+        "west-crossing",
+        "east-walk",
+        "yard-walk",
+        "yard-entrance",
+        "workshop-access"
+      ]
+    },
+    {
+      "relation": "air",
+      "network": {
+        "from": "plane-apron",
+        "to": "airport-apron",
+        "mode": "plane"
+      },
+      "points": [
+        [
+          800,
+          571,
+          3
+        ],
+        [
+          650,
+          650,
+          190
+        ],
+        [
+          680,
+          230,
+          190
+        ],
+        [
+          844,
+          186,
+          3
+        ]
+      ],
+      "edges": [
+        "takeoff",
+        "flight",
+        "arrival"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "visit",
+      "actor": {
+        "identity": "visit",
+        "at": [
+          556,
+          160,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            230,
+            135,
+            104
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            200,
+            480,
+            108
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "delivery",
+      "actor": {
+        "identity": "delivery",
+        "at": [
+          525,
+          316,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            1071.5,
+            84.5,
+            103
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "booking",
+      "actor": {
+        "identity": "booking",
+        "at": [
+          556,
+          160,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            1039,
+            309.5,
+            78
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            230,
+            135,
+            104
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "bike",
+      "actor": {
+        "identity": "bike",
+        "at": [
+          200,
+          602,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            556,
+            84,
+            108
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "air",
+      "actor": {
+        "identity": "air",
+        "at": [
+          800,
+          571,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            844,
+            85.5,
+            109
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

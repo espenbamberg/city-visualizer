@@ -1,0 +1,990 @@
+{
+  "title": "One library, six neighbourhoods",
+  "question": "How do local branches and shared technology deliver one regional library service?",
+  "summary": "Thirty workplaces across six neighbourhoods connect lending, learning, stock and delivery. Five shared applications support them, with a common runtime, database and gateway.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Regional library service — example operating brief",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "north-desk",
+      "number": "01",
+      "label": "Northbank Welcome",
+      "kind": "place",
+      "role": "Front-desk team",
+      "description": "Welcomes readers, checks requests and connects them to branch services.",
+      "constraint": "Staff check the collection before promising a pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-collection",
+      "number": "02",
+      "label": "Northbank Collection",
+      "kind": "place",
+      "role": "Collection team",
+      "description": "Maintains the lending collection and prepares reserved books.",
+      "constraint": "A reservation is ready only after the book is located.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-learning",
+      "number": "03",
+      "label": "Northbank Learning",
+      "kind": "place",
+      "role": "Learning team",
+      "description": "Runs reading groups and digital learning sessions.",
+      "constraint": "Session places and facilitator availability determine the programme.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-stock",
+      "number": "04",
+      "label": "Northbank Book store",
+      "kind": "place",
+      "role": "Stock team",
+      "description": "Receives, sorts and stores books moving through the regional collection.",
+      "constraint": "Each transfer needs an identified destination branch.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-dispatch",
+      "number": "05",
+      "label": "Northbank Delivery",
+      "kind": "place",
+      "role": "Delivery team",
+      "description": "Plans inter-branch deliveries and records arrival.",
+      "constraint": "Branch staff confirm receipt before a book becomes ready for pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-desk",
+      "number": "06",
+      "label": "Riverside Welcome",
+      "kind": "place",
+      "role": "Front-desk team",
+      "description": "Welcomes readers, checks requests and connects them to branch services.",
+      "constraint": "Staff check the collection before promising a pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-collection",
+      "number": "07",
+      "label": "Riverside Collection",
+      "kind": "place",
+      "role": "Collection team",
+      "description": "Maintains the lending collection and prepares reserved books.",
+      "constraint": "A reservation is ready only after the book is located.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-learning",
+      "number": "08",
+      "label": "Riverside Learning",
+      "kind": "place",
+      "role": "Learning team",
+      "description": "Runs reading groups and digital learning sessions.",
+      "constraint": "Session places and facilitator availability determine the programme.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-stock",
+      "number": "09",
+      "label": "Riverside Book store",
+      "kind": "place",
+      "role": "Stock team",
+      "description": "Receives, sorts and stores books moving through the regional collection.",
+      "constraint": "Each transfer needs an identified destination branch.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-dispatch",
+      "number": "10",
+      "label": "Riverside Delivery",
+      "kind": "place",
+      "role": "Delivery team",
+      "description": "Plans inter-branch deliveries and records arrival.",
+      "constraint": "Branch staff confirm receipt before a book becomes ready for pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-desk",
+      "number": "11",
+      "label": "Market quarter Welcome",
+      "kind": "place",
+      "role": "Front-desk team",
+      "description": "Welcomes readers, checks requests and connects them to branch services.",
+      "constraint": "Staff check the collection before promising a pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-collection",
+      "number": "12",
+      "label": "Market quarter Collection",
+      "kind": "place",
+      "role": "Collection team",
+      "description": "Maintains the lending collection and prepares reserved books.",
+      "constraint": "A reservation is ready only after the book is located.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-learning",
+      "number": "13",
+      "label": "Market quarter Learning",
+      "kind": "place",
+      "role": "Learning team",
+      "description": "Runs reading groups and digital learning sessions.",
+      "constraint": "Session places and facilitator availability determine the programme.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-stock",
+      "number": "14",
+      "label": "Market quarter Book store",
+      "kind": "place",
+      "role": "Stock team",
+      "description": "Receives, sorts and stores books moving through the regional collection.",
+      "constraint": "Each transfer needs an identified destination branch.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-dispatch",
+      "number": "15",
+      "label": "Market quarter Delivery",
+      "kind": "place",
+      "role": "Delivery team",
+      "description": "Plans inter-branch deliveries and records arrival.",
+      "constraint": "Branch staff confirm receipt before a book becomes ready for pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-desk",
+      "number": "16",
+      "label": "Hill district Welcome",
+      "kind": "place",
+      "role": "Front-desk team",
+      "description": "Welcomes readers, checks requests and connects them to branch services.",
+      "constraint": "Staff check the collection before promising a pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-collection",
+      "number": "17",
+      "label": "Hill district Collection",
+      "kind": "place",
+      "role": "Collection team",
+      "description": "Maintains the lending collection and prepares reserved books.",
+      "constraint": "A reservation is ready only after the book is located.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-learning",
+      "number": "18",
+      "label": "Hill district Learning",
+      "kind": "place",
+      "role": "Learning team",
+      "description": "Runs reading groups and digital learning sessions.",
+      "constraint": "Session places and facilitator availability determine the programme.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-stock",
+      "number": "19",
+      "label": "Hill district Book store",
+      "kind": "place",
+      "role": "Stock team",
+      "description": "Receives, sorts and stores books moving through the regional collection.",
+      "constraint": "Each transfer needs an identified destination branch.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-dispatch",
+      "number": "20",
+      "label": "Hill district Delivery",
+      "kind": "place",
+      "role": "Delivery team",
+      "description": "Plans inter-branch deliveries and records arrival.",
+      "constraint": "Branch staff confirm receipt before a book becomes ready for pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-desk",
+      "number": "21",
+      "label": "Harbour Welcome",
+      "kind": "place",
+      "role": "Front-desk team",
+      "description": "Welcomes readers, checks requests and connects them to branch services.",
+      "constraint": "Staff check the collection before promising a pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-collection",
+      "number": "22",
+      "label": "Harbour Collection",
+      "kind": "place",
+      "role": "Collection team",
+      "description": "Maintains the lending collection and prepares reserved books.",
+      "constraint": "A reservation is ready only after the book is located.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-learning",
+      "number": "23",
+      "label": "Harbour Learning",
+      "kind": "place",
+      "role": "Learning team",
+      "description": "Runs reading groups and digital learning sessions.",
+      "constraint": "Session places and facilitator availability determine the programme.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-stock",
+      "number": "24",
+      "label": "Harbour Book store",
+      "kind": "place",
+      "role": "Stock team",
+      "description": "Receives, sorts and stores books moving through the regional collection.",
+      "constraint": "Each transfer needs an identified destination branch.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-dispatch",
+      "number": "25",
+      "label": "Harbour Delivery",
+      "kind": "place",
+      "role": "Delivery team",
+      "description": "Plans inter-branch deliveries and records arrival.",
+      "constraint": "Branch staff confirm receipt before a book becomes ready for pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-desk",
+      "number": "26",
+      "label": "West gardens Welcome",
+      "kind": "place",
+      "role": "Front-desk team",
+      "description": "Welcomes readers, checks requests and connects them to branch services.",
+      "constraint": "Staff check the collection before promising a pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-collection",
+      "number": "27",
+      "label": "West gardens Collection",
+      "kind": "place",
+      "role": "Collection team",
+      "description": "Maintains the lending collection and prepares reserved books.",
+      "constraint": "A reservation is ready only after the book is located.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-learning",
+      "number": "28",
+      "label": "West gardens Learning",
+      "kind": "place",
+      "role": "Learning team",
+      "description": "Runs reading groups and digital learning sessions.",
+      "constraint": "Session places and facilitator availability determine the programme.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-stock",
+      "number": "29",
+      "label": "West gardens Book store",
+      "kind": "place",
+      "role": "Stock team",
+      "description": "Receives, sorts and stores books moving through the regional collection.",
+      "constraint": "Each transfer needs an identified destination branch.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-dispatch",
+      "number": "30",
+      "label": "West gardens Delivery",
+      "kind": "place",
+      "role": "Delivery team",
+      "description": "Plans inter-branch deliveries and records arrival.",
+      "constraint": "Branch staff confirm receipt before a book becomes ready for pickup.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "catalogue",
+      "number": "S1",
+      "label": "Shared catalogue",
+      "kind": "system",
+      "role": "Collection discovery",
+      "description": "Lists titles and the branch holding each copy.",
+      "constraint": "Branches update holdings after each transfer.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "reservations",
+      "number": "S2",
+      "label": "Reservations",
+      "kind": "system",
+      "role": "Reservation coordination",
+      "description": "Tracks a reader’s request from ordering to pickup.",
+      "constraint": "A request remains pending until a copy is assigned.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "membership",
+      "number": "S3",
+      "label": "Membership",
+      "kind": "system",
+      "role": "Reader records",
+      "description": "Maintains membership records used by the front desks.",
+      "constraint": "Staff resolve unmatched reader records before lending.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "delivery",
+      "number": "S4",
+      "label": "Delivery planning",
+      "kind": "system",
+      "role": "Transfer planning",
+      "description": "Groups prepared transfers into delivery runs.",
+      "constraint": "Planning uses the branch destination and ready status.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "notices",
+      "number": "S5",
+      "label": "Reader notices",
+      "kind": "system",
+      "role": "Pickup notifications",
+      "description": "Sends a pickup notice after the receiving branch confirms the book.",
+      "constraint": "A pending transfer must not trigger a ready notice.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "runtime",
+      "number": "T6",
+      "label": "Shared runtime",
+      "kind": "infrastructure",
+      "role": "Application operations",
+      "description": "Runs the shared library services.",
+      "constraint": "Service availability depends on this runtime.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "records",
+      "number": "T7",
+      "label": "Library records",
+      "kind": "infrastructure",
+      "role": "Data operations",
+      "description": "Stores catalogue, membership and reservation records.",
+      "constraint": "Services need consistent updates when books move.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "integration",
+      "number": "T8",
+      "label": "Message gateway",
+      "kind": "infrastructure",
+      "role": "External messaging",
+      "description": "Connects notices and delivery updates to external endpoints.",
+      "constraint": "Delivery acknowledgements return through the gateway.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "north-find",
+      "from": "north-desk",
+      "to": "north-collection",
+      "kind": "information",
+      "label": "Check local availability",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-prepare",
+      "from": "north-stock",
+      "to": "north-dispatch",
+      "kind": "movement",
+      "label": "Bring a prepared book to delivery",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-walk",
+      "from": "north-desk",
+      "to": "north-collection",
+      "kind": "movement",
+      "label": "Walk to the collection",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-find",
+      "from": "river-desk",
+      "to": "river-collection",
+      "kind": "information",
+      "label": "Check local availability",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-prepare",
+      "from": "river-stock",
+      "to": "river-dispatch",
+      "kind": "movement",
+      "label": "Bring a prepared book to delivery",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-walk",
+      "from": "river-desk",
+      "to": "river-collection",
+      "kind": "movement",
+      "label": "Walk to the collection",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-find",
+      "from": "market-desk",
+      "to": "market-collection",
+      "kind": "information",
+      "label": "Check local availability",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-prepare",
+      "from": "market-stock",
+      "to": "market-dispatch",
+      "kind": "movement",
+      "label": "Bring a prepared book to delivery",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-walk",
+      "from": "market-desk",
+      "to": "market-collection",
+      "kind": "movement",
+      "label": "Walk to the collection",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-find",
+      "from": "hill-desk",
+      "to": "hill-collection",
+      "kind": "information",
+      "label": "Check local availability",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-prepare",
+      "from": "hill-stock",
+      "to": "hill-dispatch",
+      "kind": "movement",
+      "label": "Bring a prepared book to delivery",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-walk",
+      "from": "hill-desk",
+      "to": "hill-collection",
+      "kind": "movement",
+      "label": "Walk to the collection",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-find",
+      "from": "harbour-desk",
+      "to": "harbour-collection",
+      "kind": "information",
+      "label": "Check local availability",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-prepare",
+      "from": "harbour-stock",
+      "to": "harbour-dispatch",
+      "kind": "movement",
+      "label": "Bring a prepared book to delivery",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-walk",
+      "from": "harbour-desk",
+      "to": "harbour-collection",
+      "kind": "movement",
+      "label": "Walk to the collection",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-find",
+      "from": "west-desk",
+      "to": "west-collection",
+      "kind": "information",
+      "label": "Check local availability",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-prepare",
+      "from": "west-stock",
+      "to": "west-dispatch",
+      "kind": "movement",
+      "label": "Bring a prepared book to delivery",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-walk",
+      "from": "west-desk",
+      "to": "west-collection",
+      "kind": "movement",
+      "label": "Walk to the collection",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-search",
+      "from": "north-collection",
+      "to": "catalogue",
+      "kind": "information",
+      "label": "Search regional holdings",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-member",
+      "from": "north-desk",
+      "to": "membership",
+      "kind": "information",
+      "label": "Check membership",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "north-run",
+      "from": "north-dispatch",
+      "to": "delivery",
+      "kind": "information",
+      "label": "Update the transfer plan",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-search",
+      "from": "river-collection",
+      "to": "catalogue",
+      "kind": "information",
+      "label": "Search regional holdings",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-member",
+      "from": "river-desk",
+      "to": "membership",
+      "kind": "information",
+      "label": "Check membership",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "river-run",
+      "from": "river-dispatch",
+      "to": "delivery",
+      "kind": "information",
+      "label": "Update the transfer plan",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-search",
+      "from": "market-collection",
+      "to": "catalogue",
+      "kind": "information",
+      "label": "Search regional holdings",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-member",
+      "from": "market-desk",
+      "to": "membership",
+      "kind": "information",
+      "label": "Check membership",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "market-run",
+      "from": "market-dispatch",
+      "to": "delivery",
+      "kind": "information",
+      "label": "Update the transfer plan",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-search",
+      "from": "hill-collection",
+      "to": "catalogue",
+      "kind": "information",
+      "label": "Search regional holdings",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-member",
+      "from": "hill-desk",
+      "to": "membership",
+      "kind": "information",
+      "label": "Check membership",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hill-run",
+      "from": "hill-dispatch",
+      "to": "delivery",
+      "kind": "information",
+      "label": "Update the transfer plan",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-search",
+      "from": "harbour-collection",
+      "to": "catalogue",
+      "kind": "information",
+      "label": "Search regional holdings",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-member",
+      "from": "harbour-desk",
+      "to": "membership",
+      "kind": "information",
+      "label": "Check membership",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "harbour-run",
+      "from": "harbour-dispatch",
+      "to": "delivery",
+      "kind": "information",
+      "label": "Update the transfer plan",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-search",
+      "from": "west-collection",
+      "to": "catalogue",
+      "kind": "information",
+      "label": "Search regional holdings",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-member",
+      "from": "west-desk",
+      "to": "membership",
+      "kind": "information",
+      "label": "Check membership",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "west-run",
+      "from": "west-dispatch",
+      "to": "delivery",
+      "kind": "information",
+      "label": "Update the transfer plan",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "catalogue-host",
+      "from": "catalogue",
+      "to": "runtime",
+      "kind": "technical",
+      "label": "Runs on the shared runtime",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "reservations-host",
+      "from": "reservations",
+      "to": "runtime",
+      "kind": "technical",
+      "label": "Runs on the shared runtime",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "membership-host",
+      "from": "membership",
+      "to": "runtime",
+      "kind": "technical",
+      "label": "Runs on the shared runtime",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "delivery-host",
+      "from": "delivery",
+      "to": "runtime",
+      "kind": "technical",
+      "label": "Runs on the shared runtime",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "notices-host",
+      "from": "notices",
+      "to": "runtime",
+      "kind": "technical",
+      "label": "Runs on the shared runtime",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "save",
+      "from": "runtime",
+      "to": "records",
+      "kind": "technical",
+      "label": "Read and write library records",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "send",
+      "from": "notices",
+      "to": "integration",
+      "kind": "technical",
+      "label": "Submit a reader notice",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "request",
+      "from": "north-desk",
+      "to": "reservations",
+      "kind": "information",
+      "label": "Register a book reservation",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "locate",
+      "from": "reservations",
+      "to": "catalogue",
+      "kind": "information",
+      "label": "Find an available copy",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "transfer",
+      "from": "harbour-dispatch",
+      "to": "north-dispatch",
+      "kind": "movement",
+      "label": "Deliver the reserved book between branches",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "confirm",
+      "from": "north-dispatch",
+      "to": "notices",
+      "kind": "information",
+      "label": "Confirm the book has arrived",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "cross-district",
+      "from": "north-collection",
+      "to": "river-learning",
+      "kind": "movement",
+      "label": "Walk to the Riverside reading group",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "reader-journey",
+      "number": "01",
+      "label": "A reader crosses neighbourhoods",
+      "summary": "Local help, a borrowed book and a group in Riverside.",
+      "condition": "Northbank has the chosen book; the Riverside reading group is open.",
+      "outcome": "The reader reaches the Riverside learning team with a book from Northbank.",
+      "actor": {
+        "kind": "person",
+        "label": "Reader in the ochre coat",
+        "start": "north-desk"
+      },
+      "steps": [
+        {
+          "title": "Find the collection",
+          "text": "The welcome team directs the reader to the Northbank collection.",
+          "relations": [
+            "north-walk",
+            "north-find"
+          ],
+          "state": {
+            "at": "north-collection",
+            "via": "north-walk",
+            "moving": "Walking to the collection",
+            "caption": "At the Northbank collection"
+          }
+        },
+        {
+          "title": "Join another neighbourhood",
+          "text": "The reader takes the connecting streets to the Riverside learning centre and joins the group.",
+          "relations": [
+            "cross-district"
+          ],
+          "state": {
+            "at": "river-learning",
+            "via": "cross-district",
+            "moving": "Walking to Riverside",
+            "caption": "At the Riverside learning centre"
+          }
+        }
+      ]
+    },
+    {
+      "id": "regional-reservation",
+      "number": "02",
+      "label": "A book from another branch",
+      "summary": "A reservation becomes a delivered book and a pickup notice.",
+      "condition": "The local branch lacks the requested copy; Harbour has one available.",
+      "outcome": "The receiving branch confirms arrival before the reader is notified.",
+      "steps": [
+        {
+          "title": "Register the request",
+          "text": "Northbank staff check membership and record the reader’s reservation.",
+          "relations": [
+            "north-member",
+            "request"
+          ]
+        },
+        {
+          "title": "Find a regional copy",
+          "text": "Reservations checks the shared catalogue and identifies the Harbour copy.",
+          "relations": [
+            "locate",
+            "harbour-search"
+          ]
+        },
+        {
+          "title": "Prepare and deliver",
+          "text": "Harbour prepares the copy, schedules it and delivers it to Northbank.",
+          "relations": [
+            "harbour-prepare",
+            "harbour-run",
+            "transfer"
+          ]
+        },
+        {
+          "title": "Confirm and notify",
+          "text": "Northbank confirms receipt. The notices service sends the pickup message through the gateway.",
+          "relations": [
+            "confirm",
+            "send"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "number": "03",
+      "label": "The shared foundation",
+      "summary": "Local services depend on common applications and records.",
+      "condition": "All six branches use the shared applications.",
+      "outcome": "The operating team can trace branch dependencies through services to runtime and records.",
+      "steps": [
+        {
+          "title": "Shared discovery",
+          "text": "Each collection team searches the same regional catalogue.",
+          "relations": [
+            "north-search",
+            "river-search",
+            "market-search",
+            "hill-search",
+            "harbour-search",
+            "west-search"
+          ]
+        },
+        {
+          "title": "Common runtime and records",
+          "text": "The applications share runtime and storage. An interruption here affects several branch activities.",
+          "relations": [
+            "catalogue-host",
+            "reservations-host",
+            "membership-host",
+            "delivery-host",
+            "notices-host",
+            "save"
+          ],
+          "problem": true
+        }
+      ]
+    }
+  ]
+}

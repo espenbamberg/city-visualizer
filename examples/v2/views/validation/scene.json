@@ -1,0 +1,381 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      -15,
+      -15,
+      0
+    ],
+    [
+      580,
+      420,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 580,
+      "d": 420,
+      "h": 3,
+      "material": "#c1cfc9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 30,
+      "y": 28,
+      "z": 3,
+      "w": 85,
+      "d": 70,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 210,
+      "y": 28,
+      "z": 3,
+      "w": 85,
+      "d": 70,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 390,
+      "y": 28,
+      "z": 3,
+      "w": 85,
+      "d": 70,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 390,
+      "y": 250,
+      "z": 3,
+      "w": 110,
+      "d": 72,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 30,
+      "y": 250,
+      "z": 3,
+      "w": 85,
+      "d": 70,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "fields",
+      "entity": "fields",
+      "asset": "terminal",
+      "x": 40,
+      "y": 38,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#acb9a2",
+      "anchor": [
+        123,
+        116,
+        4
+      ],
+      "label": [
+        72.5,
+        91,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "FELTKONTROLL"
+    },
+    {
+      "id": "capacity",
+      "entity": "capacity",
+      "asset": "terminal",
+      "x": 220,
+      "y": 38,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#b2c4b9",
+      "anchor": [
+        303,
+        116,
+        4
+      ],
+      "label": [
+        252.5,
+        91,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "KAPASITETSKONTROLL"
+    },
+    {
+      "id": "decision",
+      "entity": "decision",
+      "asset": "terminal",
+      "x": 400,
+      "y": 38,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#b5bfa4",
+      "anchor": [
+        483,
+        116,
+        4
+      ],
+      "label": [
+        432.5,
+        91,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "BESLUTNING"
+    },
+    {
+      "id": "accepted",
+      "entity": "accepted",
+      "asset": "queue",
+      "x": 400,
+      "y": 260,
+      "w": 90,
+      "d": 50,
+      "h": 40,
+      "material": "#baa88b",
+      "anchor": [
+        508,
+        238,
+        4
+      ],
+      "label": [
+        445,
+        315,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "GODKJENT"
+    },
+    {
+      "id": "rejected",
+      "entity": "rejected",
+      "asset": "terminal",
+      "x": 40,
+      "y": 260,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#b9bdc2",
+      "anchor": [
+        123,
+        238,
+        4
+      ],
+      "label": [
+        72.5,
+        313,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "RETURMELDING"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "capacity",
+      "points": [
+        [
+          123,
+          116,
+          4
+        ],
+        [
+          123,
+          200,
+          4
+        ],
+        [
+          303,
+          200,
+          4
+        ],
+        [
+          303,
+          116,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "decide",
+      "points": [
+        [
+          303,
+          116,
+          4
+        ],
+        [
+          303,
+          200,
+          4
+        ],
+        [
+          483,
+          200,
+          4
+        ],
+        [
+          483,
+          116,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "accept",
+      "points": [
+        [
+          483,
+          116,
+          4
+        ],
+        [
+          483,
+          200,
+          4
+        ],
+        [
+          508,
+          200,
+          4
+        ],
+        [
+          508,
+          238,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "reject",
+      "points": [
+        [
+          123,
+          116,
+          4
+        ],
+        [
+          123,
+          200,
+          4
+        ],
+        [
+          123,
+          238,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "ok",
+      "actor": {
+        "identity": "ok",
+        "at": [
+          123,
+          116,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            252.5,
+            62,
+            95
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            432.5,
+            62,
+            95
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            445,
+            285,
+            70
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "missing",
+        "at": [
+          123,
+          116,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            72.5,
+            284,
+            95
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

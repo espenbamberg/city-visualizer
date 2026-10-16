@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "language": "nb",
+  "root": "city",
+  "views": {
+    "city": {
+      "issue": "views/city/issue.json",
+      "scene": "views/city/scene.json"
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "seed": 81403,
+  "environment": "campus",
+  "groups": [
+    {
+      "label": "Inngang",
+      "pattern": "green",
+      "at": [
+        20,
+        20
+      ],
+      "plots": [
+        {
+          "entity": "intake",
+          "asset": "office",
+          "size": "compact"
+        }
+      ]
+    },
+    {
+      "label": "Felles verksted",
+      "pattern": "court",
+      "at": [
+        220,
+        140
+      ],
+      "plots": [
+        {
+          "entity": "check",
+          "asset": "workshop",
+          "size": "expanded"
+        }
+      ]
+    },
+    {
+      "label": "Utlevering",
+      "pattern": "green",
+      "at": [
+        600,
+        20
+      ],
+      "plots": [
+        {
+          "entity": "release",
+          "asset": "office",
+          "size": "compact"
+        }
+      ]
+    }
+  ],
+  "network": {
+    "nodes": [
+      {
+        "id": "intake-port",
+        "at": [
+          67.5,
+          132,
+          3
+        ]
+      },
+      {
+        "id": "intake-lane",
+        "at": [
+          67.5,
+          450,
+          3
+        ]
+      },
+      {
+        "id": "check-port",
+        "at": [
+          400,
+          366,
+          3
+        ]
+      },
+      {
+        "id": "check-lane",
+        "at": [
+          400,
+          450,
+          3
+        ]
+      },
+      {
+        "id": "release-port",
+        "at": [
+          647.5,
+          132,
+          3
+        ]
+      },
+      {
+        "id": "release-lane",
+        "at": [
+          647.5,
+          450,
+          3
+        ]
+      },
+      {
+        "id": "entrance",
+        "at": [
+          67.5,
+          525,
+          3
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "intake-entry",
+        "entity": "intake",
+        "node": "intake-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      },
+      {
+        "id": "check-entry",
+        "entity": "check",
+        "node": "check-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      },
+      {
+        "id": "release-entry",
+        "entity": "release",
+        "node": "release-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      }
+    ],
+    "edges": [
+      {
+        "id": "intake-access",
+        "from": "intake-port",
+        "to": "intake-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "check-access",
+        "from": "check-port",
+        "to": "check-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "shared-1",
+        "from": "intake-lane",
+        "to": "check-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "release-access",
+        "from": "release-port",
+        "to": "release-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "shared-2",
+        "from": "check-lane",
+        "to": "release-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "common-entrance",
+        "from": "entrance",
+        "to": "intake-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      }
+    ]
+  },
+  "routes": [
+    {
+      "relation": "inspect",
+      "network": {
+        "from": "intake-entry",
+        "to": "check-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "deliver",
+      "network": {
+        "from": "check-entry",
+        "to": "release-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "clarify",
+      "network": {
+        "from": "check-entry",
+        "to": "intake-entry",
+        "mode": "person"
+      }
+    }
+  ]
+}

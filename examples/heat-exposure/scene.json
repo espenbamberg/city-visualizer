@@ -1,0 +1,70 @@
+{
+  "width": 1400, "height": 1000, "seed": 8049,
+  "camera": { "azimuth": 45, "elevation": 34 },
+  "bounds": [[-30, -20, 0], [820, -20, 0], [-30, 510, 0], [820, 510, 0]],
+  "ground": [
+    { "type": "box", "x": -20, "y": -10, "z": -4, "w": 825, "d": 495, "h": 5, "material": "#e4e0cf", "r": 6 },
+    { "type": "box", "x": -18, "y": 187, "z": 1, "w": 821, "d": 48, "h": 0.7, "material": "#adb2a7", "r": 1 },
+    { "type": "line", "points": [[-17, 184, 2], [801, 184, 2]], "color": "#f2efdc", "width": 2 },
+    { "type": "line", "points": [[-17, 238, 2], [801, 238, 2]], "color": "#f2efdc", "width": 2 },
+    { "type": "line", "points": [[-10, 211, 2], [796, 211, 2]], "color": "#eae8d6", "width": 1.2, "dash": [15, 20] },
+    { "type": "box", "x": 20, "y": 12, "z": 1, "w": 160, "d": 153, "h": 1, "material": "#c1c6a9", "r": 4 },
+    { "type": "box", "x": 276, "y": 14, "z": 1, "w": 222, "d": 158, "h": 1, "material": "#d5d1b9", "r": 3 },
+    { "type": "box", "x": 588, "y": 21, "z": 1, "w": 192, "d": 168, "h": 1, "material": "#c1cdba", "r": 4 },
+    { "type": "box", "x": 35, "y": 254, "z": 1, "w": 250, "d": 184, "h": 1, "material": "#bac7a3", "r": 5 },
+    { "type": "box", "x": 318, "y": 250, "z": 1, "w": 231, "d": 181, "h": 1, "material": "#d5d0ba", "r": 3 },
+    { "type": "box", "x": 554, "y": 237, "z": 1, "w": 26, "d": 224, "h": 1, "material": "#ddd8c2", "r": 1 },
+    { "type": "box", "x": 35, "y": 441, "z": 1, "w": 695, "d": 27, "h": 1, "material": "#ddd8c2", "r": 2 },
+    { "type": "box", "x": 214, "y": 187, "z": 2, "w": 4, "d": 48, "h": 0.1, "material": "#f1eedb", "r": 0 },
+    { "type": "box", "x": 222, "y": 187, "z": 2, "w": 4, "d": 48, "h": 0.1, "material": "#f1eedb", "r": 0 },
+    { "type": "box", "x": 230, "y": 187, "z": 2, "w": 4, "d": 48, "h": 0.1, "material": "#f1eedb", "r": 0 },
+    { "type": "box", "x": 238, "y": 187, "z": 2, "w": 4, "d": 48, "h": 0.1, "material": "#f1eedb", "r": 0 },
+    { "type": "box", "x": 246, "y": 187, "z": 2, "w": 4, "d": 48, "h": 0.1, "material": "#f1eedb", "r": 0 },
+    { "type": "text", "at": [26, 205, 2.2], "text": "LINDEN LANE", "size": 10, "color": "#66705c", "tracking": 1.5 },
+    { "type": "text", "at": [594, 285, 2.2], "text": "SHADE + ACCESS", "size": 12, "color": "#65745e", "tracking": 1.5 }
+  ],
+  "scenery": [
+    { "type": "tree", "x": 26, "y": 43, "h": 48, "seed": 0 },
+    { "type": "tree", "x": 172, "y": 67, "h": 54, "seed": 1 },
+    { "type": "tree", "x": 791, "y": 115, "h": 54, "seed": 1 },
+    { "type": "tree", "x": 646, "y": 363, "h": 52, "seed": 0 },
+    { "type": "tree", "x": 708, "y": 395, "h": 60, "seed": 1 },
+    { "type": "bench", "x": 648, "y": 402, "sortAt": [662, 408, 0] },
+    { "type": "lamp", "x": 20, "y": 249 },
+    { "type": "lamp", "x": 296, "y": 246 },
+    { "type": "lamp", "x": 589, "y": 247 },
+    { "type": "person", "x": 245, "y": 244, "z": 3, "material": "#7e9486" },
+    { "type": "person", "x": 571, "y": 368, "z": 3, "material": "#8e947c" }
+  ],
+  "instances": [
+    { "id": "home", "entity": "home", "asset": "house", "x": 45, "y": 35, "w": 112, "d": 88, "h": 72, "material": "#c6b59b", "anchor": [101, 165, 3], "label": [101, 130, 2.2], "labelStyle": { "width": 146, "size": 12 } },
+    { "id": "school", "entity": "school", "asset": "school", "sign": "LINDEN / SCHOOL", "x": 300, "y": 30, "w": 180, "d": 115, "h": 65, "material": "#c5b99c", "anchor": [390, 182, 3], "label": [390, 152, 2.2], "labelStyle": { "width": 144, "size": 12 } },
+    { "id": "park", "entity": "park", "asset": "park", "x": 60, "y": 265, "w": 200, "d": 150, "h": 72, "material": "#a8ba8b", "anchor": [160, 444, 3], "label": [159, 417, 2.2], "labelStyle": { "width": 144, "size": 11 } },
+    { "id": "square", "entity": "square", "asset": "square", "x": 340, "y": 270, "w": 190, "d": 130, "h": 38, "material": "#a8a99b", "anchor": [435, 430, 3], "label": [435, 405, 2.2], "labelStyle": { "width": 142, "size": 11 } },
+    { "id": "cool-room", "entity": "cool-room", "asset": "cool-room", "sign": "COMMUNITY / COOL ROOM", "x": 610, "y": 45, "w": 150, "d": 115, "h": 58, "material": "#b7c9bb", "anchor": [685, 198, 3], "label": [685, 165, 2.2], "labelStyle": { "width": 167, "size": 11 } }
+  ],
+  "routes": [
+    { "relation": "walk-school", "points": [[126,156,3],[126,175,3],[470,175,3]] },
+    { "relation": "meet-square", "points": [[470,175,3],[232,175,3],[232,245,3],[310,245,3],[310,355,3],[335,355,3],[345,355,4],[365,355,4]] },
+    { "relation": "seek-shade", "points": [[365,355,4],[345,367,4],[335,367,3],[270,367,3],[255,367,4],[152,367,4]] },
+    { "relation": "reach-room", "points": [[152,367,4],[168,367,4],[168,270,4],[168,250,3],[232,250,3],[232,175,3],[683,175,3],[683,164,3],[683,160,8],[683,150,8],[668,137,8]] },
+    { "relation": "return-shade", "points": [[683,175,3],[232,175,3],[232,250,3],[168,250,3],[168,270,4],[168,367,4],[152,367,4]] },
+    { "relation": "opening-notice", "via": [[780, 198, 3], [780, 8, 3], [280, 8, 3], [280, 182, 3]] },
+    { "relation": "family-notice", "via": [[390, 185, 3], [101, 185, 3]] },
+    { "relation": "paving-influence", "via": [[537, 430, 3], [537, 245, 3], [490, 245, 3], [490, 163, 3], [390, 163, 3]] },
+    { "relation": "room-access", "via": [[390, 204, 3], [585, 204, 3], [585, 198, 3]] }
+  ],
+  "scenarioLayouts": [
+    { "scenario": "hot-afternoon", "actor":{"identity":"resident","at":[126,156,3],"material":"#b58b58"}, "steps": [
+      { "at": [395, 105, 82], "links": [{ "relation": "walk-school", "segment": 1 }] },
+      { "at": [435, 338, 58], "links": [{ "relation": "paving-influence", "segment": 1 }] },
+      { "at": [152, 370, 83], "links": [{ "relation": "seek-shade", "segment": 2 }] },
+      { "at": [683, 112, 76], "links": [{ "relation": "room-access", "segment": 1 }] }
+    ] },
+    { "scenario": "closed-door", "actor":{"identity":"resident","at":[152,367,4],"material":"#b58b58"}, "steps": [
+      { "at": [586, 338, 30], "links": [{ "relation": "reach-room", "segment": 5 }], "routeEnd":6 },
+      { "at": [683, 112, 76], "links": [{ "relation": "room-access", "segment": 1 }], "path":[[683,175,3]] },
+      { "at": [152, 370, 83], "links": [{ "relation": "return-shade", "segment": 0 }] }
+    ] }
+  ]
+}

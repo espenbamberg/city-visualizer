@@ -1,0 +1,35 @@
+{
+  "seed": 92713,
+  "theme": "room",
+  "rows": [
+    [
+      {
+        "entity": "intake",
+        "asset": "desk",
+        "emphasis": "context"
+      },
+      {
+        "entity": "diagnosis",
+        "asset": "tester",
+        "emphasis": "primary"
+      },
+      {
+        "entity": "parts",
+        "asset": "shelf",
+        "emphasis": "context"
+      }
+    ],
+    [
+      {
+        "entity": "quality",
+        "asset": "tester",
+        "emphasis": "supporting"
+      },
+      {
+        "entity": "repair",
+        "asset": "workbench",
+        "emphasis": "primary"
+      }
+    ]
+  ]
+}

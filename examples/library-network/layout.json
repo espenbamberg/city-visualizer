@@ -1,0 +1,228 @@
+{
+  "seed": 90421,
+  "districts": [
+    {
+      "label": "Northbank",
+      "plots": [
+        {
+          "entity": "north-desk",
+          "asset": "reception",
+          "sign": "Welcome"
+        },
+        {
+          "entity": "north-collection",
+          "asset": "office",
+          "sign": "Collection",
+          "height": 93
+        },
+        {
+          "entity": "north-learning",
+          "asset": "school",
+          "sign": "Learning"
+        },
+        {
+          "entity": "north-stock",
+          "asset": "warehouse",
+          "sign": "Book store"
+        },
+        {
+          "entity": "north-dispatch",
+          "asset": "depot",
+          "sign": "Delivery"
+        }
+      ]
+    },
+    {
+      "label": "Riverside",
+      "plots": [
+        {
+          "entity": "river-desk",
+          "asset": "reception",
+          "sign": "Welcome"
+        },
+        {
+          "entity": "river-collection",
+          "asset": "office",
+          "sign": "Collection",
+          "height": 121
+        },
+        {
+          "entity": "river-learning",
+          "asset": "school",
+          "sign": "Learning"
+        },
+        {
+          "entity": "river-stock",
+          "asset": "warehouse",
+          "sign": "Book store"
+        },
+        {
+          "entity": "river-dispatch",
+          "asset": "depot",
+          "sign": "Delivery"
+        }
+      ]
+    },
+    {
+      "label": "Market quarter",
+      "plots": [
+        {
+          "entity": "market-desk",
+          "asset": "reception",
+          "sign": "Welcome"
+        },
+        {
+          "entity": "market-collection",
+          "asset": "office",
+          "sign": "Collection",
+          "height": 149
+        },
+        {
+          "entity": "market-learning",
+          "asset": "school",
+          "sign": "Learning"
+        },
+        {
+          "entity": "market-stock",
+          "asset": "warehouse",
+          "sign": "Book store"
+        },
+        {
+          "entity": "market-dispatch",
+          "asset": "depot",
+          "sign": "Delivery"
+        }
+      ]
+    },
+    {
+      "label": "Hill district",
+      "plots": [
+        {
+          "entity": "hill-desk",
+          "asset": "reception",
+          "sign": "Welcome"
+        },
+        {
+          "entity": "hill-collection",
+          "asset": "office",
+          "sign": "Collection",
+          "height": 93
+        },
+        {
+          "entity": "hill-learning",
+          "asset": "school",
+          "sign": "Learning"
+        },
+        {
+          "entity": "hill-stock",
+          "asset": "warehouse",
+          "sign": "Book store"
+        },
+        {
+          "entity": "hill-dispatch",
+          "asset": "depot",
+          "sign": "Delivery"
+        }
+      ]
+    },
+    {
+      "label": "Harbour",
+      "plots": [
+        {
+          "entity": "harbour-desk",
+          "asset": "reception",
+          "sign": "Welcome"
+        },
+        {
+          "entity": "harbour-collection",
+          "asset": "office",
+          "sign": "Collection",
+          "height": 121
+        },
+        {
+          "entity": "harbour-learning",
+          "asset": "school",
+          "sign": "Learning"
+        },
+        {
+          "entity": "harbour-stock",
+          "asset": "warehouse",
+          "sign": "Book store"
+        },
+        {
+          "entity": "harbour-dispatch",
+          "asset": "depot",
+          "sign": "Delivery"
+        }
+      ]
+    },
+    {
+      "label": "West gardens",
+      "plots": [
+        {
+          "entity": "west-desk",
+          "asset": "reception",
+          "sign": "Welcome"
+        },
+        {
+          "entity": "west-collection",
+          "asset": "office",
+          "sign": "Collection",
+          "height": 149
+        },
+        {
+          "entity": "west-learning",
+          "asset": "school",
+          "sign": "Learning"
+        },
+        {
+          "entity": "west-stock",
+          "asset": "warehouse",
+          "sign": "Book store"
+        },
+        {
+          "entity": "west-dispatch",
+          "asset": "depot",
+          "sign": "Delivery"
+        }
+      ]
+    },
+    {
+      "label": "Shared services & technology",
+      "plots": [
+        {
+          "entity": "catalogue",
+          "asset": "cabinet"
+        },
+        {
+          "entity": "reservations",
+          "asset": "cabinet"
+        },
+        {
+          "entity": "membership",
+          "asset": "cabinet"
+        },
+        {
+          "entity": "delivery",
+          "asset": "cabinet"
+        },
+        {
+          "entity": "notices",
+          "asset": "cabinet"
+        },
+        {
+          "entity": "runtime",
+          "asset": "server"
+        },
+        {
+          "entity": "records",
+          "asset": "database"
+        },
+        {
+          "entity": "integration",
+          "asset": "gateway"
+        }
+      ]
+    }
+  ]
+}

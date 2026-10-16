@@ -1,0 +1,35 @@
+{
+  "seed": 92713,
+  "theme": "digital",
+  "rows": [
+    [
+      {
+        "entity": "fields",
+        "asset": "terminal",
+        "emphasis": "primary"
+      },
+      {
+        "entity": "capacity",
+        "asset": "terminal",
+        "emphasis": "supporting"
+      }
+    ],
+    [
+      {
+        "entity": "decision",
+        "asset": "terminal",
+        "emphasis": "primary"
+      },
+      {
+        "entity": "accepted",
+        "asset": "queue",
+        "emphasis": "context"
+      },
+      {
+        "entity": "rejected",
+        "asset": "terminal",
+        "emphasis": "context"
+      }
+    ]
+  ]
+}

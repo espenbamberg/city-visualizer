@@ -1,0 +1,327 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      -15,
+      -15,
+      0
+    ],
+    [
+      580,
+      420,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 580,
+      "d": 420,
+      "h": 3,
+      "material": "#ded9c9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 10,
+      "y": 8,
+      "z": 3,
+      "w": 558,
+      "d": 5,
+      "h": 23,
+      "material": "#8ca69b"
+    },
+    {
+      "type": "box",
+      "x": 10,
+      "y": 400,
+      "z": 3,
+      "w": 558,
+      "d": 5,
+      "h": 8,
+      "material": "#8ca69b"
+    },
+    {
+      "type": "box",
+      "x": 64,
+      "y": 2,
+      "z": 0,
+      "w": 48,
+      "d": 12,
+      "h": 11,
+      "material": "#637369",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 64,
+      "y": 404,
+      "z": 0,
+      "w": 48,
+      "d": 12,
+      "h": 11,
+      "material": "#637369",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 470,
+      "y": 2,
+      "z": 0,
+      "w": 48,
+      "d": 12,
+      "h": 11,
+      "material": "#637369",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 470,
+      "y": 404,
+      "z": 0,
+      "w": 48,
+      "d": 12,
+      "h": 11,
+      "material": "#637369",
+      "r": 4
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "battery",
+      "entity": "battery",
+      "asset": "battery",
+      "x": 40,
+      "y": 38,
+      "w": 90,
+      "d": 65,
+      "h": 30,
+      "material": "#acb9a2",
+      "anchor": [
+        148,
+        133,
+        4
+      ],
+      "label": [
+        85,
+        108,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "BATTERIPAKKE"
+    },
+    {
+      "id": "control",
+      "entity": "control",
+      "asset": "terminal",
+      "x": 220,
+      "y": 38,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#b2c4b9",
+      "anchor": [
+        303,
+        116,
+        4
+      ],
+      "label": [
+        252.5,
+        91,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "MOTORSTYRING"
+    },
+    {
+      "id": "motor",
+      "entity": "motor",
+      "asset": "motor",
+      "x": 400,
+      "y": 38,
+      "w": 70,
+      "d": 60,
+      "h": 45,
+      "material": "#b5bfa4",
+      "anchor": [
+        488,
+        128,
+        4
+      ],
+      "label": [
+        435,
+        103,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "DRIVMOTOR"
+    },
+    {
+      "id": "cargo",
+      "entity": "cargo",
+      "asset": "shelf",
+      "x": 400,
+      "y": 260,
+      "w": 75,
+      "d": 40,
+      "h": 68,
+      "material": "#baa88b",
+      "anchor": [
+        493,
+        238,
+        4
+      ],
+      "label": [
+        437.5,
+        305,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "SIKRET LAST"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "power",
+      "points": [
+        [
+          148,
+          133,
+          4
+        ],
+        [
+          148,
+          200,
+          4
+        ],
+        [
+          303,
+          200,
+          4
+        ],
+        [
+          303,
+          116,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "drive",
+      "points": [
+        [
+          303,
+          116,
+          4
+        ],
+        [
+          303,
+          200,
+          4
+        ],
+        [
+          488,
+          200,
+          4
+        ],
+        [
+          488,
+          128,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "cargo",
+      "points": [
+        [
+          488,
+          128,
+          4
+        ],
+        [
+          488,
+          200,
+          4
+        ],
+        [
+          493,
+          200,
+          4
+        ],
+        [
+          493,
+          238,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "energy",
+      "actor": {
+        "identity": "energy",
+        "at": [
+          148,
+          133,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            252.5,
+            62,
+            95
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            435,
+            68,
+            75
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "load",
+      "steps": [
+        {
+          "at": [
+            437.5,
+            280,
+            98
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

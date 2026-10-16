@@ -1,0 +1,154 @@
+{
+  "title": "Inne i parken",
+  "question": "Hva skjer i inne i parken?",
+  "summary": "Gangveien forbinder inngang, skygge, sitteplasser og utgang.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et reparasjonsoppdrag fra henting til ferdig levering",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "entry",
+      "number": "01",
+      "label": "Inngangen",
+      "kind": "place",
+      "role": "Inngangen",
+      "description": "Møtested ved gangveien.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "shade",
+      "number": "02",
+      "label": "Trærne",
+      "kind": "place",
+      "role": "Trærne",
+      "description": "Skygge ved oppholdsområdet.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "rest",
+      "number": "03",
+      "label": "Sitteplassen",
+      "kind": "place",
+      "role": "Sitteplassen",
+      "description": "Et sted å vente mens reparasjonen pågår.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "exit",
+      "number": "04",
+      "label": "Sykkelutgangen",
+      "kind": "vehicle",
+      "role": "Sykkelutgangen",
+      "description": "Her starter sykkelturen hjem.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "shade",
+      "from": "entry",
+      "to": "shade",
+      "kind": "movement",
+      "label": "Gå til skyggen",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "rest",
+      "from": "shade",
+      "to": "rest",
+      "kind": "movement",
+      "label": "Finn en sitteplass",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "exit",
+      "from": "rest",
+      "to": "exit",
+      "kind": "movement",
+      "label": "Gå til sykkelen",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "pause",
+      "number": "01",
+      "label": "En pause mellom ærend",
+      "summary": "Finn skygge og en plass å sitte.",
+      "condition": "Kunden kommer fra verkstedet.",
+      "outcome": "Kunden er ved sykkelen og klar for hjemturen.",
+      "actor": {
+        "kind": "person",
+        "label": "Kunden",
+        "start": "entry"
+      },
+      "steps": [
+        {
+          "title": "Velg skygge",
+          "text": "Gangveien leder til trærne.",
+          "relations": [
+            "shade"
+          ],
+          "state": {
+            "at": "shade",
+            "via": "shade",
+            "moving": "Velg skygge",
+            "caption": "Ved trærne"
+          }
+        },
+        {
+          "title": "Sett deg ned",
+          "text": "Kunden finner en plass nær gangveien.",
+          "relations": [
+            "rest"
+          ],
+          "state": {
+            "at": "rest",
+            "via": "rest",
+            "moving": "Sett deg ned",
+            "caption": "Ved sitteplassen"
+          }
+        },
+        {
+          "title": "Fortsett hjem",
+          "text": "Kunden går til sykkelen ved utgangen.",
+          "relations": [
+            "exit"
+          ],
+          "state": {
+            "at": "exit",
+            "via": "exit",
+            "moving": "Fortsett hjem",
+            "caption": "Ved sykkelutgangen"
+          }
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "storyHeading": "Velg et forløp"
+  },
+  "legend": {
+    "movement": "Fysisk bevegelse",
+    "information": "Informasjon",
+    "electricity": "Elektrisk strøm",
+    "dependency": "Avhengighet"
+  }
+}

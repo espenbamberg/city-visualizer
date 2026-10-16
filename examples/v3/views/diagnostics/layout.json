@@ -1,0 +1,35 @@
+{
+  "seed": 92713,
+  "theme": "room",
+  "rows": [
+    [
+      {
+        "entity": "isolate",
+        "asset": "workbench",
+        "emphasis": "context"
+      },
+      {
+        "entity": "probe",
+        "asset": "tester",
+        "emphasis": "primary"
+      }
+    ],
+    [
+      {
+        "entity": "read",
+        "asset": "terminal",
+        "emphasis": "supporting"
+      },
+      {
+        "entity": "compare",
+        "asset": "desk",
+        "emphasis": "supporting"
+      },
+      {
+        "entity": "report",
+        "asset": "terminal",
+        "emphasis": "context"
+      }
+    ]
+  ]
+}

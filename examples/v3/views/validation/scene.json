@@ -1,0 +1,431 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      600,
+      522,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 600,
+      "d": 522,
+      "h": 3,
+      "material": "#c1cfc9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 28,
+      "z": 3,
+      "w": 136,
+      "d": 106,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 387,
+      "y": 28,
+      "z": 3,
+      "w": 81,
+      "d": 82,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 271,
+      "z": 3,
+      "w": 136,
+      "d": 106,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 212,
+      "y": 271,
+      "z": 3,
+      "w": 64,
+      "d": 70,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 387,
+      "y": 271,
+      "z": 3,
+      "w": 68,
+      "d": 74,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "fields",
+      "entity": "fields",
+      "asset": "terminal",
+      "x": 30,
+      "y": 36,
+      "w": 120,
+      "d": 72,
+      "h": 45,
+      "anchor": [
+        172,
+        172,
+        4
+      ],
+      "label": [
+        90,
+        128,
+        4
+      ],
+      "labelStyle": {
+        "width": 120,
+        "size": 10,
+        "lines": [
+          "Feltkontroll"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "FELTKONTROLL",
+      "size": "expanded",
+      "emphasis": "primary"
+    },
+    {
+      "id": "capacity",
+      "entity": "capacity",
+      "asset": "terminal",
+      "x": 395,
+      "y": 36,
+      "w": 65,
+      "d": 48,
+      "h": 45,
+      "anchor": [
+        482,
+        148,
+        4
+      ],
+      "label": [
+        427.5,
+        104,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Kapasitetskontroll"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "KAPASITETSKONTROLL",
+      "size": "regular",
+      "emphasis": "supporting"
+    },
+    {
+      "id": "decision",
+      "entity": "decision",
+      "asset": "terminal",
+      "x": 30,
+      "y": 279,
+      "w": 120,
+      "d": 72,
+      "h": 45,
+      "anchor": [
+        172,
+        415,
+        4
+      ],
+      "label": [
+        90,
+        371,
+        4
+      ],
+      "labelStyle": {
+        "width": 120,
+        "size": 10,
+        "lines": [
+          "Beslutning"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "BESLUTNING",
+      "size": "expanded",
+      "emphasis": "primary"
+    },
+    {
+      "id": "accepted",
+      "entity": "accepted",
+      "asset": "queue",
+      "x": 220,
+      "y": 279,
+      "w": 48,
+      "d": 36,
+      "h": 40,
+      "anchor": [
+        290,
+        379,
+        4
+      ],
+      "label": [
+        244,
+        335,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Godkjent"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "GODKJENT",
+      "size": "compact",
+      "emphasis": "context"
+    },
+    {
+      "id": "rejected",
+      "entity": "rejected",
+      "asset": "terminal",
+      "x": 395,
+      "y": 279,
+      "w": 52,
+      "d": 40,
+      "h": 45,
+      "anchor": [
+        469,
+        383,
+        4
+      ],
+      "label": [
+        421,
+        339,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Returmelding"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "RETURMELDING",
+      "size": "compact",
+      "emphasis": "context"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "capacity",
+      "points": [
+        [
+          172,
+          172,
+          4
+        ],
+        [
+          172,
+          224,
+          4
+        ],
+        [
+          482,
+          224,
+          4
+        ],
+        [
+          482,
+          148,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "decide",
+      "points": [
+        [
+          482,
+          148,
+          4
+        ],
+        [
+          482,
+          224,
+          4
+        ],
+        [
+          582,
+          224,
+          4
+        ],
+        [
+          582,
+          467,
+          4
+        ],
+        [
+          172,
+          467,
+          4
+        ],
+        [
+          172,
+          415,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "accept",
+      "points": [
+        [
+          172,
+          415,
+          4
+        ],
+        [
+          172,
+          467,
+          4
+        ],
+        [
+          290,
+          467,
+          4
+        ],
+        [
+          290,
+          379,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "reject",
+      "points": [
+        [
+          172,
+          172,
+          4
+        ],
+        [
+          172,
+          224,
+          4
+        ],
+        [
+          582,
+          224,
+          4
+        ],
+        [
+          582,
+          467,
+          4
+        ],
+        [
+          469,
+          467,
+          4
+        ],
+        [
+          469,
+          383,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "ok",
+      "actor": {
+        "identity": "ok",
+        "at": [
+          172,
+          172,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            427.5,
+            60,
+            73
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            90,
+            315,
+            73
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            244,
+            297,
+            68
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "missing",
+        "at": [
+          172,
+          172,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            421,
+            299,
+            73
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

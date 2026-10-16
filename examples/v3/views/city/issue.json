@@ -1,0 +1,362 @@
+{
+  "title": "Et oppdrag, flere innsider",
+  "question": "Hva skjer i et oppdrag, flere innsider?",
+  "summary": "Åpne objektene merket ⊕. Følg arbeidet inne i verkstedet, bilens energi, parklivet og bestillingens data.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et reparasjonsoppdrag fra henting til ferdig levering",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "home",
+      "number": "01",
+      "label": "Hjemmet",
+      "kind": "place",
+      "role": "Hjemmet",
+      "description": "Kunden avtaler henting og leverer apparatet.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "workshop",
+      "number": "02",
+      "label": "Verkstedet",
+      "kind": "place",
+      "role": "Verkstedet",
+      "description": "Mottak, diagnose, reparasjon og sluttkontroll.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional",
+      "detailView": "workshop"
+    },
+    {
+      "id": "park",
+      "number": "03",
+      "label": "Nabolagsparken",
+      "kind": "place",
+      "role": "Nabolagsparken",
+      "description": "Et oppholdssted på veien mellom hjem og verksted.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional",
+      "detailView": "park"
+    },
+    {
+      "id": "van",
+      "number": "04",
+      "label": "Servicebilen",
+      "kind": "vehicle",
+      "role": "Servicebilen",
+      "description": "Flytter apparatet og driver elektrisk fra batteri til motor.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional",
+      "detailView": "van"
+    },
+    {
+      "id": "depot",
+      "number": "05",
+      "label": "Utleveringen",
+      "kind": "place",
+      "role": "Utleveringen",
+      "description": "Tar imot kontrollerte apparater og avtaler levering.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "booking",
+      "number": "06",
+      "label": "Bestillingen",
+      "kind": "system",
+      "role": "Bestillingen",
+      "description": "Kontrollerer oppdraget og sender en bekreftet arbeidsordre.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional",
+      "detailView": "booking"
+    },
+    {
+      "id": "plane",
+      "number": "07",
+      "label": "Deleflyet",
+      "kind": "vehicle",
+      "role": "Deleflyet",
+      "description": "Frakter reservedeler til terminalen.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional",
+      "detailView": "plane"
+    },
+    {
+      "id": "airport",
+      "number": "08",
+      "label": "Flyterminalen",
+      "kind": "place",
+      "role": "Flyterminalen",
+      "description": "Sorterer innkomne reservedeler før lokal transport.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "visit",
+      "from": "home",
+      "to": "workshop",
+      "kind": "movement",
+      "label": "Lever apparatet",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "rest",
+      "from": "workshop",
+      "to": "park",
+      "kind": "movement",
+      "label": "Gå til parken",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "cycle",
+      "from": "park",
+      "to": "home",
+      "kind": "movement",
+      "label": "Sykle hjem",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "load",
+      "from": "workshop",
+      "to": "van",
+      "kind": "movement",
+      "label": "Last det kontrollerte apparatet",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "deliver",
+      "from": "van",
+      "to": "depot",
+      "kind": "movement",
+      "label": "Kjør til utleveringen",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "request",
+      "from": "home",
+      "to": "booking",
+      "kind": "information",
+      "label": "Send bestillingen",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "order",
+      "from": "booking",
+      "to": "workshop",
+      "kind": "information",
+      "label": "Send bekreftet arbeidsordre",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "air",
+      "from": "plane",
+      "to": "airport",
+      "kind": "movement",
+      "label": "Fly reservedeler til terminalen",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "visit",
+      "number": "01",
+      "label": "Kunden og verkstedet",
+      "summary": "Fra hjemmet til reparasjon og en pause i parken.",
+      "condition": "Hentingen er avtalt, og verkstedet er åpent.",
+      "outcome": "Kunden har levert apparatet og gått til parken.",
+      "actor": {
+        "kind": "person",
+        "label": "Kunden",
+        "start": "home"
+      },
+      "steps": [
+        {
+          "title": "Lever apparatet",
+          "text": "Kunden kommer til verkstedet. Åpne verkstedet for å følge arbeidet videre.",
+          "relations": [
+            "visit"
+          ],
+          "state": {
+            "at": "workshop",
+            "via": "visit",
+            "moving": "Lever apparatet",
+            "caption": "Ved verkstedet"
+          }
+        },
+        {
+          "title": "Ta en pause",
+          "text": "Kunden går til parken mens apparatet undersøkes.",
+          "relations": [
+            "rest"
+          ],
+          "state": {
+            "at": "park",
+            "via": "rest",
+            "moving": "Ta en pause",
+            "caption": "Ved nabolagsparken"
+          }
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "number": "02",
+      "label": "Servicebilen leverer",
+      "summary": "Følg bilen, eller åpne den mens den kjører.",
+      "condition": "Sluttkontrollen er godkjent og bilen er lastet.",
+      "outcome": "Utleveringen har mottatt apparatet.",
+      "actor": {
+        "kind": "van",
+        "label": "Servicebilen",
+        "start": "van",
+        "entity": "van"
+      },
+      "steps": [
+        {
+          "title": "Kjør til utleveringen",
+          "text": "Bilen følger kjøreveien til utleveringen. Klikk på den for å se energien på innsiden.",
+          "relations": [
+            "deliver"
+          ],
+          "state": {
+            "at": "depot",
+            "via": "deliver",
+            "moving": "Kjør til utleveringen",
+            "caption": "Ved utleveringen"
+          }
+        }
+      ]
+    },
+    {
+      "id": "booking",
+      "number": "03",
+      "label": "Data blir en arbeidsordre",
+      "summary": "Bestilling, kontroll og overlevering.",
+      "condition": "Kunden har fylt ut apparat og ønsket tidspunkt.",
+      "outcome": "Verkstedet har fått en bekreftet ordre.",
+      "actor": {
+        "kind": "data",
+        "label": "Bestillingsdata",
+        "start": "home"
+      },
+      "steps": [
+        {
+          "title": "Send opplysningene",
+          "text": "Dataene går til bestillingssystemet.",
+          "relations": [
+            "request"
+          ],
+          "state": {
+            "at": "booking",
+            "via": "request",
+            "moving": "Send opplysningene",
+            "caption": "Ved bestillingen"
+          }
+        },
+        {
+          "title": "Send arbeidsordren",
+          "text": "Bestillingen er kontrollert og får et oppdragsnummer.",
+          "relations": [
+            "order"
+          ],
+          "state": {
+            "at": "workshop",
+            "via": "order",
+            "moving": "Send arbeidsordren",
+            "caption": "Ved verkstedet"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bike",
+      "number": "04",
+      "label": "Sykkelturen hjem",
+      "summary": "En sykkel følger forbindelsen fra parken.",
+      "condition": "Kunden har sykkelen ved parkutgangen.",
+      "outcome": "Kunden er hjemme.",
+      "actor": {
+        "kind": "bicycle",
+        "label": "Kunden på sykkel",
+        "start": "park"
+      },
+      "steps": [
+        {
+          "title": "Sykle hjem",
+          "text": "Sykkelen følger den merkede ruten gjennom nabolaget.",
+          "relations": [
+            "cycle"
+          ],
+          "state": {
+            "at": "home",
+            "via": "cycle",
+            "moving": "Sykle hjem",
+            "caption": "Ved hjemmet"
+          }
+        }
+      ]
+    },
+    {
+      "id": "air",
+      "number": "05",
+      "label": "Reservedeler med fly",
+      "summary": "Flyet følger et luftløp og lander ved terminalen.",
+      "condition": "Reservedelene er lastet og klarert for transport.",
+      "outcome": "Delene er ved flyterminalen.",
+      "actor": {
+        "kind": "plane",
+        "label": "Deleflyet",
+        "start": "plane",
+        "entity": "plane"
+      },
+      "steps": [
+        {
+          "title": "Frakt reservedelene",
+          "text": "Flyet følger luftløpet. Åpne flyet for å se hvordan lasten håndteres.",
+          "relations": [
+            "air"
+          ],
+          "state": {
+            "at": "airport",
+            "via": "air",
+            "moving": "Frakt reservedelene",
+            "caption": "Ved flyterminalen"
+          }
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "storyHeading": "Velg et forløp"
+  },
+  "legend": {
+    "movement": "Fysisk bevegelse",
+    "information": "Informasjon",
+    "electricity": "Elektrisk strøm",
+    "dependency": "Avhengighet"
+  }
+}

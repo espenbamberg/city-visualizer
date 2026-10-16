@@ -1,0 +1,333 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      -15,
+      -15,
+      0
+    ],
+    [
+      580,
+      420,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 225,
+      "y": -60,
+      "z": 0,
+      "w": 130,
+      "d": 540,
+      "h": 2,
+      "material": "#9daea6",
+      "r": 12
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 580,
+      "d": 420,
+      "h": 3,
+      "material": "#ded9c9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 575,
+      "y": 130,
+      "z": 0,
+      "w": 90,
+      "d": 160,
+      "h": 8,
+      "material": "#a9bdb1",
+      "r": 35
+    },
+    {
+      "type": "box",
+      "x": 596,
+      "y": 165,
+      "z": 8,
+      "w": 40,
+      "d": 90,
+      "h": 4,
+      "material": "#72918e",
+      "r": 12
+    },
+    {
+      "type": "box",
+      "x": -60,
+      "y": 155,
+      "z": 0,
+      "w": 65,
+      "d": 110,
+      "h": 5,
+      "material": "#a9bdb1",
+      "r": 18
+    },
+    {
+      "type": "box",
+      "x": -50,
+      "y": 194,
+      "z": 5,
+      "w": 32,
+      "d": 8,
+      "h": 68,
+      "material": "#8da998",
+      "r": 1
+    },
+    {
+      "type": "box",
+      "x": 10,
+      "y": 4,
+      "z": 3,
+      "w": 558,
+      "d": 5,
+      "h": 13,
+      "material": "#abbeb0"
+    },
+    {
+      "type": "box",
+      "x": 10,
+      "y": 411,
+      "z": 3,
+      "w": 558,
+      "d": 5,
+      "h": 13,
+      "material": "#abbeb0"
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "manifest",
+      "entity": "manifest",
+      "asset": "desk",
+      "x": 40,
+      "y": 38,
+      "w": 75,
+      "d": 48,
+      "h": 42,
+      "material": "#acb9a2",
+      "anchor": [
+        133,
+        116,
+        4
+      ],
+      "label": [
+        77.5,
+        91,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "LASTELISTE"
+    },
+    {
+      "id": "check",
+      "entity": "check",
+      "asset": "workbench",
+      "x": 220,
+      "y": 38,
+      "w": 90,
+      "d": 55,
+      "h": 55,
+      "material": "#b2c4b9",
+      "anchor": [
+        328,
+        123,
+        4
+      ],
+      "label": [
+        265,
+        98,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "LASTKONTROLL"
+    },
+    {
+      "id": "hold",
+      "entity": "hold",
+      "asset": "shelf",
+      "x": 400,
+      "y": 38,
+      "w": 75,
+      "d": 40,
+      "h": 68,
+      "material": "#b5bfa4",
+      "anchor": [
+        493,
+        108,
+        4
+      ],
+      "label": [
+        437.5,
+        83,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "LASTEROM"
+    },
+    {
+      "id": "unload",
+      "entity": "unload",
+      "asset": "workbench",
+      "x": 400,
+      "y": 260,
+      "w": 90,
+      "d": 55,
+      "h": 55,
+      "material": "#baa88b",
+      "anchor": [
+        508,
+        238,
+        4
+      ],
+      "label": [
+        445,
+        320,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "LOSSING"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "check",
+      "points": [
+        [
+          133,
+          116,
+          4
+        ],
+        [
+          133,
+          200,
+          4
+        ],
+        [
+          328,
+          200,
+          4
+        ],
+        [
+          328,
+          123,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "stow",
+      "points": [
+        [
+          328,
+          123,
+          4
+        ],
+        [
+          328,
+          200,
+          4
+        ],
+        [
+          493,
+          200,
+          4
+        ],
+        [
+          493,
+          108,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "unload",
+      "points": [
+        [
+          493,
+          108,
+          4
+        ],
+        [
+          493,
+          200,
+          4
+        ],
+        [
+          508,
+          200,
+          4
+        ],
+        [
+          508,
+          238,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "cargo",
+      "actor": {
+        "identity": "technician",
+        "at": [
+          133,
+          116,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            265,
+            65.5,
+            85
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            437.5,
+            58,
+            98
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            445,
+            287.5,
+            85
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      -15,
+      -15,
+      0
+    ],
+    [
+      580,
+      420,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 580,
+      "d": 420,
+      "h": 3,
+      "material": "#ded9c9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "w": 580,
+      "d": 4,
+      "h": 66,
+      "material": "#c4c6b5"
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "w": 4,
+      "d": 420,
+      "h": 66,
+      "material": "#b8c3b4"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          40,
+          4,
+          3.1
+        ],
+        [
+          40,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          80,
+          4,
+          3.1
+        ],
+        [
+          80,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          120,
+          4,
+          3.1
+        ],
+        [
+          120,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          160,
+          4,
+          3.1
+        ],
+        [
+          160,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          200,
+          4,
+          3.1
+        ],
+        [
+          200,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          240,
+          4,
+          3.1
+        ],
+        [
+          240,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          280,
+          4,
+          3.1
+        ],
+        [
+          280,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          320,
+          4,
+          3.1
+        ],
+        [
+          320,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          360,
+          4,
+          3.1
+        ],
+        [
+          360,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          400,
+          4,
+          3.1
+        ],
+        [
+          400,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          440,
+          4,
+          3.1
+        ],
+        [
+          440,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          480,
+          4,
+          3.1
+        ],
+        [
+          480,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          520,
+          4,
+          3.1
+        ],
+        [
+          520,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          560,
+          4,
+          3.1
+        ],
+        [
+          560,
+          420,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          40,
+          3.1
+        ],
+        [
+          580,
+          40,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          80,
+          3.1
+        ],
+        [
+          580,
+          80,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          120,
+          3.1
+        ],
+        [
+          580,
+          120,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          160,
+          3.1
+        ],
+        [
+          580,
+          160,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          200,
+          3.1
+        ],
+        [
+          580,
+          200,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          240,
+          3.1
+        ],
+        [
+          580,
+          240,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          280,
+          3.1
+        ],
+        [
+          580,
+          280,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          320,
+          3.1
+        ],
+        [
+          580,
+          320,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          360,
+          3.1
+        ],
+        [
+          580,
+          360,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          400,
+          3.1
+        ],
+        [
+          580,
+          400,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "isolate",
+      "entity": "isolate",
+      "asset": "workbench",
+      "x": 40,
+      "y": 38,
+      "w": 90,
+      "d": 55,
+      "h": 55,
+      "material": "#acb9a2",
+      "anchor": [
+        148,
+        123,
+        4
+      ],
+      "label": [
+        85,
+        98,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "KLARGJØRING"
+    },
+    {
+      "id": "probe",
+      "entity": "probe",
+      "asset": "tester",
+      "x": 220,
+      "y": 38,
+      "w": 85,
+      "d": 55,
+      "h": 65,
+      "material": "#b2c4b9",
+      "anchor": [
+        323,
+        123,
+        4
+      ],
+      "label": [
+        262.5,
+        98,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "MÅLEPUNKT"
+    },
+    {
+      "id": "read",
+      "entity": "read",
+      "asset": "terminal",
+      "x": 400,
+      "y": 38,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#b5bfa4",
+      "anchor": [
+        483,
+        116,
+        4
+      ],
+      "label": [
+        432.5,
+        91,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "MÅLEINSTRUMENT"
+    },
+    {
+      "id": "compare",
+      "entity": "compare",
+      "asset": "desk",
+      "x": 400,
+      "y": 260,
+      "w": 75,
+      "d": 48,
+      "h": 42,
+      "material": "#baa88b",
+      "anchor": [
+        493,
+        238,
+        4
+      ],
+      "label": [
+        437.5,
+        313,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "SAMMENLIGNING"
+    },
+    {
+      "id": "report",
+      "entity": "report",
+      "asset": "terminal",
+      "x": 40,
+      "y": 260,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#b9bdc2",
+      "anchor": [
+        123,
+        238,
+        4
+      ],
+      "label": [
+        72.5,
+        313,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "FEILRAPPORT"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "prepare",
+      "points": [
+        [
+          148,
+          123,
+          4
+        ],
+        [
+          148,
+          200,
+          4
+        ],
+        [
+          323,
+          200,
+          4
+        ],
+        [
+          323,
+          123,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "measure",
+      "points": [
+        [
+          323,
+          123,
+          4
+        ],
+        [
+          323,
+          200,
+          4
+        ],
+        [
+          483,
+          200,
+          4
+        ],
+        [
+          483,
+          116,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "compare",
+      "points": [
+        [
+          483,
+          116,
+          4
+        ],
+        [
+          483,
+          200,
+          4
+        ],
+        [
+          493,
+          200,
+          4
+        ],
+        [
+          493,
+          238,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "report",
+      "points": [
+        [
+          493,
+          238,
+          4
+        ],
+        [
+          493,
+          200,
+          4
+        ],
+        [
+          123,
+          200,
+          4
+        ],
+        [
+          123,
+          238,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "measure",
+      "actor": {
+        "identity": "technician",
+        "at": [
+          148,
+          123,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            262.5,
+            65.5,
+            95
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            432.5,
+            62,
+            95
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            437.5,
+            284,
+            72
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            72.5,
+            284,
+            95
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

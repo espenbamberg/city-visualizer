@@ -1,0 +1,1364 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      660,
+      569,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 660,
+      "d": 569,
+      "h": 3,
+      "material": "#ded9c9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "w": 660,
+      "d": 4,
+      "h": 62,
+      "material": "#c4c6b5"
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "w": 4,
+      "d": 569,
+      "h": 46,
+      "material": "#b8c3b4"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          40,
+          4,
+          3.1
+        ],
+        [
+          40,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          80,
+          4,
+          3.1
+        ],
+        [
+          80,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          120,
+          4,
+          3.1
+        ],
+        [
+          120,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          160,
+          4,
+          3.1
+        ],
+        [
+          160,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          200,
+          4,
+          3.1
+        ],
+        [
+          200,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          240,
+          4,
+          3.1
+        ],
+        [
+          240,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          280,
+          4,
+          3.1
+        ],
+        [
+          280,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          320,
+          4,
+          3.1
+        ],
+        [
+          320,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          360,
+          4,
+          3.1
+        ],
+        [
+          360,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          400,
+          4,
+          3.1
+        ],
+        [
+          400,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          440,
+          4,
+          3.1
+        ],
+        [
+          440,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          480,
+          4,
+          3.1
+        ],
+        [
+          480,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          520,
+          4,
+          3.1
+        ],
+        [
+          520,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          560,
+          4,
+          3.1
+        ],
+        [
+          560,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          600,
+          4,
+          3.1
+        ],
+        [
+          600,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          640,
+          4,
+          3.1
+        ],
+        [
+          640,
+          569,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          40,
+          3.1
+        ],
+        [
+          660,
+          40,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          80,
+          3.1
+        ],
+        [
+          660,
+          80,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          120,
+          3.1
+        ],
+        [
+          660,
+          120,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          160,
+          3.1
+        ],
+        [
+          660,
+          160,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          200,
+          3.1
+        ],
+        [
+          660,
+          200,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          240,
+          3.1
+        ],
+        [
+          660,
+          240,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          280,
+          3.1
+        ],
+        [
+          660,
+          280,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          320,
+          3.1
+        ],
+        [
+          660,
+          320,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          360,
+          3.1
+        ],
+        [
+          660,
+          360,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          400,
+          3.1
+        ],
+        [
+          660,
+          400,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          440,
+          3.1
+        ],
+        [
+          660,
+          440,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          480,
+          3.1
+        ],
+        [
+          660,
+          480,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          520,
+          3.1
+        ],
+        [
+          660,
+          520,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          4,
+          560,
+          3.1
+        ],
+        [
+          660,
+          560,
+          3.1
+        ]
+      ],
+      "color": "#cfcdbe",
+      "width": 0.35
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 28,
+      "z": 3,
+      "w": 81,
+      "d": 78,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 197,
+      "y": 28,
+      "z": 3,
+      "w": 196,
+      "d": 139,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 447,
+      "y": 28,
+      "z": 3,
+      "w": 64,
+      "d": 66,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 304,
+      "z": 3,
+      "w": 101,
+      "d": 89,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 402,
+      "y": 304,
+      "z": 3,
+      "w": 166,
+      "d": 120,
+      "h": 0.5,
+      "material": "#d4d5c4",
+      "r": 3
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "intake",
+      "entity": "intake",
+      "asset": "desk",
+      "x": 30,
+      "y": 36,
+      "w": 65,
+      "d": 44,
+      "h": 52,
+      "anchor": [
+        46.25,
+        144,
+        3
+      ],
+      "label": [
+        62.5,
+        100,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Mottaksbord"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "MOTTAKSBORD",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "intake"
+    },
+    {
+      "id": "diagnosis",
+      "entity": "diagnosis",
+      "asset": "tester",
+      "x": 205,
+      "y": 36,
+      "w": 180,
+      "d": 105,
+      "h": 65,
+      "anchor": [
+        250,
+        205,
+        3
+      ],
+      "label": [
+        295,
+        161,
+        4
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Diagnosebenk"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "DIAGNOSEBENK",
+      "size": "expanded",
+      "emphasis": "primary",
+      "process": "measurement"
+    },
+    {
+      "id": "parts",
+      "entity": "parts",
+      "asset": "shelf",
+      "x": 455,
+      "y": 36,
+      "w": 48,
+      "d": 32,
+      "h": 68,
+      "anchor": [
+        467,
+        132,
+        3
+      ],
+      "label": [
+        479,
+        88,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Delehylle"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "DELEHYLLE",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "storage"
+    },
+    {
+      "id": "quality",
+      "entity": "quality",
+      "asset": "tester",
+      "x": 30,
+      "y": 312,
+      "w": 85,
+      "d": 55,
+      "h": 65,
+      "anchor": [
+        51.25,
+        431,
+        3
+      ],
+      "label": [
+        72.5,
+        387,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Sluttkontroll"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "SLUTTKONTROLL",
+      "size": "regular",
+      "emphasis": "supporting",
+      "process": "measurement"
+    },
+    {
+      "id": "repair",
+      "entity": "repair",
+      "asset": "workbench",
+      "x": 410,
+      "y": 312,
+      "w": 150,
+      "d": 86,
+      "h": 55,
+      "anchor": [
+        447.5,
+        462,
+        3
+      ],
+      "label": [
+        485,
+        418,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10,
+        "lines": [
+          "Arbeidsbenk"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "ARBEIDSBENK",
+      "size": "expanded",
+      "emphasis": "primary",
+      "process": "repair"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "inspect",
+      "points": [
+        [
+          46.25,
+          144,
+          3
+        ],
+        [
+          117,
+          257,
+          4
+        ],
+        [
+          407,
+          257,
+          4
+        ],
+        [
+          250,
+          205,
+          3
+        ]
+      ],
+      "network": {
+        "from": "intake-entry",
+        "to": "diagnosis-entry",
+        "mode": "person"
+      },
+      "edges": [
+        "link-0",
+        "link-1",
+        "link-2"
+      ]
+    },
+    {
+      "relation": "fetch",
+      "points": [
+        [
+          250,
+          205,
+          3
+        ],
+        [
+          407,
+          257,
+          4
+        ],
+        [
+          525,
+          257,
+          4
+        ],
+        [
+          467,
+          132,
+          3
+        ]
+      ],
+      "network": {
+        "from": "diagnosis-entry",
+        "to": "parts-entry",
+        "mode": "person"
+      },
+      "edges": [
+        "link-2",
+        "link-3",
+        "link-4"
+      ]
+    },
+    {
+      "relation": "fix",
+      "points": [
+        [
+          467,
+          132,
+          3
+        ],
+        [
+          525,
+          257,
+          4
+        ],
+        [
+          642,
+          257,
+          4
+        ],
+        [
+          642,
+          514,
+          4
+        ],
+        [
+          582,
+          514,
+          4
+        ],
+        [
+          447.5,
+          462,
+          3
+        ]
+      ],
+      "network": {
+        "from": "parts-entry",
+        "to": "repair-entry",
+        "mode": "person"
+      },
+      "edges": [
+        "link-4",
+        "link-5",
+        "link-6",
+        "link-7",
+        "link-8"
+      ]
+    },
+    {
+      "relation": "test",
+      "points": [
+        [
+          447.5,
+          462,
+          3
+        ],
+        [
+          582,
+          514,
+          4
+        ],
+        [
+          137,
+          514,
+          4
+        ],
+        [
+          51.25,
+          431,
+          3
+        ]
+      ],
+      "network": {
+        "from": "repair-entry",
+        "to": "quality-entry",
+        "mode": "person"
+      },
+      "edges": [
+        "link-8",
+        "link-9",
+        "link-10"
+      ]
+    },
+    {
+      "relation": "hold",
+      "points": [
+        [
+          250,
+          205,
+          3
+        ],
+        [
+          407,
+          257,
+          4
+        ],
+        [
+          117,
+          257,
+          4
+        ],
+        [
+          46.25,
+          144,
+          3
+        ]
+      ],
+      "network": {
+        "from": "diagnosis-entry",
+        "to": "intake-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-2",
+        "link-1",
+        "link-0"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "repair",
+      "actor": {
+        "identity": "technician",
+        "at": [
+          46.25,
+          144,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            295,
+            88.5,
+            93
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "diagnosis",
+              "part": "probes",
+              "state": "active"
+            },
+            {
+              "entity": "diagnosis",
+              "part": "meter",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            479,
+            52,
+            96
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "parts",
+              "part": "labels",
+              "state": "active"
+            },
+            {
+              "entity": "parts",
+              "part": "stock",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            485,
+            355,
+            83
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "repair",
+              "part": "component",
+              "state": "active"
+            },
+            {
+              "entity": "repair",
+              "part": "tools",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            72.5,
+            339.5,
+            93
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "quality",
+              "part": "meter",
+              "state": "active"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "technician",
+        "at": [
+          46.25,
+          144,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            295,
+            88.5,
+            93
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "diagnosis",
+              "part": "meter",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            62.5,
+            58,
+            80
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "intake",
+              "part": "record",
+              "state": "waiting"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adaptiveDetail": true,
+  "network": {
+    "nodes": [
+      {
+        "id": "junction-0",
+        "at": [
+          46.25,
+          144,
+          3
+        ]
+      },
+      {
+        "id": "junction-1",
+        "at": [
+          250,
+          205,
+          3
+        ]
+      },
+      {
+        "id": "junction-2",
+        "at": [
+          467,
+          132,
+          3
+        ]
+      },
+      {
+        "id": "junction-3",
+        "at": [
+          51.25,
+          431,
+          3
+        ]
+      },
+      {
+        "id": "junction-4",
+        "at": [
+          447.5,
+          462,
+          3
+        ]
+      },
+      {
+        "id": "junction-5",
+        "at": [
+          117,
+          257,
+          4
+        ]
+      },
+      {
+        "id": "junction-6",
+        "at": [
+          407,
+          257,
+          4
+        ]
+      },
+      {
+        "id": "junction-7",
+        "at": [
+          525,
+          257,
+          4
+        ]
+      },
+      {
+        "id": "junction-8",
+        "at": [
+          642,
+          257,
+          4
+        ]
+      },
+      {
+        "id": "junction-9",
+        "at": [
+          642,
+          514,
+          4
+        ]
+      },
+      {
+        "id": "junction-10",
+        "at": [
+          582,
+          514,
+          4
+        ]
+      },
+      {
+        "id": "junction-11",
+        "at": [
+          137,
+          514,
+          4
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "link-0",
+        "from": "junction-0",
+        "to": "junction-5",
+        "surface": "path",
+        "modes": [
+          "person",
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-1",
+        "from": "junction-5",
+        "to": "junction-6",
+        "surface": "path",
+        "modes": [
+          "person",
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-2",
+        "from": "junction-6",
+        "to": "junction-1",
+        "surface": "path",
+        "modes": [
+          "person",
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-3",
+        "from": "junction-6",
+        "to": "junction-7",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-4",
+        "from": "junction-7",
+        "to": "junction-2",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-5",
+        "from": "junction-7",
+        "to": "junction-8",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-6",
+        "from": "junction-8",
+        "to": "junction-9",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-7",
+        "from": "junction-9",
+        "to": "junction-10",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-8",
+        "from": "junction-10",
+        "to": "junction-4",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-9",
+        "from": "junction-10",
+        "to": "junction-11",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-10",
+        "from": "junction-11",
+        "to": "junction-3",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 20
+      }
+    ],
+    "ports": [
+      {
+        "id": "intake-entry",
+        "entity": "intake",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-0"
+      },
+      {
+        "id": "diagnosis-entry",
+        "entity": "diagnosis",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-1"
+      },
+      {
+        "id": "parts-entry",
+        "entity": "parts",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-2"
+      },
+      {
+        "id": "quality-entry",
+        "entity": "quality",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-3"
+      },
+      {
+        "id": "repair-entry",
+        "entity": "repair",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-4"
+      }
+    ]
+  }
+}

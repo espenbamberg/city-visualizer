@@ -1,0 +1,158 @@
+{
+  "title": "Inne i servicebilen",
+  "question": "Hva skjer i inne i servicebilen?",
+  "summary": "En utbrettet oversikt over bilens energikjede og last. Strøm følger forbindelsene mellom batteri, styring og motor.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et reparasjonsoppdrag fra henting til ferdig levering",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "battery",
+      "number": "01",
+      "label": "Batteripakke",
+      "kind": "station",
+      "role": "Batteripakke",
+      "description": "Lagrer energien for kjøreturen.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "control",
+      "number": "02",
+      "label": "Motorstyring",
+      "kind": "system",
+      "role": "Motorstyring",
+      "description": "Regulerer energien til motoren.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "motor",
+      "number": "03",
+      "label": "Drivmotor",
+      "kind": "station",
+      "role": "Drivmotor",
+      "description": "Omsetter elektrisk energi til bevegelse.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "cargo",
+      "number": "04",
+      "label": "Sikret last",
+      "kind": "station",
+      "role": "Sikret last",
+      "description": "Holder det kontrollerte apparatet under transport.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "power",
+      "from": "battery",
+      "to": "control",
+      "kind": "electricity",
+      "label": "Forsyn motorstyringen",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "drive",
+      "from": "control",
+      "to": "motor",
+      "kind": "electricity",
+      "label": "Driv motoren",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "cargo",
+      "from": "motor",
+      "to": "cargo",
+      "kind": "dependency",
+      "label": "Transporter sikret last",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "energy",
+      "number": "01",
+      "label": "Fra batteri til fremdrift",
+      "summary": "Strømpulsen følger bilens elektriske forbindelser.",
+      "condition": "Bilen er klar til avgang og batteriet har energi.",
+      "outcome": "Motoren leverer fremdrift til kjøreturen.",
+      "actor": {
+        "kind": "electricity",
+        "label": "Elektrisk energi",
+        "start": "battery"
+      },
+      "steps": [
+        {
+          "title": "Lever energi",
+          "text": "Batteriet forsyner motorstyringen.",
+          "relations": [
+            "power"
+          ],
+          "state": {
+            "at": "control",
+            "via": "power",
+            "moving": "Lever energi",
+            "caption": "Ved motorstyring"
+          }
+        },
+        {
+          "title": "Reguler motoren",
+          "text": "Motorstyringen regulerer strømmen til drivmotoren.",
+          "relations": [
+            "drive"
+          ],
+          "state": {
+            "at": "motor",
+            "via": "drive",
+            "moving": "Reguler motoren",
+            "caption": "Ved drivmotor"
+          }
+        }
+      ]
+    },
+    {
+      "id": "load",
+      "number": "02",
+      "label": "Lasten følger oppdraget",
+      "summary": "Last og transport er avhengige av hverandre.",
+      "condition": "Apparatet er sikret i bilen.",
+      "outcome": "Lasten kan overleveres med oppdragsnummer.",
+      "steps": [
+        {
+          "title": "Hold lasten samlet",
+          "text": "Det sikrede apparatet og dokumentasjonen følger samme oppdrag til utleveringen.",
+          "relations": [
+            "cargo"
+          ]
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "storyHeading": "Velg et forløp"
+  },
+  "legend": {
+    "movement": "Fysisk bevegelse",
+    "information": "Informasjon",
+    "electricity": "Elektrisk strøm",
+    "dependency": "Avhengighet"
+  }
+}

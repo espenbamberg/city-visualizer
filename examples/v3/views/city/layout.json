@@ -1,0 +1,55 @@
+{
+  "seed": 92713,
+  "districts": [
+    {
+      "label": "Verksted og nabolag",
+      "plots": [
+        {
+          "entity": "workshop",
+          "asset": "workshop",
+          "emphasis": "primary"
+        },
+        {
+          "entity": "park",
+          "asset": "park",
+          "emphasis": "primary"
+        },
+        {
+          "entity": "home",
+          "asset": "house",
+          "emphasis": "context"
+        },
+        {
+          "entity": "van",
+          "asset": "van",
+          "emphasis": "context"
+        }
+      ]
+    },
+    {
+      "label": "Levering og bestilling",
+      "plots": [
+        {
+          "entity": "booking",
+          "asset": "cabinet",
+          "emphasis": "context"
+        },
+        {
+          "entity": "depot",
+          "asset": "depot",
+          "emphasis": "supporting"
+        },
+        {
+          "entity": "plane",
+          "asset": "plane",
+          "emphasis": "context"
+        },
+        {
+          "entity": "airport",
+          "asset": "warehouse",
+          "emphasis": "supporting"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "seed": 62131,
+  "districts": [
+    {
+      "label": "Library neighbourhood",
+      "plots": [
+        {
+          "entity": "home",
+          "asset": "house"
+        },
+        {
+          "entity": "desk",
+          "asset": "reception"
+        },
+        {
+          "entity": "collection",
+          "asset": "office"
+        },
+        {
+          "entity": "park",
+          "asset": "park"
+        },
+        {
+          "entity": "room",
+          "asset": "school"
+        }
+      ]
+    }
+  ]
+}

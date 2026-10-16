@@ -1,0 +1,427 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      -15,
+      -15,
+      0
+    ],
+    [
+      580,
+      420,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 580,
+      "d": 420,
+      "h": 3,
+      "material": "#c1cfc9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 30,
+      "y": 28,
+      "z": 3,
+      "w": 85,
+      "d": 70,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 210,
+      "y": 28,
+      "z": 3,
+      "w": 85,
+      "d": 70,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 390,
+      "y": 28,
+      "z": 3,
+      "w": 110,
+      "d": 72,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 390,
+      "y": 250,
+      "z": 3,
+      "w": 130,
+      "d": 92,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 30,
+      "y": 250,
+      "z": 3,
+      "w": 85,
+      "d": 70,
+      "h": 1,
+      "material": "#d3ded5",
+      "r": 4
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "receive",
+      "entity": "receive",
+      "asset": "terminal",
+      "x": 40,
+      "y": 38,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#acb9a2",
+      "anchor": [
+        123,
+        116,
+        4
+      ],
+      "label": [
+        72.5,
+        91,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "MOTTAK"
+    },
+    {
+      "id": "validate",
+      "entity": "validate",
+      "asset": "terminal",
+      "x": 220,
+      "y": 38,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#b2c4b9",
+      "anchor": [
+        303,
+        116,
+        4
+      ],
+      "label": [
+        252.5,
+        91,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "VALIDERING"
+    },
+    {
+      "id": "queue",
+      "entity": "queue",
+      "asset": "queue",
+      "x": 400,
+      "y": 38,
+      "w": 90,
+      "d": 50,
+      "h": 40,
+      "material": "#b5bfa4",
+      "anchor": [
+        508,
+        118,
+        4
+      ],
+      "label": [
+        445,
+        93,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "ORDREKØ"
+    },
+    {
+      "id": "store",
+      "entity": "store",
+      "asset": "database",
+      "x": 400,
+      "y": 260,
+      "w": 110,
+      "d": 70,
+      "h": 60,
+      "material": "#baa88b",
+      "anchor": [
+        528,
+        238,
+        4
+      ],
+      "label": [
+        455,
+        335,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "ORDRELAGER"
+    },
+    {
+      "id": "send",
+      "entity": "send",
+      "asset": "terminal",
+      "x": 40,
+      "y": 260,
+      "w": 65,
+      "d": 48,
+      "h": 65,
+      "material": "#b9bdc2",
+      "anchor": [
+        123,
+        238,
+        4
+      ],
+      "label": [
+        72.5,
+        313,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "ARBEIDSORDRE"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "check",
+      "points": [
+        [
+          123,
+          116,
+          4
+        ],
+        [
+          123,
+          200,
+          4
+        ],
+        [
+          303,
+          200,
+          4
+        ],
+        [
+          303,
+          116,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "enqueue",
+      "points": [
+        [
+          303,
+          116,
+          4
+        ],
+        [
+          303,
+          200,
+          4
+        ],
+        [
+          508,
+          200,
+          4
+        ],
+        [
+          508,
+          118,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "save",
+      "points": [
+        [
+          508,
+          118,
+          4
+        ],
+        [
+          508,
+          200,
+          4
+        ],
+        [
+          528,
+          200,
+          4
+        ],
+        [
+          528,
+          238,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "send",
+      "points": [
+        [
+          528,
+          238,
+          4
+        ],
+        [
+          528,
+          200,
+          4
+        ],
+        [
+          123,
+          200,
+          4
+        ],
+        [
+          123,
+          238,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "reject",
+      "points": [
+        [
+          303,
+          116,
+          4
+        ],
+        [
+          303,
+          200,
+          4
+        ],
+        [
+          123,
+          200,
+          4
+        ],
+        [
+          123,
+          116,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "accepted",
+      "actor": {
+        "identity": "accepted",
+        "at": [
+          123,
+          116,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            252.5,
+            62,
+            95
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            445,
+            63,
+            70
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            455,
+            295,
+            90
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            72.5,
+            284,
+            95
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "incomplete",
+      "actor": {
+        "identity": "incomplete",
+        "at": [
+          123,
+          116,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            252.5,
+            62,
+            95
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            72.5,
+            62,
+            95
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

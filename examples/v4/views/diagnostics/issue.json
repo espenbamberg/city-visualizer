@@ -1,0 +1,193 @@
+{
+  "title": "Inne i diagnosen",
+  "question": "Hva skjer i inne i diagnosen?",
+  "summary": "Fra sikker klargjøring til et måleresultat som peker på riktig komponent.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et reparasjonsoppdrag fra henting til ferdig levering",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "isolate",
+      "number": "01",
+      "label": "Klargjøring",
+      "kind": "station",
+      "role": "Klargjøring",
+      "description": "Klargjør apparatet og kobler fra forsyningen.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "probe",
+      "number": "02",
+      "label": "Målepunkt",
+      "kind": "station",
+      "role": "Målepunkt",
+      "description": "Setter måleprober ved den aktuelle komponenten.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "read",
+      "number": "03",
+      "label": "Måleinstrument",
+      "kind": "system",
+      "role": "Måleinstrument",
+      "description": "Viser det avleste resultatet.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "compare",
+      "number": "04",
+      "label": "Sammenligning",
+      "kind": "station",
+      "role": "Sammenligning",
+      "description": "Sammenholder resultatet med arbeidsordrens kontrollpunkter.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "report",
+      "number": "05",
+      "label": "Feilrapport",
+      "kind": "system",
+      "role": "Feilrapport",
+      "description": "Lagrer måling og delenummer.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "prepare",
+      "from": "isolate",
+      "to": "probe",
+      "kind": "movement",
+      "label": "Sett måleprobene",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "measure",
+      "from": "probe",
+      "to": "read",
+      "kind": "information",
+      "label": "Les signalet",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "compare",
+      "from": "read",
+      "to": "compare",
+      "kind": "information",
+      "label": "Vurder målingen",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "report",
+      "from": "compare",
+      "to": "report",
+      "kind": "information",
+      "label": "Lagre feilen",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "measure",
+      "number": "01",
+      "label": "Finn den defekte komponenten",
+      "summary": "Følg teknikeren og deretter måledataene.",
+      "condition": "Apparatet står på diagnosebenken.",
+      "outcome": "Feilrapporten angir målingen og komponenten som skal byttes.",
+      "actor": {
+        "kind": "person",
+        "label": "Teknikeren",
+        "start": "isolate",
+        "identity": "technician"
+      },
+      "steps": [
+        {
+          "title": "Klargjør målepunktet",
+          "text": "Teknikeren klargjør apparatet og plasserer probene.",
+          "relations": [
+            "prepare"
+          ],
+          "state": {
+            "at": "probe",
+            "via": "prepare",
+            "moving": "Klargjør målepunktet",
+            "caption": "Ved målepunkt"
+          }
+        },
+        {
+          "title": "Les målingen",
+          "text": "Instrumentet mottar signalet fra målepunktet.",
+          "relations": [
+            "measure"
+          ],
+          "state": {
+            "at": "read",
+            "via": "measure",
+            "moving": "Les målingen",
+            "caption": "Ved måleinstrument"
+          },
+          "actor": {
+            "kind": "data",
+            "label": "Måledata"
+          },
+          "handoff": "Fra teknikerens handling til instrumentets måledata."
+        },
+        {
+          "title": "Vurder resultatet",
+          "text": "Teknikeren sammenholder avlesningen med kontrollpunktene i oppdraget.",
+          "relations": [
+            "compare"
+          ],
+          "state": {
+            "at": "compare",
+            "via": "compare",
+            "moving": "Vurder resultatet",
+            "caption": "Ved sammenligning"
+          }
+        },
+        {
+          "title": "Dokumenter funnet",
+          "text": "Målingen og delenummeret følger apparatet videre til reparasjon.",
+          "relations": [
+            "report"
+          ],
+          "state": {
+            "at": "report",
+            "via": "report",
+            "moving": "Dokumenter funnet",
+            "caption": "Ved feilrapport"
+          }
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "storyHeading": "Velg et forløp"
+  },
+  "legend": {
+    "movement": "Fysisk bevegelse",
+    "information": "Informasjon",
+    "electricity": "Elektrisk strøm",
+    "dependency": "Avhengighet"
+  }
+}

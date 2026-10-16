@@ -1,0 +1,589 @@
+{
+  "width": 1600,
+  "height": 1100,
+  "seed": 81403,
+  "adaptiveDetail": true,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 34
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      885,
+      330,
+      0
+    ],
+    [
+      870,
+      450,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": -10,
+      "y": 0,
+      "z": -3,
+      "w": 880,
+      "d": 450,
+      "h": 3,
+      "material": "#e5e1ce",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 2,
+      "y": 12,
+      "z": 0,
+      "w": 137,
+      "d": 184,
+      "h": 2,
+      "material": "#dedbc9",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        10,
+        20,
+        3
+      ],
+      "text": "MOTTAKSKONTOR",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    },
+    {
+      "type": "box",
+      "x": 247,
+      "y": 12,
+      "z": 0,
+      "w": 402,
+      "d": 298,
+      "h": 2,
+      "material": "#dedbc9",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        255,
+        20,
+        3
+      ],
+      "text": "SERVICEVERKSTED",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    },
+    {
+      "type": "box",
+      "x": 672,
+      "y": 12,
+      "z": 0,
+      "w": 137,
+      "d": 184,
+      "h": 2,
+      "material": "#dedbc9",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        680,
+        20,
+        3
+      ],
+      "text": "UTLEVERINGSKONTOR",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    },
+    {
+      "type": "text",
+      "at": [
+        380,
+        436,
+        3
+      ],
+      "text": "SERVICEGATA",
+      "size": 9,
+      "color": "#5c6e5e"
+    }
+  ],
+  "scenery": [
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 168,
+      "h": 43,
+      "seed": 0
+    },
+    {
+      "type": "person",
+      "id": "visitor-intake",
+      "x": 50,
+      "y": 154,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 277,
+      "y": 282,
+      "h": 43,
+      "seed": 1
+    },
+    {
+      "type": "person",
+      "id": "visitor-check",
+      "x": 295,
+      "y": 268,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 702,
+      "y": 168,
+      "h": 43,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-release",
+      "x": 720,
+      "y": 154,
+      "z": 3
+    }
+  ],
+  "instances": [
+    {
+      "id": "intake",
+      "entity": "intake",
+      "asset": "office",
+      "x": 20,
+      "y": 30,
+      "w": 95,
+      "d": 76,
+      "h": 93,
+      "material": "#bcc6b1",
+      "sign": "Mottak",
+      "size": "compact",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        67.5,
+        142,
+        3
+      ],
+      "label": [
+        67.5,
+        113,
+        3
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Mottak"
+        ]
+      }
+    },
+    {
+      "id": "check",
+      "entity": "check",
+      "asset": "workshop",
+      "x": 265,
+      "y": 30,
+      "w": 360,
+      "d": 190,
+      "h": 68,
+      "material": "#bcc6b1",
+      "sign": "Kontroll",
+      "size": "expanded",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        445,
+        256,
+        3
+      ],
+      "label": [
+        445,
+        227,
+        3
+      ],
+      "labelStyle": {
+        "width": 360,
+        "size": 10,
+        "lines": [
+          "Kontroll"
+        ]
+      }
+    },
+    {
+      "id": "release",
+      "entity": "release",
+      "asset": "office",
+      "x": 690,
+      "y": 30,
+      "w": 95,
+      "d": 76,
+      "h": 93,
+      "material": "#bcc6b1",
+      "sign": "Utlevering",
+      "size": "compact",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        737.5,
+        142,
+        3
+      ],
+      "label": [
+        737.5,
+        113,
+        3
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Utlevering"
+        ]
+      }
+    }
+  ],
+  "network": {
+    "nodes": [
+      {
+        "id": "intake-port",
+        "at": [
+          67.5,
+          142,
+          3
+        ]
+      },
+      {
+        "id": "intake-lane",
+        "at": [
+          67.5,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "check-port",
+        "at": [
+          445,
+          256,
+          3
+        ]
+      },
+      {
+        "id": "check-lane",
+        "at": [
+          445,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "release-port",
+        "at": [
+          737.5,
+          142,
+          3
+        ]
+      },
+      {
+        "id": "release-lane",
+        "at": [
+          737.5,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "street-west",
+        "at": [
+          0,
+          394,
+          3
+        ]
+      },
+      {
+        "id": "street-east",
+        "at": [
+          840,
+          394,
+          3
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "intake-entry",
+        "entity": "intake",
+        "node": "intake-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      },
+      {
+        "id": "check-entry",
+        "entity": "check",
+        "node": "check-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      },
+      {
+        "id": "release-entry",
+        "entity": "release",
+        "node": "release-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      }
+    ],
+    "edges": [
+      {
+        "id": "intake-access",
+        "from": "intake-port",
+        "to": "intake-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "check-access",
+        "from": "check-port",
+        "to": "check-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "shared-1",
+        "from": "intake-lane",
+        "to": "check-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "release-access",
+        "from": "release-port",
+        "to": "release-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "shared-2",
+        "from": "check-lane",
+        "to": "release-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "public-street",
+        "from": "street-west",
+        "to": "street-east",
+        "surface": "road",
+        "width": 64,
+        "modes": [
+          "car",
+          "van"
+        ]
+      }
+    ]
+  },
+  "routes": [
+    {
+      "relation": "inspect",
+      "network": {
+        "from": "intake-entry",
+        "to": "check-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          67.5,
+          142,
+          3
+        ],
+        [
+          67.5,
+          330,
+          3
+        ],
+        [
+          445,
+          330,
+          3
+        ],
+        [
+          445,
+          256,
+          3
+        ]
+      ],
+      "edges": [
+        "intake-access",
+        "shared-1",
+        "check-access"
+      ]
+    },
+    {
+      "relation": "deliver",
+      "network": {
+        "from": "check-entry",
+        "to": "release-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          445,
+          256,
+          3
+        ],
+        [
+          445,
+          330,
+          3
+        ],
+        [
+          737.5,
+          330,
+          3
+        ],
+        [
+          737.5,
+          142,
+          3
+        ]
+      ],
+      "edges": [
+        "check-access",
+        "shared-2",
+        "release-access"
+      ]
+    },
+    {
+      "relation": "clarify",
+      "network": {
+        "from": "check-entry",
+        "to": "intake-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          445,
+          256,
+          3
+        ],
+        [
+          445,
+          330,
+          3
+        ],
+        [
+          67.5,
+          330,
+          3
+        ],
+        [
+          67.5,
+          142,
+          3
+        ]
+      ],
+      "edges": [
+        "check-access",
+        "shared-1",
+        "intake-access"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "complete",
+      "actor": {
+        "identity": "colleague",
+        "at": [
+          67.5,
+          142,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            445,
+            125,
+            100
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            737.5,
+            68,
+            125
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "colleague",
+        "at": [
+          67.5,
+          142,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            445,
+            125,
+            100
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            67.5,
+            68,
+            125
+          ],
+          "links": []
+        }
+      ]
+    }
+  ],
+  "environment": "city"
+}

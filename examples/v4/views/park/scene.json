@@ -1,0 +1,365 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      -15,
+      -15,
+      0
+    ],
+    [
+      580,
+      420,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 580,
+      "d": 420,
+      "h": 3,
+      "material": "#bbc8a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 100,
+      "y": 188,
+      "z": 3,
+      "w": 460,
+      "d": 24,
+      "h": 0.5,
+      "material": "#ddd7bd",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 149,
+      "y": 128,
+      "z": 3,
+      "w": 18,
+      "d": 82,
+      "h": 0.5,
+      "material": "#ddd7bd",
+      "r": 2
+    },
+    {
+      "type": "box",
+      "x": 329,
+      "y": 138,
+      "z": 3,
+      "w": 18,
+      "d": 72,
+      "h": 0.5,
+      "material": "#ddd7bd",
+      "r": 2
+    },
+    {
+      "type": "box",
+      "x": 509,
+      "y": 128,
+      "z": 3,
+      "w": 18,
+      "d": 82,
+      "h": 0.5,
+      "material": "#ddd7bd",
+      "r": 2
+    },
+    {
+      "type": "box",
+      "x": 437,
+      "y": 190,
+      "z": 3,
+      "w": 18,
+      "d": 58,
+      "h": 0.5,
+      "material": "#ddd7bd",
+      "r": 2
+    }
+  ],
+  "scenery": [
+    {
+      "type": "tree",
+      "x": 40,
+      "y": 165,
+      "h": 42,
+      "seed": 40
+    },
+    {
+      "type": "tree",
+      "x": 45,
+      "y": 330,
+      "h": 42,
+      "seed": 45
+    },
+    {
+      "type": "tree",
+      "x": 210,
+      "y": 310,
+      "h": 42,
+      "seed": 210
+    },
+    {
+      "type": "tree",
+      "x": 260,
+      "y": 345,
+      "h": 42,
+      "seed": 260
+    },
+    {
+      "type": "tree",
+      "x": 320,
+      "y": 290,
+      "h": 42,
+      "seed": 320
+    },
+    {
+      "type": "bench",
+      "x": 210,
+      "y": 225
+    },
+    {
+      "type": "lamp",
+      "x": 85,
+      "y": 194
+    },
+    {
+      "type": "lamp",
+      "x": 555,
+      "y": 220
+    }
+  ],
+  "instances": [
+    {
+      "id": "entry",
+      "entity": "entry",
+      "asset": "seating",
+      "x": 40,
+      "y": 38,
+      "w": 100,
+      "d": 70,
+      "h": 36,
+      "material": "#acb9a2",
+      "anchor": [
+        158,
+        138,
+        4
+      ],
+      "label": [
+        90,
+        113,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "INNGANGEN"
+    },
+    {
+      "id": "shade",
+      "entity": "shade",
+      "asset": "garden",
+      "x": 220,
+      "y": 38,
+      "w": 100,
+      "d": 80,
+      "h": 62,
+      "material": "#b2c4b9",
+      "anchor": [
+        338,
+        148,
+        4
+      ],
+      "label": [
+        270,
+        123,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "TRÆRNE"
+    },
+    {
+      "id": "rest",
+      "entity": "rest",
+      "asset": "seating",
+      "x": 400,
+      "y": 38,
+      "w": 100,
+      "d": 70,
+      "h": 36,
+      "material": "#b5bfa4",
+      "anchor": [
+        518,
+        138,
+        4
+      ],
+      "label": [
+        450,
+        113,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "SITTEPLASSEN"
+    },
+    {
+      "id": "exit",
+      "entity": "exit",
+      "asset": "bicycle",
+      "x": 400,
+      "y": 260,
+      "w": 28,
+      "d": 14,
+      "h": 40,
+      "material": "#baa88b",
+      "anchor": [
+        446,
+        238,
+        4
+      ],
+      "label": [
+        414,
+        279,
+        4
+      ],
+      "labelStyle": {
+        "width": 150,
+        "size": 10
+      },
+      "sign": "SYKKELUTGANGEN"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "shade",
+      "points": [
+        [
+          158,
+          138,
+          4
+        ],
+        [
+          158,
+          200,
+          4
+        ],
+        [
+          338,
+          200,
+          4
+        ],
+        [
+          338,
+          148,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "rest",
+      "points": [
+        [
+          338,
+          148,
+          4
+        ],
+        [
+          338,
+          200,
+          4
+        ],
+        [
+          518,
+          200,
+          4
+        ],
+        [
+          518,
+          138,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "exit",
+      "points": [
+        [
+          518,
+          138,
+          4
+        ],
+        [
+          518,
+          200,
+          4
+        ],
+        [
+          446,
+          200,
+          4
+        ],
+        [
+          446,
+          238,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "pause",
+      "actor": {
+        "identity": "technician",
+        "at": [
+          158,
+          138,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            270,
+            78,
+            92
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            450,
+            73,
+            66
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            414,
+            267,
+            70
+          ],
+          "links": []
+        }
+      ]
+    }
+  ],
+  "adaptiveDetail": true
+}

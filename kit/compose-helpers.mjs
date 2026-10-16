@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {actorAt} from './model.mjs';
+
+export function relationshipMode(issue,relation) {
+  const modes=new Set();
+  for(const s of issue.scenarios)if(s.actor)s.steps.forEach((step,i)=>{if(step.state?.via===relation.id)modes.add(actorAt(s,i).kind);});
+  assert(modes.size<=1,`Conflicting travel modes: ${relation.id}; use separate relationships`);
+  return [...modes][0]??({movement:'person',information:'data',electricity:'electricity'}[relation.kind]);
+}
+
+export function scenarioLayouts(issue,scene) {
+  return issue.scenarios.map(s=>{
+    const seen=new Map();
+    return {scenario:s.id,...(s.actor?{actor:{identity:s.actor.identity??s.id,at:scene.instances.find(a=>a.entity===s.actor.start).anchor,material:'#aa8557'}}:{}),steps:s.steps.map((step,i)=>{
+      const r=issue.relationships.find(r=>r.id===(step.state?.via??step.relations[0]));
+      const a=scene.instances.find(a=>a.entity===(step.state?.at??r.to)),slot=seen.get(a.entity)??0;seen.set(a.entity,slot+1);
+      return {at:[a.x+a.w/2+slot*30,a.y+a.d/2,a.h+32],links:[],...(s.actor&&(!step.state.via||actorAt(s,i).kind==='document')?{path:step.state.via?scene.routes.find(r=>r.relation===step.state.via).points:[a.anchor]}:{})};
+    })};
+  });
+}

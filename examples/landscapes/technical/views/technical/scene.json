@@ -1,0 +1,705 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 81403,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      425,
+      498,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 425,
+      "d": 498,
+      "h": 3,
+      "material": "#c1cfc9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 28,
+      "z": 3,
+      "w": 81,
+      "d": 82,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 197,
+      "y": 28,
+      "z": 3,
+      "w": 136,
+      "d": 106,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 271,
+      "z": 3,
+      "w": 81,
+      "d": 82,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 212,
+      "y": 271,
+      "z": 3,
+      "w": 81,
+      "d": 82,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "input",
+      "entity": "input",
+      "asset": "terminal",
+      "x": 30,
+      "y": 36,
+      "w": 65,
+      "d": 48,
+      "h": 45,
+      "anchor": [
+        46.25,
+        148,
+        4
+      ],
+      "label": [
+        62.5,
+        104,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Inndata"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "INNDATA",
+      "size": "regular",
+      "process": "record"
+    },
+    {
+      "id": "validate",
+      "entity": "validate",
+      "asset": "terminal",
+      "x": 205,
+      "y": 36,
+      "w": 120,
+      "d": 72,
+      "h": 45,
+      "anchor": [
+        235,
+        172,
+        4
+      ],
+      "label": [
+        265,
+        128,
+        4
+      ],
+      "labelStyle": {
+        "width": 120,
+        "size": 10,
+        "lines": [
+          "Validering"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "VALIDERING",
+      "size": "expanded",
+      "process": "checks"
+    },
+    {
+      "id": "store",
+      "entity": "store",
+      "asset": "terminal",
+      "x": 30,
+      "y": 279,
+      "w": 65,
+      "d": 48,
+      "h": 45,
+      "anchor": [
+        46.25,
+        391,
+        4
+      ],
+      "label": [
+        62.5,
+        347,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Lagring"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "LAGRING",
+      "size": "regular",
+      "process": "readout"
+    },
+    {
+      "id": "receipt",
+      "entity": "receipt",
+      "asset": "terminal",
+      "x": 220,
+      "y": 279,
+      "w": 65,
+      "d": 48,
+      "h": 45,
+      "anchor": [
+        236.25,
+        391,
+        4
+      ],
+      "label": [
+        252.5,
+        347,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Kvittering"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "KVITTERING",
+      "size": "regular",
+      "process": "dispatch"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "check",
+      "network": {
+        "from": "input-entry",
+        "to": "validate-entry",
+        "mode": "data"
+      },
+      "points": [
+        [
+          46.25,
+          148,
+          4
+        ],
+        [
+          46.25,
+          224,
+          4
+        ],
+        [
+          235,
+          224,
+          4
+        ],
+        [
+          235,
+          172,
+          4
+        ]
+      ],
+      "edges": [
+        "aisle-0",
+        "aisle-4",
+        "aisle-1"
+      ]
+    },
+    {
+      "relation": "save",
+      "network": {
+        "from": "validate-entry",
+        "to": "store-entry",
+        "mode": "data"
+      },
+      "points": [
+        [
+          235,
+          172,
+          4
+        ],
+        [
+          235,
+          224,
+          4
+        ],
+        [
+          407,
+          224,
+          4
+        ],
+        [
+          407,
+          443,
+          4
+        ],
+        [
+          236.25,
+          443,
+          4
+        ],
+        [
+          46.25,
+          443,
+          4
+        ],
+        [
+          46.25,
+          391,
+          4
+        ]
+      ],
+      "edges": [
+        "aisle-1",
+        "aisle-5",
+        "aisle-8",
+        "aisle-7",
+        "aisle-6",
+        "aisle-2"
+      ]
+    },
+    {
+      "relation": "confirm",
+      "network": {
+        "from": "store-entry",
+        "to": "receipt-entry",
+        "mode": "data"
+      },
+      "points": [
+        [
+          46.25,
+          391,
+          4
+        ],
+        [
+          46.25,
+          443,
+          4
+        ],
+        [
+          236.25,
+          443,
+          4
+        ],
+        [
+          236.25,
+          391,
+          4
+        ]
+      ],
+      "edges": [
+        "aisle-2",
+        "aisle-6",
+        "aisle-3"
+      ]
+    },
+    {
+      "relation": "reject",
+      "network": {
+        "from": "validate-entry",
+        "to": "input-entry",
+        "mode": "data"
+      },
+      "points": [
+        [
+          235,
+          172,
+          4
+        ],
+        [
+          235,
+          224,
+          4
+        ],
+        [
+          46.25,
+          224,
+          4
+        ],
+        [
+          46.25,
+          148,
+          4
+        ]
+      ],
+      "edges": [
+        "aisle-1",
+        "aisle-4",
+        "aisle-0"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "complete",
+      "actor": {
+        "identity": "order",
+        "at": [
+          46.25,
+          148,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            265,
+            72,
+            77
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "validate",
+              "part": "decision",
+              "state": "done"
+            }
+          ]
+        },
+        {
+          "at": [
+            62.5,
+            303,
+            77
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "store",
+              "part": "display",
+              "state": "done"
+            }
+          ]
+        },
+        {
+          "at": [
+            252.5,
+            303,
+            77
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "receipt",
+              "part": "output",
+              "state": "done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "order",
+        "at": [
+          46.25,
+          148,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            265,
+            72,
+            77
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "validate",
+              "part": "decision",
+              "state": "blocked"
+            }
+          ]
+        },
+        {
+          "at": [
+            62.5,
+            60,
+            77
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "input",
+              "part": "record",
+              "state": "waiting"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "environment": "technical",
+  "adaptiveDetail": true,
+  "network": {
+    "setting": "indoor",
+    "nodes": [
+      {
+        "id": "port-input",
+        "at": [
+          46.25,
+          148,
+          4
+        ]
+      },
+      {
+        "id": "lane-input",
+        "at": [
+          46.25,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "port-validate",
+        "at": [
+          235,
+          172,
+          4
+        ]
+      },
+      {
+        "id": "lane-validate",
+        "at": [
+          235,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "port-store",
+        "at": [
+          46.25,
+          391,
+          4
+        ]
+      },
+      {
+        "id": "lane-store",
+        "at": [
+          46.25,
+          443,
+          4
+        ]
+      },
+      {
+        "id": "port-receipt",
+        "at": [
+          236.25,
+          391,
+          4
+        ]
+      },
+      {
+        "id": "lane-receipt",
+        "at": [
+          236.25,
+          443,
+          4
+        ]
+      },
+      {
+        "id": "spine-2-8",
+        "at": [
+          407,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "spine-2-9",
+        "at": [
+          407,
+          443,
+          4
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "input-entry",
+        "node": "port-input",
+        "entity": "input",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "z": 4
+      },
+      {
+        "id": "validate-entry",
+        "node": "port-validate",
+        "entity": "validate",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "z": 4
+      },
+      {
+        "id": "store-entry",
+        "node": "port-store",
+        "entity": "store",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "z": 4
+      },
+      {
+        "id": "receipt-entry",
+        "node": "port-receipt",
+        "entity": "receipt",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "z": 4
+      }
+    ],
+    "edges": [
+      {
+        "id": "aisle-0",
+        "from": "port-input",
+        "to": "lane-input",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-1",
+        "from": "port-validate",
+        "to": "lane-validate",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-2",
+        "from": "port-store",
+        "to": "lane-store",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-3",
+        "from": "port-receipt",
+        "to": "lane-receipt",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-4",
+        "from": "lane-input",
+        "to": "lane-validate",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-5",
+        "from": "lane-validate",
+        "to": "spine-2-8",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-6",
+        "from": "lane-store",
+        "to": "lane-receipt",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-7",
+        "from": "lane-receipt",
+        "to": "spine-2-9",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-8",
+        "from": "spine-2-8",
+        "to": "spine-2-9",
+        "surface": "cable",
+        "width": 20,
+        "modes": [
+          "document",
+          "data",
+          "electricity"
+        ]
+      }
+    ]
+  }
+}

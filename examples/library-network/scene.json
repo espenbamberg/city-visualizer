@@ -1,0 +1,5212 @@
+{
+  "width": 1600,
+  "height": 1100,
+  "seed": 90421,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 34
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      2700,
+      1725,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": -3,
+      "w": 2700,
+      "d": 1725,
+      "h": 4,
+      "material": "#e4e0cf",
+      "r": 6
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 287,
+      "z": 1,
+      "w": 2700,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          309,
+          2
+        ],
+        [
+          2700,
+          309,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 632,
+      "z": 1,
+      "w": 2700,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          654,
+          2
+        ],
+        [
+          2700,
+          654,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 977,
+      "z": 1,
+      "w": 2700,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          999,
+          2
+        ],
+        [
+          2700,
+          999,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 1322,
+      "z": 1,
+      "w": 2700,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          1344,
+          2
+        ],
+        [
+          2700,
+          1344,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 1667,
+      "z": 1,
+      "w": 2700,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          1689,
+          2
+        ],
+        [
+          2700,
+          1689,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 248,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          268,
+          0,
+          2
+        ],
+        [
+          268,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 548,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          568,
+          0,
+          2
+        ],
+        [
+          568,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 848,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          868,
+          0,
+          2
+        ],
+        [
+          868,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 1148,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          1168,
+          0,
+          2
+        ],
+        [
+          1168,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 1448,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          1468,
+          0,
+          2
+        ],
+        [
+          1468,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 1748,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          1768,
+          0,
+          2
+        ],
+        [
+          1768,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 2048,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          2068,
+          0,
+          2
+        ],
+        [
+          2068,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 2348,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          2368,
+          0,
+          2
+        ],
+        [
+          2368,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 2648,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 1725,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          2668,
+          0,
+          2
+        ],
+        [
+          2668,
+          1725,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "text",
+      "at": [
+        30,
+        22,
+        3
+      ],
+      "text": "NORTHBANK",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 46,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 175,
+      "y": 216,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 328,
+      "y": 46,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 475,
+      "y": 216,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 628,
+      "y": 46,
+      "z": 1,
+      "w": 232,
+      "d": 225,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 833,
+      "y": 233,
+      "z": 2,
+      "w": 14,
+      "d": 76,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 391,
+      "z": 1,
+      "w": 220,
+      "d": 201,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 221,
+      "y": 554,
+      "z": 2,
+      "w": 14,
+      "d": 100,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 328,
+      "y": 391,
+      "z": 1,
+      "w": 175,
+      "d": 199,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 476,
+      "y": 552,
+      "z": 2,
+      "w": 14,
+      "d": 102,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 624,
+      "y": 393,
+      "z": 1,
+      "w": 212,
+      "d": 225,
+      "h": 2,
+      "material": "#bbc6a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 644,
+      "y": 473,
+      "z": 3,
+      "w": 172,
+      "d": 22,
+      "h": 0.5,
+      "material": "#d8d4bd"
+    },
+    {
+      "type": "text",
+      "at": [
+        930,
+        22,
+        3
+      ],
+      "text": "RIVERSIDE",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 928,
+      "y": 46,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1075,
+      "y": 216,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1228,
+      "y": 46,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1375,
+      "y": 216,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1528,
+      "y": 46,
+      "z": 1,
+      "w": 232,
+      "d": 225,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1733,
+      "y": 233,
+      "z": 2,
+      "w": 14,
+      "d": 76,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 928,
+      "y": 391,
+      "z": 1,
+      "w": 220,
+      "d": 201,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1121,
+      "y": 554,
+      "z": 2,
+      "w": 14,
+      "d": 100,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1228,
+      "y": 391,
+      "z": 1,
+      "w": 175,
+      "d": 199,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1376,
+      "y": 552,
+      "z": 2,
+      "w": 14,
+      "d": 102,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1524,
+      "y": 393,
+      "z": 1,
+      "w": 212,
+      "d": 225,
+      "h": 2,
+      "material": "#bbc6a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 1544,
+      "y": 473,
+      "z": 3,
+      "w": 172,
+      "d": 22,
+      "h": 0.5,
+      "material": "#d8d4bd"
+    },
+    {
+      "type": "text",
+      "at": [
+        1830,
+        22,
+        3
+      ],
+      "text": "MARKET QUARTER",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 1828,
+      "y": 46,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1975,
+      "y": 216,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2128,
+      "y": 46,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2275,
+      "y": 216,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2428,
+      "y": 46,
+      "z": 1,
+      "w": 232,
+      "d": 225,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2633,
+      "y": 233,
+      "z": 2,
+      "w": 14,
+      "d": 76,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1828,
+      "y": 391,
+      "z": 1,
+      "w": 220,
+      "d": 201,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2021,
+      "y": 554,
+      "z": 2,
+      "w": 14,
+      "d": 100,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2128,
+      "y": 391,
+      "z": 1,
+      "w": 175,
+      "d": 199,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2276,
+      "y": 552,
+      "z": 2,
+      "w": 14,
+      "d": 102,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2424,
+      "y": 393,
+      "z": 1,
+      "w": 212,
+      "d": 225,
+      "h": 2,
+      "material": "#bbc6a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 2444,
+      "y": 473,
+      "z": 3,
+      "w": 172,
+      "d": 22,
+      "h": 0.5,
+      "material": "#d8d4bd"
+    },
+    {
+      "type": "text",
+      "at": [
+        30,
+        712,
+        3
+      ],
+      "text": "HILL DISTRICT",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 736,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 175,
+      "y": 906,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 328,
+      "y": 736,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 475,
+      "y": 906,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 628,
+      "y": 736,
+      "z": 1,
+      "w": 232,
+      "d": 225,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 833,
+      "y": 923,
+      "z": 2,
+      "w": 14,
+      "d": 76,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 1081,
+      "z": 1,
+      "w": 220,
+      "d": 201,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 221,
+      "y": 1244,
+      "z": 2,
+      "w": 14,
+      "d": 100,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 328,
+      "y": 1081,
+      "z": 1,
+      "w": 175,
+      "d": 199,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 476,
+      "y": 1242,
+      "z": 2,
+      "w": 14,
+      "d": 102,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 624,
+      "y": 1083,
+      "z": 1,
+      "w": 212,
+      "d": 225,
+      "h": 2,
+      "material": "#bbc6a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 644,
+      "y": 1163,
+      "z": 3,
+      "w": 172,
+      "d": 22,
+      "h": 0.5,
+      "material": "#d8d4bd"
+    },
+    {
+      "type": "text",
+      "at": [
+        930,
+        712,
+        3
+      ],
+      "text": "HARBOUR",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 928,
+      "y": 736,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1075,
+      "y": 906,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1228,
+      "y": 736,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1375,
+      "y": 906,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1528,
+      "y": 736,
+      "z": 1,
+      "w": 232,
+      "d": 225,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1733,
+      "y": 923,
+      "z": 2,
+      "w": 14,
+      "d": 76,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 928,
+      "y": 1081,
+      "z": 1,
+      "w": 220,
+      "d": 201,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1121,
+      "y": 1244,
+      "z": 2,
+      "w": 14,
+      "d": 100,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1228,
+      "y": 1081,
+      "z": 1,
+      "w": 175,
+      "d": 199,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1376,
+      "y": 1242,
+      "z": 2,
+      "w": 14,
+      "d": 102,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1524,
+      "y": 1083,
+      "z": 1,
+      "w": 212,
+      "d": 225,
+      "h": 2,
+      "material": "#bbc6a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 1544,
+      "y": 1163,
+      "z": 3,
+      "w": 172,
+      "d": 22,
+      "h": 0.5,
+      "material": "#d8d4bd"
+    },
+    {
+      "type": "text",
+      "at": [
+        1830,
+        712,
+        3
+      ],
+      "text": "WEST GARDENS",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 1828,
+      "y": 736,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1975,
+      "y": 906,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2128,
+      "y": 736,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2275,
+      "y": 906,
+      "z": 2,
+      "w": 14,
+      "d": 93,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2428,
+      "y": 736,
+      "z": 1,
+      "w": 232,
+      "d": 225,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2633,
+      "y": 923,
+      "z": 2,
+      "w": 14,
+      "d": 76,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1828,
+      "y": 1081,
+      "z": 1,
+      "w": 220,
+      "d": 201,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2021,
+      "y": 1244,
+      "z": 2,
+      "w": 14,
+      "d": 100,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2128,
+      "y": 1081,
+      "z": 1,
+      "w": 175,
+      "d": 199,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2276,
+      "y": 1242,
+      "z": 2,
+      "w": 14,
+      "d": 102,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2424,
+      "y": 1083,
+      "z": 1,
+      "w": 212,
+      "d": 225,
+      "h": 2,
+      "material": "#bbc6a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 2444,
+      "y": 1163,
+      "z": 3,
+      "w": 172,
+      "d": 22,
+      "h": 0.5,
+      "material": "#d8d4bd"
+    },
+    {
+      "type": "text",
+      "at": [
+        30,
+        1402,
+        3
+      ],
+      "text": "SHARED SERVICES & TECHNOLOGY",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 1426,
+      "z": 1,
+      "w": 110,
+      "d": 149,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 111,
+      "y": 1537,
+      "z": 2,
+      "w": 14,
+      "d": 152,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 328,
+      "y": 1426,
+      "z": 1,
+      "w": 110,
+      "d": 149,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 411,
+      "y": 1537,
+      "z": 2,
+      "w": 14,
+      "d": 152,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 628,
+      "y": 1426,
+      "z": 1,
+      "w": 110,
+      "d": 149,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 711,
+      "y": 1537,
+      "z": 2,
+      "w": 14,
+      "d": 152,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 928,
+      "y": 1426,
+      "z": 1,
+      "w": 110,
+      "d": 149,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1011,
+      "y": 1537,
+      "z": 2,
+      "w": 14,
+      "d": 152,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1228,
+      "y": 1426,
+      "z": 1,
+      "w": 110,
+      "d": 149,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1311,
+      "y": 1537,
+      "z": 2,
+      "w": 14,
+      "d": 152,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1528,
+      "y": 1426,
+      "z": 1,
+      "w": 172,
+      "d": 180,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1673,
+      "y": 1568,
+      "z": 2,
+      "w": 14,
+      "d": 121,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 1828,
+      "y": 1426,
+      "z": 1,
+      "w": 162,
+      "d": 180,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 1963,
+      "y": 1568,
+      "z": 2,
+      "w": 14,
+      "d": 121,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2128,
+      "y": 1426,
+      "z": 1,
+      "w": 172,
+      "d": 165,
+      "h": 1,
+      "material": "#d7d9d0",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 2273,
+      "y": 1553,
+      "z": 2,
+      "w": 14,
+      "d": 136,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 2424,
+      "y": 1428,
+      "z": 1,
+      "w": 212,
+      "d": 225,
+      "h": 2,
+      "material": "#bbc6a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 2444,
+      "y": 1508,
+      "z": 3,
+      "w": 172,
+      "d": 22,
+      "h": 0.5,
+      "material": "#d8d4bd"
+    }
+  ],
+  "scenery": [
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 234,
+      "h": 48,
+      "seed": 0
+    },
+    {
+      "type": "person",
+      "id": "visitor-north-desk",
+      "x": 52,
+      "y": 241,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 201,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 332,
+      "y": 234,
+      "h": 54,
+      "seed": 1
+    },
+    {
+      "type": "person",
+      "id": "visitor-north-collection",
+      "x": 352,
+      "y": 241,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 501,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 632,
+      "y": 251,
+      "h": 60,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-north-learning",
+      "x": 652,
+      "y": 258,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 859,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 572,
+      "h": 48,
+      "seed": 3
+    },
+    {
+      "type": "person",
+      "id": "visitor-north-stock",
+      "x": 52,
+      "y": 579,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 247,
+      "y": 626
+    },
+    {
+      "type": "tree",
+      "x": 332,
+      "y": 570,
+      "h": 54,
+      "seed": 4
+    },
+    {
+      "type": "person",
+      "id": "visitor-north-dispatch",
+      "x": 352,
+      "y": 577,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 502,
+      "y": 626
+    },
+    {
+      "type": "tree",
+      "x": 644,
+      "y": 418,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 699,
+      "y": 421,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 744,
+      "y": 523,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "bench",
+      "x": 649,
+      "y": 498
+    },
+    {
+      "type": "person",
+      "id": "garden-0-5",
+      "x": 729,
+      "y": 484,
+      "z": 4
+    },
+    {
+      "type": "tree",
+      "x": 932,
+      "y": 234,
+      "h": 48,
+      "seed": 1
+    },
+    {
+      "type": "person",
+      "id": "visitor-river-desk",
+      "x": 952,
+      "y": 241,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1101,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 1232,
+      "y": 234,
+      "h": 54,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-river-collection",
+      "x": 1252,
+      "y": 241,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1401,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 1532,
+      "y": 251,
+      "h": 60,
+      "seed": 3
+    },
+    {
+      "type": "person",
+      "id": "visitor-river-learning",
+      "x": 1552,
+      "y": 258,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1759,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 932,
+      "y": 572,
+      "h": 48,
+      "seed": 4
+    },
+    {
+      "type": "person",
+      "id": "visitor-river-stock",
+      "x": 952,
+      "y": 579,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1147,
+      "y": 626
+    },
+    {
+      "type": "tree",
+      "x": 1232,
+      "y": 570,
+      "h": 54,
+      "seed": 5
+    },
+    {
+      "type": "person",
+      "id": "visitor-river-dispatch",
+      "x": 1252,
+      "y": 577,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1402,
+      "y": 626
+    },
+    {
+      "type": "tree",
+      "x": 1544,
+      "y": 418,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 1599,
+      "y": 421,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 1644,
+      "y": 523,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "bench",
+      "x": 1549,
+      "y": 498
+    },
+    {
+      "type": "person",
+      "id": "garden-1-5",
+      "x": 1629,
+      "y": 484,
+      "z": 4
+    },
+    {
+      "type": "tree",
+      "x": 1832,
+      "y": 234,
+      "h": 48,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-market-desk",
+      "x": 1852,
+      "y": 241,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2001,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 2132,
+      "y": 234,
+      "h": 54,
+      "seed": 3
+    },
+    {
+      "type": "person",
+      "id": "visitor-market-collection",
+      "x": 2152,
+      "y": 241,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2301,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 2432,
+      "y": 251,
+      "h": 60,
+      "seed": 4
+    },
+    {
+      "type": "person",
+      "id": "visitor-market-learning",
+      "x": 2452,
+      "y": 258,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2659,
+      "y": 281
+    },
+    {
+      "type": "tree",
+      "x": 1832,
+      "y": 572,
+      "h": 48,
+      "seed": 5
+    },
+    {
+      "type": "person",
+      "id": "visitor-market-stock",
+      "x": 1852,
+      "y": 579,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2047,
+      "y": 626
+    },
+    {
+      "type": "tree",
+      "x": 2132,
+      "y": 570,
+      "h": 54,
+      "seed": 6
+    },
+    {
+      "type": "person",
+      "id": "visitor-market-dispatch",
+      "x": 2152,
+      "y": 577,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2302,
+      "y": 626
+    },
+    {
+      "type": "tree",
+      "x": 2444,
+      "y": 418,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 2499,
+      "y": 421,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 2544,
+      "y": 523,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "bench",
+      "x": 2449,
+      "y": 498
+    },
+    {
+      "type": "person",
+      "id": "garden-2-5",
+      "x": 2529,
+      "y": 484,
+      "z": 4
+    },
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 924,
+      "h": 48,
+      "seed": 3
+    },
+    {
+      "type": "person",
+      "id": "visitor-hill-desk",
+      "x": 52,
+      "y": 931,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 201,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 332,
+      "y": 924,
+      "h": 54,
+      "seed": 4
+    },
+    {
+      "type": "person",
+      "id": "visitor-hill-collection",
+      "x": 352,
+      "y": 931,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 501,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 632,
+      "y": 941,
+      "h": 60,
+      "seed": 5
+    },
+    {
+      "type": "person",
+      "id": "visitor-hill-learning",
+      "x": 652,
+      "y": 948,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 859,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 1262,
+      "h": 48,
+      "seed": 6
+    },
+    {
+      "type": "person",
+      "id": "visitor-hill-stock",
+      "x": 52,
+      "y": 1269,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 247,
+      "y": 1316
+    },
+    {
+      "type": "tree",
+      "x": 332,
+      "y": 1260,
+      "h": 54,
+      "seed": 7
+    },
+    {
+      "type": "person",
+      "id": "visitor-hill-dispatch",
+      "x": 352,
+      "y": 1267,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 502,
+      "y": 1316
+    },
+    {
+      "type": "tree",
+      "x": 644,
+      "y": 1108,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 699,
+      "y": 1111,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 744,
+      "y": 1213,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "bench",
+      "x": 649,
+      "y": 1188
+    },
+    {
+      "type": "person",
+      "id": "garden-3-5",
+      "x": 729,
+      "y": 1174,
+      "z": 4
+    },
+    {
+      "type": "tree",
+      "x": 932,
+      "y": 924,
+      "h": 48,
+      "seed": 4
+    },
+    {
+      "type": "person",
+      "id": "visitor-harbour-desk",
+      "x": 952,
+      "y": 931,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1101,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 1232,
+      "y": 924,
+      "h": 54,
+      "seed": 5
+    },
+    {
+      "type": "person",
+      "id": "visitor-harbour-collection",
+      "x": 1252,
+      "y": 931,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1401,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 1532,
+      "y": 941,
+      "h": 60,
+      "seed": 6
+    },
+    {
+      "type": "person",
+      "id": "visitor-harbour-learning",
+      "x": 1552,
+      "y": 948,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1759,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 932,
+      "y": 1262,
+      "h": 48,
+      "seed": 7
+    },
+    {
+      "type": "person",
+      "id": "visitor-harbour-stock",
+      "x": 952,
+      "y": 1269,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1147,
+      "y": 1316
+    },
+    {
+      "type": "tree",
+      "x": 1232,
+      "y": 1260,
+      "h": 54,
+      "seed": 8
+    },
+    {
+      "type": "person",
+      "id": "visitor-harbour-dispatch",
+      "x": 1252,
+      "y": 1267,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1402,
+      "y": 1316
+    },
+    {
+      "type": "tree",
+      "x": 1544,
+      "y": 1108,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 1599,
+      "y": 1111,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 1644,
+      "y": 1213,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "bench",
+      "x": 1549,
+      "y": 1188
+    },
+    {
+      "type": "person",
+      "id": "garden-4-5",
+      "x": 1629,
+      "y": 1174,
+      "z": 4
+    },
+    {
+      "type": "tree",
+      "x": 1832,
+      "y": 924,
+      "h": 48,
+      "seed": 5
+    },
+    {
+      "type": "person",
+      "id": "visitor-west-desk",
+      "x": 1852,
+      "y": 931,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2001,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 2132,
+      "y": 924,
+      "h": 54,
+      "seed": 6
+    },
+    {
+      "type": "person",
+      "id": "visitor-west-collection",
+      "x": 2152,
+      "y": 931,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2301,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 2432,
+      "y": 941,
+      "h": 60,
+      "seed": 7
+    },
+    {
+      "type": "person",
+      "id": "visitor-west-learning",
+      "x": 2452,
+      "y": 948,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2659,
+      "y": 971
+    },
+    {
+      "type": "tree",
+      "x": 1832,
+      "y": 1262,
+      "h": 48,
+      "seed": 8
+    },
+    {
+      "type": "person",
+      "id": "visitor-west-stock",
+      "x": 1852,
+      "y": 1269,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2047,
+      "y": 1316
+    },
+    {
+      "type": "tree",
+      "x": 2132,
+      "y": 1260,
+      "h": 54,
+      "seed": 9
+    },
+    {
+      "type": "person",
+      "id": "visitor-west-dispatch",
+      "x": 2152,
+      "y": 1267,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2302,
+      "y": 1316
+    },
+    {
+      "type": "tree",
+      "x": 2444,
+      "y": 1108,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 2499,
+      "y": 1111,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 2544,
+      "y": 1213,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "bench",
+      "x": 2449,
+      "y": 1188
+    },
+    {
+      "type": "person",
+      "id": "garden-5-5",
+      "x": 2529,
+      "y": 1174,
+      "z": 4
+    },
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 1555,
+      "h": 48,
+      "seed": 6
+    },
+    {
+      "type": "person",
+      "id": "visitor-catalogue",
+      "x": 52,
+      "y": 1562,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 137,
+      "y": 1661
+    },
+    {
+      "type": "tree",
+      "x": 332,
+      "y": 1555,
+      "h": 54,
+      "seed": 7
+    },
+    {
+      "type": "person",
+      "id": "visitor-reservations",
+      "x": 352,
+      "y": 1562,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 437,
+      "y": 1661
+    },
+    {
+      "type": "tree",
+      "x": 632,
+      "y": 1555,
+      "h": 60,
+      "seed": 8
+    },
+    {
+      "type": "person",
+      "id": "visitor-membership",
+      "x": 652,
+      "y": 1562,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 737,
+      "y": 1661
+    },
+    {
+      "type": "tree",
+      "x": 932,
+      "y": 1555,
+      "h": 48,
+      "seed": 9
+    },
+    {
+      "type": "person",
+      "id": "visitor-delivery",
+      "x": 952,
+      "y": 1562,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1037,
+      "y": 1661
+    },
+    {
+      "type": "tree",
+      "x": 1232,
+      "y": 1555,
+      "h": 54,
+      "seed": 10
+    },
+    {
+      "type": "person",
+      "id": "visitor-notices",
+      "x": 1252,
+      "y": 1562,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1337,
+      "y": 1661
+    },
+    {
+      "type": "tree",
+      "x": 1532,
+      "y": 1586,
+      "h": 60,
+      "seed": 11
+    },
+    {
+      "type": "person",
+      "id": "visitor-runtime",
+      "x": 1552,
+      "y": 1593,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1699,
+      "y": 1661
+    },
+    {
+      "type": "tree",
+      "x": 1832,
+      "y": 1586,
+      "h": 48,
+      "seed": 12
+    },
+    {
+      "type": "person",
+      "id": "visitor-records",
+      "x": 1852,
+      "y": 1593,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 1989,
+      "y": 1661
+    },
+    {
+      "type": "tree",
+      "x": 2132,
+      "y": 1571,
+      "h": 54,
+      "seed": 13
+    },
+    {
+      "type": "person",
+      "id": "visitor-integration",
+      "x": 2152,
+      "y": 1578,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 2299,
+      "y": 1661
+    },
+    {
+      "type": "tree",
+      "x": 2444,
+      "y": 1453,
+      "h": 58,
+      "seed": 8
+    },
+    {
+      "type": "tree",
+      "x": 2499,
+      "y": 1456,
+      "h": 58,
+      "seed": 8
+    },
+    {
+      "type": "tree",
+      "x": 2544,
+      "y": 1558,
+      "h": 58,
+      "seed": 8
+    },
+    {
+      "type": "bench",
+      "x": 2449,
+      "y": 1533
+    },
+    {
+      "type": "person",
+      "id": "garden-6-8",
+      "x": 2529,
+      "y": 1519,
+      "z": 4
+    }
+  ],
+  "instances": [
+    {
+      "id": "north-desk",
+      "entity": "north-desk",
+      "asset": "reception",
+      "x": 40,
+      "y": 58,
+      "w": 122,
+      "d": 98,
+      "h": 60,
+      "material": "#c6b59b",
+      "sign": "Welcome",
+      "anchor": [
+        182,
+        226,
+        3
+      ],
+      "label": [
+        101,
+        168,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Northbank Welcome"
+        ]
+      }
+    },
+    {
+      "id": "north-collection",
+      "entity": "north-collection",
+      "asset": "office",
+      "x": 340,
+      "y": 58,
+      "w": 122,
+      "d": 98,
+      "h": 93,
+      "material": "#c6b59b",
+      "sign": "Collection",
+      "anchor": [
+        482,
+        226,
+        3
+      ],
+      "label": [
+        401,
+        168,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Northbank",
+          "Collection"
+        ]
+      }
+    },
+    {
+      "id": "north-learning",
+      "entity": "north-learning",
+      "asset": "school",
+      "x": 640,
+      "y": 58,
+      "w": 180,
+      "d": 115,
+      "h": 65,
+      "material": "#c6b59b",
+      "sign": "Learning",
+      "anchor": [
+        840,
+        243,
+        3
+      ],
+      "label": [
+        730,
+        185,
+        3
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Northbank Learning"
+        ]
+      }
+    },
+    {
+      "id": "north-stock",
+      "entity": "north-stock",
+      "asset": "warehouse",
+      "x": 40,
+      "y": 403,
+      "w": 168,
+      "d": 91,
+      "h": 73,
+      "material": "#c6b59b",
+      "sign": "Book store",
+      "anchor": [
+        228,
+        564,
+        3
+      ],
+      "label": [
+        124,
+        506,
+        3
+      ],
+      "labelStyle": {
+        "width": 168,
+        "size": 10,
+        "lines": [
+          "Northbank Book",
+          "store"
+        ]
+      }
+    },
+    {
+      "id": "north-dispatch",
+      "entity": "north-dispatch",
+      "asset": "depot",
+      "x": 340,
+      "y": 403,
+      "w": 123,
+      "d": 89,
+      "h": 67,
+      "material": "#c6b59b",
+      "sign": "Delivery",
+      "anchor": [
+        483,
+        562,
+        3
+      ],
+      "label": [
+        401.5,
+        504,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Northbank Delivery"
+        ]
+      }
+    },
+    {
+      "id": "river-desk",
+      "entity": "river-desk",
+      "asset": "reception",
+      "x": 940,
+      "y": 58,
+      "w": 122,
+      "d": 98,
+      "h": 60,
+      "material": "#b7c9bb",
+      "sign": "Welcome",
+      "anchor": [
+        1082,
+        226,
+        3
+      ],
+      "label": [
+        1001,
+        168,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Riverside Welcome"
+        ]
+      }
+    },
+    {
+      "id": "river-collection",
+      "entity": "river-collection",
+      "asset": "office",
+      "x": 1240,
+      "y": 58,
+      "w": 122,
+      "d": 98,
+      "h": 121,
+      "material": "#b7c9bb",
+      "sign": "Collection",
+      "anchor": [
+        1382,
+        226,
+        3
+      ],
+      "label": [
+        1301,
+        168,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Riverside",
+          "Collection"
+        ]
+      }
+    },
+    {
+      "id": "river-learning",
+      "entity": "river-learning",
+      "asset": "school",
+      "x": 1540,
+      "y": 58,
+      "w": 180,
+      "d": 115,
+      "h": 65,
+      "material": "#b7c9bb",
+      "sign": "Learning",
+      "anchor": [
+        1740,
+        243,
+        3
+      ],
+      "label": [
+        1630,
+        185,
+        3
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Riverside Learning"
+        ]
+      }
+    },
+    {
+      "id": "river-stock",
+      "entity": "river-stock",
+      "asset": "warehouse",
+      "x": 940,
+      "y": 403,
+      "w": 168,
+      "d": 91,
+      "h": 73,
+      "material": "#b7c9bb",
+      "sign": "Book store",
+      "anchor": [
+        1128,
+        564,
+        3
+      ],
+      "label": [
+        1024,
+        506,
+        3
+      ],
+      "labelStyle": {
+        "width": 168,
+        "size": 10,
+        "lines": [
+          "Riverside Book",
+          "store"
+        ]
+      }
+    },
+    {
+      "id": "river-dispatch",
+      "entity": "river-dispatch",
+      "asset": "depot",
+      "x": 1240,
+      "y": 403,
+      "w": 123,
+      "d": 89,
+      "h": 67,
+      "material": "#b7c9bb",
+      "sign": "Delivery",
+      "anchor": [
+        1383,
+        562,
+        3
+      ],
+      "label": [
+        1301.5,
+        504,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Riverside Delivery"
+        ]
+      }
+    },
+    {
+      "id": "market-desk",
+      "entity": "market-desk",
+      "asset": "reception",
+      "x": 1840,
+      "y": 58,
+      "w": 122,
+      "d": 98,
+      "h": 60,
+      "material": "#c5b99c",
+      "sign": "Welcome",
+      "anchor": [
+        1982,
+        226,
+        3
+      ],
+      "label": [
+        1901,
+        168,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Market quarter",
+          "Welcome"
+        ]
+      }
+    },
+    {
+      "id": "market-collection",
+      "entity": "market-collection",
+      "asset": "office",
+      "x": 2140,
+      "y": 58,
+      "w": 122,
+      "d": 98,
+      "h": 149,
+      "material": "#c5b99c",
+      "sign": "Collection",
+      "anchor": [
+        2282,
+        226,
+        3
+      ],
+      "label": [
+        2201,
+        168,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Market quarter",
+          "Collection"
+        ]
+      }
+    },
+    {
+      "id": "market-learning",
+      "entity": "market-learning",
+      "asset": "school",
+      "x": 2440,
+      "y": 58,
+      "w": 180,
+      "d": 115,
+      "h": 65,
+      "material": "#c5b99c",
+      "sign": "Learning",
+      "anchor": [
+        2640,
+        243,
+        3
+      ],
+      "label": [
+        2530,
+        185,
+        3
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Market quarter",
+          "Learning"
+        ]
+      }
+    },
+    {
+      "id": "market-stock",
+      "entity": "market-stock",
+      "asset": "warehouse",
+      "x": 1840,
+      "y": 403,
+      "w": 168,
+      "d": 91,
+      "h": 73,
+      "material": "#c5b99c",
+      "sign": "Book store",
+      "anchor": [
+        2028,
+        564,
+        3
+      ],
+      "label": [
+        1924,
+        506,
+        3
+      ],
+      "labelStyle": {
+        "width": 168,
+        "size": 10,
+        "lines": [
+          "Market quarter",
+          "Book store"
+        ]
+      }
+    },
+    {
+      "id": "market-dispatch",
+      "entity": "market-dispatch",
+      "asset": "depot",
+      "x": 2140,
+      "y": 403,
+      "w": 123,
+      "d": 89,
+      "h": 67,
+      "material": "#c5b99c",
+      "sign": "Delivery",
+      "anchor": [
+        2283,
+        562,
+        3
+      ],
+      "label": [
+        2201.5,
+        504,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Market quarter",
+          "Delivery"
+        ]
+      }
+    },
+    {
+      "id": "hill-desk",
+      "entity": "hill-desk",
+      "asset": "reception",
+      "x": 40,
+      "y": 748,
+      "w": 122,
+      "d": 98,
+      "h": 60,
+      "material": "#bac1b3",
+      "sign": "Welcome",
+      "anchor": [
+        182,
+        916,
+        3
+      ],
+      "label": [
+        101,
+        858,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Hill district",
+          "Welcome"
+        ]
+      }
+    },
+    {
+      "id": "hill-collection",
+      "entity": "hill-collection",
+      "asset": "office",
+      "x": 340,
+      "y": 748,
+      "w": 122,
+      "d": 98,
+      "h": 93,
+      "material": "#bac1b3",
+      "sign": "Collection",
+      "anchor": [
+        482,
+        916,
+        3
+      ],
+      "label": [
+        401,
+        858,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Hill district",
+          "Collection"
+        ]
+      }
+    },
+    {
+      "id": "hill-learning",
+      "entity": "hill-learning",
+      "asset": "school",
+      "x": 640,
+      "y": 748,
+      "w": 180,
+      "d": 115,
+      "h": 65,
+      "material": "#bac1b3",
+      "sign": "Learning",
+      "anchor": [
+        840,
+        933,
+        3
+      ],
+      "label": [
+        730,
+        875,
+        3
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Hill district",
+          "Learning"
+        ]
+      }
+    },
+    {
+      "id": "hill-stock",
+      "entity": "hill-stock",
+      "asset": "warehouse",
+      "x": 40,
+      "y": 1093,
+      "w": 168,
+      "d": 91,
+      "h": 73,
+      "material": "#bac1b3",
+      "sign": "Book store",
+      "anchor": [
+        228,
+        1254,
+        3
+      ],
+      "label": [
+        124,
+        1196,
+        3
+      ],
+      "labelStyle": {
+        "width": 168,
+        "size": 10,
+        "lines": [
+          "Hill district Book",
+          "store"
+        ]
+      }
+    },
+    {
+      "id": "hill-dispatch",
+      "entity": "hill-dispatch",
+      "asset": "depot",
+      "x": 340,
+      "y": 1093,
+      "w": 123,
+      "d": 89,
+      "h": 67,
+      "material": "#bac1b3",
+      "sign": "Delivery",
+      "anchor": [
+        483,
+        1252,
+        3
+      ],
+      "label": [
+        401.5,
+        1194,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Hill district",
+          "Delivery"
+        ]
+      }
+    },
+    {
+      "id": "harbour-desk",
+      "entity": "harbour-desk",
+      "asset": "reception",
+      "x": 940,
+      "y": 748,
+      "w": 122,
+      "d": 98,
+      "h": 60,
+      "material": "#b9b6c2",
+      "sign": "Welcome",
+      "anchor": [
+        1082,
+        916,
+        3
+      ],
+      "label": [
+        1001,
+        858,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Harbour Welcome"
+        ]
+      }
+    },
+    {
+      "id": "harbour-collection",
+      "entity": "harbour-collection",
+      "asset": "office",
+      "x": 1240,
+      "y": 748,
+      "w": 122,
+      "d": 98,
+      "h": 121,
+      "material": "#b9b6c2",
+      "sign": "Collection",
+      "anchor": [
+        1382,
+        916,
+        3
+      ],
+      "label": [
+        1301,
+        858,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Harbour Collection"
+        ]
+      }
+    },
+    {
+      "id": "harbour-learning",
+      "entity": "harbour-learning",
+      "asset": "school",
+      "x": 1540,
+      "y": 748,
+      "w": 180,
+      "d": 115,
+      "h": 65,
+      "material": "#b9b6c2",
+      "sign": "Learning",
+      "anchor": [
+        1740,
+        933,
+        3
+      ],
+      "label": [
+        1630,
+        875,
+        3
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Harbour Learning"
+        ]
+      }
+    },
+    {
+      "id": "harbour-stock",
+      "entity": "harbour-stock",
+      "asset": "warehouse",
+      "x": 940,
+      "y": 1093,
+      "w": 168,
+      "d": 91,
+      "h": 73,
+      "material": "#b9b6c2",
+      "sign": "Book store",
+      "anchor": [
+        1128,
+        1254,
+        3
+      ],
+      "label": [
+        1024,
+        1196,
+        3
+      ],
+      "labelStyle": {
+        "width": 168,
+        "size": 10,
+        "lines": [
+          "Harbour Book store"
+        ]
+      }
+    },
+    {
+      "id": "harbour-dispatch",
+      "entity": "harbour-dispatch",
+      "asset": "depot",
+      "x": 1240,
+      "y": 1093,
+      "w": 123,
+      "d": 89,
+      "h": 67,
+      "material": "#b9b6c2",
+      "sign": "Delivery",
+      "anchor": [
+        1383,
+        1252,
+        3
+      ],
+      "label": [
+        1301.5,
+        1194,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Harbour Delivery"
+        ]
+      }
+    },
+    {
+      "id": "west-desk",
+      "entity": "west-desk",
+      "asset": "reception",
+      "x": 1840,
+      "y": 748,
+      "w": 122,
+      "d": 98,
+      "h": 60,
+      "material": "#c8b6a3",
+      "sign": "Welcome",
+      "anchor": [
+        1982,
+        916,
+        3
+      ],
+      "label": [
+        1901,
+        858,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "West gardens",
+          "Welcome"
+        ]
+      }
+    },
+    {
+      "id": "west-collection",
+      "entity": "west-collection",
+      "asset": "office",
+      "x": 2140,
+      "y": 748,
+      "w": 122,
+      "d": 98,
+      "h": 149,
+      "material": "#c8b6a3",
+      "sign": "Collection",
+      "anchor": [
+        2282,
+        916,
+        3
+      ],
+      "label": [
+        2201,
+        858,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "West gardens",
+          "Collection"
+        ]
+      }
+    },
+    {
+      "id": "west-learning",
+      "entity": "west-learning",
+      "asset": "school",
+      "x": 2440,
+      "y": 748,
+      "w": 180,
+      "d": 115,
+      "h": 65,
+      "material": "#c8b6a3",
+      "sign": "Learning",
+      "anchor": [
+        2640,
+        933,
+        3
+      ],
+      "label": [
+        2530,
+        875,
+        3
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "West gardens",
+          "Learning"
+        ]
+      }
+    },
+    {
+      "id": "west-stock",
+      "entity": "west-stock",
+      "asset": "warehouse",
+      "x": 1840,
+      "y": 1093,
+      "w": 168,
+      "d": 91,
+      "h": 73,
+      "material": "#c8b6a3",
+      "sign": "Book store",
+      "anchor": [
+        2028,
+        1254,
+        3
+      ],
+      "label": [
+        1924,
+        1196,
+        3
+      ],
+      "labelStyle": {
+        "width": 168,
+        "size": 10,
+        "lines": [
+          "West gardens Book",
+          "store"
+        ]
+      }
+    },
+    {
+      "id": "west-dispatch",
+      "entity": "west-dispatch",
+      "asset": "depot",
+      "x": 2140,
+      "y": 1093,
+      "w": 123,
+      "d": 89,
+      "h": 67,
+      "material": "#c8b6a3",
+      "sign": "Delivery",
+      "anchor": [
+        2283,
+        1252,
+        3
+      ],
+      "label": [
+        2201.5,
+        1194,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "West gardens",
+          "Delivery"
+        ]
+      }
+    },
+    {
+      "id": "catalogue",
+      "entity": "catalogue",
+      "asset": "cabinet",
+      "x": 40,
+      "y": 1438,
+      "w": 58,
+      "d": 39,
+      "h": 42,
+      "material": "#c6b59b",
+      "sign": "Shared catalogue",
+      "anchor": [
+        118,
+        1547,
+        3
+      ],
+      "label": [
+        69,
+        1489,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Shared catalogue"
+        ]
+      }
+    },
+    {
+      "id": "reservations",
+      "entity": "reservations",
+      "asset": "cabinet",
+      "x": 340,
+      "y": 1438,
+      "w": 58,
+      "d": 39,
+      "h": 42,
+      "material": "#c6b59b",
+      "sign": "Reservations",
+      "anchor": [
+        418,
+        1547,
+        3
+      ],
+      "label": [
+        369,
+        1489,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Reservations"
+        ]
+      }
+    },
+    {
+      "id": "membership",
+      "entity": "membership",
+      "asset": "cabinet",
+      "x": 640,
+      "y": 1438,
+      "w": 58,
+      "d": 39,
+      "h": 42,
+      "material": "#c6b59b",
+      "sign": "Membership",
+      "anchor": [
+        718,
+        1547,
+        3
+      ],
+      "label": [
+        669,
+        1489,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Membership"
+        ]
+      }
+    },
+    {
+      "id": "delivery",
+      "entity": "delivery",
+      "asset": "cabinet",
+      "x": 940,
+      "y": 1438,
+      "w": 58,
+      "d": 39,
+      "h": 42,
+      "material": "#c6b59b",
+      "sign": "Delivery planning",
+      "anchor": [
+        1018,
+        1547,
+        3
+      ],
+      "label": [
+        969,
+        1489,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Delivery planning"
+        ]
+      }
+    },
+    {
+      "id": "notices",
+      "entity": "notices",
+      "asset": "cabinet",
+      "x": 1240,
+      "y": 1438,
+      "w": 58,
+      "d": 39,
+      "h": 42,
+      "material": "#c6b59b",
+      "sign": "Reader notices",
+      "anchor": [
+        1318,
+        1547,
+        3
+      ],
+      "label": [
+        1269,
+        1489,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Reader notices"
+        ]
+      }
+    },
+    {
+      "id": "runtime",
+      "entity": "runtime",
+      "asset": "server",
+      "x": 1540,
+      "y": 1438,
+      "w": 120,
+      "d": 70,
+      "h": 85,
+      "material": "#c6b59b",
+      "sign": "Shared runtime",
+      "anchor": [
+        1680,
+        1578,
+        3
+      ],
+      "label": [
+        1600,
+        1520,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Shared runtime"
+        ]
+      }
+    },
+    {
+      "id": "records",
+      "entity": "records",
+      "asset": "database",
+      "x": 1840,
+      "y": 1438,
+      "w": 110,
+      "d": 70,
+      "h": 60,
+      "material": "#c6b59b",
+      "sign": "Library records",
+      "anchor": [
+        1970,
+        1578,
+        3
+      ],
+      "label": [
+        1895,
+        1520,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Library records"
+        ]
+      }
+    },
+    {
+      "id": "integration",
+      "entity": "integration",
+      "asset": "gateway",
+      "x": 2140,
+      "y": 1438,
+      "w": 120,
+      "d": 55,
+      "h": 34,
+      "material": "#c6b59b",
+      "sign": "Message gateway",
+      "anchor": [
+        2280,
+        1563,
+        3
+      ],
+      "label": [
+        2200,
+        1505,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Message gateway"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "relation": "north-find",
+      "points": [
+        [
+          182,
+          226,
+          3
+        ],
+        [
+          182,
+          305,
+          3
+        ],
+        [
+          264,
+          305,
+          3
+        ],
+        [
+          482,
+          305,
+          3
+        ],
+        [
+          482,
+          226,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "north-prepare",
+      "points": [
+        [
+          228,
+          564,
+          3
+        ],
+        [
+          228,
+          654,
+          3
+        ],
+        [
+          268,
+          654,
+          3
+        ],
+        [
+          483,
+          654,
+          3
+        ],
+        [
+          483,
+          562,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "north-walk",
+      "points": [
+        [
+          182,
+          226,
+          3
+        ],
+        [
+          182,
+          309,
+          3
+        ],
+        [
+          268,
+          309,
+          3
+        ],
+        [
+          482,
+          309,
+          3
+        ],
+        [
+          482,
+          226,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "river-find",
+      "points": [
+        [
+          1082,
+          226,
+          3
+        ],
+        [
+          1082,
+          311,
+          3
+        ],
+        [
+          1170,
+          311,
+          3
+        ],
+        [
+          1382,
+          311,
+          3
+        ],
+        [
+          1382,
+          226,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "river-prepare",
+      "points": [
+        [
+          1128,
+          564,
+          3
+        ],
+        [
+          1128,
+          654,
+          3
+        ],
+        [
+          1168,
+          654,
+          3
+        ],
+        [
+          1383,
+          654,
+          3
+        ],
+        [
+          1383,
+          562,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "river-walk",
+      "points": [
+        [
+          1082,
+          226,
+          3
+        ],
+        [
+          1082,
+          309,
+          3
+        ],
+        [
+          1168,
+          309,
+          3
+        ],
+        [
+          1382,
+          309,
+          3
+        ],
+        [
+          1382,
+          226,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "market-find",
+      "points": [
+        [
+          1982,
+          226,
+          3
+        ],
+        [
+          1982,
+          307,
+          3
+        ],
+        [
+          2066,
+          307,
+          3
+        ],
+        [
+          2282,
+          307,
+          3
+        ],
+        [
+          2282,
+          226,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "market-prepare",
+      "points": [
+        [
+          2028,
+          564,
+          3
+        ],
+        [
+          2028,
+          654,
+          3
+        ],
+        [
+          2068,
+          654,
+          3
+        ],
+        [
+          2283,
+          654,
+          3
+        ],
+        [
+          2283,
+          562,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "market-walk",
+      "points": [
+        [
+          1982,
+          226,
+          3
+        ],
+        [
+          1982,
+          309,
+          3
+        ],
+        [
+          2068,
+          309,
+          3
+        ],
+        [
+          2282,
+          309,
+          3
+        ],
+        [
+          2282,
+          226,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "hill-find",
+      "points": [
+        [
+          182,
+          916,
+          3
+        ],
+        [
+          182,
+          1003,
+          3
+        ],
+        [
+          272,
+          1003,
+          3
+        ],
+        [
+          482,
+          1003,
+          3
+        ],
+        [
+          482,
+          916,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "hill-prepare",
+      "points": [
+        [
+          228,
+          1254,
+          3
+        ],
+        [
+          228,
+          1344,
+          3
+        ],
+        [
+          268,
+          1344,
+          3
+        ],
+        [
+          483,
+          1344,
+          3
+        ],
+        [
+          483,
+          1252,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "hill-walk",
+      "points": [
+        [
+          182,
+          916,
+          3
+        ],
+        [
+          182,
+          999,
+          3
+        ],
+        [
+          268,
+          999,
+          3
+        ],
+        [
+          482,
+          999,
+          3
+        ],
+        [
+          482,
+          916,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "harbour-find",
+      "points": [
+        [
+          1082,
+          916,
+          3
+        ],
+        [
+          1082,
+          999,
+          3
+        ],
+        [
+          1168,
+          999,
+          3
+        ],
+        [
+          1382,
+          999,
+          3
+        ],
+        [
+          1382,
+          916,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "harbour-prepare",
+      "points": [
+        [
+          1128,
+          1254,
+          3
+        ],
+        [
+          1128,
+          1344,
+          3
+        ],
+        [
+          1168,
+          1344,
+          3
+        ],
+        [
+          1383,
+          1344,
+          3
+        ],
+        [
+          1383,
+          1252,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "harbour-walk",
+      "points": [
+        [
+          1082,
+          916,
+          3
+        ],
+        [
+          1082,
+          999,
+          3
+        ],
+        [
+          1168,
+          999,
+          3
+        ],
+        [
+          1382,
+          999,
+          3
+        ],
+        [
+          1382,
+          916,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "west-find",
+      "points": [
+        [
+          1982,
+          916,
+          3
+        ],
+        [
+          1982,
+          995,
+          3
+        ],
+        [
+          2064,
+          995,
+          3
+        ],
+        [
+          2282,
+          995,
+          3
+        ],
+        [
+          2282,
+          916,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "west-prepare",
+      "points": [
+        [
+          2028,
+          1254,
+          3
+        ],
+        [
+          2028,
+          1344,
+          3
+        ],
+        [
+          2068,
+          1344,
+          3
+        ],
+        [
+          2283,
+          1344,
+          3
+        ],
+        [
+          2283,
+          1252,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "west-walk",
+      "points": [
+        [
+          1982,
+          916,
+          3
+        ],
+        [
+          1982,
+          999,
+          3
+        ],
+        [
+          2068,
+          999,
+          3
+        ],
+        [
+          2282,
+          999,
+          3
+        ],
+        [
+          2282,
+          916,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "north-search",
+      "points": [
+        [
+          482,
+          226,
+          3
+        ],
+        [
+          482,
+          311,
+          3
+        ],
+        [
+          270,
+          311,
+          3
+        ],
+        [
+          270,
+          1691,
+          3
+        ],
+        [
+          118,
+          1691,
+          3
+        ],
+        [
+          118,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "north-member",
+      "points": [
+        [
+          182,
+          226,
+          3
+        ],
+        [
+          182,
+          313,
+          3
+        ],
+        [
+          272,
+          313,
+          3
+        ],
+        [
+          272,
+          1693,
+          3
+        ],
+        [
+          718,
+          1693,
+          3
+        ],
+        [
+          718,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "north-run",
+      "points": [
+        [
+          483,
+          562,
+          3
+        ],
+        [
+          483,
+          650,
+          3
+        ],
+        [
+          564,
+          650,
+          3
+        ],
+        [
+          564,
+          1685,
+          3
+        ],
+        [
+          1018,
+          1685,
+          3
+        ],
+        [
+          1018,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "river-search",
+      "points": [
+        [
+          1382,
+          226,
+          3
+        ],
+        [
+          1382,
+          307,
+          3
+        ],
+        [
+          266,
+          307,
+          3
+        ],
+        [
+          266,
+          1687,
+          3
+        ],
+        [
+          118,
+          1687,
+          3
+        ],
+        [
+          118,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "river-member",
+      "points": [
+        [
+          1082,
+          226,
+          3
+        ],
+        [
+          1082,
+          309,
+          3
+        ],
+        [
+          868,
+          309,
+          3
+        ],
+        [
+          868,
+          1689,
+          3
+        ],
+        [
+          718,
+          1689,
+          3
+        ],
+        [
+          718,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "river-run",
+      "points": [
+        [
+          1383,
+          562,
+          3
+        ],
+        [
+          1383,
+          656,
+          3
+        ],
+        [
+          1170,
+          656,
+          3
+        ],
+        [
+          1170,
+          1691,
+          3
+        ],
+        [
+          1018,
+          1691,
+          3
+        ],
+        [
+          1018,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "market-search",
+      "points": [
+        [
+          2282,
+          226,
+          3
+        ],
+        [
+          2282,
+          313,
+          3
+        ],
+        [
+          272,
+          313,
+          3
+        ],
+        [
+          272,
+          1693,
+          3
+        ],
+        [
+          118,
+          1693,
+          3
+        ],
+        [
+          118,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "market-member",
+      "points": [
+        [
+          1982,
+          226,
+          3
+        ],
+        [
+          1982,
+          305,
+          3
+        ],
+        [
+          864,
+          305,
+          3
+        ],
+        [
+          864,
+          1685,
+          3
+        ],
+        [
+          718,
+          1685,
+          3
+        ],
+        [
+          718,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "market-run",
+      "points": [
+        [
+          2283,
+          562,
+          3
+        ],
+        [
+          2283,
+          652,
+          3
+        ],
+        [
+          1166,
+          652,
+          3
+        ],
+        [
+          1166,
+          1687,
+          3
+        ],
+        [
+          1018,
+          1687,
+          3
+        ],
+        [
+          1018,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "hill-search",
+      "points": [
+        [
+          482,
+          916,
+          3
+        ],
+        [
+          482,
+          999,
+          3
+        ],
+        [
+          268,
+          999,
+          3
+        ],
+        [
+          268,
+          1689,
+          3
+        ],
+        [
+          118,
+          1689,
+          3
+        ],
+        [
+          118,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "hill-member",
+      "points": [
+        [
+          182,
+          916,
+          3
+        ],
+        [
+          182,
+          1001,
+          3
+        ],
+        [
+          270,
+          1001,
+          3
+        ],
+        [
+          270,
+          1691,
+          3
+        ],
+        [
+          718,
+          1691,
+          3
+        ],
+        [
+          718,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "hill-run",
+      "points": [
+        [
+          483,
+          1252,
+          3
+        ],
+        [
+          483,
+          1348,
+          3
+        ],
+        [
+          572,
+          1348,
+          3
+        ],
+        [
+          572,
+          1693,
+          3
+        ],
+        [
+          1018,
+          1693,
+          3
+        ],
+        [
+          1018,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "harbour-search",
+      "points": [
+        [
+          1382,
+          916,
+          3
+        ],
+        [
+          1382,
+          995,
+          3
+        ],
+        [
+          264,
+          995,
+          3
+        ],
+        [
+          264,
+          1685,
+          3
+        ],
+        [
+          118,
+          1685,
+          3
+        ],
+        [
+          118,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "harbour-member",
+      "points": [
+        [
+          1082,
+          916,
+          3
+        ],
+        [
+          1082,
+          997,
+          3
+        ],
+        [
+          866,
+          997,
+          3
+        ],
+        [
+          866,
+          1687,
+          3
+        ],
+        [
+          718,
+          1687,
+          3
+        ],
+        [
+          718,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "harbour-run",
+      "points": [
+        [
+          1383,
+          1252,
+          3
+        ],
+        [
+          1383,
+          1344,
+          3
+        ],
+        [
+          1168,
+          1344,
+          3
+        ],
+        [
+          1168,
+          1689,
+          3
+        ],
+        [
+          1018,
+          1689,
+          3
+        ],
+        [
+          1018,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "west-search",
+      "points": [
+        [
+          2282,
+          916,
+          3
+        ],
+        [
+          2282,
+          1001,
+          3
+        ],
+        [
+          270,
+          1001,
+          3
+        ],
+        [
+          270,
+          1691,
+          3
+        ],
+        [
+          118,
+          1691,
+          3
+        ],
+        [
+          118,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "west-member",
+      "points": [
+        [
+          1982,
+          916,
+          3
+        ],
+        [
+          1982,
+          1003,
+          3
+        ],
+        [
+          872,
+          1003,
+          3
+        ],
+        [
+          872,
+          1693,
+          3
+        ],
+        [
+          718,
+          1693,
+          3
+        ],
+        [
+          718,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "west-run",
+      "points": [
+        [
+          2283,
+          1252,
+          3
+        ],
+        [
+          2283,
+          1340,
+          3
+        ],
+        [
+          1164,
+          1340,
+          3
+        ],
+        [
+          1164,
+          1685,
+          3
+        ],
+        [
+          1018,
+          1685,
+          3
+        ],
+        [
+          1018,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "catalogue-host",
+      "points": [
+        [
+          118,
+          1547,
+          3
+        ],
+        [
+          118,
+          1687,
+          3
+        ],
+        [
+          266,
+          1687,
+          3
+        ],
+        [
+          1680,
+          1687,
+          3
+        ],
+        [
+          1680,
+          1578,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "reservations-host",
+      "points": [
+        [
+          418,
+          1547,
+          3
+        ],
+        [
+          418,
+          1689,
+          3
+        ],
+        [
+          568,
+          1689,
+          3
+        ],
+        [
+          1680,
+          1689,
+          3
+        ],
+        [
+          1680,
+          1578,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "membership-host",
+      "points": [
+        [
+          718,
+          1547,
+          3
+        ],
+        [
+          718,
+          1691,
+          3
+        ],
+        [
+          870,
+          1691,
+          3
+        ],
+        [
+          1680,
+          1691,
+          3
+        ],
+        [
+          1680,
+          1578,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "delivery-host",
+      "points": [
+        [
+          1018,
+          1547,
+          3
+        ],
+        [
+          1018,
+          1693,
+          3
+        ],
+        [
+          1172,
+          1693,
+          3
+        ],
+        [
+          1680,
+          1693,
+          3
+        ],
+        [
+          1680,
+          1578,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "notices-host",
+      "points": [
+        [
+          1318,
+          1547,
+          3
+        ],
+        [
+          1318,
+          1685,
+          3
+        ],
+        [
+          1464,
+          1685,
+          3
+        ],
+        [
+          1680,
+          1685,
+          3
+        ],
+        [
+          1680,
+          1578,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "save",
+      "points": [
+        [
+          1680,
+          1578,
+          3
+        ],
+        [
+          1680,
+          1687,
+          3
+        ],
+        [
+          1766,
+          1687,
+          3
+        ],
+        [
+          1970,
+          1687,
+          3
+        ],
+        [
+          1970,
+          1578,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "send",
+      "points": [
+        [
+          1318,
+          1547,
+          3
+        ],
+        [
+          1318,
+          1689,
+          3
+        ],
+        [
+          1468,
+          1689,
+          3
+        ],
+        [
+          2280,
+          1689,
+          3
+        ],
+        [
+          2280,
+          1563,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "request",
+      "points": [
+        [
+          182,
+          226,
+          3
+        ],
+        [
+          182,
+          311,
+          3
+        ],
+        [
+          270,
+          311,
+          3
+        ],
+        [
+          270,
+          1691,
+          3
+        ],
+        [
+          418,
+          1691,
+          3
+        ],
+        [
+          418,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "locate",
+      "points": [
+        [
+          418,
+          1547,
+          3
+        ],
+        [
+          418,
+          1693,
+          3
+        ],
+        [
+          272,
+          1693,
+          3
+        ],
+        [
+          118,
+          1693,
+          3
+        ],
+        [
+          118,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "transfer",
+      "points": [
+        [
+          1383,
+          1252,
+          3
+        ],
+        [
+          1383,
+          1344,
+          3
+        ],
+        [
+          568,
+          1344,
+          3
+        ],
+        [
+          568,
+          654,
+          3
+        ],
+        [
+          483,
+          654,
+          3
+        ],
+        [
+          483,
+          562,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "confirm",
+      "points": [
+        [
+          483,
+          562,
+          3
+        ],
+        [
+          483,
+          652,
+          3
+        ],
+        [
+          566,
+          652,
+          3
+        ],
+        [
+          566,
+          1687,
+          3
+        ],
+        [
+          1318,
+          1687,
+          3
+        ],
+        [
+          1318,
+          1547,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "cross-district",
+      "points": [
+        [
+          482,
+          226,
+          3
+        ],
+        [
+          482,
+          309,
+          3
+        ],
+        [
+          568,
+          309,
+          3
+        ],
+        [
+          1740,
+          309,
+          3
+        ],
+        [
+          1740,
+          243,
+          3
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "reader-journey",
+      "actor": {
+        "identity": "reader-journey",
+        "at": [
+          182,
+          226,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            401,
+            107,
+            143
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            1630,
+            115.5,
+            115
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "regional-reservation",
+      "steps": [
+        {
+          "at": [
+            669,
+            1457.5,
+            92
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            69,
+            1457.5,
+            92
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            1301.5,
+            1137.5,
+            117
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            1269,
+            1457.5,
+            92
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "platform",
+      "steps": [
+        {
+          "at": [
+            69,
+            1457.5,
+            92
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            1600,
+            1473,
+            135
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

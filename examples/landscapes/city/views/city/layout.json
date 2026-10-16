@@ -1,0 +1,234 @@
+{
+  "seed": 81403,
+  "environment": "city",
+  "groups": [
+    {
+      "label": "Mottakskontor",
+      "pattern": "street",
+      "at": [
+        20,
+        30
+      ],
+      "plots": [
+        {
+          "entity": "intake",
+          "asset": "office",
+          "size": "compact"
+        }
+      ]
+    },
+    {
+      "label": "Serviceverksted",
+      "pattern": "street",
+      "at": [
+        265,
+        30
+      ],
+      "plots": [
+        {
+          "entity": "check",
+          "asset": "workshop",
+          "size": "expanded"
+        }
+      ]
+    },
+    {
+      "label": "Utleveringskontor",
+      "pattern": "street",
+      "at": [
+        690,
+        30
+      ],
+      "plots": [
+        {
+          "entity": "release",
+          "asset": "office",
+          "size": "compact"
+        }
+      ]
+    }
+  ],
+  "network": {
+    "nodes": [
+      {
+        "id": "intake-port",
+        "at": [
+          67.5,
+          142,
+          3
+        ]
+      },
+      {
+        "id": "intake-lane",
+        "at": [
+          67.5,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "check-port",
+        "at": [
+          445,
+          256,
+          3
+        ]
+      },
+      {
+        "id": "check-lane",
+        "at": [
+          445,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "release-port",
+        "at": [
+          737.5,
+          142,
+          3
+        ]
+      },
+      {
+        "id": "release-lane",
+        "at": [
+          737.5,
+          330,
+          3
+        ]
+      },
+      {
+        "id": "street-west",
+        "at": [
+          0,
+          394,
+          3
+        ]
+      },
+      {
+        "id": "street-east",
+        "at": [
+          840,
+          394,
+          3
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "intake-entry",
+        "entity": "intake",
+        "node": "intake-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      },
+      {
+        "id": "check-entry",
+        "entity": "check",
+        "node": "check-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      },
+      {
+        "id": "release-entry",
+        "entity": "release",
+        "node": "release-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      }
+    ],
+    "edges": [
+      {
+        "id": "intake-access",
+        "from": "intake-port",
+        "to": "intake-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "check-access",
+        "from": "check-port",
+        "to": "check-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "shared-1",
+        "from": "intake-lane",
+        "to": "check-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "release-access",
+        "from": "release-port",
+        "to": "release-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "shared-2",
+        "from": "check-lane",
+        "to": "release-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "public-street",
+        "from": "street-west",
+        "to": "street-east",
+        "surface": "road",
+        "width": 64,
+        "modes": [
+          "car",
+          "van"
+        ]
+      }
+    ]
+  },
+  "routes": [
+    {
+      "relation": "inspect",
+      "network": {
+        "from": "intake-entry",
+        "to": "check-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "deliver",
+      "network": {
+        "from": "check-entry",
+        "to": "release-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "clarify",
+      "network": {
+        "from": "check-entry",
+        "to": "intake-entry",
+        "mode": "person"
+      }
+    }
+  ]
+}

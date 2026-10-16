@@ -1,0 +1,202 @@
+{
+  "title": "Inne i valideringen",
+  "question": "Hva skjer i inne i valideringen?",
+  "summary": "Tre konkrete kontroller avgjør om bestillingen kan sendes videre.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et reparasjonsoppdrag fra henting til ferdig levering",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "fields",
+      "number": "01",
+      "label": "Feltkontroll",
+      "kind": "system",
+      "role": "Feltkontroll",
+      "description": "Kontrollerer at apparat og kontakt er fylt ut.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "capacity",
+      "number": "02",
+      "label": "Kapasitetskontroll",
+      "kind": "system",
+      "role": "Kapasitetskontroll",
+      "description": "Kontrollerer at ønsket tidspunkt er ledig.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "decision",
+      "number": "03",
+      "label": "Beslutning",
+      "kind": "system",
+      "role": "Beslutning",
+      "description": "Samler kontrollresultatene.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "accepted",
+      "number": "04",
+      "label": "Godkjent",
+      "kind": "system",
+      "role": "Godkjent",
+      "description": "Sender godkjent bestilling til ordrekøen.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "rejected",
+      "number": "05",
+      "label": "Returmelding",
+      "kind": "system",
+      "role": "Returmelding",
+      "description": "Returnerer navnet på feltet som må rettes.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "capacity",
+      "from": "fields",
+      "to": "capacity",
+      "kind": "information",
+      "label": "Kontroller tidspunkt",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "decide",
+      "from": "capacity",
+      "to": "decision",
+      "kind": "information",
+      "label": "Samle resultatene",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "accept",
+      "from": "decision",
+      "to": "accepted",
+      "kind": "information",
+      "label": "Godkjenn",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "reject",
+      "from": "fields",
+      "to": "rejected",
+      "kind": "information",
+      "label": "Beskriv mangelen",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "ok",
+      "number": "01",
+      "label": "Kontrollene består",
+      "summary": "Opplysninger og kapasitet kontrolleres før godkjenning.",
+      "condition": "Alle obligatoriske felt er oppgitt.",
+      "outcome": "Bestillingen er godkjent for ordrekøen.",
+      "actor": {
+        "kind": "data",
+        "label": "Kontrollresultat",
+        "start": "fields"
+      },
+      "steps": [
+        {
+          "title": "Kontroller tidspunktet",
+          "text": "Et ledig tidspunkt oppfyller kapasitetskontrollen.",
+          "relations": [
+            "capacity"
+          ],
+          "state": {
+            "at": "capacity",
+            "via": "capacity",
+            "moving": "Kontroller tidspunktet",
+            "caption": "Ved kapasitetskontroll"
+          }
+        },
+        {
+          "title": "Samle kontrollene",
+          "text": "Beslutningen bygger på både feltkontroll og kapasitet.",
+          "relations": [
+            "decide"
+          ],
+          "state": {
+            "at": "decision",
+            "via": "decide",
+            "moving": "Samle kontrollene",
+            "caption": "Ved beslutning"
+          }
+        },
+        {
+          "title": "Godkjenn bestillingen",
+          "text": "Den godkjente bestillingen sendes tilbake til ordrekøen på nivået over.",
+          "relations": [
+            "accept"
+          ],
+          "state": {
+            "at": "accepted",
+            "via": "accept",
+            "moving": "Godkjenn bestillingen",
+            "caption": "Ved godkjent"
+          }
+        }
+      ]
+    },
+    {
+      "id": "missing",
+      "number": "02",
+      "label": "Et felt mangler",
+      "summary": "Feilen blir en konkret returmelding.",
+      "condition": "Et obligatorisk felt er tomt.",
+      "outcome": "Returmeldingen identifiserer feltet kunden må rette.",
+      "actor": {
+        "kind": "data",
+        "label": "Returmelding",
+        "start": "fields"
+      },
+      "steps": [
+        {
+          "title": "Returner mangelen",
+          "text": "Feltkontrollen oppgir hvilket felt som mangler.",
+          "relations": [
+            "reject"
+          ],
+          "state": {
+            "at": "rejected",
+            "via": "reject",
+            "moving": "Returner mangelen",
+            "caption": "Ved returmelding"
+          }
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "storyHeading": "Velg et forløp"
+  },
+  "legend": {
+    "movement": "Fysisk bevegelse",
+    "information": "Informasjon",
+    "electricity": "Elektrisk strøm",
+    "dependency": "Avhengighet"
+  }
+}

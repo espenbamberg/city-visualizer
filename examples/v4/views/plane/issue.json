@@ -1,0 +1,154 @@
+{
+  "title": "Inne i deleflyet",
+  "question": "Hva skjer i inne i deleflyet?",
+  "summary": "Lasten kontrolleres, stues og klargjøres for lossing. Visningen er en utbrettet oversikt over lastarbeidet.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Et reparasjonsoppdrag fra henting til ferdig levering",
+      "locator": "brief.md",
+      "date": "2026-10-12"
+    }
+  ],
+  "entities": [
+    {
+      "id": "manifest",
+      "number": "01",
+      "label": "Lasteliste",
+      "kind": "station",
+      "role": "Lasteliste",
+      "description": "Kobler reservedelen til mottaker og forsendelse.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "check",
+      "number": "02",
+      "label": "Lastkontroll",
+      "kind": "station",
+      "role": "Lastkontroll",
+      "description": "Kontrollerer kolli og merking.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "hold",
+      "number": "03",
+      "label": "Lasterom",
+      "kind": "station",
+      "role": "Lasterom",
+      "description": "Holder last og merking samlet.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "unload",
+      "number": "04",
+      "label": "Lossing",
+      "kind": "station",
+      "role": "Lossing",
+      "description": "Klargjør kolliet for overlevering til terminalen.",
+      "constraint": "Neste aktivitet starter når overleveringen er bekreftet.",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "check",
+      "from": "manifest",
+      "to": "check",
+      "kind": "movement",
+      "label": "Kontroller kolliet",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "stow",
+      "from": "check",
+      "to": "hold",
+      "kind": "movement",
+      "label": "Stue lasten",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "unload",
+      "from": "hold",
+      "to": "unload",
+      "kind": "movement",
+      "label": "Klargjør lossing",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "cargo",
+      "number": "01",
+      "label": "Reservedelen gjennom lastarbeidet",
+      "summary": "Følg medarbeiderens kontroll og overlevering.",
+      "condition": "Reservedelen er pakket og knyttet til en forsendelse.",
+      "outcome": "Terminalen kan ta imot riktig kolli.",
+      "actor": {
+        "kind": "person",
+        "label": "Lastmedarbeideren",
+        "start": "manifest"
+      },
+      "steps": [
+        {
+          "title": "Sjekk lastelisten",
+          "text": "Kolliet kontrolleres mot mottaker og forsendelse.",
+          "relations": [
+            "check"
+          ],
+          "state": {
+            "at": "check",
+            "via": "check",
+            "moving": "Sjekk lastelisten",
+            "caption": "Ved lastkontroll"
+          }
+        },
+        {
+          "title": "Plasser i lasterommet",
+          "text": "Lasten plasseres og merkes for riktig mottaker.",
+          "relations": [
+            "stow"
+          ],
+          "state": {
+            "at": "hold",
+            "via": "stow",
+            "moving": "Plasser i lasterommet",
+            "caption": "Ved lasterom"
+          }
+        },
+        {
+          "title": "Overlever kolliet",
+          "text": "Ved ankomst klargjøres kolliet for terminalen.",
+          "relations": [
+            "unload"
+          ],
+          "state": {
+            "at": "unload",
+            "via": "unload",
+            "moving": "Overlever kolliet",
+            "caption": "Ved lossing"
+          }
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "storyHeading": "Velg et forløp"
+  },
+  "legend": {
+    "movement": "Fysisk bevegelse",
+    "information": "Informasjon",
+    "electricity": "Elektrisk strøm",
+    "dependency": "Avhengighet"
+  }
+}

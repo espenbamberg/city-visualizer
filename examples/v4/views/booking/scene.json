@@ -1,0 +1,813 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      600,
+      520,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 600,
+      "d": 520,
+      "h": 3,
+      "material": "#c1cfc9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 28,
+      "z": 3,
+      "w": 68,
+      "d": 74,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 197,
+      "y": 28,
+      "z": 3,
+      "w": 136,
+      "d": 106,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 387,
+      "y": 28,
+      "z": 3,
+      "w": 64,
+      "d": 70,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 271,
+      "z": 3,
+      "w": 126,
+      "d": 104,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 387,
+      "y": 271,
+      "z": 3,
+      "w": 68,
+      "d": 74,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "receive",
+      "entity": "receive",
+      "asset": "terminal",
+      "x": 30,
+      "y": 36,
+      "w": 52,
+      "d": 40,
+      "h": 45,
+      "anchor": [
+        43,
+        140,
+        3
+      ],
+      "label": [
+        56,
+        96,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Mottak"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "MOTTAK",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "record"
+    },
+    {
+      "id": "validate",
+      "entity": "validate",
+      "asset": "terminal",
+      "x": 205,
+      "y": 36,
+      "w": 120,
+      "d": 72,
+      "h": 45,
+      "anchor": [
+        235,
+        172,
+        3
+      ],
+      "label": [
+        265,
+        128,
+        4
+      ],
+      "labelStyle": {
+        "width": 120,
+        "size": 10,
+        "lines": [
+          "Validering"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "VALIDERING",
+      "size": "expanded",
+      "emphasis": "primary",
+      "process": "checks"
+    },
+    {
+      "id": "queue",
+      "entity": "queue",
+      "asset": "queue",
+      "x": 395,
+      "y": 36,
+      "w": 48,
+      "d": 36,
+      "h": 40,
+      "anchor": [
+        407,
+        136,
+        3
+      ],
+      "label": [
+        419,
+        92,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Ordrekø"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "ORDREKØ",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "queue"
+    },
+    {
+      "id": "store",
+      "entity": "store",
+      "asset": "database",
+      "x": 30,
+      "y": 279,
+      "w": 110,
+      "d": 70,
+      "h": 60,
+      "anchor": [
+        57.5,
+        413,
+        3
+      ],
+      "label": [
+        85,
+        369,
+        4
+      ],
+      "labelStyle": {
+        "width": 110,
+        "size": 10,
+        "lines": [
+          "Ordrelager"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "ORDRELAGER",
+      "emphasis": "supporting"
+    },
+    {
+      "id": "send",
+      "entity": "send",
+      "asset": "terminal",
+      "x": 395,
+      "y": 279,
+      "w": 52,
+      "d": 40,
+      "h": 45,
+      "anchor": [
+        408,
+        383,
+        3
+      ],
+      "label": [
+        421,
+        339,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Arbeidsordre"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "ARBEIDSORDRE",
+      "size": "compact",
+      "emphasis": "context",
+      "process": "dispatch"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "check",
+      "points": [
+        [
+          43,
+          140,
+          3
+        ],
+        [
+          104,
+          224,
+          4
+        ],
+        [
+          347,
+          224,
+          4
+        ],
+        [
+          235,
+          172,
+          3
+        ]
+      ],
+      "network": {
+        "from": "receive-entry",
+        "to": "validate-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-0",
+        "link-1",
+        "link-2"
+      ]
+    },
+    {
+      "relation": "enqueue",
+      "points": [
+        [
+          235,
+          172,
+          3
+        ],
+        [
+          347,
+          224,
+          4
+        ],
+        [
+          465,
+          224,
+          4
+        ],
+        [
+          407,
+          136,
+          3
+        ]
+      ],
+      "network": {
+        "from": "validate-entry",
+        "to": "queue-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-2",
+        "link-3",
+        "link-4"
+      ]
+    },
+    {
+      "relation": "save",
+      "points": [
+        [
+          407,
+          136,
+          3
+        ],
+        [
+          465,
+          224,
+          4
+        ],
+        [
+          582,
+          224,
+          4
+        ],
+        [
+          582,
+          465,
+          4
+        ],
+        [
+          162,
+          465,
+          4
+        ],
+        [
+          57.5,
+          413,
+          3
+        ]
+      ],
+      "network": {
+        "from": "queue-entry",
+        "to": "store-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-4",
+        "link-5",
+        "link-6",
+        "link-7",
+        "link-8"
+      ]
+    },
+    {
+      "relation": "send",
+      "points": [
+        [
+          57.5,
+          413,
+          3
+        ],
+        [
+          162,
+          465,
+          4
+        ],
+        [
+          469,
+          465,
+          4
+        ],
+        [
+          408,
+          383,
+          3
+        ]
+      ],
+      "network": {
+        "from": "store-entry",
+        "to": "send-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-8",
+        "link-9",
+        "link-10"
+      ]
+    },
+    {
+      "relation": "reject",
+      "points": [
+        [
+          235,
+          172,
+          3
+        ],
+        [
+          347,
+          224,
+          4
+        ],
+        [
+          104,
+          224,
+          4
+        ],
+        [
+          43,
+          140,
+          3
+        ]
+      ],
+      "network": {
+        "from": "validate-entry",
+        "to": "receive-entry",
+        "mode": "data"
+      },
+      "edges": [
+        "link-2",
+        "link-1",
+        "link-0"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "accepted",
+      "actor": {
+        "identity": "accepted",
+        "at": [
+          43,
+          140,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            265,
+            72,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "validate",
+              "part": "fields",
+              "state": "active"
+            },
+            {
+              "entity": "validate",
+              "part": "capacity",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "at": [
+            419,
+            54,
+            68
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "queue",
+              "part": "tickets",
+              "state": "waiting"
+            }
+          ]
+        },
+        {
+          "at": [
+            85,
+            314,
+            88
+          ],
+          "links": [],
+          "parts": []
+        },
+        {
+          "at": [
+            421,
+            299,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "send",
+              "part": "output",
+              "state": "active"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "incomplete",
+      "actor": {
+        "identity": "incomplete",
+        "at": [
+          43,
+          140,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            265,
+            72,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "validate",
+              "part": "fields",
+              "state": "blocked"
+            }
+          ]
+        },
+        {
+          "at": [
+            56,
+            56,
+            73
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "receive",
+              "part": "contact",
+              "state": "waiting"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adaptiveDetail": true,
+  "network": {
+    "nodes": [
+      {
+        "id": "junction-0",
+        "at": [
+          43,
+          140,
+          3
+        ]
+      },
+      {
+        "id": "junction-1",
+        "at": [
+          235,
+          172,
+          3
+        ]
+      },
+      {
+        "id": "junction-2",
+        "at": [
+          407,
+          136,
+          3
+        ]
+      },
+      {
+        "id": "junction-3",
+        "at": [
+          57.5,
+          413,
+          3
+        ]
+      },
+      {
+        "id": "junction-4",
+        "at": [
+          408,
+          383,
+          3
+        ]
+      },
+      {
+        "id": "junction-5",
+        "at": [
+          104,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-6",
+        "at": [
+          347,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-7",
+        "at": [
+          465,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-8",
+        "at": [
+          582,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-9",
+        "at": [
+          582,
+          465,
+          4
+        ]
+      },
+      {
+        "id": "junction-10",
+        "at": [
+          162,
+          465,
+          4
+        ]
+      },
+      {
+        "id": "junction-11",
+        "at": [
+          469,
+          465,
+          4
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "id": "link-0",
+        "from": "junction-0",
+        "to": "junction-5",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-1",
+        "from": "junction-5",
+        "to": "junction-6",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-2",
+        "from": "junction-6",
+        "to": "junction-1",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-3",
+        "from": "junction-6",
+        "to": "junction-7",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-4",
+        "from": "junction-7",
+        "to": "junction-2",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-5",
+        "from": "junction-7",
+        "to": "junction-8",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-6",
+        "from": "junction-8",
+        "to": "junction-9",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-7",
+        "from": "junction-9",
+        "to": "junction-10",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-8",
+        "from": "junction-10",
+        "to": "junction-3",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-9",
+        "from": "junction-10",
+        "to": "junction-11",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      },
+      {
+        "id": "link-10",
+        "from": "junction-11",
+        "to": "junction-4",
+        "surface": "cable",
+        "modes": [
+          "data"
+        ],
+        "width": 20
+      }
+    ],
+    "ports": [
+      {
+        "id": "receive-entry",
+        "entity": "receive",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-0"
+      },
+      {
+        "id": "validate-entry",
+        "entity": "validate",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-1"
+      },
+      {
+        "id": "queue-entry",
+        "entity": "queue",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-2"
+      },
+      {
+        "id": "store-entry",
+        "entity": "store",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-3"
+      },
+      {
+        "id": "send-entry",
+        "entity": "send",
+        "side": "front",
+        "position": 0.25,
+        "offset": 64,
+        "node": "junction-4"
+      }
+    ]
+  }
+}

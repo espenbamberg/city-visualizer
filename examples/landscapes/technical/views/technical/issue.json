@@ -1,0 +1,201 @@
+{
+  "title": "Fra bestilling til kvittering",
+  "question": "Når kan en digital bestilling bekreftes?",
+  "summary": "Tjenesten kontrollerer obligatoriske felt og ledig kapasitet, lagrer bestillingen og sender kvittering. Manglende felt sendes tilbake til avsenderen.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "brief",
+      "title": "Illustrativ bestillingsflyt",
+      "locator": "brief.md",
+      "date": "2026-10-13"
+    }
+  ],
+  "presentation": {
+    "eyebrow": "CityVisualizer · landskap",
+    "layoutNote": "Skjematisk dataflyt: arbeidsflater og kort viser logiske funksjoner, ikke faktiske servere eller rom."
+  },
+  "entities": [
+    {
+      "id": "input",
+      "label": "Inndata",
+      "description": "Tar imot kontakt, valgt tid og bestilling.",
+      "constraint": "Alle obligatoriske felt må følge med.",
+      "kind": "system",
+      "number": "01",
+      "role": "Inndata",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "validate",
+      "label": "Validering",
+      "description": "Kontrollerer feltene og om tiden fortsatt er ledig.",
+      "constraint": "Begge kontrollene må bestås.",
+      "kind": "system",
+      "number": "02",
+      "role": "Validering",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "store",
+      "label": "Lagring",
+      "description": "Lagrer den godkjente bestillingen med et unikt nummer.",
+      "constraint": "Kvittering sendes først når lagringen er bekreftet.",
+      "kind": "system",
+      "number": "03",
+      "role": "Lagring",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "receipt",
+      "label": "Kvittering",
+      "description": "Returnerer bestillingsnummer og avtalt tid.",
+      "constraint": "Avsenderen må kunne knytte kvitteringen til bestillingen.",
+      "kind": "system",
+      "number": "04",
+      "role": "Kvittering",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "check",
+      "from": "input",
+      "to": "validate",
+      "label": "Kontroller bestillingen",
+      "kind": "information",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "save",
+      "from": "validate",
+      "to": "store",
+      "label": "Lagre godkjent bestilling",
+      "kind": "information",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "confirm",
+      "from": "store",
+      "to": "receipt",
+      "label": "Bekreft lagring",
+      "kind": "information",
+      "source": "brief",
+      "status": "fictional"
+    },
+    {
+      "id": "reject",
+      "from": "validate",
+      "to": "input",
+      "label": "Be om manglende felt",
+      "kind": "information",
+      "source": "brief",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "complete",
+      "number": "01",
+      "label": "Godkjent bestilling",
+      "summary": "Alle felt er utfylt og tiden er ledig.",
+      "condition": "Alle felt er utfylt og tiden er ledig.",
+      "outcome": "Avsenderen har en kvittering med bestillingsnummer.",
+      "actor": {
+        "kind": "data",
+        "label": "Bestillingen",
+        "start": "input",
+        "identity": "order"
+      },
+      "steps": [
+        {
+          "title": "Kontroller feltene",
+          "text": "Valideringen kontrollerer kontaktopplysningene og at valgt tid er ledig.",
+          "relations": [
+            "check"
+          ],
+          "state": {
+            "at": "validate",
+            "via": "check",
+            "moving": "Kontroller feltene",
+            "caption": "Kontroller feltene"
+          }
+        },
+        {
+          "title": "Lagre bestillingen",
+          "text": "Den godkjente bestillingen får et unikt nummer og lagres.",
+          "relations": [
+            "save"
+          ],
+          "state": {
+            "at": "store",
+            "via": "save",
+            "moving": "Lagre bestillingen",
+            "caption": "Lagre bestillingen"
+          }
+        },
+        {
+          "title": "Send kvitteringen",
+          "text": "Bekreftet lagring utløser en kvittering med nummer og avtalt tid.",
+          "relations": [
+            "confirm"
+          ],
+          "state": {
+            "at": "receipt",
+            "via": "confirm",
+            "moving": "Send kvitteringen",
+            "caption": "Send kvitteringen"
+          }
+        }
+      ]
+    },
+    {
+      "id": "missing",
+      "number": "02",
+      "label": "Manglende felt",
+      "summary": "Kontaktopplysningene er ufullstendige.",
+      "condition": "Kontaktopplysningene er ufullstendige.",
+      "outcome": "Avsenderen får vite hvilke felt som må fylles ut. Bestillingen er ikke lagret.",
+      "actor": {
+        "kind": "data",
+        "label": "Bestillingen",
+        "start": "input",
+        "identity": "order"
+      },
+      "steps": [
+        {
+          "title": "Finn mangelen",
+          "text": "Valideringen oppdager at kontaktopplysningene mangler.",
+          "relations": [
+            "check"
+          ],
+          "state": {
+            "at": "validate",
+            "via": "check",
+            "moving": "Finn mangelen",
+            "caption": "Finn mangelen"
+          }
+        },
+        {
+          "title": "Be om retting",
+          "text": "Avsenderen får en konkret melding om feltet som må fylles ut før et nytt forsøk.",
+          "relations": [
+            "reject"
+          ],
+          "state": {
+            "at": "input",
+            "via": "reject",
+            "moving": "Be om retting",
+            "caption": "Be om retting"
+          }
+        }
+      ]
+    }
+  ]
+}

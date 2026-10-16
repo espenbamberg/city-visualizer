@@ -1,0 +1,461 @@
+{
+  "width": 1400,
+  "height": 1000,
+  "seed": 92713,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      600,
+      520,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 600,
+      "d": 520,
+      "h": 3,
+      "material": "#c1cfc9",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 28,
+      "z": 3,
+      "w": 68,
+      "d": 74,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 197,
+      "y": 28,
+      "z": 3,
+      "w": 136,
+      "d": 106,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 387,
+      "y": 28,
+      "z": 3,
+      "w": 64,
+      "d": 70,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 22,
+      "y": 271,
+      "z": 3,
+      "w": 126,
+      "d": 104,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 387,
+      "y": 271,
+      "z": 3,
+      "w": 68,
+      "d": 74,
+      "h": 0.5,
+      "material": "#d3ded5",
+      "r": 3
+    }
+  ],
+  "scenery": [],
+  "instances": [
+    {
+      "id": "receive",
+      "entity": "receive",
+      "asset": "terminal",
+      "x": 30,
+      "y": 36,
+      "w": 52,
+      "d": 40,
+      "h": 45,
+      "anchor": [
+        104,
+        140,
+        4
+      ],
+      "label": [
+        56,
+        96,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Mottak"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "MOTTAK",
+      "size": "compact",
+      "emphasis": "context"
+    },
+    {
+      "id": "validate",
+      "entity": "validate",
+      "asset": "terminal",
+      "x": 205,
+      "y": 36,
+      "w": 120,
+      "d": 72,
+      "h": 45,
+      "anchor": [
+        347,
+        172,
+        4
+      ],
+      "label": [
+        265,
+        128,
+        4
+      ],
+      "labelStyle": {
+        "width": 120,
+        "size": 10,
+        "lines": [
+          "Validering"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "VALIDERING",
+      "size": "expanded",
+      "emphasis": "primary"
+    },
+    {
+      "id": "queue",
+      "entity": "queue",
+      "asset": "queue",
+      "x": 395,
+      "y": 36,
+      "w": 48,
+      "d": 36,
+      "h": 40,
+      "anchor": [
+        465,
+        136,
+        4
+      ],
+      "label": [
+        419,
+        92,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Ordrekø"
+        ]
+      },
+      "material": "#b3c2ad",
+      "sign": "ORDREKØ",
+      "size": "compact",
+      "emphasis": "context"
+    },
+    {
+      "id": "store",
+      "entity": "store",
+      "asset": "database",
+      "x": 30,
+      "y": 279,
+      "w": 110,
+      "d": 70,
+      "h": 60,
+      "anchor": [
+        162,
+        413,
+        4
+      ],
+      "label": [
+        85,
+        369,
+        4
+      ],
+      "labelStyle": {
+        "width": 110,
+        "size": 10,
+        "lines": [
+          "Ordrelager"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "ORDRELAGER",
+      "emphasis": "supporting"
+    },
+    {
+      "id": "send",
+      "entity": "send",
+      "asset": "terminal",
+      "x": 395,
+      "y": 279,
+      "w": 52,
+      "d": 40,
+      "h": 45,
+      "anchor": [
+        469,
+        383,
+        4
+      ],
+      "label": [
+        421,
+        339,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Arbeidsordre"
+        ]
+      },
+      "material": "#b7c5ba",
+      "sign": "ARBEIDSORDRE",
+      "size": "compact",
+      "emphasis": "context"
+    }
+  ],
+  "routes": [
+    {
+      "relation": "check",
+      "points": [
+        [
+          104,
+          140,
+          4
+        ],
+        [
+          104,
+          224,
+          4
+        ],
+        [
+          347,
+          224,
+          4
+        ],
+        [
+          347,
+          172,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "enqueue",
+      "points": [
+        [
+          347,
+          172,
+          4
+        ],
+        [
+          347,
+          224,
+          4
+        ],
+        [
+          465,
+          224,
+          4
+        ],
+        [
+          465,
+          136,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "save",
+      "points": [
+        [
+          465,
+          136,
+          4
+        ],
+        [
+          465,
+          224,
+          4
+        ],
+        [
+          582,
+          224,
+          4
+        ],
+        [
+          582,
+          465,
+          4
+        ],
+        [
+          162,
+          465,
+          4
+        ],
+        [
+          162,
+          413,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "send",
+      "points": [
+        [
+          162,
+          413,
+          4
+        ],
+        [
+          162,
+          465,
+          4
+        ],
+        [
+          469,
+          465,
+          4
+        ],
+        [
+          469,
+          383,
+          4
+        ]
+      ]
+    },
+    {
+      "relation": "reject",
+      "points": [
+        [
+          347,
+          172,
+          4
+        ],
+        [
+          347,
+          224,
+          4
+        ],
+        [
+          104,
+          224,
+          4
+        ],
+        [
+          104,
+          140,
+          4
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "accepted",
+      "actor": {
+        "identity": "accepted",
+        "at": [
+          104,
+          140,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            265,
+            72,
+            73
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            419,
+            54,
+            68
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            85,
+            314,
+            88
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            421,
+            299,
+            73
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "incomplete",
+      "actor": {
+        "identity": "incomplete",
+        "at": [
+          104,
+          140,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            265,
+            72,
+            73
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            56,
+            56,
+            73
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

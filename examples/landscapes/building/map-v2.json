@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "language": "nb",
+  "root": "building",
+  "views": {
+    "building": {
+      "issue": "views/building/issue.json",
+      "scene": "views/building/scene.json"
+    },
+    "workspace": {
+      "issue": "views/workspace/issue.json",
+      "scene": "views/workspace/scene.json",
+      "boundaries": [
+        {
+          "relation": "inspect",
+          "entity": "intake",
+          "direction": "in"
+        },
+        {
+          "relation": "deliver",
+          "entity": "release",
+          "direction": "out"
+        },
+        {
+          "relation": "clarify",
+          "entity": "intake",
+          "direction": "out"
+        }
+      ]
+    }
+  }
+}

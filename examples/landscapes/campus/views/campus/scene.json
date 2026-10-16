@@ -1,0 +1,801 @@
+{
+  "width": 1600,
+  "height": 1100,
+  "seed": 81403,
+  "adaptiveDetail": true,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 34
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      795,
+      440,
+      0
+    ],
+    [
+      870,
+      555,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": -10,
+      "y": -10,
+      "z": -3,
+      "w": 880,
+      "d": 565,
+      "h": 3,
+      "material": "#c4cdae",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 2,
+      "y": 2,
+      "z": 0,
+      "w": 137,
+      "d": 184,
+      "h": 2,
+      "material": "#c2ccad",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        10,
+        10,
+        3
+      ],
+      "text": "INNGANG",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    },
+    {
+      "type": "box",
+      "x": 202,
+      "y": 122,
+      "z": 0,
+      "w": 402,
+      "d": 298,
+      "h": 2,
+      "material": "#dedbc9",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        210,
+        130,
+        3
+      ],
+      "text": "FELLES VERKSTED",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          222,
+          142,
+          2.1
+        ],
+        [
+          222,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          252,
+          142,
+          2.1
+        ],
+        [
+          252,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          282,
+          142,
+          2.1
+        ],
+        [
+          282,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          312,
+          142,
+          2.1
+        ],
+        [
+          312,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          342,
+          142,
+          2.1
+        ],
+        [
+          342,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          372,
+          142,
+          2.1
+        ],
+        [
+          372,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          402,
+          142,
+          2.1
+        ],
+        [
+          402,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          432,
+          142,
+          2.1
+        ],
+        [
+          432,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          462,
+          142,
+          2.1
+        ],
+        [
+          462,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          492,
+          142,
+          2.1
+        ],
+        [
+          492,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          522,
+          142,
+          2.1
+        ],
+        [
+          522,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          552,
+          142,
+          2.1
+        ],
+        [
+          552,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          582,
+          142,
+          2.1
+        ],
+        [
+          582,
+          410,
+          2.1
+        ]
+      ],
+      "color": "#d0cebc",
+      "width": 0.35
+    },
+    {
+      "type": "box",
+      "x": 582,
+      "y": 2,
+      "z": 0,
+      "w": 137,
+      "d": 184,
+      "h": 2,
+      "material": "#c2ccad",
+      "r": 5
+    },
+    {
+      "type": "text",
+      "at": [
+        590,
+        10,
+        3
+      ],
+      "text": "UTLEVERING",
+      "size": 10,
+      "color": "#68745e",
+      "tracking": 0.7
+    },
+    {
+      "type": "text",
+      "at": [
+        85,
+        503,
+        3
+      ],
+      "text": "FELLES INNGANG",
+      "size": 9,
+      "color": "#5c6e5e"
+    }
+  ],
+  "scenery": [
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 158,
+      "h": 43,
+      "seed": 0
+    },
+    {
+      "type": "person",
+      "id": "visitor-intake",
+      "x": 50,
+      "y": 144,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 232,
+      "y": 392,
+      "h": 43,
+      "seed": 1
+    },
+    {
+      "type": "person",
+      "id": "visitor-check",
+      "x": 250,
+      "y": 378,
+      "z": 3
+    },
+    {
+      "type": "tree",
+      "x": 612,
+      "y": 158,
+      "h": 43,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-release",
+      "x": 630,
+      "y": 144,
+      "z": 3
+    }
+  ],
+  "instances": [
+    {
+      "id": "intake",
+      "entity": "intake",
+      "asset": "office",
+      "x": 20,
+      "y": 20,
+      "w": 95,
+      "d": 76,
+      "h": 93,
+      "material": "#bcc6b1",
+      "sign": "Mottak",
+      "size": "compact",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        67.5,
+        132,
+        3
+      ],
+      "label": [
+        67.5,
+        103,
+        3
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Mottak"
+        ]
+      }
+    },
+    {
+      "id": "check",
+      "entity": "check",
+      "asset": "workshop",
+      "x": 220,
+      "y": 140,
+      "w": 360,
+      "d": 190,
+      "h": 68,
+      "material": "#bcc6b1",
+      "sign": "Kontroll",
+      "size": "expanded",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        400,
+        366,
+        3
+      ],
+      "label": [
+        400,
+        337,
+        3
+      ],
+      "labelStyle": {
+        "width": 360,
+        "size": 10,
+        "lines": [
+          "Kontroll"
+        ]
+      }
+    },
+    {
+      "id": "release",
+      "entity": "release",
+      "asset": "office",
+      "x": 600,
+      "y": 20,
+      "w": 95,
+      "d": 76,
+      "h": 93,
+      "material": "#bcc6b1",
+      "sign": "Utlevering",
+      "size": "compact",
+      "emphasis": "supporting",
+      "detailLevels": true,
+      "anchor": [
+        647.5,
+        132,
+        3
+      ],
+      "label": [
+        647.5,
+        103,
+        3
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Utlevering"
+        ]
+      }
+    }
+  ],
+  "network": {
+    "nodes": [
+      {
+        "id": "intake-port",
+        "at": [
+          67.5,
+          132,
+          3
+        ]
+      },
+      {
+        "id": "intake-lane",
+        "at": [
+          67.5,
+          450,
+          3
+        ]
+      },
+      {
+        "id": "check-port",
+        "at": [
+          400,
+          366,
+          3
+        ]
+      },
+      {
+        "id": "check-lane",
+        "at": [
+          400,
+          450,
+          3
+        ]
+      },
+      {
+        "id": "release-port",
+        "at": [
+          647.5,
+          132,
+          3
+        ]
+      },
+      {
+        "id": "release-lane",
+        "at": [
+          647.5,
+          450,
+          3
+        ]
+      },
+      {
+        "id": "entrance",
+        "at": [
+          67.5,
+          525,
+          3
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "intake-entry",
+        "entity": "intake",
+        "node": "intake-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      },
+      {
+        "id": "check-entry",
+        "entity": "check",
+        "node": "check-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      },
+      {
+        "id": "release-entry",
+        "entity": "release",
+        "node": "release-port",
+        "side": "front",
+        "position": 0.5,
+        "offset": 36
+      }
+    ],
+    "edges": [
+      {
+        "id": "intake-access",
+        "from": "intake-port",
+        "to": "intake-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "check-access",
+        "from": "check-port",
+        "to": "check-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "shared-1",
+        "from": "intake-lane",
+        "to": "check-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "release-access",
+        "from": "release-port",
+        "to": "release-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "shared-2",
+        "from": "check-lane",
+        "to": "release-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      },
+      {
+        "id": "common-entrance",
+        "from": "entrance",
+        "to": "intake-lane",
+        "surface": "path",
+        "width": 28,
+        "modes": [
+          "person"
+        ]
+      }
+    ]
+  },
+  "routes": [
+    {
+      "relation": "inspect",
+      "network": {
+        "from": "intake-entry",
+        "to": "check-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          67.5,
+          132,
+          3
+        ],
+        [
+          67.5,
+          450,
+          3
+        ],
+        [
+          400,
+          450,
+          3
+        ],
+        [
+          400,
+          366,
+          3
+        ]
+      ],
+      "edges": [
+        "intake-access",
+        "shared-1",
+        "check-access"
+      ]
+    },
+    {
+      "relation": "deliver",
+      "network": {
+        "from": "check-entry",
+        "to": "release-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          400,
+          366,
+          3
+        ],
+        [
+          400,
+          450,
+          3
+        ],
+        [
+          647.5,
+          450,
+          3
+        ],
+        [
+          647.5,
+          132,
+          3
+        ]
+      ],
+      "edges": [
+        "check-access",
+        "shared-2",
+        "release-access"
+      ]
+    },
+    {
+      "relation": "clarify",
+      "network": {
+        "from": "check-entry",
+        "to": "intake-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          400,
+          366,
+          3
+        ],
+        [
+          400,
+          450,
+          3
+        ],
+        [
+          67.5,
+          450,
+          3
+        ],
+        [
+          67.5,
+          132,
+          3
+        ]
+      ],
+      "edges": [
+        "check-access",
+        "shared-1",
+        "intake-access"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "complete",
+      "actor": {
+        "identity": "colleague",
+        "at": [
+          67.5,
+          132,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            400,
+            235,
+            100
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            647.5,
+            58,
+            125
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "colleague",
+        "at": [
+          67.5,
+          132,
+          3
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            400,
+            235,
+            100
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            67.5,
+            58,
+            125
+          ],
+          "links": []
+        }
+      ]
+    }
+  ],
+  "environment": "campus"
+}

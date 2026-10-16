@@ -1,0 +1,60 @@
+{
+  "seed": 81403,
+  "environment": "building",
+  "rooms": [
+    {
+      "id": "reception",
+      "label": "Mottaksrom",
+      "w": 180,
+      "d": 208,
+      "door": {
+        "offset": 105,
+        "width": 48
+      },
+      "plots": [
+        {
+          "entity": "intake",
+          "asset": "desk",
+          "size": "regular",
+          "process": "record"
+        }
+      ]
+    },
+    {
+      "id": "inspection",
+      "label": "Kontrollrom",
+      "w": 252,
+      "d": 240,
+      "door": {
+        "offset": 178,
+        "width": 48
+      },
+      "plots": [
+        {
+          "entity": "check",
+          "asset": "tester",
+          "size": "expanded",
+          "process": "measurement"
+        }
+      ]
+    },
+    {
+      "id": "dispatch",
+      "label": "Utleveringsrom",
+      "w": 180,
+      "d": 208,
+      "door": {
+        "offset": 105,
+        "width": 48
+      },
+      "plots": [
+        {
+          "entity": "release",
+          "asset": "desk",
+          "size": "regular",
+          "process": "dispatch"
+        }
+      ]
+    }
+  ]
+}

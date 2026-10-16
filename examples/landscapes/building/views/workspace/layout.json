@@ -1,0 +1,26 @@
+{
+  "seed": 81403,
+  "environment": "workspace",
+  "rows": [
+    [
+      {
+        "entity": "intake",
+        "asset": "desk",
+        "size": "compact",
+        "process": "record"
+      },
+      {
+        "entity": "check",
+        "asset": "tester",
+        "size": "expanded",
+        "process": "measurement"
+      },
+      {
+        "entity": "release",
+        "asset": "desk",
+        "size": "compact",
+        "process": "dispatch"
+      }
+    ]
+  ]
+}

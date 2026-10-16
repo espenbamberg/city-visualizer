@@ -1,0 +1,34 @@
+{
+  "environment": "technical",
+  "seed": 81403,
+  "rows": [
+    [
+      {
+        "entity": "input",
+        "asset": "terminal",
+        "size": "regular",
+        "process": "record"
+      },
+      {
+        "entity": "validate",
+        "asset": "terminal",
+        "size": "expanded",
+        "process": "checks"
+      }
+    ],
+    [
+      {
+        "entity": "store",
+        "asset": "terminal",
+        "size": "regular",
+        "process": "readout"
+      },
+      {
+        "entity": "receipt",
+        "asset": "terminal",
+        "size": "regular",
+        "process": "dispatch"
+      }
+    ]
+  ]
+}

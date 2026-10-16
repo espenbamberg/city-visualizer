@@ -1,0 +1,104 @@
+{
+  "id": "northbank-repair",
+  "title": "The repair district",
+  "question": "Why does a repair miss its promised date?",
+  "summary": "A promise crosses many hands. Follow an appliance from the customer's home to the workshop, and see how information and parts keep the work moving—or hold it up.",
+  "status": "fictional",
+  "presentation": {
+    "eyebrow": "NORTHBANK REPAIR / AN ILLUSTRATED SYSTEM",
+    "intro": "Behind every repair is a neighborhood of people, places and dependencies.",
+    "storyHeading": "A promise crosses many hands.",
+    "caption": "A world you can read, from the street to the server."
+  },
+  "legend": { "movement": "Appliances & parts", "information": "Information", "dependency": "Dependency", "technical": "Technical links" },
+  "sources": [{ "id": "fixture", "title": "Northbank Repair — example brief", "locator": "brief.md · Operating rules and technical architecture", "date": "2026-10-12" }],
+  "entities": [
+    { "id": "home", "number": "01", "label": "Customer home", "kind": "place", "role": "Customer", "description": "Where the journey begins and where a missed promise is felt. The customer requests a repair, approves the quote and receives the returned appliance.", "constraint": "A collection can only succeed when the supplied address is correct.", "source": "fixture", "status": "fictional" },
+    { "id": "desk", "number": "02", "label": "Service desk", "kind": "place", "role": "Service coordinator", "description": "The coordinator records the request, arranges collection, communicates the diagnosis and quote, and keeps the customer informed.", "constraint": "A customer update depends on reliable status from the workshop and depot.", "source": "fixture", "status": "fictional" },
+    { "id": "supplier", "number": "03", "label": "Parts supplier", "kind": "place", "role": "Supplier stock clerk", "description": "Supplies a replacement part when the workshop's physical stock cannot cover a repair. Its delivery becomes a dependency of the waiting job.", "constraint": "A supplier order is not the same as a part being available at the bench.", "source": "fixture", "status": "fictional" },
+    { "id": "workshop", "number": "04", "label": "Repair workshop", "kind": "place", "role": "Repair technician", "description": "The technician diagnoses the fault, checks the actual shelf, completes an approved repair and performs a quality check before release.", "constraint": "The inventory record can say a part exists even when the physical shelf is empty.", "source": "fixture", "status": "fictional" },
+    { "id": "depot", "number": "05", "label": "Delivery depot", "kind": "place", "role": "Dispatcher and driver", "description": "Connects the customer's home and the workshop. Collection, failed attempts, rescheduling and the final return are coordinated here.", "constraint": "A failed collection prevents diagnosis from starting, even if workshop capacity is available.", "source": "fixture", "status": "fictional" },
+    { "id": "booking", "number": "A", "label": "Booking", "kind": "system", "role": "Address and appointments", "description": "Holds the customer-supplied address and collection window. An address correction must reach this record before the depot reschedules.", "constraint": "The depot uses the address and collection window stored here to plan its run.", "source": "fixture", "status": "fictional" },
+    { "id": "jobs", "number": "B", "label": "Job records", "kind": "system", "role": "Repair state", "description": "Records diagnosis, customer approval, work state and completion. It links coordination at the desk to activity at the workshop.", "constraint": "A recorded job state must be kept consistent with what has actually happened.", "source": "fixture", "status": "fictional" },
+    { "id": "inventory", "number": "C", "label": "Inventory", "kind": "system", "role": "Recorded parts stock", "description": "Supports stock checks. In the missing-part scenario, this record disagrees with the physical shelf and triggers an external order.", "constraint": "Recorded availability does not guarantee physical availability.", "source": "fixture", "status": "fictional" },
+    { "id": "orders", "number": "D", "label": "Supplier orders", "kind": "system", "role": "Parts replenishment", "description": "Carries a replacement-part request from the workshop to the supplier. Work remains dependent on the part arriving.", "constraint": "Submitting an order does not mean the repair can resume.", "source": "fixture", "status": "fictional" },
+    { "id": "dispatch", "number": "E", "label": "Dispatch", "kind": "system", "role": "Collection and return runs", "description": "Supports the depot's collection and return schedule. A corrected address creates a new collection attempt rather than erasing the failed one.", "constraint": "Scheduling and successful collection are distinct events.", "source": "fixture", "status": "fictional" },
+    { "id": "notifications", "number": "F", "label": "Notifications", "kind": "system", "role": "Customer updates", "description": "Delivers messages from the service desk to the customer, including the explanation that a part is missing and a date needs revisiting.", "constraint": "Communication makes a delay visible; it does not resolve the underlying dependency.", "source": "fixture", "status": "fictional" },
+    { "id": "servers", "number": "T1", "label": "Application servers", "kind": "infrastructure", "role": "Shared application runtime", "description": "Runs booking, job records, inventory and dispatch. These applications support the coordinator, technician and depot.", "constraint": "The applications depend on this shared runtime and its connection to the operational database.", "source": "fixture", "status": "fictional" },
+    { "id": "database", "number": "T2", "label": "Operational database", "kind": "infrastructure", "role": "Persistent business records", "description": "Stores addresses, appointments, job state, recorded inventory and dispatch schedules. The application servers read and write these records.", "constraint": "A working database can still contain an incorrect address or stock count; technical availability does not guarantee correct business information.", "source": "fixture", "status": "fictional" },
+    { "id": "gateway", "number": "T3", "label": "Integration gateway", "kind": "infrastructure", "role": "Supplier and messaging connections", "description": "Connects supplier ordering and customer notifications to external endpoints. The application servers submit exchanges through this gateway.", "constraint": "Supplier orders and customer updates rely on the gateway's external connections.", "source": "fixture", "status": "fictional" }
+  ],
+  "relationships": [
+    { "id": "request", "from": "home", "to": "desk", "kind": "information", "label": "Request, approval or address correction", "shortLabel": "Customer request / response", "source": "fixture", "status": "fictional" },
+    { "id": "booking-record", "from": "desk", "to": "booking", "kind": "information", "label": "Record address and appointment", "shortLabel": "Registers address and collection", "source": "fixture", "status": "fictional" },
+    { "id": "arrange", "from": "desk", "to": "depot", "kind": "information", "label": "Arrange collection", "source": "fixture", "status": "fictional" },
+    { "id": "schedule", "from": "depot", "to": "dispatch", "kind": "information", "label": "Schedule the run", "source": "fixture", "status": "fictional" },
+    { "id": "collect", "from": "home", "to": "depot", "kind": "movement", "label": "Appliance collected", "source": "fixture", "status": "fictional" },
+    { "id": "intake", "from": "depot", "to": "workshop", "kind": "movement", "label": "Appliance delivered for diagnosis", "source": "fixture", "status": "fictional" },
+    { "id": "job-update", "from": "workshop", "to": "jobs", "kind": "information", "label": "Record diagnosis and repair state", "source": "fixture", "status": "fictional" },
+    { "id": "diagnosis", "from": "workshop", "to": "desk", "kind": "information", "label": "Diagnosis, quote and status", "source": "fixture", "status": "fictional" },
+    { "id": "quote", "from": "desk", "to": "home", "kind": "information", "label": "Request quote approval", "source": "fixture", "status": "fictional" },
+    { "id": "authorize", "from": "desk", "to": "workshop", "kind": "information", "label": "Authorize repair or request a status update", "source": "fixture", "status": "fictional" },
+    { "id": "stock", "from": "workshop", "to": "inventory", "kind": "information", "label": "Compare record with shelf", "source": "fixture", "status": "fictional" },
+    { "id": "order", "from": "workshop", "to": "orders", "kind": "information", "label": "Request a missing part", "source": "fixture", "status": "fictional" },
+    { "id": "replenish", "from": "orders", "to": "supplier", "kind": "dependency", "label": "Repair waits on supplier fulfillment", "source": "fixture", "status": "fictional" },
+    { "id": "parts", "from": "supplier", "to": "workshop", "kind": "movement", "label": "Replacement part arrives", "source": "fixture", "status": "fictional" },
+    { "id": "notify", "from": "desk", "to": "notifications", "kind": "information", "label": "Publish a customer update", "source": "fixture", "status": "fictional" },
+    { "id": "message", "from": "notifications", "to": "home", "kind": "information", "label": "Customer receives the update", "source": "fixture", "status": "fictional" },
+    { "id": "failed", "from": "depot", "to": "desk", "kind": "information", "label": "Report an unsuccessful collection", "source": "fixture", "status": "fictional" },
+    { "id": "release", "from": "workshop", "to": "depot", "kind": "movement", "label": "Quality-checked appliance released", "source": "fixture", "status": "fictional" },
+    { "id": "return", "from": "depot", "to": "home", "kind": "movement", "label": "Repaired appliance returned", "source": "fixture", "status": "fictional" },
+    { "id": "booking-host", "from": "booking", "to": "servers", "kind": "technical", "label": "Booking runs on the application servers", "shortLabel": "Booking runs here", "source": "fixture", "status": "fictional" },
+    { "id": "jobs-host", "from": "jobs", "to": "servers", "kind": "technical", "label": "Job records runs on the application servers", "source": "fixture", "status": "fictional" },
+    { "id": "inventory-host", "from": "inventory", "to": "servers", "kind": "technical", "label": "Inventory runs on the application servers", "source": "fixture", "status": "fictional" },
+    { "id": "dispatch-host", "from": "dispatch", "to": "servers", "kind": "technical", "label": "Dispatch runs on the application servers", "source": "fixture", "status": "fictional" },
+    { "id": "orders-gateway", "from": "orders", "to": "gateway", "kind": "technical", "label": "Supplier orders uses the integration gateway", "source": "fixture", "status": "fictional" },
+    { "id": "notifications-gateway", "from": "notifications", "to": "gateway", "kind": "technical", "label": "Notifications uses the integration gateway", "source": "fixture", "status": "fictional" },
+    { "id": "persist", "from": "servers", "to": "database", "kind": "technical", "label": "Applications read and write operational records", "shortLabel": "Reads / writes booking records", "source": "fixture", "status": "fictional" },
+    { "id": "exchange", "from": "servers", "to": "gateway", "kind": "technical", "label": "Applications submit external exchanges", "source": "fixture", "status": "fictional" }
+  ],
+  "scenarios": [
+    {
+      "id": "booking", "number": "01", "label": "Book a repair", "summary": "From the service desk to a stored record.",
+      "condition": "The customer brings a repair request to the desk. The coordinator can use the booking application and its database.",
+      "outcome": "The address and requested collection window are stored, ready for the depot to arrange collection.",
+      "actor": {"kind":"document","label":"Booking record (symbol)","start":"desk"},
+      "steps": [
+        { "title": "Describe the fault", "text": "At the service desk, the customer explains the fault and supplies a collection address. The coordinator opens a repair request.", "relations": ["request"], "state":{"at":"desk","caption":"Repair request at the service desk"} },
+        { "title": "Register the booking", "text": "The coordinator enters the address and requested collection window in Booking at the workstation.", "relations": ["booking-record"], "state":{"at":"booking","via":"booking-record","moving":"Registering the supplied information","caption":"Request registered in Booking"} },
+        { "title": "Run the booking application", "text": "Booking runs on the shared application servers, alongside job records, inventory and dispatch.", "relations": ["booking-host"], "state":{"at":"booking","caption":"Booking uses the highlighted application servers"} },
+        { "title": "Store the booking", "text": "The application writes the address and collection window to the operational database. The depot can use the stored booking to arrange collection.", "relations": ["persist"], "state":{"at":"database","caption":"Booking stored in the operational database"} }
+      ]
+    },
+    {
+      "id": "routine", "number": "02", "label": "Routine repair", "summary": "The right information. The right part.", "condition": "Correct address; the required part is physically in stock.", "outcome": "The approved appliance is repaired, checked and returned.",
+      "steps": [
+        { "title": "A repair is requested", "text": "The customer contacts the desk. The coordinator records the address and arranges a collection with the depot.", "relations": ["request", "booking-record", "arrange", "schedule"] },
+        { "title": "From home to the bench", "text": "The driver collects the appliance and delivers it to the workshop. Diagnosis can now begin.", "relations": ["collect", "intake"] },
+        { "title": "Diagnosis and approval", "text": "The technician records the diagnosis. The desk communicates the quote, obtains customer approval and authorizes repair.", "relations": ["job-update", "diagnosis", "quote", "request", "authorize"] },
+        { "title": "The part is on the shelf", "text": "The technician checks the stock record against the shelf. The required part is present, so the approved repair and quality check can be completed.", "relations": ["stock", "job-update"] },
+        { "title": "A completed promise", "text": "The workshop releases the checked appliance to the depot. The driver returns it to the customer.", "relations": ["release", "schedule", "return"] }
+      ]
+    },
+    {
+      "id": "missing", "number": "03", "label": "Missing part", "summary": "A small mismatch. A much longer journey.", "condition": "Collection and quote approval have succeeded; recorded stock differs from the physical shelf.", "outcome": "The job waits for supply. It resumes after the replacement part arrives, then is repaired and returned.",
+      "steps": [
+        { "title": "The shelf tells a different story", "text": "After collection, diagnosis and approval, the technician discovers that a recorded part is absent. The completion promise now depends on replenishment.", "relations": ["stock"], "problem": true },
+        { "title": "The repair becomes a waiting job", "text": "The workshop requests the part through supplier ordering. Submitting the order does not make the part available: work waits on fulfillment.", "relations": ["order", "replenish"], "problem": true },
+        { "title": "The delay reaches the customer", "text": "The workshop reports the wait. The desk sends an update explaining the missing part; no new completion date is asserted before supply is confirmed.", "relations": ["diagnosis", "notify", "message"] },
+        { "title": "An extra coordination cycle", "text": "The customer asks for progress. The desk checks with the workshop and passes the update back to the customer.", "relations": ["request", "authorize", "diagnosis"], "problem": true },
+        { "title": "A part, then a completed repair", "text": "The replacement arrives. The technician completes the approved repair and quality check, updates the job, and releases it for return.", "relations": ["parts", "job-update", "release", "return"] }
+      ]
+    },
+    {
+      "id": "address", "number": "04", "label": "Missed collection", "summary": "The repair cannot start without the appliance.", "condition": "The initial collection address is incorrect; the required part will be available once the appliance reaches the workshop.", "outcome": "A corrected record enables a new collection. The ordinary approved repair and return sequence then completes.",
+      "steps": [
+        { "title": "An incorrect address travels downstream", "text": "The customer requests a repair. The desk records the supplied address and arranges collection; dispatch schedules the attempt.", "relations": ["request", "booking-record", "arrange", "schedule"] },
+        { "title": "Collection fails", "text": "The driver cannot collect at the incorrect address. The depot reports the failed attempt to the desk. No appliance has reached the workshop.", "relations": ["failed"], "problem": true },
+        { "title": "Correct the source record", "text": "The desk asks for a correction through a customer update. The customer supplies it, and the desk updates booking before arranging another attempt.", "relations": ["notify", "message", "request", "booking-record"] },
+        { "title": "A new collection succeeds", "text": "The desk and depot reschedule using the corrected address. The driver collects the appliance and delivers it to the workshop.", "relations": ["arrange", "schedule", "collect", "intake"] },
+        { "title": "Resume the ordinary repair", "text": "Diagnosis and quote approval now take place. With the part available, the technician repairs and checks the appliance before releasing it for return.", "relations": ["diagnosis", "quote", "request", "authorize", "stock", "job-update", "release", "return"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "language": "nb",
+  "root": "campus",
+  "views": {
+    "campus": {
+      "issue": "views/campus/issue.json",
+      "scene": "views/campus/scene.json"
+    }
+  }
+}

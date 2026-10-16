@@ -1,0 +1,1075 @@
+{
+  "width": 1500,
+  "height": 1050,
+  "seed": 81403,
+  "environment": "building",
+  "adaptiveDetail": true,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 38
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      642,
+      322,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 642,
+      "d": 322,
+      "h": 3,
+      "material": "#dedbca",
+      "r": 4
+    },
+    {
+      "type": "box",
+      "x": 10,
+      "y": 10,
+      "z": 3,
+      "w": 180,
+      "d": 208,
+      "h": 0.3,
+      "material": "#e7e3d3"
+    },
+    {
+      "type": "text",
+      "at": [
+        22,
+        204,
+        3.4
+      ],
+      "text": "MOTTAKSROM",
+      "size": 8,
+      "color": "#63745f",
+      "tracking": 0.5
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          50,
+          10,
+          3.5
+        ],
+        [
+          50,
+          218,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          90,
+          10,
+          3.5
+        ],
+        [
+          90,
+          218,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          130,
+          10,
+          3.5
+        ],
+        [
+          130,
+          218,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          170,
+          10,
+          3.5
+        ],
+        [
+          170,
+          218,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          115,
+          220,
+          3.5
+        ],
+        [
+          163,
+          220,
+          3.5
+        ]
+      ],
+      "color": "#a5b393",
+      "width": 2
+    },
+    {
+      "type": "box",
+      "x": 195,
+      "y": 10,
+      "z": 3,
+      "w": 252,
+      "d": 240,
+      "h": 0.3,
+      "material": "#e7e3d3"
+    },
+    {
+      "type": "text",
+      "at": [
+        207,
+        236,
+        3.4
+      ],
+      "text": "KONTROLLROM",
+      "size": 8,
+      "color": "#63745f",
+      "tracking": 0.5
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          235,
+          10,
+          3.5
+        ],
+        [
+          235,
+          250,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          275,
+          10,
+          3.5
+        ],
+        [
+          275,
+          250,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          315,
+          10,
+          3.5
+        ],
+        [
+          315,
+          250,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          355,
+          10,
+          3.5
+        ],
+        [
+          355,
+          250,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          395,
+          10,
+          3.5
+        ],
+        [
+          395,
+          250,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          435,
+          10,
+          3.5
+        ],
+        [
+          435,
+          250,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          373,
+          252,
+          3.5
+        ],
+        [
+          421,
+          252,
+          3.5
+        ]
+      ],
+      "color": "#a5b393",
+      "width": 2
+    },
+    {
+      "type": "box",
+      "x": 452,
+      "y": 10,
+      "z": 3,
+      "w": 180,
+      "d": 208,
+      "h": 0.3,
+      "material": "#e7e3d3"
+    },
+    {
+      "type": "text",
+      "at": [
+        464,
+        204,
+        3.4
+      ],
+      "text": "UTLEVERINGSROM",
+      "size": 8,
+      "color": "#63745f",
+      "tracking": 0.5
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          492,
+          10,
+          3.5
+        ],
+        [
+          492,
+          218,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          532,
+          10,
+          3.5
+        ],
+        [
+          532,
+          218,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          572,
+          10,
+          3.5
+        ],
+        [
+          572,
+          218,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          612,
+          10,
+          3.5
+        ],
+        [
+          612,
+          218,
+          3.5
+        ]
+      ],
+      "color": "#d2d1bf",
+      "width": 0.35
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          557,
+          220,
+          3.5
+        ],
+        [
+          605,
+          220,
+          3.5
+        ]
+      ],
+      "color": "#a5b393",
+      "width": 2
+    }
+  ],
+  "scenery": [],
+  "rooms": [
+    {
+      "id": "reception",
+      "label": "Mottaksrom",
+      "x": 10,
+      "y": 10,
+      "w": 180,
+      "d": 208,
+      "h": 64,
+      "door": {
+        "offset": 105,
+        "width": 48
+      }
+    },
+    {
+      "id": "inspection",
+      "label": "Kontrollrom",
+      "x": 195,
+      "y": 10,
+      "w": 252,
+      "d": 240,
+      "h": 64,
+      "door": {
+        "offset": 178,
+        "width": 48
+      }
+    },
+    {
+      "id": "dispatch",
+      "label": "Utleveringsrom",
+      "x": 452,
+      "y": 10,
+      "w": 180,
+      "d": 208,
+      "h": 64,
+      "door": {
+        "offset": 105,
+        "width": 48
+      }
+    }
+  ],
+  "instances": [
+    {
+      "id": "intake",
+      "entity": "intake",
+      "room": "reception",
+      "asset": "desk",
+      "w": 75,
+      "d": 48,
+      "h": 52,
+      "size": "regular",
+      "x": 26,
+      "y": 36,
+      "material": "#b9c7b1",
+      "sign": "Mottak",
+      "process": "record",
+      "anchor": [
+        44.75,
+        132,
+        4
+      ],
+      "label": [
+        63.5,
+        93,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Mottak"
+        ]
+      }
+    },
+    {
+      "id": "check",
+      "entity": "check",
+      "room": "inspection",
+      "asset": "tester",
+      "w": 180,
+      "d": 105,
+      "h": 65,
+      "size": "expanded",
+      "x": 211,
+      "y": 36,
+      "material": "#b9c7b1",
+      "sign": "Kontroll",
+      "process": "measurement",
+      "anchor": [
+        256,
+        189,
+        4
+      ],
+      "label": [
+        301,
+        150,
+        4
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Kontroll"
+        ]
+      }
+    },
+    {
+      "id": "release",
+      "entity": "release",
+      "room": "dispatch",
+      "asset": "desk",
+      "w": 75,
+      "d": 48,
+      "h": 52,
+      "size": "regular",
+      "x": 468,
+      "y": 36,
+      "material": "#b9c7b1",
+      "sign": "Utlevering",
+      "process": "dispatch",
+      "anchor": [
+        486.75,
+        132,
+        4
+      ],
+      "label": [
+        505.5,
+        93,
+        4
+      ],
+      "labelStyle": {
+        "width": 105,
+        "size": 10,
+        "lines": [
+          "Utlevering"
+        ]
+      }
+    }
+  ],
+  "network": {
+    "setting": "indoor",
+    "nodes": [
+      {
+        "id": "junction-0",
+        "at": [
+          139,
+          192,
+          4
+        ]
+      },
+      {
+        "id": "junction-1",
+        "at": [
+          44.75,
+          132,
+          4
+        ]
+      },
+      {
+        "id": "junction-2",
+        "at": [
+          44.75,
+          192,
+          4
+        ]
+      },
+      {
+        "id": "junction-3",
+        "at": [
+          139,
+          290,
+          4
+        ]
+      },
+      {
+        "id": "junction-4",
+        "at": [
+          397,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-5",
+        "at": [
+          256,
+          189,
+          4
+        ]
+      },
+      {
+        "id": "junction-6",
+        "at": [
+          256,
+          224,
+          4
+        ]
+      },
+      {
+        "id": "junction-7",
+        "at": [
+          397,
+          290,
+          4
+        ]
+      },
+      {
+        "id": "junction-8",
+        "at": [
+          581,
+          192,
+          4
+        ]
+      },
+      {
+        "id": "junction-9",
+        "at": [
+          486.75,
+          132,
+          4
+        ]
+      },
+      {
+        "id": "junction-10",
+        "at": [
+          486.75,
+          192,
+          4
+        ]
+      },
+      {
+        "id": "junction-11",
+        "at": [
+          581,
+          290,
+          4
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "intake-entry",
+        "node": "junction-1",
+        "entity": "intake",
+        "side": "front",
+        "position": 0.25,
+        "offset": 48,
+        "z": 4
+      },
+      {
+        "id": "check-entry",
+        "node": "junction-5",
+        "entity": "check",
+        "side": "front",
+        "position": 0.25,
+        "offset": 48,
+        "z": 4
+      },
+      {
+        "id": "release-entry",
+        "node": "junction-9",
+        "entity": "release",
+        "side": "front",
+        "position": 0.25,
+        "offset": 48,
+        "z": 4
+      }
+    ],
+    "edges": [
+      {
+        "id": "aisle-0",
+        "from": "junction-1",
+        "to": "junction-2",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-1",
+        "from": "junction-2",
+        "to": "junction-0",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-2",
+        "from": "junction-0",
+        "to": "junction-3",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-3",
+        "from": "junction-5",
+        "to": "junction-6",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-4",
+        "from": "junction-6",
+        "to": "junction-4",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-5",
+        "from": "junction-4",
+        "to": "junction-7",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-6",
+        "from": "junction-9",
+        "to": "junction-10",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-7",
+        "from": "junction-10",
+        "to": "junction-8",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-8",
+        "from": "junction-8",
+        "to": "junction-11",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-9",
+        "from": "junction-3",
+        "to": "junction-7",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      },
+      {
+        "id": "aisle-10",
+        "from": "junction-7",
+        "to": "junction-11",
+        "surface": "path",
+        "width": 20,
+        "modes": [
+          "person",
+          "document",
+          "data",
+          "electricity"
+        ]
+      }
+    ]
+  },
+  "routes": [
+    {
+      "relation": "inspect",
+      "network": {
+        "from": "intake-entry",
+        "to": "check-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          44.75,
+          132,
+          4
+        ],
+        [
+          44.75,
+          192,
+          4
+        ],
+        [
+          139,
+          192,
+          4
+        ],
+        [
+          139,
+          290,
+          4
+        ],
+        [
+          397,
+          290,
+          4
+        ],
+        [
+          397,
+          224,
+          4
+        ],
+        [
+          256,
+          224,
+          4
+        ],
+        [
+          256,
+          189,
+          4
+        ]
+      ],
+      "edges": [
+        "aisle-0",
+        "aisle-1",
+        "aisle-2",
+        "aisle-9",
+        "aisle-5",
+        "aisle-4",
+        "aisle-3"
+      ]
+    },
+    {
+      "relation": "deliver",
+      "network": {
+        "from": "check-entry",
+        "to": "release-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          256,
+          189,
+          4
+        ],
+        [
+          256,
+          224,
+          4
+        ],
+        [
+          397,
+          224,
+          4
+        ],
+        [
+          397,
+          290,
+          4
+        ],
+        [
+          581,
+          290,
+          4
+        ],
+        [
+          581,
+          192,
+          4
+        ],
+        [
+          486.75,
+          192,
+          4
+        ],
+        [
+          486.75,
+          132,
+          4
+        ]
+      ],
+      "edges": [
+        "aisle-3",
+        "aisle-4",
+        "aisle-5",
+        "aisle-10",
+        "aisle-8",
+        "aisle-7",
+        "aisle-6"
+      ]
+    },
+    {
+      "relation": "clarify",
+      "network": {
+        "from": "check-entry",
+        "to": "intake-entry",
+        "mode": "person"
+      },
+      "points": [
+        [
+          256,
+          189,
+          4
+        ],
+        [
+          256,
+          224,
+          4
+        ],
+        [
+          397,
+          224,
+          4
+        ],
+        [
+          397,
+          290,
+          4
+        ],
+        [
+          139,
+          290,
+          4
+        ],
+        [
+          139,
+          192,
+          4
+        ],
+        [
+          44.75,
+          192,
+          4
+        ],
+        [
+          44.75,
+          132,
+          4
+        ]
+      ],
+      "edges": [
+        "aisle-3",
+        "aisle-4",
+        "aisle-5",
+        "aisle-9",
+        "aisle-2",
+        "aisle-1",
+        "aisle-0"
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "complete",
+      "actor": {
+        "identity": "colleague",
+        "at": [
+          44.75,
+          132,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            301,
+            88.5,
+            97
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "check",
+              "part": "meter",
+              "state": "done"
+            }
+          ]
+        },
+        {
+          "at": [
+            505.5,
+            60,
+            84
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "release",
+              "part": "output",
+              "state": "done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "missing",
+      "actor": {
+        "identity": "colleague",
+        "at": [
+          44.75,
+          132,
+          4
+        ],
+        "material": "#aa8557"
+      },
+      "steps": [
+        {
+          "at": [
+            301,
+            88.5,
+            97
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "check",
+              "part": "meter",
+              "state": "blocked"
+            }
+          ]
+        },
+        {
+          "at": [
+            63.5,
+            60,
+            84
+          ],
+          "links": [],
+          "parts": [
+            {
+              "entity": "intake",
+              "part": "record",
+              "state": "waiting"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,779 @@
+{
+  "width": 1600,
+  "height": 1100,
+  "seed": 62131,
+  "camera": {
+    "azimuth": 45,
+    "elevation": 34
+  },
+  "bounds": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      960,
+      760,
+      0
+    ]
+  ],
+  "ground": [
+    {
+      "type": "box",
+      "x": 0,
+      "y": 0,
+      "z": -3,
+      "w": 960,
+      "d": 760,
+      "h": 4,
+      "material": "#e4e0cf",
+      "r": 6
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 322,
+      "z": 1,
+      "w": 960,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          344,
+          2
+        ],
+        [
+          960,
+          344,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 0,
+      "y": 702,
+      "z": 1,
+      "w": 960,
+      "d": 44,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          0,
+          724,
+          2
+        ],
+        [
+          960,
+          724,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 268,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 760,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          288,
+          0,
+          2
+        ],
+        [
+          288,
+          760,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 588,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 760,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          608,
+          0,
+          2
+        ],
+        [
+          608,
+          760,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "box",
+      "x": 908,
+      "y": 0,
+      "z": 1,
+      "w": 40,
+      "d": 760,
+      "h": 1,
+      "material": "#adb2a7"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          928,
+          0,
+          2
+        ],
+        [
+          928,
+          760,
+          2
+        ]
+      ],
+      "color": "#edead9",
+      "width": 1,
+      "dash": [
+        12,
+        18
+      ]
+    },
+    {
+      "type": "text",
+      "at": [
+        30,
+        22,
+        3
+      ],
+      "text": "LIBRARY NEIGHBOURHOOD",
+      "size": 13,
+      "color": "#65745e",
+      "tracking": 1.2
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 46,
+      "z": 1,
+      "w": 164,
+      "d": 198,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 165,
+      "y": 206,
+      "z": 2,
+      "w": 14,
+      "d": 138,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 348,
+      "y": 46,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 495,
+      "y": 216,
+      "z": 2,
+      "w": 14,
+      "d": 128,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 668,
+      "y": 46,
+      "z": 1,
+      "w": 174,
+      "d": 208,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 815,
+      "y": 216,
+      "z": 2,
+      "w": 14,
+      "d": 128,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 28,
+      "y": 426,
+      "z": 1,
+      "w": 252,
+      "d": 260,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 253,
+      "y": 648,
+      "z": 2,
+      "w": 14,
+      "d": 76,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 348,
+      "y": 426,
+      "z": 1,
+      "w": 232,
+      "d": 225,
+      "h": 1,
+      "material": "#c4c9af",
+      "r": 3
+    },
+    {
+      "type": "box",
+      "x": 553,
+      "y": 613,
+      "z": 2,
+      "w": 14,
+      "d": 111,
+      "h": 0.5,
+      "material": "#ddd8c2"
+    },
+    {
+      "type": "box",
+      "x": 664,
+      "y": 428,
+      "z": 1,
+      "w": 232,
+      "d": 260,
+      "h": 2,
+      "material": "#bbc6a5",
+      "r": 5
+    },
+    {
+      "type": "box",
+      "x": 684,
+      "y": 508,
+      "z": 3,
+      "w": 192,
+      "d": 22,
+      "h": 0.5,
+      "material": "#d8d4bd"
+    }
+  ],
+  "scenery": [
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 224,
+      "h": 48,
+      "seed": 0
+    },
+    {
+      "type": "person",
+      "id": "visitor-home",
+      "x": 52,
+      "y": 231,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 191,
+      "y": 316
+    },
+    {
+      "type": "tree",
+      "x": 352,
+      "y": 234,
+      "h": 54,
+      "seed": 1
+    },
+    {
+      "type": "person",
+      "id": "visitor-desk",
+      "x": 372,
+      "y": 241,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 521,
+      "y": 316
+    },
+    {
+      "type": "tree",
+      "x": 672,
+      "y": 234,
+      "h": 60,
+      "seed": 2
+    },
+    {
+      "type": "person",
+      "id": "visitor-collection",
+      "x": 692,
+      "y": 241,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 841,
+      "y": 316
+    },
+    {
+      "type": "tree",
+      "x": 32,
+      "y": 666,
+      "h": 48,
+      "seed": 3
+    },
+    {
+      "type": "person",
+      "id": "visitor-park",
+      "x": 52,
+      "y": 673,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 279,
+      "y": 696
+    },
+    {
+      "type": "tree",
+      "x": 352,
+      "y": 631,
+      "h": 54,
+      "seed": 4
+    },
+    {
+      "type": "person",
+      "id": "visitor-room",
+      "x": 372,
+      "y": 638,
+      "z": 3
+    },
+    {
+      "type": "lamp",
+      "x": 579,
+      "y": 696
+    },
+    {
+      "type": "tree",
+      "x": 684,
+      "y": 453,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 739,
+      "y": 456,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "tree",
+      "x": 784,
+      "y": 558,
+      "h": 58,
+      "seed": 5
+    },
+    {
+      "type": "bench",
+      "x": 689,
+      "y": 533
+    },
+    {
+      "type": "person",
+      "id": "garden-0-5",
+      "x": 769,
+      "y": 519,
+      "z": 4
+    }
+  ],
+  "instances": [
+    {
+      "id": "home",
+      "entity": "home",
+      "asset": "house",
+      "x": 40,
+      "y": 58,
+      "w": 112,
+      "d": 88,
+      "h": 72,
+      "material": "#c6b59b",
+      "sign": "Reader home",
+      "anchor": [
+        172,
+        216,
+        3
+      ],
+      "label": [
+        96,
+        158,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Reader home"
+        ]
+      }
+    },
+    {
+      "id": "desk",
+      "entity": "desk",
+      "asset": "reception",
+      "x": 360,
+      "y": 58,
+      "w": 122,
+      "d": 98,
+      "h": 60,
+      "material": "#c6b59b",
+      "sign": "Welcome desk",
+      "anchor": [
+        502,
+        226,
+        3
+      ],
+      "label": [
+        421,
+        168,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Welcome desk"
+        ]
+      }
+    },
+    {
+      "id": "collection",
+      "entity": "collection",
+      "asset": "office",
+      "x": 680,
+      "y": 58,
+      "w": 122,
+      "d": 98,
+      "h": 121,
+      "material": "#c6b59b",
+      "sign": "Book collection",
+      "anchor": [
+        822,
+        226,
+        3
+      ],
+      "label": [
+        741,
+        168,
+        3
+      ],
+      "labelStyle": {
+        "width": 125,
+        "size": 10,
+        "lines": [
+          "Book collection"
+        ]
+      }
+    },
+    {
+      "id": "park",
+      "entity": "park",
+      "asset": "park",
+      "x": 40,
+      "y": 438,
+      "w": 200,
+      "d": 150,
+      "h": 72,
+      "material": "#c6b59b",
+      "sign": "Reading garden",
+      "anchor": [
+        260,
+        658,
+        3
+      ],
+      "label": [
+        140,
+        600,
+        3
+      ],
+      "labelStyle": {
+        "width": 200,
+        "size": 10,
+        "lines": [
+          "Reading garden"
+        ]
+      }
+    },
+    {
+      "id": "room",
+      "entity": "room",
+      "asset": "school",
+      "x": 360,
+      "y": 438,
+      "w": 180,
+      "d": 115,
+      "h": 65,
+      "material": "#c6b59b",
+      "sign": "Reading room",
+      "anchor": [
+        560,
+        623,
+        3
+      ],
+      "label": [
+        450,
+        565,
+        3
+      ],
+      "labelStyle": {
+        "width": 180,
+        "size": 10,
+        "lines": [
+          "Reading room"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "relation": "walk-desk",
+      "points": [
+        [
+          172,
+          216,
+          3
+        ],
+        [
+          172,
+          344,
+          3
+        ],
+        [
+          288,
+          344,
+          3
+        ],
+        [
+          502,
+          344,
+          3
+        ],
+        [
+          502,
+          226,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "walk-collection",
+      "points": [
+        [
+          502,
+          226,
+          3
+        ],
+        [
+          502,
+          344,
+          3
+        ],
+        [
+          608,
+          344,
+          3
+        ],
+        [
+          822,
+          344,
+          3
+        ],
+        [
+          822,
+          226,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "walk-park",
+      "points": [
+        [
+          822,
+          226,
+          3
+        ],
+        [
+          822,
+          344,
+          3
+        ],
+        [
+          288,
+          344,
+          3
+        ],
+        [
+          288,
+          724,
+          3
+        ],
+        [
+          260,
+          724,
+          3
+        ],
+        [
+          260,
+          658,
+          3
+        ]
+      ]
+    },
+    {
+      "relation": "walk-room",
+      "points": [
+        [
+          260,
+          658,
+          3
+        ],
+        [
+          260,
+          724,
+          3
+        ],
+        [
+          288,
+          724,
+          3
+        ],
+        [
+          560,
+          724,
+          3
+        ],
+        [
+          560,
+          623,
+          3
+        ]
+      ]
+    }
+  ],
+  "scenarioLayouts": [
+    {
+      "scenario": "reading-day",
+      "actor": {
+        "identity": "reading-day",
+        "at": [
+          172,
+          216,
+          3
+        ],
+        "material": "#b58b58"
+      },
+      "steps": [
+        {
+          "at": [
+            421,
+            107,
+            110
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            741,
+            107,
+            171
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            140,
+            513,
+            122
+          ],
+          "links": []
+        },
+        {
+          "at": [
+            450,
+            495.5,
+            115
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}
