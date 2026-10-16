@@ -29,6 +29,11 @@ figure { margin: 0; }
 .hero-image img { display: block; width: 100%; height: auto; border-radius: 3px; }
 .hero-image figcaption { padding: 18px 10px 10px; font-size: 9px; letter-spacing: .06em; color: var(--muted); }
 .dot { display: inline-block; background: #748b69; width: 5px; height: 5px; border-radius: 50%; margin-right: 6px; }
+.uses { border-top: 1px solid var(--line); padding-block: 40px; }
+.uses-intro { max-width: 690px; color: var(--muted); font-size: 14px; line-height: 1.8; margin-block: 16px 30px; }
+.uses h3 { font-size: 14px; font-weight: 600; margin: 0 0 10px; }
+.uses article p, .uses-note { font-size: 13px; color: var(--muted); line-height: 1.8; margin: 0; }
+.uses-note { border-left: 2px solid #91a38a; padding-left: 18px; margin-top: 32px; max-width: 800px; }
 .archive-toolbar { display: flex; gap: 24px; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 23px; scroll-margin-top: 16px; }
 .archive-toolbar .eyebrow { margin-bottom: 9px; }
 #result-count { font-size: 12px; color: var(--muted); margin: 0; }

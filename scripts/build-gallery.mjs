@@ -15,7 +15,7 @@ for (const image of images) {
   await access(new URL(image.thumbnail, docs));
 }
 
-const featured = groups.find(group => group.id === 'greyhaven').images.find(image => image.source.endsWith('/final-overview.png'));
+const featured = images.find(image => image.file === 'images/research-booking-step-2.webp');
 const sections = groups.map((group, index) => `
     <section class="collection" id="${escape(group.id)}" aria-labelledby="heading-${escape(group.id)}">
       <header class="collection-heading">
@@ -57,17 +57,31 @@ await writeFile(new URL('index.html', docs), `<!doctype html>
       <div class="hero-copy">
         <p class="eyebrow"><span></span> THE VISUAL ARCHIVE</p>
         <h1 id="title">Small worlds.<br>Big explanations.</h1>
-        <p class="intro">A look inside CityVisualizer. From the first workshop to a whole city under pressure—every saved screenshot from our experiments and reviews.</p>
+        <p class="intro">Turn a complex process into a place people can explore. CityVisualizer connects people, services and systems through illustrated maps and step-by-step stories.</p>
         <a class="browse" href="#archive">Explore the archive <span aria-hidden="true">↓</span></a>
         <div class="stats"><div><strong>${images.length}</strong><span>screenshots</span></div><div><strong>${groups.length}</strong><span>collections</span></div><div><strong>V1–V5</strong><span>and project studies</span></div></div>
       </div>
       <figure class="hero-image">
-        <a href="${featured.file}" class="image-link" data-title="Greyhaven · 72 hours to keep a city running" aria-label="Open Greyhaven city overview">
-          <img src="${featured.file}" width="${featured.width}" height="${featured.height}" alt="Isometric Greyhaven city with connected hospitals, waterworks, power infrastructure and emergency response stories." fetchpriority="high">
+        <a href="${featured.file}" class="image-link" data-title="The repair district · Register the booking" aria-label="Open the repair district booking screenshot">
+          <img src="${featured.file}" width="${featured.width}" height="${featured.height}" alt="The repair district: an isometric service map showing the booking journey through people, places and supporting systems." fetchpriority="high">
           <span class="expand" aria-hidden="true">↗</span>
         </a>
-        <figcaption><span><span class="dot"></span> PROJECT SPOTLIGHT</span><span>Greyhaven / 72 hours</span></figcaption>
+        <figcaption><span><span class="dot"></span> PROJECT SPOTLIGHT</span><span>The repair district / Booking</span></figcaption>
       </figure>
+    </section>
+    <section class="uses" aria-labelledby="uses-title">
+      <p class="eyebrow">WHAT YOU CAN EXPLAIN</p>
+      <h2 id="uses-title">Follow the people. Understand the process.</h2>
+      <p class="uses-intro">Use the skill when a story crosses teams, places or systems. Readers can follow the journey, open a building to see the work inside, and discover what changes when something goes wrong.</p>
+      <div class="grid">
+        <article><h3>Service &amp; customer journeys</h3><p>Follow a repair from booking to collection, a patient through care, or an application through a public service. Show who acts next and where delays happen.</p></article>
+        <article><h3>Technical systems</h3><p>Connect a user-facing service to its applications, data stores and infrastructure. Make the work behind a request visible in a workspace or system view.</p></article>
+        <article><h3>Public issues &amp; infrastructure</h3><p>Explain how heat, transport, water or electricity affect a neighborhood. Follow residents and response teams as a disruption spreads between services.</p></article>
+        <article><h3>Training &amp; onboarding</h3><p>Turn a procedure into a guided story: earning a driving licence, following a lab workflow, or learning how work moves between teams.</p></article>
+        <article><h3>Operations &amp; logistics</h3><p>Trace parts, deliveries and information through shops, workshops and warehouses. Compare the normal journey with a missing part or missed collection.</p></article>
+        <article><h3>Fictional worlds &amp; stories</h3><p>Build a setting whose places have a purpose: a cantina receiving supplies, a workshop repairing equipment, or a city responding to a storm.</p></article>
+      </div>
+      <p class="uses-note">Bring a description, a process or source material. Get an interactive HTML page that works offline, with editable inputs for future revisions—ready for documentation, workshops, lessons and presentations.</p>
     </section>
     <div id="archive" class="archive-toolbar">
       <div><p class="eyebrow">THE COLLECTIONS</p><p id="result-count" role="status">${images.length} screenshots across ${groups.length} collections</p></div>
