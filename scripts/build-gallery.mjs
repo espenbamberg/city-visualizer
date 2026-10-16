@@ -74,12 +74,12 @@ await writeFile(new URL('index.html', docs), `<!doctype html>
       <h2 id="uses-title">Follow the people. Understand the process.</h2>
       <p class="uses-intro">Use the skill when a story crosses teams, places or systems. Readers can follow the journey, open a building to see the work inside, and discover what changes when something goes wrong.</p>
       <div class="grid">
-        <article><h3>Service &amp; customer journeys</h3><p>Follow a repair from booking to collection, a patient through care, or an application through a public service. Show who acts next and where delays happen.</p></article>
-        <article><h3>Technical systems</h3><p>Connect a user-facing service to its applications, data stores and infrastructure. Make the work behind a request visible in a workspace or system view.</p></article>
-        <article><h3>Public issues &amp; infrastructure</h3><p>Explain how heat, transport, water or electricity affect a neighborhood. Follow residents and response teams as a disruption spreads between services.</p></article>
-        <article><h3>Training &amp; onboarding</h3><p>Turn a procedure into a guided story: earning a driving licence, following a lab workflow, or learning how work moves between teams.</p></article>
-        <article><h3>Operations &amp; logistics</h3><p>Trace parts, deliveries and information through shops, workshops and warehouses. Compare the normal journey with a missing part or missed collection.</p></article>
-        <article><h3>Fictional worlds &amp; stories</h3><p>Build a setting whose places have a purpose: a cantina receiving supplies, a workshop repairing equipment, or a city responding to a storm.</p></article>
+        <article><h3>Customer journeys</h3><p>Show how people interact with a product or service over time. Make touchpoints, decisions and handoffs easy to follow.</p></article>
+        <article><h3>Technical systems</h3><p>Show how components connect, exchange information and depend on each other. Let readers move from the overview into the details.</p></article>
+        <article><h3>Complex issues</h3><p>Explain how people, organizations and resources influence an outcome. Explore different perspectives and show how a change in one area affects another.</p></article>
+        <article><h3>Training &amp; onboarding</h3><p>Turn unfamiliar processes into guided, step-by-step explanations. Help people understand their role and how their work fits into the whole.</p></article>
+        <article><h3>Workflows</h3><p>Show how work moves between people and teams. Make responsibilities, dependencies and bottlenecks visible.</p></article>
+        <article><h3>Storytelling</h3><p>Create explorable settings where people, places and events connect. Let readers follow a story or discover the world at their own pace.</p></article>
       </div>
       <p class="uses-note">Bring a description, a process or source material. Get an interactive HTML page that works offline, with editable inputs for future revisions—ready for documentation, workshops, lessons and presentations.</p>
     </section>
