@@ -21,11 +21,11 @@ Use the result in documentation, workshops, lessons, presentations or public-fac
 
 ### Example prompts
 
-> Use city-visualizer to turn the attached description into an interactive customer journey, from first contact to ongoing support. Show the key touchpoints, decisions and handoffs between the customer and our teams. Include a typical journey and an alternative where the customer needs extra help. At each step, explain what the customer needs, who responds and what happens next.
+> Use city-visualizer to help our team understand the customer experience and identify where customers need better support. Turn the attached description into an interactive customer journey, from first contact to ongoing use. At each step, show what the customer is trying to achieve, what they must do and which team helps them. Compare a straightforward journey with one where the customer gets stuck. Make it clear where confusion, waiting or handoffs affect the experience.
 
-> Turn this process description into an interactive map for new employees who are unfamiliar with how we work. Show who owns each step, what information they need and how work passes between teams. Let readers explore the main activities in more detail. Include a normal workflow and an exception, and use plain language to explain how each role contributes to the outcome.
+> Use city-visualizer to help new employees learn how to carry out the process described below. Create an interactive workflow that follows a piece of work from start to finish. For each step, explain who is responsible, what information they need, what they do and who receives the result. Include an exception that requires help from another team. By the end, a new employee should understand their responsibilities, when to hand work over and who to ask for help.
 
-> Explain the system described in these notes as an interactive map for a mixed technical and non-technical audience. Start with an overview of its main parts, then let readers explore the details. Follow one request through the system, showing how information moves and which dependencies matter. Add a second scenario where a dependency is unavailable, and explain the effect on the user.
+> Use city-visualizer to help technical and non-technical colleagues understand how this system delivers a result to its users. Use the attached notes to create an interactive overview of its main components and their responsibilities. Follow one user request from submission to response, showing how information moves between components. Then show the same request when a dependency is unavailable. Explain where progress stops, which parts are affected and what the user experiences, using plain language throughout.
 
 ## Build an example
 
