@@ -11,6 +11,10 @@ export function composeLandscape(issue,layout) {
   assert(shapes.length===1,'Choose exactly one layout: districts, groups, rows or rooms');
   const shape=shapes[0],allowed={districts:['city'],groups:['city','campus'],rows:['workspace','technical'],rooms:['building']};
   assert(layout.environment===undefined||allowed[shape].includes(layout.environment),`Incompatible environment and ${shape} layout`);
+  if(shape!=='groups') {
+    const plots=shape==='rows'?layout.rows.flat():layout[shape].flatMap(group=>group.plots);
+    assert(!plots.some(p=>['rotation','z','options','beside'].some(key=>p[key]!==undefined))&&layout.scenery===undefined,'Spatial placement options require a groups layout or an authored scene');
+  }
   const scene=({districts:composeScene,groups:composeGroups,rows:composeLocal,rooms:composeBuilding})[shape](issue,layout);
   if(layout.environment)scene.environment=layout.environment;
   return scene;

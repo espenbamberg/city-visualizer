@@ -48,8 +48,9 @@ Write short, direct explanations of actions, connections and outcomes. Include o
 
 ## Reuse and changes
 
+- For rotated outdoor objects, named entrances, relative/repeated scenery, fences or new recipes, read `references/spatial-objects.md` and inspect `examples/mobility-hub/`.
 - Start with data changes. Use the existing renderer, viewer, geometry and recipes rather than generating a replacement interface for each issue.
-- If an issue needs a new object, extend a project-local copy of the kit with a detailed recipe in the established style. Register and validate it using the surrounding `kit/assets.mjs` and `kit/model.mjs` patterns. Review its component study and scene placement. Preserve the bundled examples as regression fixtures.
+- If an issue needs a new object, extend a project-local copy of the kit with a detailed recipe in the established style. Register spatial recipes in `kit/outdoor-assets.mjs`; legacy recipes follow `kit/assets.mjs` and `kit/model.mjs`. Review the component study and scene placement. Preserve bundled examples as regression fixtures.
 - For deliberate updates to CityVisualizer itself, edit this skill's source and rebuild the affected outputs. Packaging does not freeze the design; previously generated HTML changes only when rebuilt.
 - Keep `THIRD-PARTY.md` and `kit/anatomy/LICENSE` with the distributed kit. Preserve the vendored Anatomy core and its attribution. Keep the requested creator/inspiration credits in generated pages.
 
@@ -62,6 +63,7 @@ Write short, direct explanations of actions, connections and outcomes. Include o
 - `references/city-composition.md` — need-driven city size, district composition, shared walking routes and person profiles.
 - `references/variable-sizing.md` — V3 priority, supported recipe sizes, varied plots, local working areas and logical transport/path networks.
 - `references/networks-and-detail.md` — V4 activity groups, explicit transport graph and ports, route validation, process parts and zoom-adaptive detail.
+- `references/spatial-objects.md` — rotated recipes, named/four-sided access, visual/obstacle/access bounds, relative/repeated placement, fences and extending the library.
 - `references/nested-views.md` — V2 local content planning, 1–5 processes, optional depth, vehicle/data/energy actors and navigation.
 - `references/visual-direction.md` — landscape, details, page layout and interactions.
 - `references/verification.md` — new-map review and kit regression commands.

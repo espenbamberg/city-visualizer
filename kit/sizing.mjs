@@ -1,4 +1,5 @@
 import {assetDimensions} from './assets.mjs';
+import {isOutdoor} from './outdoor-assets.mjs';
 
 export const sizeVariants={
   office:{compact:[95,76,93],regular:[122,98,121],expanded:[184,126,149]},
@@ -22,7 +23,7 @@ export function dimensions(plot) {
   const size=plot.size ?? (variants && plot.emphasis!==undefined ? emphasisSizes[plot.emphasis] : undefined);
   if(size && plot.height!==undefined)throw Error('Choose a size or an office height, not both');
   const [w,d,h]=size?variants[size]:assetDimensions[plot.asset];
-  return {w,d,h:plot.height ?? h,...(size?{size}:{}),...(plot.emphasis?{emphasis:plot.emphasis}:{})};
+  return {w:isOutdoor(plot)?plot.w??w:w,d:isOutdoor(plot)?plot.d??d:d,h:plot.height ?? h,...(size?{size}:{}),...(plot.emphasis?{emphasis:plot.emphasis}:{})};
 }
 
 export function validateSize(instance) {

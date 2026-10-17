@@ -46,4 +46,6 @@ V4: `scripts/check-v4.mjs` is included in the main suite. It covers shortest per
 
 `scripts/check-city.mjs` is included in the main model suite: shared route endpoints, closed-door truncation, conflicting-path rejection, legacy input support, stable varied person profiles, five/thirty-place composition, non-overlapping plots and safe composition output.
 
+Spatial recipes: `scripts/check-spatial.mjs` is included in the main suite. It covers four orientations, named/four-sided ports, roof/canopy height clearance, gate widths, reserved bays, relative/repeated placement, shared scenery, per-port actor starts and safe builds. Build `scripts/build-spatial-example.mjs OUTPUT/spatial`, serve OUTPUT on port 8766 and run `scripts/browser-check-spatial.js`. Inspect `assets.html`, overview, every story and phone zoom. See `spatial-objects.md` for the authoring contract.
+
 These fixtures test the shared kit. Review each new issue's own labels, paths and narrative separately. Browser suites currently target Chromium; Safari/WebKit, physical devices, VoiceOver and larger-map performance need their own verification.

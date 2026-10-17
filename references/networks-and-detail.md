@@ -60,7 +60,7 @@ Save refined geometry in `scene.json`. Re-running the composition CLI replaces i
 
 Surfaces use the same edge geometry as routing. Mark crossing edges explicitly and order them after road edges when drawing them over a road. Short entrance paths join the outside port to the object; aircraft ports have an apron. Aircraft flight edges have no ground paving.
 
-Keep unusual left/rear entrances, rail, water and terrain-specific circulation as authored scene geometry until the corresponding recipes and modes are supported. Current port recipes cover front/right ground-level access. Transport retains sixteen world-projected headings.
+Explicit ports also support `back` and `left`; spatial recipes provide named sockets that move with rotation. See `spatial-objects.md`. Keep rail, water and terrain-specific circulation as authored geometry until corresponding recipes and modes are supported. Transport retains sixteen world-projected headings.
 
 ## Resolve a journey
 
@@ -82,7 +82,7 @@ A network route references its relationship and ports:
 
 Saved scenes carry both the network references and compiled geometry. Builds validate that they agree. A stale port, stale route, unavailable direction or unreachable destination fails before replacing the HTML. Authored legacy `points` routes and `routeEnd` remain supported alongside network routes.
 
-Collision validation checks complete segments against conservative expanded building and scenery bounds. Trees, lamps, benches and decorative vans must clear the corridor. Cables can enter logical/component areas. Elevated edges clear obstacles only above their reserved height. Review visual approaches and furniture as well as these geometry checks.
+Collision validation checks complete segments against conservative expanded building and scenery bounds. Spatial recipes provide separate 3D obstacle volumes and reserve traveler height, allowing passage under roofs/canopies while blocking posts, benches and trunks. Legacy trees, lamps, benches and decorative vans must clear corridors. Cables can enter logical/component areas. Review visual approaches and furniture as well as these geometry checks.
 
 ## Process-specific interiors
 

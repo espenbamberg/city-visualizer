@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
 import {roomWalls} from './rooms.mjs';
+import {isOutdoor,outdoorGeometry} from './outdoor-assets.mjs';
+import {objectObstacles} from './object-geometry.mjs';
+import {worldPoint,validateTransform} from './spatial.mjs';
 
 export const travelRadius={person:5,bicycle:17,car:26,van:26,plane:42,data:2,electricity:2,document:3};
 const point=p=>Array.isArray(p)&&p.length===3&&p.every(Number.isFinite);
@@ -14,17 +17,29 @@ function index(items,label) {
   }
   return result;
 }
-export function portPoint(port,instances) {
+export function portGeometry(port,instances) {
   const a=instances.find(a=>a.entity===port.entity);
   assert(a,`Unknown port owner: ${port.id}`);
-  assert(['front','right'].includes(port.side)&&Number.isFinite(port.position)&&port.position>=0&&port.position<=1&&Number.isFinite(port.offset)&&port.offset>=0,`Invalid port: ${port.id}`);
+  validateTransform(a);
+  if(port.socket!==undefined) {
+    assert(isOutdoor(a)&&typeof port.socket==='string'&&port.side===undefined&&port.position===undefined&&port.z===undefined,`Invalid named port: ${port.id}`);
+    const sockets=outdoorGeometry(a).ports;assert(Object.hasOwn(sockets,port.socket),`Unknown socket: ${port.socket}`);const socket=sockets[port.socket];
+    const offset=port.offset??0;assert(Number.isFinite(offset)&&offset>=0,`Invalid port offset: ${port.id}`);
+    return {start:worldPoint(a,socket.at),at:worldPoint(a,socket.at.map((v,i)=>v+socket.out[i]*offset))};
+  }
+  assert(['front','right','back','left'].includes(port.side)&&Number.isFinite(port.position)&&port.position>=0&&port.position<=1&&Number.isFinite(port.offset)&&port.offset>=0,`Invalid port: ${port.id}`);
   assert(port.z===undefined||(Number.isFinite(port.z)&&port.z>=0),'Invalid port elevation');
-  return port.side==='front'?[a.x+a.w*port.position,a.y+a.d+port.offset,port.z??3]:[a.x+a.w+port.offset,a.y+a.d*port.position,port.z??3];
+  const z=port.z??3,position=port.position;
+  const [at,out]=({front:[[a.w*position,a.d,z],[0,1,0]],right:[[a.w,a.d*position,z],[1,0,0]],back:[[a.w*position,0,z],[0,-1,0]],left:[[0,a.d*position,z],[-1,0,0]]})[port.side];
+  return {start:worldPoint(a,at.map((n,i)=>n+out[i]*2)),at:worldPoint(a,at.map((n,i)=>n+out[i]*port.offset))};
+}
+export function portPoint(port,instances) {
+  return portGeometry(port,instances).at;
 }
 
 // Slab intersection checks the entire segment against a conservative swept actor envelope.
-export function obstructed(a,b,box,radius) {
-  const min=[box.x-radius,box.y-radius,-1000],max=[box.x+box.w+radius,box.y+box.d+radius,box.h+48];
+export function obstructed(a,b,box,radius,height=0) {
+  const min=[box.x-radius,box.y-radius,box.z===undefined?-1000:box.z-height],max=[box.x+box.w+radius,box.y+box.d+radius,box.z===undefined?box.h+48:box.z+box.h];
   let lo=0,hi=1;
   for(let i=0;i<3;i++) {
     const delta=b[i]-a[i];
@@ -37,7 +52,7 @@ export function obstructed(a,b,box,radius) {
 }
 
 export function sceneryObstacles(scenery=[]) {
-  return scenery.filter(a=>['tree','lamp','bench','van'].includes(a.type)).map(a=>({entity:`scenery ${a.type}`,x:a.x-(a.type==='tree'?6:2),y:a.y-(a.type==='tree'?6:2),w:a.type==='bench'?32:a.type==='van'?54:a.type==='tree'?12:4,d:a.type==='bench'?15:a.type==='van'?28:a.type==='tree'?12:4,h:a.h??(a.type==='bench'?16:45)}));
+  return scenery.flatMap(objectObstacles);
 }
 
 export function networkIndex(network,instances,scenery=[],walls=[]) {
@@ -62,8 +77,9 @@ export function networkIndex(network,instances,scenery=[],walls=[]) {
     const points=e.points??[nodes.get(e.from).at,nodes.get(e.to).at];
     assert(Array.isArray(points)&&points.length>=2&&points.every(point)&&same(points[0],nodes.get(e.from).at)&&same(points.at(-1),nodes.get(e.to).at),`Discontinuous edge: ${e.id}`);
     assert(length(points)>0,`Zero length edge: ${e.id}`);
-    if(e.surface!=='cable')for(let i=1;i<points.length;i++)for(const a of [...instances,...sceneryObstacles(scenery),...walls]) {
-      assert(!obstructed(points[i-1],points[i],a,e.width/2),`Network ${e.id} collides with ${a.entity}`);
+    const height=Math.max(...e.modes.map(mode=>({person:25,bicycle:40,car:30,van:35,plane:38})[mode]??2));
+    if(e.surface!=='cable')for(let i=1;i<points.length;i++)for(const a of [...instances.flatMap(objectObstacles),...sceneryObstacles(scenery),...walls]) {
+      assert(!obstructed(points[i-1],points[i],a,e.width/2,height),`Network ${e.id} collides with ${a.entity}`);
     }
     adjacency.get(e.from).push({edge:e.id,to:e.to,points,cost:length(points),modes:e.modes});
     if(!e.oneWay)adjacency.get(e.to).push({edge:e.id,to:e.from,points:[...points].reverse(),cost:length(points),modes:e.modes});
@@ -113,6 +129,14 @@ export function compileNetwork(issue,scene) {
 
 export function validateNetwork(issue,scene) {
   const walls=roomWalls(scene.rooms);
+  if([...scene.instances,...scene.scenery].some(isOutdoor))for(const route of scene.routes.filter(r=>!r.network)) {
+    const relation=issue.relationships.find(r=>r.id===route.relation);if(relation?.kind!=='movement')continue;
+    const modes=issue.scenarios.flatMap(s=>{let actor=s.actor;return s.steps.flatMap(step=>{actor=step.actor??actor;return step.state?.via===relation.id&&actor?[actor.kind]:[];});});
+    const radius=Math.max(5,...modes.map(mode=>travelRadius[mode]));
+    const height=Math.max(25,...modes.map(mode=>({person:25,bicycle:40,car:30,van:35,plane:38})[mode]??2));
+    const points=route.points??[scene.instances.find(a=>a.entity===relation.from).anchor,...route.via,scene.instances.find(a=>a.entity===relation.to).anchor];
+    for(let i=1;i<points.length;i++)for(const obstacle of [...scene.instances,...scene.scenery].flatMap(objectObstacles))assert(!obstructed(points[i-1],points[i],obstacle,radius,height),`Route ${relation.id} collides with ${obstacle.entity}`);
+  }
   if(walls.length)for(const route of scene.routes) {
     const rel=issue.relationships.find(r=>r.id===route.relation);if(rel?.kind!=='movement')continue;
     const kinds=issue.scenarios.flatMap(s=>{let actor=s.actor;return s.steps.flatMap(step=>{actor=step.actor??actor;return step.state?.via===rel.id&&actor?[actor.kind]:[];});});
@@ -142,7 +166,7 @@ export function drawNetwork(network,D,instances) {
   const surfaces=network.edges.map(e=>{
     const points=e.points??[nodes.get(e.from),nodes.get(e.to)];
     if(e.surface==='air')return '';
-    if(e.surface==='cable')return D.line(points,'#829a89',2,'class="network-cable"');
+    if(e.surface==='cable')return `<g data-network-edge="${e.id}">${D.line(points,'#829a89',2,'class="network-cable"')}</g>`;
     if(network.setting==='indoor'&&e.surface==='path')return `<g data-network-edge="${e.id}" class="network-floor-path"></g>`;
     const color=e.surface==='road'?'#a6afa6':'#d9d4bd',radius=e.width/2;
     let out='';
@@ -160,10 +184,9 @@ export function drawNetwork(network,D,instances) {
   }).join('');
   const entrances=network.ports.map(p=>{
     if(network.setting==='indoor')return '';
-    const a=instances.find(a=>a.entity===p.entity),at=nodes.get(p.node);
-    const start=p.side==='front'?[at[0],a.y+a.d+2,3]:[a.x+a.w+2,at[1],3];
-    const dx=p.side==='front'?6:0,dy=p.side==='front'?0:6;
-    let out=D.polygon([[start[0]-dx,start[1]-dy,2.4],[at[0]-dx,at[1]-dy,2.4],[at[0]+dx,at[1]+dy,2.4],[start[0]+dx,start[1]+dy,2.4]],'#d9d4bd');
+    const at=nodes.get(p.node),{start}=portGeometry(p,instances),length=Math.hypot(at[0]-start[0],at[1]-start[1]);
+    const dx=length?-(at[1]-start[1])/length*6:0,dy=length?(at[0]-start[0])/length*6:0;
+    let out=length?D.polygon([[start[0]-dx,start[1]-dy,start[2]-.6],[at[0]-dx,at[1]-dy,at[2]-.6],[at[0]+dx,at[1]+dy,at[2]-.6],[start[0]+dx,start[1]+dy,start[2]-.6]],'#d9d4bd'):'';
     if(network.edges.some(e=>(e.from===p.node||e.to===p.node)&&e.surface==='air'))out+=D.box(at[0]-45,at[1]-32,1,90,64,1,'#b8beb1',4)+D.line([[at[0]-22,at[1],2.4],[at[0]+22,at[1],2.4]],'#ede9d4',1.4);
     return `<g class="network-entrance" data-port="${p.id}">${out}</g>`;
   }).join('');

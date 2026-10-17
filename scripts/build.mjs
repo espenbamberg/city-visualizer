@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { renderPage } from '../kit/render.mjs';
 import { drawing, escape } from '../kit/assets.mjs';
 import * as k from '../kit/anatomy/iso-kit.mjs';
+import {objectBounds,placedFootprint} from '../kit/object-geometry.mjs';
 
 const skill = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -20,18 +21,21 @@ const [issue, scene, css, runtime] = await Promise.all([
   readFile(resolve(skill,'kit/viewer.js'),'utf8')
 ]);
 const html = renderPage(issue,scene,css,runtime).replace('<head>', '<head><link rel="icon" href="data:,">');
-const samples = scene.instances.filter((a,index,list) => list.findIndex(b => b.asset===a.asset && b.size===a.size && b.w===a.w && b.d===a.d && b.h===a.h)===index);
+const sampleKey=a=>JSON.stringify([a.asset??a.type,a.size,a.w,a.d,a.h,a.rotation,a.options]);
+const samples = scene.instances.filter((a,index,list) => list.findIndex(b => sampleKey(a)===sampleKey(b))===index);
 let cards = samples.map(sample => {
   const a = {...sample,x:0,y:0,label:[sample.label[0]-sample.x,sample.label[1]-sample.y,sample.label[2]]};
   const entity = issue.entities.find(e=>e.id===a.entity);
-  const P = k.fitProjection(k.boxCorners({x:-20,y:-20,w:a.w+50,d:a.d+70},0,a.h+46),470,350,{...scene.camera,pad:35});
+  const bounds=objectBounds(a),f=placedFootprint(a);
+  const P = k.fitProjection([...k.boxCorners(bounds,bounds.z,bounds.z+bounds.h),...k.boxCorners({x:-20,y:-20,w:f.w+50,d:f.d+70},0,a.h+46)],470,350,{...scene.camera,pad:35});
   const D = drawing(P,scene.seed);
-  return `<article><p class="eyebrow">${escape(a.asset.toUpperCase())}${a.size?` · ${escape(a.size)}`:''}</p><svg viewBox="0 0 470 350" role="img" aria-label="${escape(a.asset)} recipe">${D.box(-20,-8,0,a.w+40,a.d+48,2,'#dddccf')}${D.asset(a)}${D.label(a,entity)}</svg><h3>${escape(entity.label)}</h3></article>`;
+  return `<article><p class="eyebrow">${escape(a.asset.toUpperCase())}${a.size?` · ${escape(a.size)}`:''}${a.rotation?` · ${a.rotation}°`:''}</p><svg viewBox="0 0 470 350" role="img" aria-label="${escape(a.asset)} recipe">${D.box(-20,-8,0,f.w+40,f.d+48,2,'#dddccf')}${D.asset(a)}${D.label(a,entity)}</svg><h3>${escape(entity.label)}</h3></article>`;
 }).join('');
-const scenerySamples = scene.scenery.filter((a,index,list) => list.findIndex(b => b.type === a.type) === index);
+const scenerySamples = scene.scenery.filter((a,index,list) => list.findIndex(b => sampleKey(a)===sampleKey(b)) === index);
 cards += scenerySamples.map(sample => {
   const a = { ...sample, id:sample.id ?? `street:${sample.x}:${sample.y}`, x: 0, y: 0 };
-  const P = k.fitProjection(k.boxCorners({x:-30,y:-30,w:110,d:100},0,Math.max(90,(a.h ?? 0)+30,(a.z ?? 0)+30)),470,350,{...scene.camera,pad:35});
+  const b=objectBounds(a);
+  const P = k.fitProjection(k.boxCorners(b,b.z,b.z+b.h),470,350,{...scene.camera,pad:35});
   const D = drawing(P,scene.seed);
   return `<article><p class="eyebrow">SCENERY</p><svg viewBox="0 0 470 350" role="img" aria-label="${escape(a.type)} recipe">${D.scenery(a)}</svg><h3>${escape(a.type)}</h3></article>`;
 }).join('');
