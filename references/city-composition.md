@@ -21,7 +21,7 @@ Supply `issue.json` and a `layout.json` alongside it:
 }
 ```
 
-Every entity must appear in exactly one plot. Choose each recipe deliberately. Optional plot `material` is a six-digit hex color; `sign` is short building signage. `height` can vary office buildings between 65 and 240 world units; their window floors follow the height. V3 adds optional `emphasis` and supported `size` variants, activating individually sized plots and shared streets/paths. See `variable-sizing.md` for the size registry, local workflow rows and network design. Recipes without a variant keep their authored dimensions in `scene-data.md`.
+Every entity must appear in exactly one plot. Choose each recipe deliberately. Optional plot `material` is a six-digit hex color; `sign` is short building signage. `height` can vary office buildings between 65 and 240 world units; their window floors follow the height. Optional `emphasis` and supported `size` variants express visual priority. All district layouts use individually sized plots, staggered street frontages and shared streets/paths. See `variable-sizing.md` for the size registry, local workflow rows and network design. Recipes without a variant keep their authored dimensions in `scene-data.md`.
 
 ```sh
 node "$SKILL/scripts/compose.mjs" "$INPUT" "$INPUT/scene.json"
@@ -30,7 +30,9 @@ node "$SKILL/scripts/build.mjs" "$INPUT" "$OUTPUT"
 
 Composition creates district plots, roads, footpaths, pocket gardens, people, lighting, connection corridors and story-marker placements. It writes a normal, editable `scene.json`, validated before replacing the requested file. The number of districts and objects determines the city footprint. Connections derive from the actual relationships; the composer adds no semantic entities or IT systems.
 
-The CLI selects a random seed when `layout.seed` is omitted and saves it as `scene.seed`. To recompose with the same people, put that seed into `layout.json`. For a new authored scene, choose a fresh nonnegative integer seed once, then keep it with the scene.
+The CLI selects a random seed when `layout.seed` is omitted and saves it as `scene.seed`. The seed controls plot spacing, setbacks, district offsets and people. To reproduce the composition and cast, put that seed into `layout.json`. For a new authored scene, choose a fresh nonnegative integer seed once, then keep it with the scene.
+
+Districts pack by their actual area rather than a fixed number of columns. Shorter streets sit inset within each neighbourhood; buildings have varied setbacks and garden space while keeping their authored dimensions. Roads end at useful access bays instead of filling a rectangular grid. Street segments remain orthogonal; use activity groups and an explicit network for diagonal paths or site-specific geography. Previously saved scenes retain their geometry until recomposed; recomposition replaces manual scene refinements.
 
 Review the generated scene and refine it: adjust streets and walking routes, place markers near their activities, add meaningful connection notes, and develop important interiors. Keep path points on the depicted surfaces. Composition is a starting layout, so domain-specific entrances and furniture placement belong in the authored scene.
 

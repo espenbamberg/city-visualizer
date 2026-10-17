@@ -82,6 +82,7 @@ await writeFile(new URL('index.html', docs), `<!doctype html>
         <article><h3>Storytelling</h3><p>Create explorable settings where people, places and events connect. Let readers follow a story or discover the world at their own pace.</p></article>
       </div>
       <p class="uses-note">Bring a description, a process or source material. Get an interactive HTML page that works offline, with editable inputs for future revisions—ready for documentation, workshops, lessons and presentations.</p>
+      <p class="uses-note">Explore the new fluid district layouts: <a href="maps/reading-day/">a day at the library</a> or <a href="maps/library-network/">six connected neighbourhoods</a>. Plots follow building footprints, with staggered placement and varied spacing.</p>
     </section>
     <div id="archive" class="archive-toolbar">
       <div><p class="eyebrow">THE COLLECTIONS</p><p id="result-count" role="status">${images.length} screenshots across ${groups.length} collections</p></div>

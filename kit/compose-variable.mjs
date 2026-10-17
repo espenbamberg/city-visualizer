@@ -2,20 +2,36 @@ import {dimensions,nameplate} from './sizing.mjs';
 import {validate,actorAt} from './model.mjs';
 import {isOutdoor} from './outdoor-assets.mjs';
 
-// Shelf rows reserve each footprint, rather than charging every plot for the largest building.
-export function packPlots(plots) {
+function variation(seed,key) {
+  let value=seed>>>0;
+  for(const char of key)value=Math.imul(value^char.codePointAt(0),16777619)>>>0;
+  value=Math.imul(value^(value>>>16),2246822507);
+  value=Math.imul(value^(value>>>13),3266489909);
+  return ((value^(value>>>16))>>>0)/4294967296;
+}
+
+// Reserve circulation before staggering plots, so variation never displaces a route into a building.
+export function packPlots(plots,seed=0) {
   const items=plots.map((plot,index)=>({...plot,...dimensions(plot),index}));
-  for(const a of items) {a.plotWidth=Math.max(a.w+84,145);a.plotDepth=a.d+116;}
+  for(const a of items) {
+    a.setback=Math.round(variation(seed,`${a.entity}:setback`)*64);
+    a.plotWidth=Math.max(a.w+84,145)+Math.round(variation(seed,`${a.entity}:gap`)*48);
+    a.plotDepth=a.d+116;
+  }
   items.sort((a,b)=>b.w*b.d-a.w*a.d || a.index-b.index);
   const target=Math.max(...items.map(a=>a.plotWidth),Math.sqrt(items.reduce((n,a)=>n+a.plotWidth*a.plotDepth,0))*1.3);
   const rows=[];
   for(const item of items) {
     let row=rows.find(r=>r.width+item.plotWidth<=target);
     if(!row){row={items:[],width:0,depth:0};rows.push(row);}
-    row.items.push({...item,localX:row.width});row.width+=item.plotWidth;row.depth=Math.max(row.depth,item.plotDepth);
+    row.items.push({...item,localX:row.width});row.width+=item.plotWidth;row.depth=Math.max(row.depth,item.plotDepth+item.setback);
   }
-  let y=0;
-  for(const row of rows){row.y=y;y+=row.depth+60;}
+  const widest=Math.max(...rows.map(r=>r.width));let y=0;
+  for(const [i,row] of rows.entries()) {
+    const inset=Math.round((widest-row.width)/2+variation(seed,`row:${i}`)*80);
+    for(const item of row.items)item.localX+=inset;
+    row.width+=inset;row.y=y;y+=row.depth+60;
+  }
   return {rows,width:Math.max(...rows.map(r=>r.width))+70,depth:y+40};
 }
 
@@ -31,13 +47,19 @@ export function composeVariable(issue,layout) {
     if(travel.get(r.id)==='road')for(const id of [r.from,r.to])vehicleAccess.add(id);
     if(travel.get(r.id)==='air')for(const id of [r.from,r.to])airAccess.add(id);
   }
-  const districts=layout.districts.map(d=>({...d,...packPlots(d.plots)}));
-  const across=Math.ceil(Math.sqrt(districts.length));
-  let totalWidth=0,totalDepth=0;
-  for(let i=0;i<districts.length;i+=across) {
-    const band=districts.slice(i,i+across);let x=0;
-    const height=Math.max(...band.map(d=>d.depth));
-    for(const d of band){d.x=x;d.y=totalDepth;d.boulevard=totalDepth+height+30;x+=d.width+70;}
+  const districts=layout.districts.map(d=>({...d,...packPlots(d.plots,layout.seed)}));
+  const target=Math.max(...districts.map(d=>d.width+70),Math.sqrt(districts.reduce((n,d)=>n+(d.width+70)*(d.depth+70),0))*1.25);
+  const bands=[];
+  for(const d of districts) {
+    let band=bands.at(-1);
+    if(!band || band.width+d.width+70>target){band={districts:[],width:0};bands.push(band);}
+    band.districts.push(d);band.width+=d.width+70;
+  }
+  const widest=Math.max(...bands.map(b=>b.width));let totalWidth=0,totalDepth=0;
+  for(const [i,band] of bands.entries()) {
+    let x=Math.round((widest-band.width)/2+variation(layout.seed,`band:${i}`)*90);
+    const height=Math.max(...band.districts.map(d=>d.depth))+60;
+    for(const d of band.districts){d.x=x;d.y=totalDepth+Math.round(variation(layout.seed,d.label)*60);d.boulevard=totalDepth+height+30;x+=d.width+70;}
     totalWidth=Math.max(totalWidth,x);totalDepth+=height+70;
   }
   const ground=[{type:'box',x:0,y:0,z:-3,w:totalWidth,d:totalDepth,h:4,material:'#e4e0cf',r:6}];
@@ -47,7 +69,7 @@ export function composeVariable(issue,layout) {
   const crossing=(x,y,vertical)=>{
     for(let i=-18;i<=18;i+=6)markings.push({type:'box',x:x+(vertical?-7:i),y:y+(vertical?i:-7),z:2.6,w:vertical?14:3,d:vertical?3:14,h:.2,material:'#edead9'});
   };
-  const joined=districts.length>1,crossBand=districts.length>across,trunk=totalWidth-26;
+  const joined=districts.length>1,crossBand=bands.length>1,trunk=totalWidth-26;
   // Shared side streets join a district spine. Only multi-district maps need a boulevard.
   for(const [di,district] of districts.entries()) {
     const spine=district.x+district.width-30,boulevard=district.boulevard;
@@ -68,7 +90,7 @@ export function composeVariable(issue,layout) {
       markings.push({type:'line',points:[[start-22,roadY-16,2.6],[start-22,roadY+16,2.6]],color:'#edead9',width:1});
       scenery.push({type:'lamp',x:spine+34,y:roadY+32});
       for(const plot of row.items) {
-        const x=district.x+plot.localX+20,y=district.y+row.y+40,{w,d,h,size,emphasis}=plot;
+        const x=district.x+plot.localX+20,y=district.y+row.y+40+plot.setback,{w,d,h,size,emphasis}=plot;
         const entity=issue.entities.find(e=>e.id===plot.entity),anchor=[x+w+22,y+d+76,3];
         const material=plot.material ?? ['#c6b59b','#b7c9bb','#bac1b3','#b9b6c2'][di%4];
         const labelStyle=nameplate(entity.label,w);
@@ -90,8 +112,8 @@ export function composeVariable(issue,layout) {
       }
     }
   }
-  if(joined)for(let i=0;i<districts.length;i+=across) {
-    const band=districts.slice(i,i+across),start=band[0].x+band[0].width-30,end=crossBand?trunk:band.at(-1).x+band.at(-1).width-30,y=band[0].boulevard;
+  if(joined)for(const {districts:band} of bands) {
+    const start=band[0].x+band[0].width-30,end=crossBand?trunk:band.at(-1).x+band.at(-1).width-30,y=band[0].boulevard;
     road(start-22,y-22,end-start+44,44);
     footpath(start-42,y-42,end-start+16,16);
     for(const d of band)crossing(d.x+d.width-30,y-34,false);
