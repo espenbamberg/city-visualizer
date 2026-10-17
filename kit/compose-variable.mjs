@@ -1,5 +1,6 @@
 import {dimensions,nameplate} from './sizing.mjs';
 import {validate,actorAt} from './model.mjs';
+import {isOutdoor} from './outdoor-assets.mjs';
 
 // Shelf rows reserve each footprint, rather than charging every plot for the largest building.
 export function packPlots(plots) {
@@ -71,7 +72,7 @@ export function composeVariable(issue,layout) {
         const entity=issue.entities.find(e=>e.id===plot.entity),anchor=[x+w+22,y+d+76,3];
         const material=plot.material ?? ['#c6b59b','#b7c9bb','#bac1b3','#b9b6c2'][di%4];
         const labelStyle=nameplate(entity.label,w);
-        instances.push({id:entity.id,entity:entity.id,asset:plot.asset,x,y,w,d,h,material,sign:plot.sign ?? entity.label,anchor,label:[x+w/2,y+d+12,3],labelStyle,...(size?{size}:{}),...(emphasis?{emphasis}:{})});
+        instances.push({id:entity.id,entity:entity.id,asset:plot.asset,x,y,w,d,h,material,sign:plot.sign ?? (isOutdoor(plot)?undefined:entity.label),anchor,label:[x+w/2,y+d+12,3],labelStyle,...(size?{size}:{}),...(emphasis?{emphasis}:{})});
         ground.push({type:'box',x:x-10,y:y-10,z:1,w:plot.plotWidth-20,d:plot.plotDepth-8,h:1,material:entity.kind==='place'?'#c4c9af':'#d7d9d0',r:3});
         if(airAccess.has(entity.id)) {
           road(anchor[0]-45,anchor[1]-30,90,60);

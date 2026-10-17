@@ -137,7 +137,8 @@ export function validateOutdoor(input) {
   const defaults=outdoorDimensions[a.asset];
   assert(a.w>=defaults[0]&&a.d>=defaults[1]&&a.h===defaults[2],'Outdoor dimensions must meet the recipe minimum; height is fixed');
   assert(/^#[a-fA-F0-9]{6}$/.test(a.material),'Invalid outdoor material');
-  assert(a.sign===undefined || (typeof a.sign==='string'&&a.sign.length<=24),'Outdoor sign must be at most 24 characters');
+  assert(a.sign===undefined || typeof a.sign==='string','Invalid outdoor sign');
+  if(a.asset==='corner-shop')assert(a.sign===undefined || a.sign.length<=24,'Outdoor sign must be at most 24 characters');
   const options=a.options??{};
   assert(options&&typeof options==='object'&&!Array.isArray(options),'Invalid outdoor options');
   const allowed=({'bike-rack':['bays'],'canopy-tree':['crown'],fence:['path','gate']})[a.asset]??[];
@@ -159,7 +160,7 @@ export function validateOutdoor(input) {
 }
 
 export function outdoorGeometry(input) {
-  const a=outdoorInstance(input),recipe=outdoorRecipes[a.asset].build(a);
+  const a=validateOutdoor(input),recipe=outdoorRecipes[a.asset].build(a);
   return {a,...recipe,bounds:unionBounds(recipe.parts.map(p=>worldBox(a,p))),obstacles:recipe.obstacles.map(b=>({...worldBox(a,b),entity:a.entity??`scenery ${a.type}`})),clearances:recipe.clearances.map(b=>worldBox(a,b))};
 }
 

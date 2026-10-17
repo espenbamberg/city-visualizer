@@ -15,16 +15,30 @@ async function checkSpatial(browserPage) {
         if(i)await page.locator('[data-action="next"]').click();
         const actor=page.locator(`[data-actor="${story.id}"]`);
         await page.waitForFunction(id=>document.querySelector(`[data-actor="${id}"]`)?.dataset.phase==='settled',story.id);
-        const route=data.scene.routes.find(r=>r.relation===story.steps[i].state.via);
+        const path=data.scene.scenarioLayouts.find(l=>l.scenario===story.id).steps[i].path;
         const point=JSON.parse(await actor.getAttribute('data-position'));
-        assert(point.every((n,j)=>Math.abs(n-route.points.at(-1)[j])<.001),`${story.id}: actor reaches the named socket`);
+        assert(point.every((n,j)=>Math.abs(n-path.at(-1)[j])<.001),`${story.id}: actor reaches or stays at the named socket`);
         if(story.id==='catch-bus')assert(await actor.evaluate(el=>el.parentElement.dataset.interior)==='stop','Person is interleaved with the shelter parts');
         if(story.id==='find-shade')assert(await actor.evaluate(el=>el.parentElement.dataset.interior)==='shade','Person is interleaved with tree parts');
       }
+      if(story.id==='catch-bus') {
+        const actor=page.locator('[data-actor="catch-bus"]'),arrival=await actor.getAttribute('data-position');
+        for(const action of ['previous','next']) {
+          await page.locator(`[data-action="${action}"]`).click();
+          await page.waitForFunction(()=>document.querySelector('[data-actor="catch-bus"]')?.dataset.phase==='settled');
+          assert(await actor.getAttribute('data-position')===arrival,`${action}: waiting preserves arrival position`);
+        }
+      }
       await page.locator(`[data-scenario="${story.id}"]`).click();
       assert(await page.locator('.story-layout:not([hidden]) .step-marker[aria-pressed="true"]').count()===1,'Restart has one current step');
+      if(story.id==='catch-bus') {
+        await page.locator('[data-action="next"]').click();
+        await page.waitForFunction(()=>document.querySelector('[data-actor="catch-bus"]')?.dataset.phase==='settled');
+        const point=JSON.parse(await page.locator('[data-actor="catch-bus"]').getAttribute('data-position'));
+        assert(JSON.stringify(point)===JSON.stringify(data.scene.routes.find(r=>r.relation==='walk-stop').points.at(-1)),'Replay waits at the arrival port');
+      }
     }
-    report.push('All five stories: named-port arrival, gate traversal, roof/canopy layering and restart.');
+    report.push('All five stories: named-port arrival, stationary waiting forward/backward/replay, gate traversal, roof/canopy layering and restart.');
     await page.locator('#panel-hide').click();
     for(const entity of data.issue.entities) {
       const object=page.locator(`.map-object[data-entity="${entity.id}"]`);await object.focus();await page.keyboard.press('Enter');

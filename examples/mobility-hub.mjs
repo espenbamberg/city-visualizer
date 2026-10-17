@@ -27,8 +27,10 @@ export function mobilityHub() {
     journey('find-shade','4','Find some shade','Walk beneath the edge of the canopy.',[['walk-shade','shade','Step into the shade','The neighbour stands beneath the canopy, with room between the path and trunk.']],'The tree provides shade while its trunk stays clear of the path.'),
     {id:'power-bay',number:'5',label:'Power the charging bay',summary:'Follow the separate electrical connection.',condition:'The charging installation has a supply connection.',outcome:'Power reaches the cabinet beside the reserved vehicle bay.',actor:{kind:'electricity',label:'Electrical supply',start:'shop'},steps:[{title:'Supply the charging cabinet',text:'The cable connects the supply to the charging cabinet. Vehicle access uses the marked bay and road.',relations:['supply'],state:{at:'charging',via:'supply',moving:'Following the supply cable',caption:'Supply connected at the charging cabinet.'}}]}
   ]};
+  issue.scenarios[0].steps.push({title:'Wait under cover',text:'The neighbour stays at the waiting socket while the boarding entrance remains free.',relations:['walk-stop'],state:{at:'stop',caption:'Still waiting in the same sheltered place.'}});
   const ports=[
     {id:'shop-entry',entity:'shop',node:'shop-entry',socket:'public',offset:25},
+    {id:'stop-boarding',entity:'stop',node:'stop-boarding',socket:'boarding'},
     {id:'stop-entry',entity:'stop',node:'stop-entry',socket:'waiting'},
     {id:'rack-entry',entity:'racks',node:'rack-entry',socket:'parking'},
     {id:'gate-entry',entity:'gate',node:'gate-entry',socket:'gate'},

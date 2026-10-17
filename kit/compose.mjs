@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {assetDimensions} from './assets.mjs';
 import {routePoints,validate} from './model.mjs';
 import {composeVariable} from './compose-variable.mjs';
+import {isOutdoor} from './outdoor-assets.mjs';
 
 // District plots provide editable starting geometry; their meaning and size come from the brief.
 export function composeScene(issue, layout) {
@@ -59,7 +60,7 @@ export function composeScene(issue, layout) {
         if (!lines.length || (lines.at(-1)+' '+word).length>18) lines.push(word);
         else lines[lines.length-1]+=' '+word;
       }
-      instances.push({id:entity.id,entity:entity.id,asset:plot.asset,x,y,w,d,h:plot.height ?? h,material:plot.material ?? materials[di%materials.length],sign:plot.sign ?? entity.label,anchor,label:[x+w/2,y+d+12,3],labelStyle:{width:Math.max(w,125),size:10,lines}});
+      instances.push({id:entity.id,entity:entity.id,asset:plot.asset,x,y,w,d,h:plot.height ?? h,material:plot.material ?? materials[di%materials.length],sign:plot.sign ?? (isOutdoor(plot)?undefined:entity.label),anchor,label:[x+w/2,y+d+12,3],labelStyle:{width:Math.max(w,125),size:10,lines}});
       ground.push({type:'box',x:x-12,y:y-12,z:1,w:w+52,d:d+110,h:1,material:entity.kind==='place'?'#c4c9af':'#d7d9d0',r:3},
         {type:'box',x:anchor[0]-7,y:y+d+60,z:2,w:14,d:roadY-(y+d+60),h:.5,material:'#ddd8c2'});
       scenery.push({type:'tree',x:x-8,y:y+d+78,h:48+(pi%3)*6,seed:di+pi},

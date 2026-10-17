@@ -216,6 +216,14 @@
         ]
       },
       {
+        "id": "stop-boarding",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
         "id": "stop-entry",
         "at": [
           0,
@@ -367,6 +375,12 @@
         "node": "shop-entry",
         "socket": "public",
         "offset": 25
+      },
+      {
+        "id": "stop-boarding",
+        "entity": "stop",
+        "node": "stop-boarding",
+        "socket": "boarding"
       },
       {
         "id": "stop-entry",

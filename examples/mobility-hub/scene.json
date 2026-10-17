@@ -380,12 +380,11 @@
       "d": 55,
       "h": 52,
       "material": "#8fa79b",
-      "sign": "Bus shelter",
       "emphasis": "supporting",
       "detailLevels": true,
       "rotation": 270,
       "anchor": [
-        455.75,
+        497,
         125,
         3
       ],
@@ -409,7 +408,6 @@
       "d": 28,
       "h": 22,
       "material": "#758d7d",
-      "sign": "Cycle parking",
       "emphasis": "supporting",
       "detailLevels": true,
       "rotation": 90,
@@ -441,7 +439,6 @@
       "d": 110,
       "h": 37,
       "material": "#93aa94",
-      "sign": "Charging bay",
       "emphasis": "supporting",
       "detailLevels": true,
       "anchor": [
@@ -469,7 +466,6 @@
       "d": 70,
       "h": 16,
       "material": "#879c76",
-      "sign": "Community garden",
       "emphasis": "supporting",
       "detailLevels": true,
       "anchor": [
@@ -497,7 +493,6 @@
       "d": 140,
       "h": 28,
       "material": "#9c8e74",
-      "sign": "Garden gate",
       "emphasis": "supporting",
       "detailLevels": true,
       "options": {
@@ -547,7 +542,6 @@
       "d": 58,
       "h": 75,
       "material": "#8ea17a",
-      "sign": "Shade tree",
       "emphasis": "supporting",
       "detailLevels": true,
       "anchor": [
@@ -573,6 +567,14 @@
         "at": [
           190,
           190,
+          3
+        ]
+      },
+      {
+        "id": "stop-boarding",
+        "at": [
+          497,
+          125,
           3
         ]
       },
@@ -728,6 +730,12 @@
         "node": "shop-entry",
         "socket": "public",
         "offset": 25
+      },
+      {
+        "id": "stop-boarding",
+        "entity": "stop",
+        "node": "stop-boarding",
+        "socket": "boarding"
       },
       {
         "id": "stop-entry",
@@ -1187,6 +1195,21 @@
             84
           ],
           "links": []
+        },
+        {
+          "at": [
+            477.5,
+            125,
+            84
+          ],
+          "links": [],
+          "path": [
+            [
+              455.75,
+              125,
+              3
+            ]
+          ]
         }
       ]
     },

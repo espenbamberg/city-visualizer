@@ -1,11 +1,11 @@
 import { assetNames, sceneryNames } from './assets.mjs';
 import {validateSize} from './sizing.mjs';
-import {validateNetwork} from './network.mjs';
+import {validateNetwork,obstructed,travelRadius} from './network.mjs';
 import {processParts} from './process-assets.mjs';
 import {validateEnvironment} from './environments.mjs';
 import {validateRoomContents} from './rooms.mjs';
 import {isOutdoor,validateOutdoor} from './outdoor-assets.mjs';
-import {validateClearances} from './object-geometry.mjs';
+import {validateClearances,objectObstacles} from './object-geometry.mjs';
 import {validateTransform} from './spatial.mjs';
 
 export const relationshipKinds = ['movement', 'information', 'dependency', 'technical', 'influence', 'electricity'];
@@ -234,6 +234,19 @@ export function validate(issue, scene) {
     }
   }
   for (const scenario of issue.scenarios) if (scenario.actor) require(scene.scenarioLayouts?.some(s => s.scenario===scenario.id), 'Actor without scenario layout');
+  const obstacles=[...scene.instances,...scene.scenery].filter(isOutdoor).flatMap(objectObstacles);
+  // Legacy story paths can differ from relationship lines; only new spatial solids add constraints.
+  if(obstacles.length)for(const route of scene.routes.filter(r=>!r.network)) {
+    const relation=issue.relationships.find(r=>r.id===route.relation);if(relation.kind!=='movement')continue;
+    const journeys=issue.scenarios.flatMap(s=>s.actor?s.steps.flatMap((step,i)=>step.state.via===relation.id?[{
+      kind:actorAt(s,i).kind,points:actorPath(s,scene.scenarioLayouts.find(l=>l.scenario===s.id),i,scene)
+    }]:[]):[]);
+    if(!journeys.length)journeys.push({kind:'person',points:routePoints(relation,route,scene)});
+    for(const {kind,points} of journeys)if(physicalActors.includes(kind)) {
+      const height=({person:25,bicycle:40,car:30,van:35,plane:38})[kind];
+      for(let i=1;i<points.length;i++)for(const obstacle of obstacles)require(!obstructed(points[i-1],points[i],obstacle,travelRadius[kind],height),`Route ${relation.id} collides with ${obstacle.entity}`);
+    }
+  }
   return true;
 }
 

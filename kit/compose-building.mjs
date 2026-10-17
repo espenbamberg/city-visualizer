@@ -4,6 +4,7 @@ import {compileNetwork} from './network.mjs';
 import {roomWalls} from './rooms.mjs';
 import {scenarioLayouts,relationshipMode} from './compose-helpers.mjs';
 import {validate} from './model.mjs';
+import {isOutdoor} from './outdoor-assets.mjs';
 
 // shortcut: one front door per room and one floor; extend openings when a real journey needs another topology.
 export function composeBuilding(issue,layout) {
@@ -19,7 +20,7 @@ export function composeBuilding(issue,layout) {
     for(const p of room.plots) {
       const e=issue.entities.find(e=>e.id===p.entity);assert(e&&!seen.has(e.id),'Unknown or repeated room entity');seen.add(e.id);
       const at=p.at??[x,26];assert(Array.isArray(at)&&at.length===2&&at.every(Number.isFinite),'Invalid station position');
-      const a={id:e.id,entity:e.id,room:r.id,asset:p.asset,...dimensions(p),x:r.x+at[0],y:r.y+at[1],material:p.material??'#b9c7b1',sign:p.sign??e.label,...(p.process?{process:p.process}:{})};
+      const a={id:e.id,entity:e.id,room:r.id,asset:p.asset,...dimensions(p),x:r.x+at[0],y:r.y+at[1],material:p.material??'#b9c7b1',sign:p.sign??(isOutdoor(p)?undefined:e.label),...(p.process?{process:p.process}:{})};
       a.anchor=[a.x+a.w*.25,a.y+a.d+48,4];a.label=[a.x+a.w/2,a.y+a.d+9,4];a.labelStyle=nameplate(e.label,a.w);
       assert(a.anchor[1]<=r.y+r.d-26,`Room has no circulation space: ${e.id}`);
       instances.push(a);x=at[0]+a.w+60;
