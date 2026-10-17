@@ -12,6 +12,8 @@ V5 adds optional layout/scene `environment` (`city`, `campus`, `building`, `work
 
 ## Build
 
+The spatial extension adds seven outdoor recipes usable as instances or scenery, quarter-turn `rotation`, optional elevation, named sockets and four-sided ports. Group layouts support relative placement, repeated scenery and fence paths/gates. See `spatial-objects.md` for dimensions and compatibility rules.
+
 ```sh
 node .opencode/skills/city-visualizer/scripts/build.mjs /path/to/input /path/to/output
 ```

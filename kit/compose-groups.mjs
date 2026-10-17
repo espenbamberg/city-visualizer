@@ -3,6 +3,10 @@ import {dimensions,nameplate} from './sizing.mjs';
 import {compileNetwork,obstructed,sceneryObstacles} from './network.mjs';
 import {validate,actorAt} from './model.mjs';
 import {scenarioLayouts} from './compose-helpers.mjs';
+import {isOutdoor} from './outdoor-assets.mjs';
+import {placedFootprint,objectBounds} from './object-geometry.mjs';
+import {unionBounds} from './spatial.mjs';
+import {relativePosition,placeScenery} from './spatial-layout.mjs';
 
 export function composeGroups(issue,layout) {
   assert(layout.environment===undefined||['city','campus'].includes(layout.environment),'Groups require city or campus');
@@ -17,31 +21,33 @@ export function composeGroups(issue,layout) {
     let cursor=0;
     for(const [i,p] of plots.entries()) {
       const entity=issue.entities.find(e=>e.id===p.entity);assert(entity&&!seen.has(p.entity),'Unknown or repeated group entity');seen.add(p.entity);
-      const at=p.at??[cursor,group.pattern==='court'&&i>0?70:group.pattern==='green'&&i%2?50:0];
+      const at=p.beside?relativePosition(p,instances).map((n,i)=>n-group.at[i]):p.at??[cursor,group.pattern==='court'&&i>0?70:group.pattern==='green'&&i%2?50:0];
       assert(Array.isArray(at)&&at.length===2&&at.every(Number.isFinite),'Invalid plot position');
       const a={id:p.entity,entity:p.entity,asset:p.asset,x:group.at[0]+at[0],y:group.at[1]+at[1],w:p.w,d:p.d,h:p.h,
         material:p.material??(p.asset==='park'?'#b2c09a':'#bcc6b1'),sign:p.sign??entity.label,
-        ...(p.size?{size:p.size}:{}),emphasis:p.emphasis??'supporting',detailLevels:true,...(p.process?{process:p.process}:{})};
-      a.anchor=[a.x+a.w/2,a.y+a.d+36,3];a.label=[a.x+a.w/2,a.y+a.d+7,3];a.labelStyle=nameplate(entity.label,a.w);
-      instances.push(a);placed.push(a);cursor=at[0]+a.w+90;
+        ...(p.size?{size:p.size}:{}),emphasis:p.emphasis??'supporting',detailLevels:true,...(p.process?{process:p.process}:{}),
+        ...(p.rotation!==undefined?{rotation:p.rotation}:{}),...(p.z!==undefined?{z:p.z}:{}),...(p.options?{options:p.options}:{})};
+      const f=placedFootprint(a);
+      a.anchor=[f.x+f.w/2,f.y+f.d+36,3];a.label=p.label??[f.x+f.w/2,f.y+f.d+7,3];a.labelStyle=p.labelStyle??nameplate(entity.label,f.w);
+      instances.push(a);placed.push({...a,...f});cursor=at[0]+f.w+90;
     }
     const x=Math.min(...placed.map(a=>a.x))-18,y=Math.min(...placed.map(a=>a.y))-18;
     const w=Math.max(...placed.map(a=>a.x+a.w))-x+24,d=Math.max(...placed.map(a=>a.y+a.d))-y+90;
     ground.push({type:'box',x,y,z:0,w,d,h:2,material:group.pattern==='green'?'#c2ccad':'#dedbc9',r:5},
       {type:'text',at:[x+8,y+8,3],text:group.label.toUpperCase(),size:10,color:'#68745e',tracking:.7});
     if(group.pattern==='court')for(let dx=20;dx<w;dx+=30)ground.push({type:'line',points:[[x+dx,y+20,2.1],[x+dx,y+d-10,2.1]],color:'#d0cebc',width:.35});
-    for(const a of placed)scenery.push({type:'tree',x:a.x+12,y:a.y+a.d+62,h:43,seed:instances.indexOf(a),owner:a.entity},
+    for(const a of placed)scenery.push({type:'tree',x:a.x+12,y:a.y+a.d+62,h:43,seed:instances.findIndex(item=>item.entity===a.entity),owner:a.entity},
       {type:'person',id:`visitor-${a.entity}`,x:a.x+30,y:a.y+a.d+48,z:3,owner:a.entity});
   }
   assert(seen.size===issue.entities.length,'Every entity needs an activity group');
   const terrain=ground.filter(g=>g.type==='box'),left=Math.min(...terrain.map(g=>g.x))-12,back=Math.min(...terrain.map(g=>g.y))-12;
   ground.unshift({type:'box',x:left,y:back,z:-3,w:Math.max(...terrain.map(g=>g.x+g.w))-left+12,d:Math.max(...terrain.map(g=>g.y+g.d))-back+12,h:3,material:layout.environment==='campus'?'#c4cdae':'#e5e1ce',r:5});
-  for(const a of instances)for(const b of instances)if(a!==b)assert(!(a.x<b.x+b.w+8&&b.x<a.x+a.w+8&&a.y<b.y+b.d+8&&b.y<a.y+a.d+8),`Overlapping activity plots: ${a.entity}/${b.entity}`);
+  for(const a of instances)for(const b of instances)if(a!==b&&!isOutdoor(a)&&!isOutdoor(b))assert(!(a.x<b.x+b.w+8&&b.x<a.x+a.w+8&&a.y<b.y+b.d+8&&b.y<a.y+a.d+8),`Overlapping activity plots: ${a.entity}/${b.entity}`);
   const scene={width:1600,height:1100,seed:layout.seed,adaptiveDetail:true,camera:{azimuth:45,elevation:34},
     bounds:[[0,0,0],[Math.max(...instances.map(a=>a.x+a.w))+100,Math.max(...instances.map(a=>a.y+a.d))+110,0]],ground,scenery:[],instances,
     network:structuredClone(layout.network),routes:structuredClone(layout.routes)};
   compileNetwork(issue,scene);
-  for(const item of scenery) {
+  for(const item of layout.scenery===undefined?scenery:[]) {
     const a=instances.find(a=>a.entity===item.owner);
     for(const [x,y] of [[item.x,item.y],[a.x-22,a.y+a.d+26],[a.x+a.w+24,a.y+24],[a.x+18,a.y-24]]) {
       const candidate={...item,x,y};delete candidate.owner;
@@ -54,6 +60,12 @@ export function composeGroups(issue,layout) {
       });
       if(!blocked){scene.scenery.push(candidate);break;}
     }
+  }
+  if(layout.scenery!==undefined) {
+    scene.scenery=placeScenery(layout.scenery,instances);
+    const surfaces=scene.network.edges.filter(e=>!['air','cable'].includes(e.surface)).flatMap(e=>(e.points??[scene.network.nodes.find(n=>n.id===e.from).at,scene.network.nodes.find(n=>n.id===e.to).at]).map(p=>({x:p[0]-e.width/2,y:p[1]-e.width/2,z:0,w:e.width,d:e.width,h:1})));
+    const b=unionBounds([scene.ground[0],...scene.scenery.map(objectBounds),...surfaces]);
+    Object.assign(scene.ground[0],{x:b.x-12,y:b.y-12,w:b.w+24,d:b.d+24});
   }
   for(const a of instances) {
     const p=scene.network.ports.find(p=>p.entity===a.entity);if(p)a.anchor=scene.network.nodes.find(n=>n.id===p.node).at;

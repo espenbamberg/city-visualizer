@@ -1,0 +1,641 @@
+{
+  "seed": 617203,
+  "environment": "campus",
+  "groups": [
+    {
+      "label": "Neighbourhood mobility hub",
+      "pattern": "court",
+      "at": [
+        0,
+        0
+      ],
+      "plots": [
+        {
+          "entity": "shop",
+          "asset": "corner-shop",
+          "at": [
+            80,
+            80
+          ],
+          "sign": "CORNER SHOP",
+          "material": "#c4b79a",
+          "emphasis": "primary",
+          "label": [
+            133,
+            176,
+            3
+          ],
+          "labelStyle": {
+            "width": 104,
+            "size": 8
+          }
+        },
+        {
+          "entity": "stop",
+          "asset": "bus-shelter",
+          "at": [
+            420,
+            70
+          ],
+          "rotation": 270,
+          "material": "#8fa79b",
+          "label": [
+            450,
+            190,
+            3
+          ],
+          "labelStyle": {
+            "width": 115,
+            "size": 9
+          }
+        },
+        {
+          "entity": "racks",
+          "asset": "bike-rack",
+          "at": [
+            80,
+            300
+          ],
+          "rotation": 90,
+          "options": {
+            "bays": 3
+          },
+          "material": "#758d7d",
+          "label": [
+            108,
+            380,
+            3
+          ],
+          "labelStyle": {
+            "width": 112,
+            "size": 9
+          }
+        },
+        {
+          "entity": "charging",
+          "asset": "charging-bay",
+          "at": [
+            420,
+            300
+          ],
+          "material": "#93aa94",
+          "label": [
+            452,
+            414,
+            3
+          ],
+          "labelStyle": {
+            "width": 115,
+            "size": 9
+          }
+        },
+        {
+          "entity": "garden",
+          "asset": "planting-bed",
+          "at": [
+            230,
+            330
+          ],
+          "material": "#879c76",
+          "label": [
+            286,
+            408,
+            3
+          ],
+          "labelStyle": {
+            "width": 140,
+            "size": 9
+          }
+        },
+        {
+          "entity": "gate",
+          "asset": "fence",
+          "at": [
+            210,
+            290
+          ],
+          "w": 180,
+          "d": 140,
+          "options": {
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                180,
+                0
+              ],
+              [
+                180,
+                140
+              ]
+            ],
+            "gate": {
+              "segment": 0,
+              "offset": 70,
+              "width": 40
+            }
+          },
+          "material": "#9c8e74",
+          "label": [
+            245,
+            292,
+            27
+          ],
+          "labelStyle": {
+            "plane": "front",
+            "width": 58,
+            "size": 5
+          }
+        },
+        {
+          "entity": "shade",
+          "asset": "canopy-tree",
+          "at": [
+            220,
+            70
+          ],
+          "material": "#8ea17a",
+          "label": [
+            249,
+            138,
+            3
+          ],
+          "labelStyle": {
+            "width": 100,
+            "size": 8
+          }
+        }
+      ]
+    }
+  ],
+  "scenery": [
+    {
+      "id": "street-tree",
+      "type": "canopy-tree",
+      "x": 560,
+      "y": 80,
+      "material": "#9aaa7c",
+      "repeat": {
+        "count": 2,
+        "step": [
+          0,
+          110
+        ]
+      }
+    },
+    {
+      "type": "bike-rack",
+      "beside": {
+        "entity": "stop",
+        "side": "back",
+        "gap": 25,
+        "align": "start"
+      },
+      "options": {
+        "bays": 2
+      },
+      "material": "#96a58b"
+    },
+    {
+      "type": "fence",
+      "x": 70,
+      "y": 430,
+      "material": "#a39476"
+    }
+  ],
+  "network": {
+    "nodes": [
+      {
+        "id": "shop-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "stop-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "rack-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "gate-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "garden-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "shade-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "shop-power",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "bay-power",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "bay-entry",
+        "at": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "id": "west",
+        "at": [
+          65,
+          230,
+          3
+        ]
+      },
+      {
+        "id": "shop-junction",
+        "at": [
+          190,
+          230,
+          3
+        ]
+      },
+      {
+        "id": "shade-junction",
+        "at": [
+          266.4,
+          230,
+          3
+        ]
+      },
+      {
+        "id": "garden-junction",
+        "at": [
+          300,
+          230,
+          3
+        ]
+      },
+      {
+        "id": "east",
+        "at": [
+          350,
+          230,
+          3
+        ]
+      },
+      {
+        "id": "stop-junction",
+        "at": [
+          520,
+          230,
+          3
+        ]
+      },
+      {
+        "id": "stop-approach",
+        "at": [
+          520,
+          125,
+          3
+        ]
+      },
+      {
+        "id": "road-bend",
+        "at": [
+          350,
+          480,
+          3
+        ]
+      },
+      {
+        "id": "bay-approach",
+        "at": [
+          452,
+          480,
+          3
+        ]
+      },
+      {
+        "id": "road-end",
+        "at": [
+          620,
+          480,
+          3
+        ]
+      }
+    ],
+    "ports": [
+      {
+        "id": "shop-entry",
+        "entity": "shop",
+        "node": "shop-entry",
+        "socket": "public",
+        "offset": 25
+      },
+      {
+        "id": "stop-entry",
+        "entity": "stop",
+        "node": "stop-entry",
+        "socket": "waiting"
+      },
+      {
+        "id": "rack-entry",
+        "entity": "racks",
+        "node": "rack-entry",
+        "socket": "parking"
+      },
+      {
+        "id": "gate-entry",
+        "entity": "gate",
+        "node": "gate-entry",
+        "socket": "gate"
+      },
+      {
+        "id": "garden-entry",
+        "entity": "garden",
+        "node": "garden-entry",
+        "side": "back",
+        "position": 0.5833333333333334,
+        "offset": 20
+      },
+      {
+        "id": "shade-entry",
+        "entity": "shade",
+        "node": "shade-entry",
+        "socket": "shade"
+      },
+      {
+        "id": "shop-power",
+        "entity": "shop",
+        "node": "shop-power",
+        "side": "right",
+        "position": 0.2,
+        "offset": 0,
+        "z": 8
+      },
+      {
+        "id": "bay-power",
+        "entity": "charging",
+        "node": "bay-power",
+        "socket": "power"
+      },
+      {
+        "id": "bay-entry",
+        "entity": "charging",
+        "node": "bay-entry",
+        "socket": "vehicle"
+      }
+    ],
+    "edges": [
+      {
+        "id": "shop-path",
+        "from": "shop-entry",
+        "to": "shop-junction",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "west-path",
+        "from": "west",
+        "to": "shop-junction",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "rack-path",
+        "from": "west",
+        "to": "rack-entry",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "shade-path",
+        "from": "shop-junction",
+        "to": "shade-junction",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "shade-access",
+        "from": "shade-junction",
+        "to": "shade-entry",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "garden-path",
+        "from": "shade-junction",
+        "to": "garden-junction",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "gate-path",
+        "from": "garden-junction",
+        "to": "gate-entry",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "garden-access",
+        "from": "gate-entry",
+        "to": "garden-entry",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "east-path",
+        "from": "garden-junction",
+        "to": "east",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "stop-path",
+        "from": "east",
+        "to": "stop-junction",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "stop-approach-path",
+        "from": "stop-junction",
+        "to": "stop-approach",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "shelter-access",
+        "from": "stop-approach",
+        "to": "stop-entry",
+        "surface": "path",
+        "modes": [
+          "person"
+        ],
+        "width": 16
+      },
+      {
+        "id": "supply-cable",
+        "from": "shop-power",
+        "to": "bay-power",
+        "surface": "cable",
+        "modes": [
+          "electricity"
+        ],
+        "width": 8
+      },
+      {
+        "id": "street",
+        "from": "road-bend",
+        "to": "bay-approach",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 60
+      },
+      {
+        "id": "street-end",
+        "from": "bay-approach",
+        "to": "road-end",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 60
+      },
+      {
+        "id": "vehicle-access",
+        "from": "bay-approach",
+        "to": "bay-entry",
+        "surface": "road",
+        "modes": [
+          "car",
+          "van"
+        ],
+        "width": 60
+      }
+    ]
+  },
+  "routes": [
+    {
+      "relation": "walk-stop",
+      "network": {
+        "from": "shop-entry",
+        "to": "stop-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "walk-racks",
+      "network": {
+        "from": "shop-entry",
+        "to": "rack-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "walk-gate",
+      "network": {
+        "from": "shop-entry",
+        "to": "gate-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "enter-garden",
+      "network": {
+        "from": "gate-entry",
+        "to": "garden-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "walk-shade",
+      "network": {
+        "from": "shop-entry",
+        "to": "shade-entry",
+        "mode": "person"
+      }
+    },
+    {
+      "relation": "supply",
+      "network": {
+        "from": "shop-power",
+        "to": "bay-power",
+        "mode": "electricity"
+      }
+    }
+  ]
+}

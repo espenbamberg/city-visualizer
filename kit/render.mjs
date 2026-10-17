@@ -5,6 +5,8 @@ import { transport } from './transport.mjs';
 import { spring, pointAlong, entranceProgress } from './motion.mjs';
 import {drawNetwork} from './network.mjs';
 import {roomWalls} from './rooms.mjs';
+import {objectBounds,placedFootprint} from './object-geometry.mjs';
+import {isOutdoor} from './outdoor-assets.mjs';
 
 export function renderMap(issue, scene) {
   validate(issue, scene);
@@ -12,7 +14,7 @@ export function renderMap(issue, scene) {
   const bounds = [...scene.bounds];
   const walls=roomWalls(scene.rooms);
   for(const wall of walls)bounds.push(...k.boxCorners(wall,3,wall.h));
-  for (const a of scene.instances) bounds.push(...k.boxCorners({ x: a.x, y: a.y, w: a.w, d: a.d }, 0, a.h + 40));
+  for (const a of scene.instances) { const b=objectBounds(a);bounds.push(...k.boxCorners(b,b.z,b.z+b.h)); }
   for (const a of scene.instances) {
     const width=a.labelStyle?.width ?? issue.entities.find(e=>e.id===a.entity).label.length*7.5+32;
     bounds.push([a.label[0]-width/2,a.label[1],a.label[2]],[a.label[0]+width/2,a.label[1]+45,a.label[2]]);
@@ -22,31 +24,33 @@ export function renderMap(issue, scene) {
     else if (a.type==='line') bounds.push(...a.points);
     else bounds.push(a.at);
   }
-  for (const a of scene.scenery) bounds.push(...k.boxCorners({x:a.x-15,y:a.y-15,w:65,d:60},a.z ?? 0,a.h ?? 80));
+  for (const a of scene.scenery) { const b=objectBounds(a);bounds.push(...k.boxCorners(b,b.z,b.z+b.h)); }
   for (const r of issue.relationships) bounds.push(...routePoints(r,scene.routes.find(a=>a.relation===r.id),scene));
   if(scene.network)for(const e of scene.network.edges)for(const p of (e.points??[scene.network.nodes.find(n=>n.id===e.from).at,scene.network.nodes.find(n=>n.id===e.to).at]))bounds.push([p[0]-e.width/2,p[1]-e.width/2,p[2]],[p[0]+e.width/2,p[1]+e.width/2,p[2]]);
   for (const layout of scene.scenarioLayouts ?? []) for (const step of layout.steps) if (step.path) bounds.push(...step.path);
   const P = k.fitProjection(bounds, scene.width, scene.height, { ...scene.camera, pad: 58 });
   const D = drawing(P,scene.seed);
   let ground = scene.ground.map(D.ground).join('');
-  for (const a of scene.instances) ground += D.polygon([[a.x + 6, a.y + 6, 2], [a.x + a.w + 12, a.y + 6, 2], [a.x + a.w + 31, a.y + a.d + 20, 2], [a.x + 31, a.y + a.d + 20, 2]], '#586251', 'opacity=".075" stroke="none"');
+  for (const item of scene.instances) { const a=placedFootprint(item);ground += D.polygon([[a.x + 6, a.y + 6, 2], [a.x + a.w + 12, a.y + 6, 2], [a.x + a.w + 31, a.y + a.d + 20, 2], [a.x + 31, a.y + a.d + 20, 2]], '#586251', 'opacity=".075" stroke="none"'); }
   for (const a of scene.instances) ground += D.walkingFloor(a);
+  for (const a of scene.scenery.filter(isOutdoor)) ground += D.walkingFloor(a);
   if(scene.network)ground+=drawNetwork(scene.network,D,scene.instances);
 
   const objects = scene.instances.map(a => {
     const e = issue.entities.find(e => e.id === a.entity);
-    const ring = k.planOutline({ x: a.x - 7, y: a.y - 7, w: a.w + 14, d: a.d + 14, r: 2 }, 2.4, P);
+    const f=placedFootprint(a),b=objectBounds(a);
+    const ring = k.planOutline({ x: f.x - 7, y: f.y - 7, w: f.w + 14, d: f.d + 14, r: 2 }, 2.4, P);
     const port = scene.network ? scene.network.ports.filter(p=>p.entity===a.entity).map(p=>{const at=scene.network.nodes.find(n=>n.id===p.node).at;return D.box(at[0]-3,at[1]-3,1,6,6,1.5,'#a0b38c');}).join('') : D.line([[a.anchor[0], a.y + a.d + 3, 3], a.anchor], '#7e9272', .9) + D.box(a.anchor[0]-3, a.anchor[1]-3, 1, 6, 6, 1.5, '#a0b38c');
-    const badge=e.detailView ? D.text([a.x+a.w/2,a.y+a.d/2,a.h+18],'⊕',20,'#526f50','class="detail-badge" aria-hidden="true"') : '';
-    const [hx,hy]=D.project([a.x+a.w/2,a.y+a.d/2,a.h/2]);
+    const badge=e.detailView ? D.text([f.x+f.w/2,f.y+f.d/2,f.z+a.h+18],'⊕',20,'#526f50','class="detail-badge" aria-hidden="true"') : '';
+    const [hx,hy]=D.project([f.x+f.w/2,f.y+f.d/2,isOutdoor(a)?b.z+b.h/2:a.h/2]);
     const hit=a.emphasis||a.size?`<path class="object-hit" d="M${hx} ${hy}h.01" aria-hidden="true"/>`:'';
-    const corners=k.boxCorners(a,0,a.h+40).map(D.project),xs=corners.map(p=>p[0]),ys=corners.map(p=>p[1]);
+    const corners=k.boxCorners(b,b.z,b.z+b.h).map(D.project),xs=corners.map(p=>p[0]),ys=corners.map(p=>p[1]);
     const box=[Math.min(...xs),Math.min(...ys),Math.max(...xs)-Math.min(...xs),Math.max(...ys)-Math.min(...ys)];
     const lod=scene.adaptiveDetail?` data-lod-width="${box[2]}" data-full-bounds="${box}"`:'';
     const label=scene.adaptiveDetail?`<g data-lod="${a.emphasis==='primary'?0:1}">${D.label(a,e)}${badge}</g>`:D.label(a,e)+badge;
-    return { at: [a.x + a.w / 2, a.y + a.d / 2, 0], footprint:a, svg: `<g class="map-object ${e.kind}" data-entity="${e.id}"${lod}${e.detailView?` data-detail="${e.detailView}"`:''} role="button" tabindex="0" aria-label="${e.detailView?'Utforsk':'Inspect'} ${escape(e.label)}" aria-pressed="false"><title>${escape(e.label)}</title><path class="selection-ring" d="${ring}"/>${D.asset({...a,floorInGround:true,detailLevels:scene.adaptiveDetail??a.detailLevels})}<g class="object-fittings">${port}${label}</g>${hit}</g>` };
+    return { at: [f.x + f.w / 2, f.y + f.d / 2, f.z], footprint:isOutdoor(a)?{...b,h:b.z+b.h}:a, svg: `<g class="map-object ${e.kind}" data-entity="${e.id}"${lod}${e.detailView?` data-detail="${e.detailView}"`:''} role="button" tabindex="0" aria-label="${e.detailView?'Utforsk':'Inspect'} ${escape(e.label)}" aria-pressed="false"><title>${escape(e.label)}</title><path class="selection-ring" d="${ring}"/>${D.asset({...a,floorInGround:true,detailLevels:scene.adaptiveDetail??a.detailLevels})}<g class="object-fittings">${port}${label}</g>${hit}</g>` };
   });
-  for (const a of scene.scenery) objects.push({ at: a.sortAt ?? [a.x, a.y, 0], footprint:{x:a.x-15,y:a.y-15,w:65,d:60,h:a.height ?? 80}, svg: `<g aria-hidden="true">${D.scenery(a)}</g>` });
+  for (const a of scene.scenery) { const b=objectBounds(a),f=isOutdoor(a)?placedFootprint(a):null;objects.push({ at: a.sortAt ?? (f?[f.x+f.w/2,f.y+f.d/2,f.z]:[a.x,a.y,0]), footprint:{...b,h:b.z+b.h}, svg: `<g aria-hidden="true">${D.scenery({...a,floorInGround:isOutdoor(a)})}</g>` }); }
   for(const wall of walls)objects.push({at:[wall.x+wall.w/2,wall.y+wall.d/2,0],footprint:wall,svg:`<g data-room-wall="${wall.id}" aria-hidden="true">${D.box(wall.x,wall.y,3,wall.w,wall.d,wall.cutaway?8:wall.h,'#bbc5b2')}${D.box(wall.x,wall.y,wall.cutaway?11:wall.h+3,wall.w,wall.d,1,'#d9deca')}</g>`});
   let riseClips = '';
   const bodies = objects.sort((a,b) => k.depthOf(a.at,P)-k.depthOf(b.at,P)).map((item,i) => {

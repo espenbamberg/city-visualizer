@@ -76,3 +76,4 @@ await import('./check-v2.mjs');
 await import('./check-v3.mjs');
 await import('./check-v4.mjs');
 await import('./check-v5.mjs');
+await import('./check-spatial.mjs');

@@ -1,0 +1,307 @@
+{
+  "title": "A connected neighbourhood",
+  "question": "How can small public spaces share a place without blocking one another?",
+  "summary": "A corner shop, shelter, cycle parking, garden and charging bay share clear approaches. Explore how each object uses space.",
+  "status": "fictional",
+  "sources": [
+    {
+      "id": "design",
+      "title": "Mobility-hub design study",
+      "locator": "An editable CityVisualizer example."
+    }
+  ],
+  "entities": [
+    {
+      "id": "shop",
+      "label": "Corner shop",
+      "kind": "place",
+      "role": "An everyday destination",
+      "description": "The shop faces the shared walking route. Its public entrance and delivery access are separate.",
+      "constraint": "Keep the doorway clear.",
+      "number": "1",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "stop",
+      "label": "Bus shelter",
+      "kind": "place",
+      "role": "A sheltered waiting place",
+      "description": "An open-sided shelter combines a roof, bench, timetable and stop sign. People enter beneath the roof.",
+      "constraint": "Leave the boarding approach free of street furniture.",
+      "number": "2",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "racks",
+      "label": "Cycle parking",
+      "kind": "infrastructure",
+      "role": "Secure cycle parking",
+      "description": "Three normal-sized hoops face a clear parking approach.",
+      "constraint": "Parking needs more space than the metal hoops occupy.",
+      "number": "3",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "charging",
+      "label": "Charging bay",
+      "kind": "infrastructure",
+      "role": "Power for parked vehicles",
+      "description": "The cabinet and cable serve a marked vehicle bay. The supply connection is separate from vehicle access.",
+      "constraint": "The marked bay must remain clear for a vehicle.",
+      "number": "4",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "garden",
+      "label": "Community garden",
+      "kind": "place",
+      "role": "A planted place to visit",
+      "description": "Raised planting beds sit inside a fence with a real opening.",
+      "constraint": "Walk through the gate rather than through plants or rails.",
+      "number": "5",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "gate",
+      "label": "Garden gate",
+      "kind": "infrastructure",
+      "role": "An opening in the boundary",
+      "description": "An L-shaped fence follows two edges of the garden. The gap is shared by its drawing and route checks.",
+      "constraint": "The gap must be wide enough for the whole walking corridor.",
+      "number": "6",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "shade",
+      "label": "Shade tree",
+      "kind": "place",
+      "role": "Shade beside the walking route",
+      "description": "The canopy reaches beyond the trunk. A person can stand beneath its edge.",
+      "constraint": "Keep the route away from the trunk and below the canopy.",
+      "number": "7",
+      "source": "design",
+      "status": "fictional"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "walk-stop",
+      "from": "shop",
+      "to": "stop",
+      "kind": "movement",
+      "label": "Walk to the shelter",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "walk-racks",
+      "from": "shop",
+      "to": "racks",
+      "kind": "movement",
+      "label": "Collect a bicycle",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "walk-gate",
+      "from": "shop",
+      "to": "gate",
+      "kind": "movement",
+      "label": "Approach the garden gate",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "enter-garden",
+      "from": "gate",
+      "to": "garden",
+      "kind": "movement",
+      "label": "Pass through the gate",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "walk-shade",
+      "from": "shop",
+      "to": "shade",
+      "kind": "movement",
+      "label": "Walk into the shade",
+      "source": "design",
+      "status": "fictional"
+    },
+    {
+      "id": "supply",
+      "from": "shop",
+      "to": "charging",
+      "kind": "electricity",
+      "label": "Feed the charging cabinet",
+      "source": "design",
+      "status": "fictional"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "catch-bus",
+      "number": "1",
+      "label": "Wait under the shelter",
+      "summary": "Follow the walking route into an open-sided shelter.",
+      "condition": "Start at the shop entrance.",
+      "outcome": "The neighbour waits under cover.",
+      "actor": {
+        "kind": "person",
+        "label": "Neighbour in a green coat",
+        "start": "shop",
+        "identity": "neighbour"
+      },
+      "steps": [
+        {
+          "title": "Enter the shelter",
+          "text": "The neighbour reaches the waiting area beneath the roof, clear of the posts and bench.",
+          "relations": [
+            "walk-stop"
+          ],
+          "state": {
+            "at": "stop",
+            "via": "walk-stop",
+            "moving": "Enter the shelter",
+            "caption": "The neighbour reaches the waiting area beneath the roof, clear of the posts and bench."
+          }
+        }
+      ]
+    },
+    {
+      "id": "collect-cycle",
+      "number": "2",
+      "label": "Collect a bicycle",
+      "summary": "Approach the cycle racks from their open side.",
+      "condition": "Start at the shop entrance.",
+      "outcome": "Cycle parking remains accessible.",
+      "actor": {
+        "kind": "person",
+        "label": "Neighbour in a green coat",
+        "start": "shop",
+        "identity": "neighbour"
+      },
+      "steps": [
+        {
+          "title": "Reach cycle parking",
+          "text": "The approach leaves space to manoeuvre a bicycle beside the hoops.",
+          "relations": [
+            "walk-racks"
+          ],
+          "state": {
+            "at": "racks",
+            "via": "walk-racks",
+            "moving": "Reach cycle parking",
+            "caption": "The approach leaves space to manoeuvre a bicycle beside the hoops."
+          }
+        }
+      ]
+    },
+    {
+      "id": "visit-garden",
+      "number": "3",
+      "label": "Visit the garden",
+      "summary": "Use the real opening in the fence.",
+      "condition": "Start at the shop entrance.",
+      "outcome": "The garden is reached without crossing rails or plants.",
+      "actor": {
+        "kind": "person",
+        "label": "Neighbour in a green coat",
+        "start": "shop",
+        "identity": "neighbour"
+      },
+      "steps": [
+        {
+          "title": "Reach the gate",
+          "text": "The neighbour follows the shared path to the opening in the fence.",
+          "relations": [
+            "walk-gate"
+          ],
+          "state": {
+            "at": "gate",
+            "via": "walk-gate",
+            "moving": "Reach the gate",
+            "caption": "The neighbour follows the shared path to the opening in the fence."
+          }
+        },
+        {
+          "title": "Enter the garden",
+          "text": "The neighbour passes between the gateposts and stops beside the planting bed.",
+          "relations": [
+            "enter-garden"
+          ],
+          "state": {
+            "at": "garden",
+            "via": "enter-garden",
+            "moving": "Enter the garden",
+            "caption": "The neighbour passes between the gateposts and stops beside the planting bed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "find-shade",
+      "number": "4",
+      "label": "Find some shade",
+      "summary": "Walk beneath the edge of the canopy.",
+      "condition": "Start at the shop entrance.",
+      "outcome": "The tree provides shade while its trunk stays clear of the path.",
+      "actor": {
+        "kind": "person",
+        "label": "Neighbour in a green coat",
+        "start": "shop",
+        "identity": "neighbour"
+      },
+      "steps": [
+        {
+          "title": "Step into the shade",
+          "text": "The neighbour stands beneath the canopy, with room between the path and trunk.",
+          "relations": [
+            "walk-shade"
+          ],
+          "state": {
+            "at": "shade",
+            "via": "walk-shade",
+            "moving": "Step into the shade",
+            "caption": "The neighbour stands beneath the canopy, with room between the path and trunk."
+          }
+        }
+      ]
+    },
+    {
+      "id": "power-bay",
+      "number": "5",
+      "label": "Power the charging bay",
+      "summary": "Follow the separate electrical connection.",
+      "condition": "The charging installation has a supply connection.",
+      "outcome": "Power reaches the cabinet beside the reserved vehicle bay.",
+      "actor": {
+        "kind": "electricity",
+        "label": "Electrical supply",
+        "start": "shop"
+      },
+      "steps": [
+        {
+          "title": "Supply the charging cabinet",
+          "text": "The cable connects the supply to the charging cabinet. Vehicle access uses the marked bay and road.",
+          "relations": [
+            "supply"
+          ],
+          "state": {
+            "at": "charging",
+            "via": "supply",
+            "moving": "Following the supply cable",
+            "caption": "Supply connected at the charging cabinet."
+          }
+        }
+      ]
+    }
+  ]
+}

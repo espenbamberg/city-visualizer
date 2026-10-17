@@ -4,6 +4,9 @@ import {validateNetwork} from './network.mjs';
 import {processParts} from './process-assets.mjs';
 import {validateEnvironment} from './environments.mjs';
 import {validateRoomContents} from './rooms.mjs';
+import {isOutdoor,validateOutdoor} from './outdoor-assets.mjs';
+import {validateClearances} from './object-geometry.mjs';
+import {validateTransform} from './spatial.mjs';
 
 export const relationshipKinds = ['movement', 'information', 'dependency', 'technical', 'influence', 'electricity'];
 export const actorKinds = ['person','document','car','van','bicycle','plane','data','electricity'];
@@ -122,6 +125,9 @@ export function validate(issue, scene) {
   require(Array.isArray(scene.scenery), 'Missing scenery array');
   for (const a of scene.scenery) {
     require(a && sceneryNames.includes(a.type), 'Unknown scenery type');
+    require(a.asset===undefined,'Scenery uses type, not asset');
+    if(isOutdoor(a))validateOutdoor(a);
+    else require(a.rotation===undefined&&a.options===undefined,'Rotation/options require a spatial recipe');
     require(Number.isFinite(a.x) && Number.isFinite(a.y), 'Invalid scenery position');
     require(a.sortAt === undefined || point(a.sortAt), 'Invalid scenery depth anchor');
     require(a.material === undefined || color(a.material), 'Invalid scenery material');
@@ -139,6 +145,9 @@ export function validate(issue, scene) {
     require(!placed.has(item.entity), `Multiple instances: ${item.entity}`);
     placed.add(item.entity);
     require(assetNames.includes(item.asset), `Unknown asset: ${item.asset}`);
+    validateTransform(item);
+    if(isOutdoor(item))validateOutdoor(item);
+    else require((item.rotation??0)===0&&(item.z??0)===0&&item.options===undefined,'Rotation/elevation/options require a spatial recipe');
     validateSize(item);
     require(item.detailLevels===undefined || typeof item.detailLevels==='boolean','Invalid object detail levels');
     require(item.process===undefined || (Object.hasOwn(processParts,item.process)&&(['storage','queue'].includes(item.process)?['shelf','queue'].includes(item.asset)&&item.w>=48&&item.d>=32:['desk','workbench','tester','terminal'].includes(item.asset)&&item.w>=52&&item.d>=40)),'Unsupported process recipe');
@@ -159,6 +168,7 @@ export function validate(issue, scene) {
     }
   }
   require(issue.entities.every(e => placed.has(e.id)), 'Unplaced entity');
+  validateClearances(scene);
   validateRoomContents(scene);
   const routes = ids(scene.routes, 'route', 'relation');
   for (const route of scene.routes) {

@@ -3,12 +3,14 @@ import { personProfile } from './people.mjs';
 import { transport } from './transport.mjs';
 import { detailAsset, detailDimensions } from './detail-assets.mjs';
 import {processAsset} from './process-assets.mjs';
+import {outdoorDimensions,isOutdoor,outdoorParts} from './outdoor-assets.mjs';
 
 export const escape = value => String(value).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]);
-export const assetNames = ['house', 'office', 'reception', 'school', 'park', 'square', 'cool-room', 'warehouse', 'workshop', 'depot', 'cabinet', 'server', 'database', 'gateway', ...Object.keys(detailDimensions)];
-export const sceneryNames = ['tree', 'lamp', 'van', 'bench', 'person'];
+export const assetNames = ['house', 'office', 'reception', 'school', 'park', 'square', 'cool-room', 'warehouse', 'workshop', 'depot', 'cabinet', 'server', 'database', 'gateway', ...Object.keys(detailDimensions), ...Object.keys(outdoorDimensions)];
+export const sceneryNames = ['tree', 'lamp', 'van', 'bench', 'person', ...Object.keys(outdoorDimensions)];
 export const assetDimensions = {house:[112,88,72],office:[122,98,121],reception:[122,98,60],school:[180,115,65],park:[200,150,72],square:[190,130,38],'cool-room':[150,115,58],warehouse:[168,91,73],workshop:[256,128,62],depot:[123,89,67],cabinet:[58,39,42],server:[120,70,85],database:[110,70,60],gateway:[120,55,34]};
 Object.assign(assetDimensions,detailDimensions);
+Object.assign(assetDimensions,outdoorDimensions);
 
 export function drawing(P, seed = 0) {
   let host = null, personSlot = 0;
@@ -321,6 +323,7 @@ export function drawing(P, seed = 0) {
   }
 
   function walkingFloor(a) {
+    if(isOutdoor(a))return outdoorParts(a,{box,line,project},P).floor;
     const {x,y,w,d}=a;
     if(a.asset==='park' && a.size)return box(x,y,1,w,d,2,a.material,5)+box(x+w*.44,y+2,3,24,d-4,.5,'#d9d5bf',2)+box(x+16,y+d*.57,3,w-32,22,.5,'#d9d5bf',2);
     if (a.asset==='park') return box(x,y,1,w,d,2,a.material,5) + box(x+79,y+2,3,w*.18,d-4,.5,'#d9d5bf',2) + box(x+26,y+79,3,w-48,25,.5,'#d9d5bf',2);
@@ -477,6 +480,7 @@ export function drawing(P, seed = 0) {
     }
   }
   function scenery(a) {
+    if(isOutdoor(a)) { const p=outdoorParts(a,{box,line,project},P);return (a.floorInGround?'':p.floor)+p.body; }
     switch (a.type) {
       case 'tree': return tree(a.x, a.y, a.h, a.seed);
       case 'lamp': return lamp(a.x, a.y);
@@ -488,6 +492,7 @@ export function drawing(P, seed = 0) {
   return { project, box, line, polygon, text, person, tree, lamp, van, bench, ground, scenery, label, walkingFloor, asset: a => {
     host=a; personSlot=0;
     try {
+      if(isOutdoor(a)) { const p=outdoorParts(a,{box,line,project},P);return (a.floorInGround?'':p.floor)+p.body; }
       if(a.process)return processAsset(a,{box,line,cylinder,sign,person,bench});
       if (['car','van','bicycle','plane'].includes(a.asset)) return transport(P,a.asset,a.material,0,[a.x+a.w/2,a.y+a.d/2,2]);
       return recipes[a.asset] ? recipes[a.asset](a) : detailAsset(a,{box,line,polygon,cylinder,text,person,tree,bench,sign});
