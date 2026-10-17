@@ -129,14 +129,6 @@ export function compileNetwork(issue,scene) {
 
 export function validateNetwork(issue,scene) {
   const walls=roomWalls(scene.rooms);
-  if([...scene.instances,...scene.scenery].some(isOutdoor))for(const route of scene.routes.filter(r=>!r.network)) {
-    const relation=issue.relationships.find(r=>r.id===route.relation);if(relation?.kind!=='movement')continue;
-    const modes=issue.scenarios.flatMap(s=>{let actor=s.actor;return s.steps.flatMap(step=>{actor=step.actor??actor;return step.state?.via===relation.id&&actor?[actor.kind]:[];});});
-    const radius=Math.max(5,...modes.map(mode=>travelRadius[mode]));
-    const height=Math.max(25,...modes.map(mode=>({person:25,bicycle:40,car:30,van:35,plane:38})[mode]??2));
-    const points=route.points??[scene.instances.find(a=>a.entity===relation.from).anchor,...route.via,scene.instances.find(a=>a.entity===relation.to).anchor];
-    for(let i=1;i<points.length;i++)for(const obstacle of [...scene.instances,...scene.scenery].flatMap(objectObstacles))assert(!obstructed(points[i-1],points[i],obstacle,radius,height),`Route ${relation.id} collides with ${obstacle.entity}`);
-  }
   if(walls.length)for(const route of scene.routes) {
     const rel=issue.relationships.find(r=>r.id===route.relation);if(rel?.kind!=='movement')continue;
     const kinds=issue.scenarios.flatMap(s=>{let actor=s.actor;return s.steps.flatMap(step=>{actor=step.actor??actor;return step.state?.via===rel.id&&actor?[actor.kind]:[];});});

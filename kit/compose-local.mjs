@@ -3,6 +3,7 @@ import {dimensions,nameplate} from './sizing.mjs';
 import {validate,actorAt} from './model.mjs';
 import {compileNetwork} from './network.mjs';
 import {relationshipMode,scenarioLayouts} from './compose-helpers.mjs';
+import {isOutdoor} from './outdoor-assets.mjs';
 
 // Local rows are authored in workflow order; each station reserves its own working area.
 export function composeLocal(issue,layout) {
@@ -32,7 +33,7 @@ export function composeLocal(issue,layout) {
     for(const plot of row) {
       const {w,d,h,size,emphasis}=plot,entity=entities.get(plot.entity);
       const anchor=[x+w+22,y+d+64,4];
-      instances.push({id:entity.id,entity:entity.id,asset:plot.asset,x,y,w,d,h,anchor,label:[x+w/2,y+d+20,4],labelStyle:nameplate(entity.label,w),material:plot.material ?? ['#b3c2ad','#b7c5ba','#c6b594'][ri%3],sign:plot.sign ?? entity.label.toUpperCase(),...(size?{size}:{}),...(emphasis?{emphasis}:{})});
+      instances.push({id:entity.id,entity:entity.id,asset:plot.asset,x,y,w,d,h,anchor,label:[x+w/2,y+d+20,4],labelStyle:nameplate(entity.label,w),material:plot.material ?? ['#b3c2ad','#b7c5ba','#c6b594'][ri%3],sign:plot.sign ?? (isOutdoor(plot)?undefined:entity.label.toUpperCase()),...(size?{size}:{}),...(emphasis?{emphasis}:{})});
       if(plot.process)instances.at(-1).process=plot.process;
       locations.set(entity.id,{anchor,corridor});x+=plot.width+gap;
     }

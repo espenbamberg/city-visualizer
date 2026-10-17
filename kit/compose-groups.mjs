@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 import {dimensions,nameplate} from './sizing.mjs';
 import {compileNetwork,obstructed,sceneryObstacles} from './network.mjs';
 import {validate,actorAt} from './model.mjs';
-import {scenarioLayouts} from './compose-helpers.mjs';
-import {isOutdoor} from './outdoor-assets.mjs';
+import {scenarioLayouts,keepStationaryActors} from './compose-helpers.mjs';
+import {isOutdoor,validateOutdoor} from './outdoor-assets.mjs';
 import {placedFootprint,objectBounds} from './object-geometry.mjs';
 import {unionBounds} from './spatial.mjs';
 import {relativePosition,placeScenery} from './spatial-layout.mjs';
@@ -24,9 +24,10 @@ export function composeGroups(issue,layout) {
       const at=p.beside?relativePosition(p,instances).map((n,i)=>n-group.at[i]):p.at??[cursor,group.pattern==='court'&&i>0?70:group.pattern==='green'&&i%2?50:0];
       assert(Array.isArray(at)&&at.length===2&&at.every(Number.isFinite),'Invalid plot position');
       const a={id:p.entity,entity:p.entity,asset:p.asset,x:group.at[0]+at[0],y:group.at[1]+at[1],w:p.w,d:p.d,h:p.h,
-        material:p.material??(p.asset==='park'?'#b2c09a':'#bcc6b1'),sign:p.sign??entity.label,
+        material:p.material??(p.asset==='park'?'#b2c09a':'#bcc6b1'),sign:p.sign??(isOutdoor(p)?undefined:entity.label),
         ...(p.size?{size:p.size}:{}),emphasis:p.emphasis??'supporting',detailLevels:true,...(p.process?{process:p.process}:{}),
         ...(p.rotation!==undefined?{rotation:p.rotation}:{}),...(p.z!==undefined?{z:p.z}:{}),...(p.options?{options:p.options}:{})};
+      if(isOutdoor(a))validateOutdoor(a);
       const f=placedFootprint(a);
       a.anchor=[f.x+f.w/2,f.y+f.d+36,3];a.label=p.label??[f.x+f.w/2,f.y+f.d+7,3];a.labelStyle=p.labelStyle??nameplate(entity.label,f.w);
       instances.push(a);placed.push({...a,...f});cursor=at[0]+f.w+90;
@@ -70,10 +71,10 @@ export function composeGroups(issue,layout) {
   for(const a of instances) {
     const p=scene.network.ports.find(p=>p.entity===a.entity);if(p)a.anchor=scene.network.nodes.find(n=>n.id===p.node).at;
   }
-  scene.scenarioLayouts=issue.scenarios.map(s=>({scenario:s.id,...(s.actor?{actor:{identity:s.actor.identity??s.id,at:scene.routes.find(r=>r.relation===s.steps[0].state.via)?.points[0]??instances.find(a=>a.entity===s.actor.start).anchor,material:'#b58b58'}}:{}),steps:s.steps.map((step,i)=>{
+  scene.scenarioLayouts=issue.scenarios.map(s=>keepStationaryActors(s,{scenario:s.id,...(s.actor?{actor:{identity:s.actor.identity??s.id,at:scene.routes.find(r=>r.relation===s.steps[0].state.via)?.points[0]??instances.find(a=>a.entity===s.actor.start).anchor,material:'#b58b58'}}:{}),steps:s.steps.map((step,i)=>{
     const r=issue.relationships.find(r=>r.id===(step.state?.via??step.relations[0])),a=instances.find(a=>a.entity===(step.state?.at??r.to));
     return {at:[a.x+a.w/2,a.y+a.d/2,a.h+36],links:[],...(s.actor&&(!step.state.via||actorAt(s,i).kind==='document')?{path:step.state.via?scene.routes.find(r=>r.relation===step.state.via).points:[a.anchor]}:{})};
-  })}));
+  })},scene));
   if(layout.environment){scene.environment=layout.environment;scene.scenarioLayouts=scenarioLayouts(issue,scene);}
   validate(issue,scene);return scene;
 }

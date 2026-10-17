@@ -20,6 +20,8 @@ Definitions live in `kit/outdoor-assets.mjs`:
 
 Width/depth may increase; recipe height stays fixed. Omitted scenery dimensions use defaults. Instances keep explicit `w`, `d`, `h`. Colors remain six-digit hex values. Unknown options and undersized recipes fail validation. Legacy assets retain their existing size contracts.
 
+Entity labels remain full-length names for nameplates and inspectors. They are not copied onto spatial recipes' physical signs. A corner shop uses `CORNER SHOP` unless an explicit `sign` (up to 24 characters) is supplied; the shelter's `BUS` sign is fixed. Other spatial recipes do not draw signs. Legacy assets keep their existing label-to-sign defaults.
+
 ## Orientation and space
 
 Spatial recipes accept `rotation: 0 | 90 | 180 | 270` and optional nonnegative `z`. Dimensions describe the **unrotated** recipe; `x`/`y` are the minimum corner of its rotated footprint. At 90/270 degrees occupied width/depth swap. World geometry transforms before projection; the finished SVG is never rotated as a flat image.
@@ -29,6 +31,8 @@ Spatial recipes accept `rotation: 0 | 90 | 180 | 270` and optional nonnegative `
 - **Reserved access** prevents other objects occupying approaches or vehicle bays. Routes may enter it. The charging recipe currently represents an empty reserved bay; parked vehicles are not an occupancy state.
 
 Legacy recipes reject rotation/elevation until converted. Elevation positions objects but does not generate supports, ramps, bridges or multilevel paths. Canopy checks use conservative rectangular volumes. Room doors retain their existing contract.
+
+Adding spatial scenery preserves legacy collision rules for existing objects. New spatial solids are checked against actual walking/vehicle paths (including authored legacy paths and truncated arrivals); an unanimated movement route uses its relationship geometry. Network routes still check all physical obstacles and corridor widths.
 
 ## Access
 
@@ -41,6 +45,8 @@ Explicit network ports accept local `front`, `right`, `back` and `left` sides. S
 Optional `offset` moves outward along the socket direction and defaults to zero. Sockets own their elevation; do not combine `socket` with `side`, `position` or `z`. `waiting` is inside the shelter; `boarding` is outside. The charging `power` and `vehicle` sockets are distinct.
 
 Recompose after moving, resizing or rotating objects. Composition rebuilds port nodes, routes, actor starts and step markers. Builds reject stale saved geometry. Stories can start at different ports of the same entity.
+
+A stationary step for the same person or vehicle at the same entity keeps its previous arrival position, even when another port is listed first. Explicit actor handoffs and symbolic appearances retain their separate placement rules.
 
 ## Placement
 

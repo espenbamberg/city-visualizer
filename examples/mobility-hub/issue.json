@@ -172,6 +172,17 @@
             "moving": "Enter the shelter",
             "caption": "The neighbour reaches the waiting area beneath the roof, clear of the posts and bench."
           }
+        },
+        {
+          "title": "Wait under cover",
+          "text": "The neighbour stays at the waiting socket while the boarding entrance remains free.",
+          "relations": [
+            "walk-stop"
+          ],
+          "state": {
+            "at": "stop",
+            "caption": "Still waiting in the same sheltered place."
+          }
         }
       ]
     },
