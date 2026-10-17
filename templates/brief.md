@@ -1,12 +1,15 @@
 # [Issue title]
 
+[Authoring guide: fill this from the conversation and supplied material; reuse known answers and omit optional prompts that add nothing. Existing briefs do not need migration.]
+
 ## Question and audience
 
-[What should the reader understand? Who is it for?]
+- Audience: [Who will use the map?]
+- Question and intended takeaway: [What should they understand or decide after exploring it?]
 
 ## Scope
 
-[The activity, places and period this explanation follows.]
+[The activity, places and period this explanation follows. Is it the current process or a proposed future? Distinguish alternatives if requested.]
 
 ## Sources
 
@@ -16,7 +19,7 @@
 
 ## Participants and operating rules
 
-[Who acts, what they use, who owns each handoff, and which conditions change the outcome.]
+[Who acts, what they use, who owns each handoff, and which conditions change the outcome. Record meaningful assumptions separately from supplied facts using the source/status conventions.]
 
 ## Plain explanation
 
@@ -24,13 +27,16 @@
 
 ## Stories
 
-### [Representative journey]
+- Primary perspective: [Whose experience or what flow leads the explanation?]
+- Focus: [What matters most to this audience: normal process, handoffs, delays, failure points or an improvement?]
 
-- Starting condition: [Trigger and participants.]
+### [Priority journey — first story]
+
+- Starting condition: [Trigger, participants and where this journey begins.]
 - Steps: [Actions and named handoffs in order.]
-- Outcome: [What changed.]
+- Outcome: [What changed and where the journey ends.]
 
-### [Exception]
+### [Optional exception — when useful and supported]
 
 - Starting condition: [The condition that differs.]
 - Steps: [How it changes the sequence.]
@@ -58,7 +64,7 @@
 
 [Which activities need their own objects? Which belong in a shared area, room or workstation? Which IT services or infrastructure are relevant at the supplied level of detail? Explain these choices before assigning space.]
 
-[For each view: which objects are primary, supporting or contextual? What useful work fills the larger areas? Which smaller objects need a clear nameplate and access?]
+[For each view: which objects are primary, supporting or contextual, and how does that serve the selected focus? What useful work fills the larger areas? Keep the supporting mechanisms needed to explain the journey, with clear nameplates and access.]
 
 ## Streets, paths and other networks
 
@@ -74,7 +80,7 @@
 
 ## Optional insides (V2)
 
-[Which objects benefit from a local visualization? For each: local question, input, stations/components, 1–5 processes, outcomes and boundary links to the parent. Add a further level only when concrete details justify it.]
+[Which objects benefit from a local visualization for this audience and focus? For each: local question, input, stations/components, 1–5 processes, outcomes and boundary links to the parent. Add a further level only when concrete details justify it.]
 
 [Which concrete apparatus, fields or components explain each step? Specify complete active/done/waiting/blocked part states where useful. Decide which names and fine details matter in overview, area and close-up.]
 
