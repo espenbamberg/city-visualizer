@@ -37,7 +37,7 @@ The supported dimensions are defined in `kit/sizing.mjs`:
 | terminal | 52 × 40 × 45 | 65 × 48 × 45 | 120 × 72 × 45 |
 | queue | 48 × 36 × 40 | 90 × 50 × 40 | 140 × 64 × 40 |
 
-Adding either field activates footprint-based district packing. Larger plots are placed first; smaller ones use remaining row space. Each plot reserves its own width and access area. Districts share streets rather than inheriting one maximum plot size. Layouts without either field keep their existing composition.
+Footprint-based district packing is the default, including layouts without either field. Larger plots are placed first; smaller ones use remaining street space. Each plot reserves its own width and access area, with seeded setbacks and spacing. Shorter streets are inset and districts pack by area with varied offsets. Districts share streets rather than inheriting one maximum plot size. Saved scenes keep their geometry until explicitly recomposed.
 
 Run `scripts/compose.mjs INPUT INPUT/scene.json`. The scene saves `size`, `emphasis` and concrete dimensions. Declared sizes must match their registered dimensions. Recompose after changing sizes so streets, paths, endpoints, markers and labels move together. Then refine the scene as needed. The normal single-level component study includes each distinct size present in its input.
 
